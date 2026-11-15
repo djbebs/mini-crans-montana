@@ -21,3 +21,10 @@ swissBUILDINGS3D supplies the existing building meshes, not surveyed window posi
 
 ## Rollback
 Choose OFF in the selector. Do not merge until visual browser checks, streaming lifecycle checks and performance tests pass.
+
+## P0.6.8 preview fix 2
+- Fixed generated windows missing required `distance`. The missing value previously produced NaN instance matrices, so no windows were drawn even when the generator returned candidates.
+- Invalid coordinates are rejected before any GPU submission.
+- Diagnostic panel reports triangles, facade regions, candidates, rejected windows and render submissions.
+- Optional magenta/yellow diagnostic contrast. Preview path starts in procedural mode; production remains opt-in.
+- Full visual confirmation with real swissBUILDINGS3D data is still required.

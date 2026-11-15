@@ -110,7 +110,7 @@ button,input{font:inherit;color:inherit}button{cursor:pointer;border:2px solid v
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
-import {createFacadeLifecycle} from './facade/facade-lifecycle.js?v=068a';
+import {createFacadeLifecycle} from './facade/facade-lifecycle.js?v=068b';
 // Optional 3D Tiles library is loaded dynamically: the OSM view stays available if the CDN fails.
 window.__p0Booted=true;
 const $=(id)=>document.getElementById(id);
@@ -119,17 +119,36 @@ let tiles=null,tilesMeshes=0,useOfficial=true,buildingLayer=null,tilesState='loa
 // Windows are an independent OFF-by-default visual experiment.
 const officialTileScenes=new Set();
 const facadeSystem=createFacadeLifecycle(THREE,{onStatus:status=>{
- const el=document.getElementById('facade-status');if(!el)return;
- el.textContent=status.mode==='off'?'Fenêtres désactivées · P0.6.6':
- status.tiles+' tuiles · '+status.estimated+' fenêtres estimées · '+status.verified+' vérifiées'+(status.errors?' · '+status.errors+' erreurs':'');
+ const el=$('facade-status');if(!el)return;
+ if(status.mode==='off'){
+  el.textContent='Fenêtres désactivées · rendu P0.6.6';
+  return;
+ }
+ const result=status.tiles+' tuiles analysées · '+status.triangles+' triangles · '+status.facades+' façades · '+
+  status.generated+' fenêtres calculées · '+status.rendered+' envoyées au rendu · '+
+  status.rejected+' rejetées · '+status.invalid+' coordonnées invalides · '+
+  status.errors+' erreurs.';
+ el.textContent=result+(status.lastError?' Dernière erreur : '+status.lastError:'')+
+  (status.rendered===0?' Aucune fenêtre exploitable : vérifier façades et chargement.':'');
 }});
-const facadeControl=document.createElement('div');facadeControl.style.cssText='margin-top:8px;padding-top:6px;border-top:2px dashed #bcb5a0;font-size:12px;line-height:1.4';
-facadeControl.innerHTML='<label for="facade-mode">🪟 Fenêtres P0.6.8</label> <select id="facade-mode"><option value="off">OFF · P0.6.6</option><option value="procedural">Procédural (estimé)</option><option value="hybrid">Hybride (estimé + vérifié)</option></select><div id="facade-status" role="status" style="font-size:10px">Fenêtres désactivées</div>';
+const facadeControl=document.createElement('div');
+facadeControl.style.cssText='margin-top:8px;padding-top:6px;border-top:2px dashed #bcb5a0;font-size:12px;line-height:1.4';
+facadeControl.innerHTML='<label for="facade-mode">🪟 Fenêtres P0.6.8</label> <select id="facade-mode" style="max-width:100%;font-size:11px"><option value="off">OFF · P0.6.6</option><option value="procedural">Procédural (estimé)</option><option value="hybrid">Hybride (estimé + vérifié)</option></select><label style="display:block;margin-top:5px"><input type="checkbox" id="facade-contrast"> Contraste diagnostic (rose/jaune)</label><div id="facade-status" role="status" style="font-size:10px;line-height:1.4;overflow-wrap:anywhere">Fenêtres désactivées</div><small style="display:block;font-size:10px">Fenêtres estimées, pas des relevés réels. Le compteur confirme les instances 3D, pas leur visibilité à l’écran.</small>';
 $('place').appendChild(facadeControl);
-$('facade-mode').addEventListener('change',e=>{
- facadeSystem.setMode(e.target.value);
+function reloadFacades(){
  if(facadeSystem.mode!=='off')for(const model of officialTileScenes)facadeSystem.load(model);
+}
+$('facade-mode').addEventListener('change',e=>{
+ facadeSystem.setMode(e.target.value);reloadFacades();
 });
+$('facade-contrast').addEventListener('change',e=>{
+ facadeSystem.setContrast(e.target.checked);reloadFacades();
+});
+// This URL is an isolated experimental preview. Production main remains OFF by default.
+if(location.pathname.includes('/preview-p068/')){
+ $('facade-mode').value='procedural';
+ facadeSystem.setMode('procedural');
+}
 function note(t,show=true){const e=$('real-status');e.textContent=t;e.classList.toggle('show',show);e.dataset.failed=String(tilesState==='error');if(tilesState==='error')e.title='Cliquer pour ouvrir le rendu officiel P0.4'}
 $('real-status').onclick=()=>{if(tilesState==='error')location.href='../crans-montana-p0/?v=4'};
 function syncRoofs(){
