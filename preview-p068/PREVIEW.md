@@ -1,12 +1,11 @@
-# Mini Crans-Montana P0.6.8 preview
+# P0.6.8 Windows Fix Preview
 
-Published from feature branch commit `43e779be67f55bc6bb4bd7b1cf30875bc157dda0` into a separate GitHub Pages folder. This does not replace P0.6.6.
+Source commit: d4fab87f99c27a76245ab17bbbfed908cf911943
 
-Preview: https://djbebs.github.io/mini-crans-montana/preview-p068/
-Stable: https://djbebs.github.io/mini-crans-montana/crans-montana-p06/
+Live stable P0.6.6 in `crans-montana-p06/` is unchanged.
 
-Use the **Fenêtres P0.6.8** selector in the left panel: **OFF**, **Procédural**, **Hybride**. OFF is the default and uses the unchanged P0.6.6 geometry. Hybrid currently has no verified landmark overrides, and provides estimated windows only.
+The previous preview generated window instances without the required numeric façade distance. That produced NaN in instancing matrices, making all windows invisible. The fix ensures every estimated window has a finite `distance`, rejects invalid placements, and displays façade and render counts. Optional diagnostic contrast is magenta/yellow.
 
-This is experimental and has not been verified against full streamed Ycoor building tiles in a real browser. P0.6.7 character flickering fixes remain in the stable P0.6.6 code.
+This page selects the Procedural mode on preview load. Switch to OFF to compare against P0.6.6 building rendering. Hybrid has no photo-verified landmark yet.
 
-Source branch: https://github.com/djbebs/mini-crans-montana/tree/feature/p068-facade-windows
+**Visual rendering against actual Ycoor geometry is not confirmed.** The diagnostic count 'envoyées au rendu' measures valid GPU instance submissions, not on-screen visibility.

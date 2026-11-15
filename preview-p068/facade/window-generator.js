@@ -14,7 +14,7 @@ export function generateWindows(groups,{maxWindows=CONFIG.maxWindowsPerTile,over
     if(windows.length+local.length>=maxWindows)break;
     const cu=u+w/2,cv=v+h/2;
     if(!wallContains(g,cu,cv,Math.max(w,h)*.49)){count.rejected++;continue}
-    const dist=surfaceDistance(g,cu,cv);if(dist===null){count.rejected++;continue}
+    const dist=surfaceDistance(g,cu,cv);if(!Number.isFinite(dist)){count.rejected++;continue}
     const tileKey=g.key+':'+Math.round(u*100)+':'+Math.round(v*100);
     const override=overrides[tileKey];
     // Overrides remain disabled unless a source-reviewed registration explicitly marks them verified.
@@ -22,7 +22,7 @@ export function generateWindows(groups,{maxWindows=CONFIG.maxWindowsPerTile,over
      local.push({u:cu,v:cv,w:override.width||w,h:override.height||h,group:g,distance:dist,key:tileKey,style:styleName,provenance:'verified'});
      count.verified++;
     }else{
-     local.push({u:cu,v:cv,w,h,group:g,key:tileKey,style:styleName,provenance:'estimated'});
+     local.push({u:cu,v:cv,w,h,group:g,distance:dist,key:tileKey,style:styleName,provenance:'estimated'});
      count.estimated++;
     }
    }

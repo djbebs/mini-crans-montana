@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#173125">
-<title>Mini Crans-Montana · P0.6.8 Preview / Ycoor</title>
+<title>Mini Crans-Montana · P0.6.8 Windows FIX / Ycoor</title>
 <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--paper:#f6f0dd;--ink:#29291f;--red:#c92430;--blue:#2f5c9e;--edge:#1d221c}
@@ -45,7 +45,7 @@ button,input{font:inherit;color:inherit}button{cursor:pointer;border:2px solid v
 #real-toggle.active{background:#306299}
 @media(max-width:650px){#real-status{top:auto;bottom:118px;max-width:calc(100vw - 24px);font-size:11px}}
 </style></head><body>
-<aside id="preview-marker" aria-label="Version expérimentale P0.6.8" style="position:fixed;top:5px;left:50%;transform:translateX(-50%);z-index:25;max-width:calc(100vw - 24px);padding:5px 9px;border:2px solid #282b23;background:#fff2c8;color:#25251b;box-shadow:2px 3px 0 #172019a0;text-align:center;font:12px 'Pixelify Sans',monospace;white-space:nowrap">🪟 P0.6.8 PREVIEW · <a href="../crans-montana-p06/" style="color:#17547d">Stable P0.6.6</a></aside>
+<aside id="preview-marker" aria-label="Version expérimentale P0.6.8" style="position:fixed;top:5px;left:50%;transform:translateX(-50%);z-index:25;max-width:calc(100vw - 24px);padding:5px 9px;border:2px solid #282b23;background:#fff2c8;color:#25251b;box-shadow:2px 3px 0 #172019a0;text-align:center;font:12px 'Pixelify Sans',monospace;white-space:nowrap">🪟 P0.6.8 WINDOWS FIX · <a href="../crans-montana-p06/" style="color:#17547d">Stable P0.6.6</a></aside>
 <main id="map" aria-label="Maquette 3D isométrique de 100 mètres autour d'Ycoor"></main>
 <div id="real-status" role="status" aria-live="polite">Connexion aux toitures officielles…</div>
 <section id="place" class="box"><b>Crans-Montana</b><small>Ycoor · Valais · Suisse</small><div>P0 · 100 × 100 m</div><div class="weather">☀ <span id="weather">Météo simulée · clair</span><br><span id="origin">Mensuration officielle du Valais : chargement…</span><br><a style="color:#174e78;display:inline-block;margin-top:5px" href="https://map.geo.admin.ch/#/map?lang=fr&amp;center=2603036,1128849&amp;z=11" target="_blank" rel="noopener noreferrer" title="Ouvrir swisstopo et activer la vue 3D pour comparer les bâtiments">Comparer à swisstopo ↗</a></div><div id="geo-status" style="font-size:11px;line-height:1.3;margin-top:5px">Mensuration officielle : interrogation…</div><details id="mo-details" style="font-size:11px;margin-top:4px"><summary>Résultats cadastraux par couche</summary><div id="mo-report" style="padding:4px 0;overflow-wrap:anywhere">Aucune couche encore vérifiée</div></details><div id="mo-warning" style="font-size:11px;margin-top:5px;line-height:1.25;color:#665f44;font-weight:700">Sol : cadastre du Valais · Mobilier : OSM géolocalisé.</div>
@@ -111,7 +111,7 @@ button,input{font:inherit;color:inherit}button{cursor:pointer;border:2px solid v
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
-import {createFacadeLifecycle} from './facade/facade-lifecycle.js?v=068a';
+import {createFacadeLifecycle} from './facade/facade-lifecycle.js?v=068b';
 // Optional 3D Tiles library is loaded dynamically: the OSM view stays available if the CDN fails.
 window.__p0Booted=true;
 const $=(id)=>document.getElementById(id);
@@ -120,17 +120,36 @@ let tiles=null,tilesMeshes=0,useOfficial=true,buildingLayer=null,tilesState='loa
 // Windows are an independent OFF-by-default visual experiment.
 const officialTileScenes=new Set();
 const facadeSystem=createFacadeLifecycle(THREE,{onStatus:status=>{
- const el=document.getElementById('facade-status');if(!el)return;
- el.textContent=status.mode==='off'?'Fenêtres désactivées · P0.6.6':
- status.tiles+' tuiles · '+status.estimated+' fenêtres estimées · '+status.verified+' vérifiées'+(status.errors?' · '+status.errors+' erreurs':'');
+ const el=$('facade-status');if(!el)return;
+ if(status.mode==='off'){
+  el.textContent='Fenêtres désactivées · rendu P0.6.6';
+  return;
+ }
+ const result=status.tiles+' tuiles analysées · '+status.triangles+' triangles · '+status.facades+' façades · '+
+  status.generated+' fenêtres calculées · '+status.rendered+' envoyées au rendu · '+
+  status.rejected+' rejetées · '+status.invalid+' coordonnées invalides · '+
+  status.errors+' erreurs.';
+ el.textContent=result+(status.lastError?' Dernière erreur : '+status.lastError:'')+
+  (status.rendered===0?' Aucune fenêtre exploitable : vérifier façades et chargement.':'');
 }});
-const facadeControl=document.createElement('div');facadeControl.style.cssText='margin-top:8px;padding-top:6px;border-top:2px dashed #bcb5a0;font-size:12px;line-height:1.4';
-facadeControl.innerHTML='<label for="facade-mode">🪟 Fenêtres P0.6.8</label> <select id="facade-mode"><option value="off">OFF · P0.6.6</option><option value="procedural">Procédural (estimé)</option><option value="hybrid">Hybride (estimé + vérifié)</option></select><div id="facade-status" role="status" style="font-size:10px">Fenêtres désactivées</div>';
+const facadeControl=document.createElement('div');
+facadeControl.style.cssText='margin-top:8px;padding-top:6px;border-top:2px dashed #bcb5a0;font-size:12px;line-height:1.4';
+facadeControl.innerHTML='<label for="facade-mode">🪟 Fenêtres P0.6.8</label> <select id="facade-mode" style="max-width:100%;font-size:11px"><option value="off">OFF · P0.6.6</option><option value="procedural">Procédural (estimé)</option><option value="hybrid">Hybride (estimé + vérifié)</option></select><label style="display:block;margin-top:5px"><input type="checkbox" id="facade-contrast"> Contraste diagnostic (rose/jaune)</label><div id="facade-status" role="status" style="font-size:10px;line-height:1.4;overflow-wrap:anywhere">Fenêtres désactivées</div><small style="display:block;font-size:10px">Fenêtres estimées, pas des relevés réels. Le compteur confirme les instances 3D, pas leur visibilité à l’écran.</small>';
 $('place').appendChild(facadeControl);
-$('facade-mode').addEventListener('change',e=>{
- facadeSystem.setMode(e.target.value);
+function reloadFacades(){
  if(facadeSystem.mode!=='off')for(const model of officialTileScenes)facadeSystem.load(model);
+}
+$('facade-mode').addEventListener('change',e=>{
+ facadeSystem.setMode(e.target.value);reloadFacades();
 });
+$('facade-contrast').addEventListener('change',e=>{
+ facadeSystem.setContrast(e.target.checked);reloadFacades();
+});
+// This URL is an isolated experimental preview. Production main remains OFF by default.
+if(location.pathname.includes('/preview-p068/')){
+ $('facade-mode').value='procedural';
+ facadeSystem.setMode('procedural');
+}
 function note(t,show=true){const e=$('real-status');e.textContent=t;e.classList.toggle('show',show);e.dataset.failed=String(tilesState==='error');if(tilesState==='error')e.title='Cliquer pour ouvrir le rendu officiel P0.4'}
 $('real-status').onclick=()=>{if(tilesState==='error')location.href='../crans-montana-p0/?v=4'};
 function syncRoofs(){
