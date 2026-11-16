@@ -1,0 +1,1384 @@
+{
+  "schemaVersion": 1,
+  "authoredAt": "2026-11-16",
+  "policy": "Source geometry unchanged. Visual IDs are not cadastral IDs. One documented façade zone; dimensions, colours, depths and rail-bar density are artistic estimates. No hidden-face extrapolation.",
+  "buildingMatches": [
+    {
+      "buildingId": "1A20B",
+      "sourceUuid": "A520AB12-913E-432E-86F2-6764D69D06FC",
+      "sourceDate": {
+        "year": 2016,
+        "month": 6
+      },
+      "surveyIds": [
+        "B002"
+      ],
+      "status": "confirmed",
+      "evidenceIds": [
+        "C005",
+        "C007",
+        "C008"
+      ],
+      "reason": "Partie centrale du groupe B002 : continuité des volumes le long de la route, succession des balcons et position entre les vues au nord et au sud. Correspondance visuelle multi-vues ; identité cadastrale non établie."
+    },
+    {
+      "buildingId": "2329F",
+      "sourceUuid": "CB45CB94-DE09-431D-945E-3F65B90D396F",
+      "sourceDate": {
+        "year": 2017,
+        "month": 6
+      },
+      "surveyIds": [
+        "B002"
+      ],
+      "status": "confirmed",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "reason": "Partie du groupe B002 proche du coude de la route : raccord au volume à bardage et alignement du front bâti dans les vues opposées. Un même repère visuel regroupe plusieurs volumes CAD."
+    },
+    {
+      "buildingId": "2355E",
+      "sourceUuid": "7817116D-3DA2-4BFC-8EB0-50E0EB8E60EC",
+      "sourceDate": {
+        "year": 2016,
+        "month": 6
+      },
+      "surveyIds": [
+        "B002"
+      ],
+      "status": "confirmed",
+      "evidenceIds": [
+        "C003",
+        "C026",
+        "C027"
+      ],
+      "reason": "Extrémité sud du groupe B002 : face devant la caméra C003 et bord du passage séparant B002 de B003 dans C026/C027. La position des caméras, le passage et la silhouette du volume concordent."
+    },
+    {
+      "buildingId": "26152",
+      "sourceUuid": "AB8CB108-63CB-477F-86C3-5A211831E7BE",
+      "sourceDate": {
+        "year": 2020,
+        "month": 6
+      },
+      "surveyIds": [
+        "B007"
+      ],
+      "status": "unresolved",
+      "evidenceIds": [
+        "C041",
+        "C042"
+      ],
+      "reason": "B007 est un candidat visuel pour ce volume allongé côté étang, mais la correspondance et son état actuel ne sont pas suffisamment établis. La source géométrique de juin 2020 le classe « Im Bau ». Aucune modification de volume n’est appliquée."
+    },
+    {
+      "buildingId": "2997D",
+      "sourceUuid": "36BB0B0C-CCF7-474E-8416-6D815B86CB86",
+      "sourceDate": {
+        "year": 2016,
+        "month": 6
+      },
+      "surveyIds": [
+        "B002"
+      ],
+      "status": "confirmed",
+      "evidenceIds": [
+        "C010",
+        "C011",
+        "C012",
+        "C055",
+        "C053",
+        "C054"
+      ],
+      "reason": "Partie du groupe B002 donnant sur Rawyl : le front oblique à bardage et commerce est recoupé par C010/C011/C012 et la vue routière C055. Les vues rapprochées C053/C054 confirment les matériaux de la devanture ; leurs coordonnées de contributeur ne servent pas à la placer."
+    },
+    {
+      "buildingId": "2F7D6",
+      "sourceUuid": "CD779601-7BBB-42D4-A330-D40B5DAF7C6C",
+      "sourceDate": {
+        "year": 2016,
+        "month": 6
+      },
+      "surveyIds": [
+        "B003"
+      ],
+      "status": "confirmed",
+      "evidenceIds": [
+        "C026",
+        "C029",
+        "C030"
+      ],
+      "reason": "Volume séparé au sud du passage : balcon à garde-corps rouges et rez vitré visibles dans C029/C030, côté opposé à B002 dans C026. Correspondance de silhouette et de situation, sans identité cadastrale revendiquée."
+    }
+  ],
+  "observations": [
+    {
+      "observationId": "OBS-RAWYL-2024",
+      "buildingId": "2997D",
+      "faceId": "2997D:wall:002",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C055",
+        "C010",
+        "C011",
+        "C012"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "high",
+      "statement": "La façade sur Rawyl présente une devanture vitrée, un bandeau/avant-toit en bois, une bande verticale de bardage horizontal et des balcons à garde-corps en bois. Trois baies superposées sont retenues dans la partie documentée ; aucune trame de fenêtres n’est extrapolée aux autres faces.",
+      "limitations": [
+        "Les interfaces Google, le cadrage et les véhicules masquent certaines zones.",
+        "Les dimensions, niveaux et profondeurs du modèle de détail sont des estimations visuelles.",
+        "La face géométrique entière mesure environ 26 m : le pilote détaille sa partie commerciale documentée, pas toutes ses travées."
+      ]
+    },
+    {
+      "observationId": "OBS-SHOP-2025",
+      "buildingId": "2997D",
+      "faceId": "2997D:wall:002",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C053",
+        "C054"
+      ],
+      "observedAt": "2025-06",
+      "confidence": "high",
+      "statement": "Les vues rapprochées de juin 2025 montrent le vitrage de la boutique, l’entrée et l’encadrement clair, sous un avant-toit en bois. Elles confirment l’apparence de la partie basse, sans fournir de cotes mesurées.",
+      "limitations": [
+        "Panoramas de contributeur : coordonnées et orientation physique non calibrées.",
+        "Le mur de pierre opposé apparaît en reflet dans le vitrage ; il n’est pas reproduit comme un mur opaque de la boutique.",
+        "Les vélos et les reflets ne sont pas des éléments de construction et ne sont pas modélisés."
+      ]
+    },
+    {
+      "observationId": "OBS-SOUTH-2024",
+      "buildingId": "2F7D6",
+      "faceId": null,
+      "sourceId": "streetview",
+      "captureIds": [
+        "C029",
+        "C030",
+        "C026"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "high",
+      "statement": "B003 présente des garde-corps rouges/bruns et un rez vitré à encadrements en bois. Ces détails sont inventoriés pour une étape ultérieure, sans ajout sur le volume dans ce pilote.",
+      "limitations": [
+        "La position de chaque détail sur une face CAD reste à établir."
+      ]
+    },
+    {
+      "observationId": "OBS-NORTH-UNRESOLVED",
+      "buildingId": "26152",
+      "faceId": null,
+      "sourceId": "streetview",
+      "captureIds": [
+        "C041",
+        "C042"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "low",
+      "statement": "Les vues depuis le côté minigolf montrent des façades à balcons au-delà de l’étang. L’attribution précise au volume CAD 26152 reste à vérifier avant de corriger le statut de construction ou sa forme.",
+      "limitations": [
+        "Ces vues sont lointaines.",
+        "Aucune augmentation de hauteur ni suppression du statut source n’est déduite automatiquement."
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "changeId": "RAWYL-FACADE-PILOT",
+      "buildingId": "2997D",
+      "faceId": "2997D:wall:002",
+      "status": "ready",
+      "title": "Façade Rawyl · devanture et étages visibles",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "C055",
+        "C010",
+        "C011",
+        "C012",
+        "C053",
+        "C054"
+      ],
+      "observationIds": [
+        "OBS-RAWYL-2024",
+        "OBS-SHOP-2025"
+      ],
+      "reason": "Les volumes officiels ne décrivent pas cette apparence de façade. Le pilote ajoute une interprétation pixel-art de la partie documentée, sans modifier les sommets du bâtiment ni prétendre à un relevé métrique.",
+      "confidence": "medium",
+      "approximate": true,
+      "focus": {
+        "u": -20.5,
+        "height": 1510.5
+      },
+      "details": [
+        {
+          "id": "shop-light-surround",
+          "kind": "panel",
+          "u": -20.25,
+          "v": 1505.4,
+          "width": 11.0,
+          "height": 3.1,
+          "color": "#ccc9b9",
+          "label": "Fond et encadrement clairs · interprétation de la devanture",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "C055",
+            "C054"
+          ]
+        },
+        {
+          "id": "balcony-recess",
+          "kind": "panel",
+          "u": -23.15,
+          "v": 1512.0,
+          "width": 4.8,
+          "height": 9.6,
+          "color": "#d6ceb9",
+          "label": "Fond clair de la travée à balcons",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "C012",
+            "C055"
+          ]
+        },
+        {
+          "id": "timber-cladding",
+          "kind": "panel",
+          "u": -17.65,
+          "v": 1512.0,
+          "width": 4.8,
+          "height": 9.6,
+          "color": "#a66e42",
+          "label": "Bardage bois · couleur interprétée",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "C012",
+            "C010",
+            "C055"
+          ]
+        },
+        {
+          "id": "shop-left-display",
+          "kind": "window",
+          "u": -24.4,
+          "v": 1505.35,
+          "width": 2.55,
+          "height": 2.6,
+          "color": "#3c5866",
+          "label": "Vitrine gauche",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.09,
+            "color": "#d0d1c1"
+          },
+          "evidenceIds": [
+            "C055",
+            "C053"
+          ]
+        },
+        {
+          "id": "shop-entry",
+          "kind": "door",
+          "u": -21.75,
+          "v": 1505.35,
+          "width": 1.55,
+          "height": 2.6,
+          "color": "#2c4655",
+          "label": "Entrée vitrée de la boutique",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C054",
+            "C055"
+          ]
+        },
+        {
+          "id": "shop-right-display",
+          "kind": "window",
+          "u": -17.95,
+          "v": 1505.35,
+          "width": 5.8,
+          "height": 2.6,
+          "color": "#3c5866",
+          "label": "Vitrine droite · travée visible",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.09,
+            "color": "#d0d1c1"
+          },
+          "evidenceIds": [
+            "C053",
+            "C054",
+            "C055"
+          ]
+        },
+        {
+          "id": "entry-left-frame",
+          "kind": "trim",
+          "u": -22.56,
+          "v": 1505.35,
+          "width": 0.08,
+          "height": 2.7,
+          "color": "#d0d1c1",
+          "label": "Montant clair de l’entrée",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C054",
+            "C055"
+          ]
+        },
+        {
+          "id": "entry-right-frame",
+          "kind": "trim",
+          "u": -20.94,
+          "v": 1505.35,
+          "width": 0.08,
+          "height": 2.7,
+          "color": "#d0d1c1",
+          "label": "Montant clair de l’entrée",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C054",
+            "C055"
+          ]
+        },
+        {
+          "id": "wood-canopy-band",
+          "kind": "beam",
+          "u": -20.25,
+          "v": 1507.1,
+          "width": 11.0,
+          "height": 0.6,
+          "color": "#925e37",
+          "label": "Bandeau de l’avant-toit en bois",
+          "depth": 0.04,
+          "offset": 0.025,
+          "evidenceIds": [
+            "C055",
+            "C053"
+          ]
+        },
+        {
+          "id": "dark-shop-sign",
+          "kind": "panel",
+          "u": -21.75,
+          "v": 1507.1,
+          "width": 2.45,
+          "height": 0.38,
+          "color": "#252d29",
+          "label": "Enseigne sombre · lettrage non restitué",
+          "depth": 0.008,
+          "offset": 0.069,
+          "evidenceIds": [
+            "C055",
+            "C012"
+          ]
+        },
+        {
+          "id": "timber-lower-bay",
+          "kind": "window",
+          "u": -17.65,
+          "v": 1509.1,
+          "width": 2.05,
+          "height": 1.3,
+          "color": "#3b505a",
+          "label": "Baie inférieure dans le bardage",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.1,
+            "color": "#b99869"
+          },
+          "evidenceIds": [
+            "C012",
+            "C055"
+          ]
+        },
+        {
+          "id": "timber-middle-bay",
+          "kind": "window",
+          "u": -17.65,
+          "v": 1512.3,
+          "width": 2.05,
+          "height": 1.3,
+          "color": "#3b505a",
+          "label": "Baie intermédiaire dans le bardage",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.1,
+            "color": "#b99869"
+          },
+          "evidenceIds": [
+            "C012",
+            "C010"
+          ]
+        },
+        {
+          "id": "timber-upper-bay",
+          "kind": "window",
+          "u": -17.65,
+          "v": 1515.5,
+          "width": 2.05,
+          "height": 1.3,
+          "color": "#3b505a",
+          "label": "Baie supérieure retenue dans la zone visible",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.1,
+            "color": "#b99869"
+          },
+          "evidenceIds": [
+            "C012",
+            "C010"
+          ]
+        },
+        {
+          "id": "recess-lower-shadow",
+          "kind": "panel",
+          "u": -23.15,
+          "v": 1509.0,
+          "width": 2.65,
+          "height": 1.75,
+          "color": "#5a5749",
+          "label": "Ouverture en retrait · interprétation de l’ombre visible",
+          "depth": 0.01,
+          "offset": 0.018,
+          "evidenceIds": [
+            "C055",
+            "C012"
+          ]
+        },
+        {
+          "id": "recess-middle-shadow",
+          "kind": "panel",
+          "u": -23.15,
+          "v": 1512.2,
+          "width": 2.65,
+          "height": 1.75,
+          "color": "#5a5749",
+          "label": "Ouverture en retrait · interprétation de l’ombre visible",
+          "depth": 0.01,
+          "offset": 0.018,
+          "evidenceIds": [
+            "C012",
+            "C011"
+          ]
+        },
+        {
+          "id": "recess-upper-shadow",
+          "kind": "panel",
+          "u": -23.15,
+          "v": 1515.4,
+          "width": 2.65,
+          "height": 1.75,
+          "color": "#5a5749",
+          "label": "Ouverture en retrait · interprétation de l’ombre visible",
+          "depth": 0.01,
+          "offset": 0.018,
+          "evidenceIds": [
+            "C012",
+            "C011"
+          ]
+        },
+        {
+          "id": "lower-balcony",
+          "kind": "balcony",
+          "u": -23.15,
+          "v": 1508.2,
+          "width": 4.7,
+          "height": 1.1,
+          "depth": 0.65,
+          "color": "#a98152",
+          "rails": [
+            {
+              "u": 0,
+              "v": 0.44,
+              "width": 4.7,
+              "height": 0.1,
+              "depth": 0.09,
+              "offset": 0.56,
+              "color": "#8d6844"
+            },
+            {
+              "u": 0,
+              "v": -0.42,
+              "width": 4.7,
+              "height": 0.09,
+              "depth": 0.09,
+              "offset": 0.56,
+              "color": "#8d6844"
+            },
+            {
+              "u": -2.1,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": -1.4,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": -0.7,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": 0.7,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": 1.4,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": 2.1,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            }
+          ],
+          "floor": {
+            "height": 0.14,
+            "color": "#ded6bf"
+          },
+          "label": "Balcon visible · placement/profondeur estimés, barreaux symboliques",
+          "evidenceIds": [
+            "C055",
+            "C012"
+          ]
+        },
+        {
+          "id": "middle-balcony",
+          "kind": "balcony",
+          "u": -23.15,
+          "v": 1511.4,
+          "width": 4.7,
+          "height": 1.1,
+          "depth": 0.65,
+          "color": "#a98152",
+          "rails": [
+            {
+              "u": 0,
+              "v": 0.44,
+              "width": 4.7,
+              "height": 0.1,
+              "depth": 0.09,
+              "offset": 0.56,
+              "color": "#8d6844"
+            },
+            {
+              "u": 0,
+              "v": -0.42,
+              "width": 4.7,
+              "height": 0.09,
+              "depth": 0.09,
+              "offset": 0.56,
+              "color": "#8d6844"
+            },
+            {
+              "u": -2.1,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": -1.4,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": -0.7,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": 0.7,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": 1.4,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": 2.1,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            }
+          ],
+          "floor": {
+            "height": 0.14,
+            "color": "#ded6bf"
+          },
+          "label": "Balcon visible · placement/profondeur estimés, barreaux symboliques",
+          "evidenceIds": [
+            "C012",
+            "C011"
+          ]
+        },
+        {
+          "id": "upper-balcony",
+          "kind": "balcony",
+          "u": -23.15,
+          "v": 1514.6,
+          "width": 4.7,
+          "height": 1.1,
+          "depth": 0.65,
+          "color": "#a98152",
+          "rails": [
+            {
+              "u": 0,
+              "v": 0.44,
+              "width": 4.7,
+              "height": 0.1,
+              "depth": 0.09,
+              "offset": 0.56,
+              "color": "#8d6844"
+            },
+            {
+              "u": 0,
+              "v": -0.42,
+              "width": 4.7,
+              "height": 0.09,
+              "depth": 0.09,
+              "offset": 0.56,
+              "color": "#8d6844"
+            },
+            {
+              "u": -2.1,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": -1.4,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": -0.7,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": 0.7,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": 1.4,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            },
+            {
+              "u": 2.1,
+              "v": 0,
+              "width": 0.09,
+              "height": 0.88,
+              "depth": 0.08,
+              "offset": 0.57,
+              "color": "#a98152"
+            }
+          ],
+          "floor": {
+            "height": 0.14,
+            "color": "#ded6bf"
+          },
+          "label": "Balcon visible · placement/profondeur estimés, barreaux symboliques",
+          "evidenceIds": [
+            "C012",
+            "C011"
+          ]
+        }
+      ]
+    },
+    {
+      "changeId": "SOUTH-RED-BALCONIES",
+      "buildingId": "2F7D6",
+      "faceId": null,
+      "status": "unresolved",
+      "title": "B003 · garde-corps rouges et rez vitré",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "C029",
+        "C030",
+        "C026"
+      ],
+      "observationIds": [
+        "OBS-SOUTH-2024"
+      ],
+      "reason": "Apparence repérée, mais implantation des détails sur les faces CAD non préparée. Aucun ajout automatique.",
+      "confidence": "medium",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "NORTH-CONSTRUCTION-STATUS",
+      "buildingId": "26152",
+      "faceId": null,
+      "status": "unresolved",
+      "title": "Volume nord · statut « en construction »",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C041",
+        "C042"
+      ],
+      "observationIds": [
+        "OBS-NORTH-UNRESOLVED"
+      ],
+      "reason": "Le statut provient de données sources de juin 2020. Les vues de 2024 ne suffisent pas encore à valider la correspondance et une modification précise du volume.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "WEST-SHUTTERS",
+      "buildingId": "2355E",
+      "faceId": null,
+      "status": "unresolved",
+      "title": "B002 · volets rouges et entrée côté accès",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "C003",
+        "C026",
+        "C027"
+      ],
+      "observationIds": [],
+      "reason": "Les volets et l’entrée sont visibles, mais cette autre face ne reçoit pas encore de détails. Les zones cachées par l’interface et les véhicules restent à vérifier.",
+      "confidence": "medium",
+      "approximate": true,
+      "details": []
+    }
+  ],
+  "captures": [
+    {
+      "capture_id": "C003",
+      "building_ids": [
+        "B002"
+      ],
+      "screenshot": "evidence/C003.jpg",
+      "panorama_id": "KYyatjHZFHgI668LQ0aCGw",
+      "latitude": "46.3108635",
+      "longitude": "7.4773651",
+      "heading_deg": "90",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "2 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3108635,7.4773651,1503a,75y,90h,90t/data=!3m7!1e1!3m5!1sKYyatjHZFHgI668LQ0aCGw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DKYyatjHZFHgI668LQ0aCGw%26yaw%3D90!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Direct view of lower west-facing façade; upper floors outside vertical frame and part obscured by UI.",
+      "captured_at_utc": "2026-11-15T22:39:01+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:39:01+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "E"
+    },
+    {
+      "capture_id": "C005",
+      "building_ids": [
+        "B001",
+        "B002",
+        "B003"
+      ],
+      "screenshot": "evidence/C005.jpg",
+      "panorama_id": "BxhlTIVC5QVUoSaRaUc1UA",
+      "latitude": "46.3109544",
+      "longitude": "7.4773586",
+      "heading_deg": "180",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "3 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3109544,7.4773586,1504a,75y,180h,90t/data=!3m7!1e1!3m5!1sBxhlTIVC5QVUoSaRaUc1UA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DBxhlTIVC5QVUoSaRaUc1UA%26yaw%3D180!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Second road node looking south; west block east façade visible at right, two balcony blocks on left.",
+      "captured_at_utc": "2026-11-15T22:40:00+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:40:00+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "S"
+    },
+    {
+      "capture_id": "C007",
+      "building_ids": [
+        "B001",
+        "B002",
+        "B004",
+        "B005"
+      ],
+      "screenshot": "evidence/C007.jpg",
+      "panorama_id": "BxhlTIVC5QVUoSaRaUc1UA",
+      "latitude": "46.3109544",
+      "longitude": "7.4773586",
+      "heading_deg": "0",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "3 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3109544,7.4773586,1504a,75y,90t/data=!3m7!1e1!3m5!1sBxhlTIVC5QVUoSaRaUc1UA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DBxhlTIVC5QVUoSaRaUc1UA%26yaw%3D0!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Northward road view; chalet and stepped/triangular apartment building visible in distance. Those background IDs are visual references only.",
+      "captured_at_utc": "2026-11-15T22:40:17+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:40:17+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "N"
+    },
+    {
+      "capture_id": "C008",
+      "building_ids": [
+        "B002",
+        "B004",
+        "B005"
+      ],
+      "screenshot": "evidence/C008.jpg",
+      "panorama_id": "59cLIxer3joXbgy4RcH1Tg",
+      "latitude": "46.3110477",
+      "longitude": "7.4773434",
+      "heading_deg": "0",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "2 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3110477,7.4773434,1504a,75y,90t/data=!3m7!1e1!3m5!1s59cLIxer3joXbgy4RcH1Tg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D59cLIxer3joXbgy4RcH1Tg%26yaw%3D0!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Northern approach to Rawyl junction; corner of playground-side block and distant chalet/stepped building.",
+      "captured_at_utc": "2026-11-15T22:40:38+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:40:38+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "N"
+    },
+    {
+      "capture_id": "C010",
+      "building_ids": [
+        "B002",
+        "B007",
+        "B006"
+      ],
+      "screenshot": "evidence/C010.jpg",
+      "panorama_id": "A5A1u_S0ng2Ychdqve8y3g",
+      "latitude": "46.3113451",
+      "longitude": "7.4774126",
+      "heading_deg": "90",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "45 Rte du Rawyl - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3113451,7.4774126,1505a,75y,90h,90t/data=!3m7!1e1!3m5!1sA5A1u_S0ng2Ychdqve8y3g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DA5A1u_S0ng2Ychdqve8y3g%26yaw%3D90!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Eastward Rawyl view: timber cladding and balconies above stone ground-floor shopfront at right; brown-clad volume continues farther along road. Volume boundaries are visual references, not verified cadastral boundaries.",
+      "captured_at_utc": "2026-11-15T22:41:37+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:41:37+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "E"
+    },
+    {
+      "capture_id": "C011",
+      "building_ids": [
+        "B002",
+        "B007",
+        "B006"
+      ],
+      "screenshot": "evidence/C011.jpg",
+      "panorama_id": "-KMKXqYnQIvDR0w1T3dwOQ",
+      "latitude": "46.3113896",
+      "longitude": "7.4775231",
+      "heading_deg": "90",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "48 Rte du Rawyl - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3113896,7.4775231,1505a,75y,90h,90t/data=!3m7!1e1!3m5!1s-KMKXqYnQIvDR0w1T3dwOQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D-KMKXqYnQIvDR0w1T3dwOQ%26yaw%3D90!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Rawyl shopfront and wood/balcony façade; continuity with playground-side block is visually inferred, cadastral segmentation unverified.",
+      "captured_at_utc": "2026-11-15T22:42:06+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:42:06+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "E"
+    },
+    {
+      "capture_id": "C012",
+      "building_ids": [
+        "B002",
+        "B001"
+      ],
+      "screenshot": "evidence/C012.jpg",
+      "panorama_id": "-KMKXqYnQIvDR0w1T3dwOQ",
+      "latitude": "46.3113896",
+      "longitude": "7.4775231",
+      "heading_deg": "180",
+      "pitch_url_t": "112.5",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "48 Rte du Rawyl - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3113896,7.4775231,1505a,75y,180h,112.5t/data=!3m7!1e1!3m5!1s-KMKXqYnQIvDR0w1T3dwOQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-22.49775394586635%26panoid%3D-KMKXqYnQIvDR0w1T3dwOQ%26yaw%3D180!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Tilted view of the Rawyl façade and corner balconies; west block appears across access road at far right.",
+      "captured_at_utc": "2026-11-15T22:42:23+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:42:23+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "S"
+    },
+    {
+      "capture_id": "C026",
+      "building_ids": [
+        "B002",
+        "B003"
+      ],
+      "screenshot": "evidence/C026.jpg",
+      "panorama_id": "c42YlOA468Caesfjk9YLxA",
+      "latitude": "46.3107713",
+      "longitude": "7.4773701",
+      "heading_deg": "90",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "2 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3107713,7.4773701,1502a,75y,90h,90t/data=!3m7!1e1!3m5!1sc42YlOA468Caesfjk9YLxA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3Dc42YlOA468Caesfjk9YLxA%26yaw%3D90!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "East-facing gap: south end/corner of B002 at left and north end of B003 at right; Google blur hides part of left foreground.",
+      "captured_at_utc": "2026-11-15T22:49:16+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:49:16+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "E"
+    },
+    {
+      "capture_id": "C027",
+      "building_ids": [
+        "B002",
+        "B003"
+      ],
+      "screenshot": "evidence/C027.jpg",
+      "panorama_id": "c42YlOA468Caesfjk9YLxA",
+      "latitude": "46.3107713",
+      "longitude": "7.4773701",
+      "heading_deg": "90",
+      "pitch_url_t": "108.29",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "2 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3107713,7.4773701,1502a,75y,90h,108.29t/data=!3m7!1e1!3m5!1sc42YlOA468Caesfjk9YLxA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-18.294840394108192%26panoid%3Dc42YlOA468Caesfjk9YLxA%26yaw%3D90!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Tilted gap view showing upper balconies and end walls; red temporary roof-edge barrier visible on B003.",
+      "captured_at_utc": "2026-11-15T22:49:35+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:49:35+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "E"
+    },
+    {
+      "capture_id": "C029",
+      "building_ids": [
+        "B003",
+        "B002"
+      ],
+      "screenshot": "evidence/C029.jpg",
+      "panorama_id": "awx_7_jAbDeJRRZrPM_rtg",
+      "latitude": "46.3106806",
+      "longitude": "7.4773777",
+      "heading_deg": "90",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "5 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3106806,7.4773777,1502a,75y,90h,90t/data=!3m7!1e1!3m5!1sawx_7_jAbDeJRRZrPM_rtg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3Dawx_7_jAbDeJRRZrPM_rtg%26yaw%3D90!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Direct west-facing elevation of south balcony block, lower storeys and glazing; left edge blurred by Google.",
+      "captured_at_utc": "2026-11-15T22:50:10+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:50:10+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "E"
+    },
+    {
+      "capture_id": "C030",
+      "building_ids": [
+        "B003",
+        "B002"
+      ],
+      "screenshot": "evidence/C030.jpg",
+      "panorama_id": "awx_7_jAbDeJRRZrPM_rtg",
+      "latitude": "46.3106806",
+      "longitude": "7.4773777",
+      "heading_deg": "90",
+      "pitch_url_t": "109.9",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "5 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3106806,7.4773777,1502a,75y,90h,109.9t/data=!3m7!1e1!3m5!1sawx_7_jAbDeJRRZrPM_rtg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-19.90256832698654%26panoid%3Dawx_7_jAbDeJRRZrPM_rtg%26yaw%3D90!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Tilted west-facing elevation of B003, balconies and roof edge; small B002 balcony fragment at far left.",
+      "captured_at_utc": "2026-11-15T22:50:24+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:50:24+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "E"
+    },
+    {
+      "capture_id": "C041",
+      "building_ids": [
+        "B002",
+        "B007",
+        "B003",
+        "S002",
+        "S003",
+        "S004"
+      ],
+      "screenshot": "evidence/C041.jpg",
+      "panorama_id": "PRfZx6Pz9R05lo1p1-f7xQ",
+      "latitude": "46.3109398",
+      "longitude": "7.479384",
+      "heading_deg": "270",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "All. Katherine Mansfield - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3109398,7.479384,1500a,75y,270h,90t/data=!3m7!1e1!3m5!1sPRfZx6Pz9R05lo1p1-f7xQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DPRfZx6Pz9R05lo1p1-f7xQ%26yaw%3D270!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Westward view across minigolf/pond: principal balcony volumes in background and three small timber structures along paths. Small structures may be movable; identities are visual survey references.",
+      "captured_at_utc": "2026-11-15T22:55:31+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:55:31+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "W"
+    },
+    {
+      "capture_id": "C042",
+      "building_ids": [
+        "B002",
+        "B007",
+        "B005",
+        "B006"
+      ],
+      "screenshot": "evidence/C042.jpg",
+      "panorama_id": "PRfZx6Pz9R05lo1p1-f7xQ",
+      "latitude": "46.3109398",
+      "longitude": "7.479384",
+      "heading_deg": "305",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "All. Katherine Mansfield - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3109398,7.479384,1500a,75y,305h,90t/data=!3m7!1e1!3m5!1sPRfZx6Pz9R05lo1p1-f7xQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DPRfZx6Pz9R05lo1p1-f7xQ%26yaw%3D305!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Northwest overview: playground/pond-facing balcony blocks, stepped triangular building above, and brown balcony frontage beyond. Trees and UI obscure small parts.",
+      "captured_at_utc": "2026-11-15T22:55:55+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:55:55+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "NW"
+    },
+    {
+      "capture_id": "C051",
+      "building_ids": [
+        "B001",
+        "B002",
+        "B003"
+      ],
+      "screenshot": "evidence/C051.jpg",
+      "panorama_id": "zyR9aiuWxB-azGw46p-UAQ",
+      "latitude": "46.3113029",
+      "longitude": "7.4772992",
+      "heading_deg": "180",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "31 Rte du Rawyl - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3113029,7.4772992,1505a,75y,180h,90t/data=!3m7!1e1!3m5!1szyR9aiuWxB-azGw46p-UAQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DzyR9aiuWxB-azGw46p-UAQ%26yaw%3D180!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Southward access-road view from Rawyl: B002 balcony/street corner at left foreground, cream B001 low/tall volumes at right, and B003 farther down road. B015 is outside this saved frame.",
+      "captured_at_utc": "2026-11-15T22:59:55+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:59:55+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "S"
+    },
+    {
+      "capture_id": "C053",
+      "building_ids": [
+        "B002"
+      ],
+      "screenshot": "evidence/C053.jpg",
+      "panorama_id": "CIABIhDoUaWw8gTFqcQ2SclAYn-w",
+      "latitude": "46.3113637",
+      "longitude": "7.4779731",
+      "heading_deg": "140",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2025",
+      "provider": "Go360 (third-party exterior tour)",
+      "title": "Specialized Crans-Montana - Google Maps",
+      "streetview_url": "https://www.google.com/maps/place/Specialized+Crans-Montana/@46.3113637,7.4779731,3a,75y,140h,90t/data=!3m8!1e1!3m6!1sCIABIhDoUaWw8gTFqcQ2SclAYn-w!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-SvnIQPeS-3aXfxkAwnVO9aLOxWY_OWEOnfRhgkXWSGDSUXjg3fi55yd43ngX5adrKSleSlJ2onrecECNPgh4L00oCfEoWqdTrGWT8VHDFJE4zgIntj6nKPlgoZfj2abO_mmeHrahzRW-X%3Dw900-h600-k-no-pi0-ya9.329025268554688-ro0-fo100!7i8192!8i4096!4m9!3m8!1s0x478ee100431d5f8d:0x5e8cb79f126978a1!8m2!3d46.3112734!4d7.4777407!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11vm9h5q5s?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Go360 shop exterior panorama from the gallery, showing the glazed shopfront under timber canopy. Coordinates/heading are viewer-reported and physical calibration is unverified.",
+      "captured_at_utc": "2026-11-15T23:03:43+00:00",
+      "captured_at_europe_zurich": "2026-11-16T00:03:43+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "SE"
+    },
+    {
+      "capture_id": "C054",
+      "building_ids": [
+        "B002"
+      ],
+      "screenshot": "evidence/C054.jpg",
+      "panorama_id": "CIABIhDMqUw1a6bWl21RTOLcw8op",
+      "latitude": "46.3113657",
+      "longitude": "7.4779613",
+      "heading_deg": "180",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2025",
+      "provider": "Go360 (third-party exterior tour)",
+      "title": "Specialized Crans-Montana - Google Maps",
+      "streetview_url": "https://www.google.com/maps/place/Specialized+Crans-Montana/@46.3113657,7.4779613,3a,75y,180h,90t/data=!3m8!1e1!3m6!1sCIABIhDMqUw1a6bWl21RTOLcw8op!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_3Q_QKKNZ3U3DnvUu2vWY-pU8wZzYg_6HUFIh8ls5EeXW-xXili37C3joK0_7Zc1ATNRYTA701V5dOMO3Vilebm1no46Nkv67Kfkq7j7RF7Bod_0SrEp6MZvwIOcvhiuOzJgtkFQ7lD3pc%3Dw900-h600-k-no-pi0-ya358.7676239013672-ro0-fo100!7i8192!8i4096!4m9!3m8!1s0x478ee100431d5f8d:0x5e8cb79f126978a1!8m2!3d46.3112734!4d7.4777407!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11vm9h5q5s?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Go360 exterior entrance/glazing panorama. Reflections show the opposite retaining wall; reflected objects are not treated as direct façade coverage.",
+      "captured_at_utc": "2026-11-15T23:04:31+00:00",
+      "captured_at_europe_zurich": "2026-11-16T00:04:31+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "S"
+    },
+    {
+      "capture_id": "C055",
+      "building_ids": [
+        "B002"
+      ],
+      "screenshot": "evidence/C055.jpg",
+      "panorama_id": "ob1EjSVlnSg4pDY-PzEOIg",
+      "latitude": "46.3114352",
+      "longitude": "7.4776328",
+      "heading_deg": "143.79",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "48 Rte du Rawyl - Google Maps",
+      "streetview_url": "https://www.google.com/maps/place/Specialized+Crans-Montana/@46.3114352,7.4776328,1505a,75y,143.79h,90t/data=!3m7!1e1!3m5!1sob1EjSVlnSg4pDY-PzEOIg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3Dob1EjSVlnSg4pDY-PzEOIg%26yaw%3D143.79482!7i16384!8i8192!4m9!3m8!1s0x478ee100431d5f8d:0x5e8cb79f126978a1!8m2!3d46.3112734!4d7.4777407!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11vm9h5q5s?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Google road panorama reached from final shop-gallery tile: direct wood-clad shopfront and upper balcony façade, parked car obscures ground-floor strip.",
+      "captured_at_utc": "2026-11-15T23:05:06+00:00",
+      "captured_at_europe_zurich": "2026-11-16T00:05:06+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "SE"
+    }
+  ]
+}

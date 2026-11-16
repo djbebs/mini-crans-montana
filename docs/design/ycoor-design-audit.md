@@ -1,0 +1,38 @@
+# Audit de conception — pilote Ycoor du 16 novembre 2026
+
+Périmètre : six volumes intersectant le rectangle pilote de 100 × 100 m. Les poignées CAD ci-dessous sont des identifiants du fichier, pas des numéros cadastraux.
+
+| Volume CAD | Repère visuel | Décision | Preuves principales |
+| --- | --- | --- | --- |
+| 1A20B | B002, partie centrale | Correspondance visuelle retenue ; aucun détail ajouté | [C005](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/index.html#C005), C007, C008 |
+| 2329F | B002, raccord au coude | Correspondance visuelle retenue ; aucun détail ajouté | [C008](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/index.html#C008), C012, C051 |
+| 2355E | B002, extrémité sud | Correspondance visuelle retenue ; volets et entrée inventoriés pour la suite | [C003](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/index.html#C003), C026, C027 |
+| 2997D | B002, façade Rawyl | Partie commerciale documentée et interprétée en pixel-art | [C055](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/index.html#C055), C010, C011, C012, C053, C054 |
+| 2F7D6 | B003 | Correspondance visuelle retenue ; garde-corps rouges et vitrages inventoriés | [C029](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/index.html#C029), C030, C026 |
+| 26152 | B007 candidat | **Non résolu**, aucune correction de masse ou de statut | [C041](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/index.html#C041), C042 |
+
+## Première façade
+
+La face nord-ouest `2997D:wall:002` est cohérente avec les vues routières depuis Rawyl et la silhouette du volume à bardage, à côté du long volume voisin. La position et le cap du visualiseur C055 placent son axe près du centre de la partie détaillée ; C010 donne une seconde vue. Cette vérification sert à attribuer une face, pas à revendiquer une pose de caméra physiquement calibrée.
+
+Les observations indépendamment inspectées montrent : vitrage et entrée de boutique, bandeau d’avant-toit bois, bande de bardage et trois baies superposées, ainsi que trois niveaux de balcons sur la partie gauche. Les interfaces Google et certains cadrages masquent une partie du haut. Le pilote n’en déduit pas de nombre total d’étages ni de répétition sur les parties cachées.
+
+Les panoramas rapprochés Go360 de juin 2025 confirment des détails de vitrage et d’entrée. Leurs positions rapportées tombent près/dans le volume voisin sur le plan : **elles ne servent pas à géoréférencer les détails**. Le mur en pierre vu dans le verre est un reflet du mur opposé, pas un parement de la devanture.
+
+Les 19 éléments explicites sont répartis sur la partie commerciale documentée de la face, avec une profondeur et une taille artistiques. Chaque élément porte ses identifiants de captures. Les trois balcons sont placés individuellement ; les barreaux représentent une texture de garde-corps, sans nombre relevé. La surface entière de la face, d’environ 26 m, ne reçoit pas automatiquement le même traitement.
+
+## Écarts et priorités restantes
+
+1. Façade Rawyl : détails absents du niveau de représentation des volumes, traités dans ce pilote. Ce manque de détail ne signifie pas à lui seul que le volume est ancien.
+2. B003 : garde-corps rouges et rez vitré à positionner sur leurs faces avant toute modélisation.
+3. Volume 26152 : confirmer la correspondance B007 et le changement éventuel depuis la source de juin 2020, encore classée en construction.
+4. Autre face de B002 / 2355E : volets et entrée visibles, à compléter après un placement documenté.
+5. Façades non visibles, détails occultés et bâtiments hors du rectangle : restent en attente de preuves.
+
+## Fidélité géométrique et rendu
+
+Les coordonnées source E/N/H restent inchangées. Les plans de mise en page de façade peuvent regrouper des triangles dont les arrondis CAD produisent des écarts inférieurs à 5 mm ; l’erreur maximale de la face sélectionnée est d’environ 1,62 mm. Ce sont des plans d’implantation approximatifs, pas un aplatissement du bâtiment.
+
+Le contrôle des rectangles utilise les triangles réellement présents. Les trous ou recouvrements non valides sont refusés. Les triangles source exactement coïncidents ne sont affichés qu’une fois, afin d’éviter le scintillement de matériaux ; les 388 faces du fichier source sont conservées dans les données avec la correspondance vers les 351 triangles rendus.
+
+Les dates source géométriques, les libellés d’imagerie (2024 ou 2025) et les horodatages de capture d’écran (novembre 2026) sont conservés séparément. Aucune dimension de façade ni précision GPS physique n’est inventée comme mesure.

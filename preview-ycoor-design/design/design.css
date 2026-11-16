@@ -1,0 +1,68 @@
+.design-panel {
+  position: fixed;
+  z-index: 16;
+  top: 240px;
+  right: 16px;
+  bottom: 85px;
+  width: 380px;
+  max-width: calc(100vw - 32px);
+  display: flex;
+  flex-direction: column;
+  color: var(--ink, #29291f);
+  background: var(--paper, #f6f0dd);
+  border: 3px solid var(--edge, #1d221c);
+  box-shadow: 6px 6px 0 #1d221c;
+  font: 13px/1.4 'Pixelify Sans', monospace;
+}
+.design-panel[hidden], .design-panel [hidden] { display: none !important; }
+.design-header { display: flex; align-items: center; justify-content: space-between; flex: 0 0 auto; gap: 10px; padding: 8px 10px; border-bottom: 2px solid var(--edge, #1d221c); }
+.design-header h2 { margin: 0; font-size: 17px; line-height: 1.2; }
+.design-panel button { color: inherit; background: #fff8e9; border: 2px solid var(--edge, #1d221c); border-radius: 0; min-height: 34px; padding: 4px 8px; box-shadow: 2px 2px 0 var(--edge, #1d221c); font: inherit; cursor: pointer; }
+.design-panel button:active:not(:disabled) { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--edge, #1d221c); }
+.design-panel button:disabled { opacity: .5; cursor: default; }
+.design-panel .design-close { min-width: 34px; flex: 0 0 34px; padding: 0; font-size: 22px; }
+.design-body { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 10px; scrollbar-gutter: stable; overflow-wrap: anywhere; }
+.design-body p { margin: 0 0 8px; }
+.design-section { padding-top: 12px; margin-top: 12px; border-top: 2px solid var(--edge, #1d221c); }
+.design-section h3 { margin: 0 0 9px; font-size: 16px; line-height: 1.25; }
+.design-section h4 { margin: 0 0 8px; font-size: 15px; }
+.design-panel a { color: var(--blue, #2f5c9e); font-weight: 700; text-underline-offset: 2px; }
+.design-sources { margin: 0; padding-left: 25px; }
+.design-source { padding: 0 0 11px 3px; margin-bottom: 11px; border-bottom: 1px solid #b6ac93; }
+.design-source:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+.design-source > a { display: inline-block; margin-bottom: 5px; }
+.design-source > a + a { margin-left: 8px; }
+.design-note, .design-date, .design-id { font-size: 12px; }
+.design-date { color: #34476a; }
+.design-id { overflow-wrap: anywhere; }
+.design-status { padding: 6px; border: 1px solid #b6ac93; background: #e6ddc3; font-weight: 700; }
+.design-targets, .design-changes { margin: 0; padding: 0; list-style: none; }
+.design-target, .design-change { margin-bottom: 10px; padding: 8px; border: 1px solid #b6ac93; }
+.design-target p, .design-change p { margin: 4px 0 7px; }
+.design-target.design-selected { border: 2px solid var(--blue, #2f5c9e); padding: 7px; background: #e7e9e1; }
+.design-change-button { width: 100%; text-align: left; margin-bottom: 6px; }
+.design-change-button[aria-current='true'] { background: #e0e8ed; border-color: var(--blue, #2f5c9e); }
+.design-kind { padding: 5px 7px; background: #e0e8ed; border: 1px solid var(--edge, #1d221c); font-weight: 700; }
+.design-selected-detail { font-weight: 700; color: var(--blue, #2f5c9e); }
+.design-selection { scroll-margin-top: 10px; }
+.design-detail-list { padding-left: 20px; }
+.design-detail-disclosure { margin: 10px 0; padding: 8px; border: 1px solid #b6ac93; }
+.design-detail-disclosure > summary { font-weight: 700; cursor: pointer; }
+.design-figure { margin: 12px 0 6px; }
+.design-image { display: block; width: 100%; height: auto; object-fit: contain; box-sizing: border-box; background: #e6ddc3; border: 1px solid #b6ac93; }
+.design-figure figcaption { margin-top: 4px; font-size: 11px; }
+.design-metadata { display: grid; grid-template-columns: minmax(80px, .8fr) minmax(0, 1.2fr); gap: 5px 8px; margin: 10px 0; font-size: 12px; }
+.design-metadata dt { font-weight: 700; }
+.design-metadata dd { margin: 0; overflow-wrap: anywhere; }
+.design-capture-links, .design-documents { display: grid; gap: 8px; }
+.design-documents { margin-top: 14px; padding-top: 10px; border-top: 2px solid var(--edge, #1d221c); }
+.design-panel :is(button, a, summary):focus-visible, .design-selection:focus-visible { outline: 3px solid #bc7b00; outline-offset: 3px; }
+@media (max-width: 650px) {
+  .design-panel { top: auto; right: 8px; left: 8px; bottom: calc(77px + env(safe-area-inset-bottom, 0px)); width: auto; max-width: none; max-height: 60dvh; box-shadow: 4px 4px 0 #1d221c; }
+  .design-header { padding: 6px 8px; }
+  .design-body { padding: 8px; }
+  .design-panel button { min-height: 38px; }
+}
+@media (max-height: 600px) and (min-width: 651px) {
+  .design-panel { top: 16px; bottom: 75px; }
+}
