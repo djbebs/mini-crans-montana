@@ -1,0 +1,214 @@
+{
+  "buildingId": "2355E",
+  "match": {
+    "surveyIds": [
+      "B002"
+    ],
+    "status": "confirmed",
+    "evidenceIds": [
+      "C003",
+      "C026",
+      "C027"
+    ],
+    "reason": "Extrémité sud du groupe B002 : face devant la caméra C003 et bord du passage séparant B002 de B003 dans C026/C027. La position des caméras, le passage et la silhouette du volume concordent."
+  },
+  "observations": [
+    {
+      "observationId": "OBS-WEST-ENTRY-2024",
+      "buildingId": "2355E",
+      "faceId": "2355E:wall:001",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C003",
+        "C026",
+        "C027"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "high",
+      "statement": "C003 montre directement deux fenêtres basses occultées par des volets roulants rouge brun fermés, leurs bordures et appuis gris, ainsi qu’une entrée en retrait à gauche avec bois, ombre et jambage en pierre. C026/C027 situent le retour sud et le passage vers B003 ; ils ne documentent pas des fenêtres supplémentaires sur la face ouest.",
+      "limitations": [
+        "Le vitrage derrière les volets fermés n’est pas visible et n’est pas inventé.",
+        "Interface Google, voiture et balcons cachent d’autres zones. Aucun étage supérieur, nombre total de fenêtres ou motif répétitif n’est déduit.",
+        "Le rayon central est du visualiseur C003 rejoint la face ouest à u≈5,08 m ; celui de C026/C027 passe au-delà de son extrémité sud. Ce contrôle attribue le plan, sans calibration physique des pixels.",
+        "Positions, altitudes, dimensions et teintes sont des estimations artistiques. L’entrée en retrait est évoquée par des éléments minces posés sur le plan CAD ; aucun creusement ni escalier métrique n’est ajouté."
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "changeId": "WEST-SHUTTERS",
+      "buildingId": "2355E",
+      "faceId": "2355E:wall:001",
+      "status": "ready",
+      "title": "B002 · volets rouges et entrée côté accès",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "C003",
+        "C026",
+        "C027"
+      ],
+      "observationIds": [
+        "OBS-WEST-ENTRY-2024"
+      ],
+      "reason": "C003 documente les deux volets fermés du niveau bas et l’entrée à gauche sur la face ouest vérifiée ; C026/C027 recoupent la situation du passage au sud. Seuls ces éléments sont interprétés : aucun vitrage caché, étage ou balcon supplémentaire n’est déduit. Le retrait de l’entrée est évoqué sans modifier la géométrie source.",
+      "confidence": "medium",
+      "approximate": true,
+      "focus": {
+        "u": 5.0,
+        "height": 1503.0
+      },
+      "details": [
+        {
+          "id": "west-left-window-surround",
+          "kind": "panel",
+          "u": 2.8,
+          "v": 1503.1,
+          "width": 1.4,
+          "height": 1.55,
+          "color": "#aaa796",
+          "label": "Bordure grise de la fenêtre gauche occultée",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-left-closed-shutter",
+          "kind": "shutter",
+          "u": 2.8,
+          "v": 1503.1,
+          "width": 1.25,
+          "height": 1.25,
+          "color": "#87413b",
+          "label": "Volet roulant gauche fermé · rouge brun estimé",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-left-window-sill",
+          "kind": "trim",
+          "u": 2.8,
+          "v": 1502.4,
+          "width": 1.45,
+          "height": 0.09,
+          "color": "#777a6e",
+          "label": "Appui gris de la fenêtre gauche",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-right-window-surround",
+          "kind": "panel",
+          "u": 8.7,
+          "v": 1503.1,
+          "width": 1.75,
+          "height": 1.55,
+          "color": "#aaa796",
+          "label": "Bordure grise de la fenêtre droite occultée",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-right-closed-shutter",
+          "kind": "shutter",
+          "u": 8.7,
+          "v": 1503.1,
+          "width": 1.6,
+          "height": 1.25,
+          "color": "#87413b",
+          "label": "Volet roulant droit fermé · vitrage caché",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-right-window-sill",
+          "kind": "trim",
+          "u": 8.7,
+          "v": 1502.4,
+          "width": 1.8,
+          "height": 0.09,
+          "color": "#777a6e",
+          "label": "Appui gris de la fenêtre droite",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-entry-shadow",
+          "kind": "panel",
+          "u": 0.95,
+          "v": 1502.65,
+          "width": 1.45,
+          "height": 3.1,
+          "color": "#3e3b30",
+          "label": "Entrée en retrait · ombre interprétée sur le plan source",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-entry-door",
+          "kind": "door",
+          "u": 1.45,
+          "v": 1502.7,
+          "width": 0.38,
+          "height": 2.55,
+          "color": "#815632",
+          "label": "Partie bois visible de l’entrée · largeur non mesurée",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-entry-stone-jamb",
+          "kind": "trim",
+          "u": 0.35,
+          "v": 1502.65,
+          "width": 0.3,
+          "height": 3.1,
+          "color": "#77776a",
+          "label": "Jambage en pierre de l’entrée · motif simplifié",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-entry-timber-head",
+          "kind": "trim",
+          "u": 1.05,
+          "v": 1504.14,
+          "width": 1.2,
+          "height": 0.1,
+          "color": "#9b7044",
+          "label": "Bois visible sous le linteau de l’entrée",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C003"
+          ]
+        }
+      ]
+    }
+  ]
+}

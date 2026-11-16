@@ -67,12 +67,17 @@
       "surveyIds": [
         "B007"
       ],
-      "status": "unresolved",
+      "status": "confirmed",
       "evidenceIds": [
+        "C013",
+        "C014",
+        "C017",
+        "C018",
+        "C022",
         "C041",
         "C042"
       ],
-      "reason": "B007 est un candidat visuel pour ce volume allongé côté étang, mais la correspondance et son état actuel ne sont pas suffisamment établis. La source géométrique de juin 2020 le classe « Im Bau ». Aucune modification de volume n’est appliquée."
+      "reason": "B007 est une correspondance visuelle étayée : les vues successives C013/C014 sur Rawyl, C017/C018 au retour nord-est et C022 côté étang relient le front brun et les balcons, recoupés par C041/C042. Cette attribution architecturale n’établit pas une identité cadastrale. La source de juin 2020 conserve « Im Bau » ; l’apparence extérieure achevée dans les vues de juin 2024 ne mesure ni la forme finale ni l’état actuel en 2026."
     },
     {
       "buildingId": "2997D",
@@ -175,20 +180,45 @@
       ]
     },
     {
+      "observationId": "OBS-WEST-ENTRY-2024",
+      "buildingId": "2355E",
+      "faceId": "2355E:wall:001",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C003",
+        "C026",
+        "C027"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "high",
+      "statement": "C003 montre directement deux fenêtres basses occultées par des volets roulants rouge brun fermés, leurs bordures et appuis gris, ainsi qu’une entrée en retrait à gauche avec bois, ombre et jambage en pierre. C026/C027 situent le retour sud et le passage vers B003 ; ils ne documentent pas des fenêtres supplémentaires sur la face ouest.",
+      "limitations": [
+        "Le vitrage derrière les volets fermés n’est pas visible et n’est pas inventé.",
+        "Interface Google, voiture et balcons cachent d’autres zones. Aucun étage supérieur, nombre total de fenêtres ou motif répétitif n’est déduit.",
+        "Le rayon central est du visualiseur C003 rejoint la face ouest à u≈5,08 m ; celui de C026/C027 passe au-delà de son extrémité sud. Ce contrôle attribue le plan, sans calibration physique des pixels.",
+        "Positions, altitudes, dimensions et teintes sont des estimations artistiques. L’entrée en retrait est évoquée par des éléments minces posés sur le plan CAD ; aucun creusement ni escalier métrique n’est ajouté."
+      ]
+    },
+    {
       "observationId": "OBS-NORTH-UNRESOLVED",
       "buildingId": "26152",
       "faceId": null,
       "sourceId": "streetview",
       "captureIds": [
+        "C013",
+        "C014",
+        "C017",
+        "C018",
         "C041",
         "C042"
       ],
       "observedAt": "2024-06",
-      "confidence": "low",
-      "statement": "Les vues depuis le côté minigolf montrent des façades à balcons au-delà de l’étang. L’attribution précise au volume CAD 26152 reste à vérifier avant de corriger le statut de construction ou sa forme.",
+      "confidence": "high",
+      "statement": "Les vues de juin 2024 relient le bardage brun du Rawyl au retour et aux balcons sur l’étang. Les parties observées paraissent achevées ; aucun chantier n’y est visible. L’attribution visuelle B007 est étayée, tandis que la géométrie finale reste à vérifier.",
       "limitations": [
-        "Ces vues sont lointaines.",
-        "Aucune augmentation de hauteur ni suppression du statut source n’est déduite automatiquement."
+        "L’apparence extérieure datée ne prouve ni réception des travaux, ni occupation, ni état de novembre 2026.",
+        "La source officielle courante conserve un état de juin 2020 classé Im Bau : sa génération en 2026 ne date pas une nouvelle observation de cet objet.",
+        "Ni hauteur absolue du toit, ni nouvelle masse mesurée ne sont déduites des images. Le modèle source est conservé, avec vérification géométrique préalable avant ajout de fenêtres."
       ]
     }
   ],
@@ -1515,25 +1545,31 @@
       "buildingId": "26152",
       "faceId": null,
       "status": "unresolved",
-      "title": "Volume nord · statut « en construction »",
+      "title": "B007 · source de 2020, forme finale à vérifier",
       "discrepancy": "unresolved",
       "evidenceIds": [
+        "C013",
+        "C014",
+        "C017",
+        "C018",
+        "C022",
         "C041",
         "C042"
       ],
       "observationIds": [
         "OBS-NORTH-UNRESOLVED"
       ],
-      "reason": "Le statut provient de données sources de juin 2020. Les vues de 2024 ne suffisent pas encore à valider la correspondance et une modification précise du volume.",
-      "confidence": "low",
+      "reason": "La correspondance visuelle est confirmée et les vues de juin 2024 montrent une enveloppe achevée en apparence. Le statut Im Bau appartient à la source de juin 2020, toujours diffusée dans le flux courant. La correction de hauteur/toiture demande une géométrie datée et mesurée ; l’état en 2026 n’est pas vérifié.",
+      "confidence": "medium",
+      "geometryReviewRequired": true,
       "approximate": true,
       "details": []
     },
     {
       "changeId": "WEST-SHUTTERS",
       "buildingId": "2355E",
-      "faceId": null,
-      "status": "unresolved",
+      "faceId": "2355E:wall:001",
+      "status": "ready",
       "title": "B002 · volets rouges et entrée côté accès",
       "discrepancy": "missing_detail",
       "evidenceIds": [
@@ -1541,11 +1577,168 @@
         "C026",
         "C027"
       ],
-      "observationIds": [],
-      "reason": "Les volets et l’entrée sont visibles, mais cette autre face ne reçoit pas encore de détails. Les zones cachées par l’interface et les véhicules restent à vérifier.",
+      "observationIds": [
+        "OBS-WEST-ENTRY-2024"
+      ],
+      "reason": "C003 documente les deux volets fermés du niveau bas et l’entrée à gauche sur la face ouest vérifiée ; C026/C027 recoupent la situation du passage au sud. Seuls ces éléments sont interprétés : aucun vitrage caché, étage ou balcon supplémentaire n’est déduit. Le retrait de l’entrée est évoqué sans modifier la géométrie source.",
       "confidence": "medium",
       "approximate": true,
-      "details": []
+      "focus": {
+        "u": 5.0,
+        "height": 1503.0
+      },
+      "details": [
+        {
+          "id": "west-left-window-surround",
+          "kind": "panel",
+          "u": 2.8,
+          "v": 1503.1,
+          "width": 1.4,
+          "height": 1.55,
+          "color": "#aaa796",
+          "label": "Bordure grise de la fenêtre gauche occultée",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-left-closed-shutter",
+          "kind": "shutter",
+          "u": 2.8,
+          "v": 1503.1,
+          "width": 1.25,
+          "height": 1.25,
+          "color": "#87413b",
+          "label": "Volet roulant gauche fermé · rouge brun estimé",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-left-window-sill",
+          "kind": "trim",
+          "u": 2.8,
+          "v": 1502.4,
+          "width": 1.45,
+          "height": 0.09,
+          "color": "#777a6e",
+          "label": "Appui gris de la fenêtre gauche",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-right-window-surround",
+          "kind": "panel",
+          "u": 8.7,
+          "v": 1503.1,
+          "width": 1.75,
+          "height": 1.55,
+          "color": "#aaa796",
+          "label": "Bordure grise de la fenêtre droite occultée",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-right-closed-shutter",
+          "kind": "shutter",
+          "u": 8.7,
+          "v": 1503.1,
+          "width": 1.6,
+          "height": 1.25,
+          "color": "#87413b",
+          "label": "Volet roulant droit fermé · vitrage caché",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-right-window-sill",
+          "kind": "trim",
+          "u": 8.7,
+          "v": 1502.4,
+          "width": 1.8,
+          "height": 0.09,
+          "color": "#777a6e",
+          "label": "Appui gris de la fenêtre droite",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-entry-shadow",
+          "kind": "panel",
+          "u": 0.95,
+          "v": 1502.65,
+          "width": 1.45,
+          "height": 3.1,
+          "color": "#3e3b30",
+          "label": "Entrée en retrait · ombre interprétée sur le plan source",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-entry-door",
+          "kind": "door",
+          "u": 1.45,
+          "v": 1502.7,
+          "width": 0.38,
+          "height": 2.55,
+          "color": "#815632",
+          "label": "Partie bois visible de l’entrée · largeur non mesurée",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-entry-stone-jamb",
+          "kind": "trim",
+          "u": 0.35,
+          "v": 1502.65,
+          "width": 0.3,
+          "height": 3.1,
+          "color": "#77776a",
+          "label": "Jambage en pierre de l’entrée · motif simplifié",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C003"
+          ]
+        },
+        {
+          "id": "west-entry-timber-head",
+          "kind": "trim",
+          "u": 1.05,
+          "v": 1504.14,
+          "width": 1.2,
+          "height": 0.1,
+          "color": "#9b7044",
+          "label": "Bois visible sous le linteau de l’entrée",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C003"
+          ]
+        }
+      ]
     }
   ],
   "captures": [
@@ -1755,6 +1948,157 @@
       "notes": "Tilted view of the Rawyl façade and corner balconies; west block appears across access road at far right.",
       "captured_at_utc": "2026-11-15T22:42:23+00:00",
       "captured_at_europe_zurich": "2026-11-15T23:42:23+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "S"
+    },
+    {
+      "capture_id": "C013",
+      "building_ids": [
+        "B007",
+        "B006",
+        "B009"
+      ],
+      "screenshot": "evidence/C013.jpg",
+      "panorama_id": "BBLeXAc6jghpIAnHH5qzww",
+      "latitude": "46.3114805",
+      "longitude": "7.4777436",
+      "heading_deg": "90",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "50 Rte du Rawyl - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3114805,7.4777436,1505a,75y,90h,90t/data=!3m7!1e1!3m5!1sBBLeXAc6jghpIAnHH5qzww!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DBBLeXAc6jghpIAnHH5qzww%26yaw%3D90!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Rawyl brown-clad continuation of playground-side frontage; cadastral subdivision unverified.",
+      "captured_at_utc": "2026-11-15T22:43:03+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:43:03+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "E"
+    },
+    {
+      "capture_id": "C014",
+      "building_ids": [
+        "B007",
+        "B006",
+        "B009"
+      ],
+      "screenshot": "evidence/C014.jpg",
+      "panorama_id": "RHv7vfZv0DGukXCTvnXdZw",
+      "latitude": "46.3115255",
+      "longitude": "7.4778551",
+      "heading_deg": "90",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "50 Rte du Rawyl - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3115255,7.4778551,1505a,75y,90h,90t/data=!3m7!1e1!3m5!1sRHv7vfZv0DGukXCTvnXdZw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DRHv7vfZv0DGukXCTvnXdZw%26yaw%3D90!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Brown-clad Rawyl frontage near east end; separate survey volume from balcony block B002, legal building boundary unverified.",
+      "captured_at_utc": "2026-11-15T22:43:31+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:43:31+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "E"
+    },
+    {
+      "capture_id": "C017",
+      "building_ids": [
+        "B007"
+      ],
+      "screenshot": "evidence/C017.jpg",
+      "panorama_id": "F5LkD2GsMlvtEKX2wW7tqw",
+      "latitude": "46.3116556",
+      "longitude": "7.4781954",
+      "heading_deg": "180",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "54 Rte du Rawyl - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3116556,7.4781954,1505a,75y,180h,90t/data=!3m7!1e1!3m5!1sF5LkD2GsMlvtEKX2wW7tqw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DF5LkD2GsMlvtEKX2wW7tqw%26yaw%3D180!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Brown-clad volume at the pond-side end of Rawyl frontage; road-level windows and a narrow side/rear balcony edge visible. Google blur obscures a substantial right-hand ground-floor area.",
+      "captured_at_utc": "2026-11-15T22:45:29+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:45:29+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "S"
+    },
+    {
+      "capture_id": "C018",
+      "building_ids": [
+        "B007",
+        "B008"
+      ],
+      "screenshot": "evidence/C018.jpg",
+      "panorama_id": "F5LkD2GsMlvtEKX2wW7tqw",
+      "latitude": "46.3116556",
+      "longitude": "7.4781954",
+      "heading_deg": "135",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "54 Rte du Rawyl - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3116556,7.4781954,1505a,75y,135h,90t/data=!3m7!1e1!3m5!1sF5LkD2GsMlvtEKX2wW7tqw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DF5LkD2GsMlvtEKX2wW7tqw%26yaw%3D135!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Southeast view across pond with brown-clad side/rear balconies at right and low white pavilion at far left.",
+      "captured_at_utc": "2026-11-15T22:45:43+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:45:43+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "SE"
+    },
+    {
+      "capture_id": "C022",
+      "building_ids": [
+        "B002",
+        "B007"
+      ],
+      "screenshot": "evidence/C022.jpg",
+      "panorama_id": "CIHM0ogKEICAgICO25bBvwE",
+      "latitude": "46.3112586",
+      "longitude": "7.4784379",
+      "heading_deg": "180",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2022",
+      "provider": "Dany Gaule (third-party photo sphere)",
+      "title": "Dany Gaule - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3112586,7.4784379,3a,75y,180h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgICO25bBvwE!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_A23IrujoaLdrV9k4z50DBj8mowPURmzotdLL9Kj_CHm9gDUWlAj0wMRh97cADzpBvT1oh2s6pNsp3nImiOi4by01Fl0XyHBirGkOl4_xjBW7TbA5AR8D0xCm3QWPvC1wKKxnxyA%3Dw900-h600-k-no-pi0-ya180-ro0-fo100!7i8192!8i4096?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Third-party sphere: principal playground-facing façades and balcony volumes. Heading is Google viewer-reported only; true compass calibration unverified.",
+      "captured_at_utc": "2026-11-15T22:47:00+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:47:00+01:00",
       "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
       "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
       "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",

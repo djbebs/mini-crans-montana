@@ -14,12 +14,16 @@ function evidence() {
 }
 const read = path => JSON.parse(readFileSync(new URL(path, import.meta.url), 'utf8'));
 
-test('six geometry targets distinguish five supported visual matches from the unresolved volume', () => {
+test('six visual matches preserve the dated source and keep the northern mass correction unresolved', () => {
   const data = evidence();
   const geometry = read('../../assets/ycoor-dxf.json');
   assert.deepEqual(data.buildingMatches.map(match => match.buildingId).sort(), geometry.buildings.map(building => building.id).sort());
-  assert.equal(data.buildingMatches.filter(match => match.status === 'confirmed').length, 5);
-  assert.equal(data.buildingMatches.find(match => match.buildingId === '26152').status, 'unresolved');
+  assert.equal(data.buildingMatches.filter(match => match.status === 'confirmed').length, 6);
+  const north = data.buildingMatches.find(match => match.buildingId === '26152');
+  assert.equal(north.status, 'confirmed');
+  assert.deepEqual(north.sourceDate, { year: 2020, month: 6 });
+  assert.ok(north.evidenceIds.includes('C013') && north.evidenceIds.includes('C017') && north.evidenceIds.includes('C022'));
+  assert.equal(data.changes.find(change => change.changeId === 'NORTH-CONSTRUCTION-STATUS').status, 'unresolved');
   for (const match of data.buildingMatches) {
     assert.equal(match.sourceUuid, geometry.buildings.find(building => building.id === match.buildingId).sourceUuid);
   }
@@ -35,12 +39,12 @@ test('linked capture records retain every original field, including imagery and 
   assert.ok(data.observations.some(observation => observation.observedAt === '2025-06'));
 });
 
-test('both documented façades fit their actual source faces and leave unresolved changes absent', () => {
+test('three documented façades fit their actual source faces and leave unresolved changes absent', () => {
   const data = evidence();
   const scene = new THREE.Scene();
   const local = createLocalBuildings({ THREE, scene, data: read('../../assets/ycoor-dxf.json'), originHeight: 1497.1 });
   const ready = data.changes.filter(change => change.status === 'ready');
-  assert.equal(ready.length, 2);
+  assert.equal(ready.length, 3);
   assert.equal(ready[0].buildingId, '2997D');
   const face = local.faces.find(face => face.id === ready[0].faceId);
   assert.ok(face.facadeAllowed && !face.orientationAmbiguous);
@@ -56,6 +60,21 @@ test('both documented façades fit their actual source faces and leave unresolve
   assert.equal(south.details.filter(detail => detail.id.startsWith('south-ground-glass-')).length, 4);
   assert.ok(south.details.every(detail => detail.u + detail.width / 2 < 8.5), 'only the documented northern frontage is interpreted');
   assert.equal(ready[0].details.length, 19, 'the first authored façade remains intact');
+  assert.equal(south.details.length, 15, 'the second authored façade remains intact');
+  const west = ready.find(change => change.changeId === 'WEST-SHUTTERS');
+  assert.equal(west.buildingId, '2355E');
+  assert.equal(west.faceId, '2355E:wall:001');
+  const westFace = local.faces.find(face => face.id === west.faceId);
+  assert.ok(westFace.facadeAllowed && !westFace.orientationAmbiguous);
+  assert.ok(westFace.normal[0] < -.99 && westFace.normal[2] > .09);
+  const shutters = west.details.filter(detail => detail.kind === 'shutter');
+  assert.equal(shutters.length, 2, 'only the two unobscured lower closed shutters are authored');
+  assert.ok(shutters.every(detail => detail.evidenceIds.includes('C003')));
+  assert.equal(west.details.filter(detail => detail.kind === 'door').length, 1);
+  assert.ok(west.details.every(detail => detail.v + detail.height / 2 < 1505), 'no upper row is inferred behind the UI or balcony');
+  const westObservation = data.observations.find(observation => west.observationIds.includes(observation.observationId));
+  assert.equal(westObservation.faceId, west.faceId);
+  assert.deepEqual(westObservation.captureIds, ['C003', 'C026', 'C027']);
   assert.equal(additions.group.children.length, ready.reduce((sum, change) => sum + change.details.length, 0));
   for (const object of additions.group.children) assert.ok(ready.some(change => change.changeId === object.userData.changeId));
   additions.dispose(); local.dispose();

@@ -1,0 +1,1016 @@
+{
+  "schemaVersion": 1,
+  "scope": "Source wall planes of the six DXF volumes intersecting the Ycoor pilot; visual groups are not cadastral identities.",
+  "countMeaning": "Opening detail count means drawn window/door/shutter components, not unique physical windows. Full and remaining window totals are unknown. No face has a complete visual census.",
+  "summary": {
+    "buildingCount": 6,
+    "faceCount": 43,
+    "partialFaceCount": 3,
+    "notReviewedFaceCount": 36,
+    "blockedFaceCount": 4,
+    "detailCount": 44,
+    "openingDetailCount": 15,
+    "completeFaceCount": 0,
+    "totalWindowCount": null
+  },
+  "buildings": [
+    {
+      "buildingId": "1A20B",
+      "visualIds": [
+        "B002"
+      ],
+      "matchStatus": "confirmed",
+      "sourceDate": {
+        "year": 2016,
+        "month": 6
+      },
+      "sourceUuid": "A520AB12-913E-432E-86F2-6764D69D06FC",
+      "faceIds": [
+        "1A20B:wall:001",
+        "1A20B:wall:002",
+        "1A20B:wall:003"
+      ]
+    },
+    {
+      "buildingId": "2329F",
+      "visualIds": [
+        "B002"
+      ],
+      "matchStatus": "confirmed",
+      "sourceDate": {
+        "year": 2017,
+        "month": 6
+      },
+      "sourceUuid": "CB45CB94-DE09-431D-945E-3F65B90D396F",
+      "faceIds": [
+        "2329F:wall:001",
+        "2329F:wall:002",
+        "2329F:wall:003",
+        "2329F:wall:004",
+        "2329F:wall:005",
+        "2329F:wall:006",
+        "2329F:wall:007",
+        "2329F:wall:008",
+        "2329F:wall:009",
+        "2329F:wall:010",
+        "2329F:wall:011",
+        "2329F:wall:012",
+        "2329F:wall:013",
+        "2329F:wall:014",
+        "2329F:wall:015",
+        "2329F:wall:016",
+        "2329F:wall:017",
+        "2329F:wall:018"
+      ]
+    },
+    {
+      "buildingId": "2355E",
+      "visualIds": [
+        "B002"
+      ],
+      "matchStatus": "confirmed",
+      "sourceDate": {
+        "year": 2016,
+        "month": 6
+      },
+      "sourceUuid": "7817116D-3DA2-4BFC-8EB0-50E0EB8E60EC",
+      "faceIds": [
+        "2355E:wall:001",
+        "2355E:wall:002",
+        "2355E:wall:003"
+      ]
+    },
+    {
+      "buildingId": "26152",
+      "visualIds": [
+        "B007"
+      ],
+      "matchStatus": "confirmed",
+      "sourceDate": {
+        "year": 2020,
+        "month": 6
+      },
+      "sourceUuid": "AB8CB108-63CB-477F-86C3-5A211831E7BE",
+      "faceIds": [
+        "26152:wall:001",
+        "26152:wall:002",
+        "26152:wall:003",
+        "26152:wall:004"
+      ]
+    },
+    {
+      "buildingId": "2997D",
+      "visualIds": [
+        "B002"
+      ],
+      "matchStatus": "confirmed",
+      "sourceDate": {
+        "year": 2016,
+        "month": 6
+      },
+      "sourceUuid": "36BB0B0C-CCF7-474E-8416-6D815B86CB86",
+      "faceIds": [
+        "2997D:wall:001",
+        "2997D:wall:002",
+        "2997D:wall:003",
+        "2997D:wall:004",
+        "2997D:wall:005"
+      ]
+    },
+    {
+      "buildingId": "2F7D6",
+      "visualIds": [
+        "B003"
+      ],
+      "matchStatus": "confirmed",
+      "sourceDate": {
+        "year": 2016,
+        "month": 6
+      },
+      "sourceUuid": "CD779601-7BBB-42D4-A330-D40B5DAF7C6C",
+      "faceIds": [
+        "2F7D6:wall:001",
+        "2F7D6:wall:002",
+        "2F7D6:wall:003",
+        "2F7D6:wall:004",
+        "2F7D6:wall:005",
+        "2F7D6:wall:006",
+        "2F7D6:wall:007",
+        "2F7D6:wall:008",
+        "2F7D6:wall:009",
+        "2F7D6:wall:010"
+      ]
+    }
+  ],
+  "faces": [
+    {
+      "faceId": "1A20B:wall:001",
+      "buildingId": "1A20B",
+      "orientation": "Ouest",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C005",
+        "C007",
+        "C008"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "1A20B:wall:002",
+      "buildingId": "1A20B",
+      "orientation": "Sud",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C005",
+        "C007",
+        "C008"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "1A20B:wall:003",
+      "buildingId": "1A20B",
+      "orientation": "Est",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C005",
+        "C007",
+        "C008"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:001",
+      "buildingId": "2329F",
+      "orientation": "Ouest",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:002",
+      "buildingId": "2329F",
+      "orientation": "Ouest",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:003",
+      "buildingId": "2329F",
+      "orientation": "Nord-Ouest",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:004",
+      "buildingId": "2329F",
+      "orientation": "Nord-Ouest",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:005",
+      "buildingId": "2329F",
+      "orientation": "Nord",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:006",
+      "buildingId": "2329F",
+      "orientation": "Sud",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:007",
+      "buildingId": "2329F",
+      "orientation": "Sud",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:008",
+      "buildingId": "2329F",
+      "orientation": "Sud",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:009",
+      "buildingId": "2329F",
+      "orientation": "Sud",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:010",
+      "buildingId": "2329F",
+      "orientation": "Sud",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:011",
+      "buildingId": "2329F",
+      "orientation": "Nord-Est",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:012",
+      "buildingId": "2329F",
+      "orientation": "Sud-Est",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:013",
+      "buildingId": "2329F",
+      "orientation": "Sud-Est",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:014",
+      "buildingId": "2329F",
+      "orientation": "Sud-Est",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:015",
+      "buildingId": "2329F",
+      "orientation": "Nord-Est",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:016",
+      "buildingId": "2329F",
+      "orientation": "Est",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:017",
+      "buildingId": "2329F",
+      "orientation": "Est",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2329F:wall:018",
+      "buildingId": "2329F",
+      "orientation": "Est",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2355E:wall:001",
+      "buildingId": "2355E",
+      "orientation": "Ouest",
+      "status": "partial",
+      "detailCount": 10,
+      "openingDetailCount": 3,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [
+        "WEST-SHUTTERS"
+      ],
+      "evidenceIds": [
+        "C003",
+        "C026",
+        "C027"
+      ],
+      "candidateCaptureIds": [
+        "C003",
+        "C026",
+        "C027"
+      ],
+      "nextAction": "Comparer les parties non traitées avec les photos et relever les ouvertures encore visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2355E:wall:002",
+      "buildingId": "2355E",
+      "orientation": "Sud",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C003",
+        "C026",
+        "C027"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2355E:wall:003",
+      "buildingId": "2355E",
+      "orientation": "Est",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C003",
+        "C026",
+        "C027"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "26152:wall:001",
+      "buildingId": "26152",
+      "orientation": "Sud-Ouest",
+      "status": "geometry_review",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C013",
+        "C014",
+        "C017",
+        "C018",
+        "C022",
+        "C041",
+        "C042"
+      ],
+      "nextAction": "Comparer le volume final daté et mesuré avec la source de 2020 avant de placer des fenêtres.",
+      "canFocus": true
+    },
+    {
+      "faceId": "26152:wall:002",
+      "buildingId": "26152",
+      "orientation": "Nord-Ouest",
+      "status": "geometry_review",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C013",
+        "C014",
+        "C017",
+        "C018",
+        "C022",
+        "C041",
+        "C042"
+      ],
+      "nextAction": "Comparer le volume final daté et mesuré avec la source de 2020 avant de placer des fenêtres.",
+      "canFocus": true
+    },
+    {
+      "faceId": "26152:wall:003",
+      "buildingId": "26152",
+      "orientation": "Sud-Est",
+      "status": "geometry_review",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C013",
+        "C014",
+        "C017",
+        "C018",
+        "C022",
+        "C041",
+        "C042"
+      ],
+      "nextAction": "Comparer le volume final daté et mesuré avec la source de 2020 avant de placer des fenêtres.",
+      "canFocus": true
+    },
+    {
+      "faceId": "26152:wall:004",
+      "buildingId": "26152",
+      "orientation": "Nord-Est",
+      "status": "geometry_review",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C013",
+        "C014",
+        "C017",
+        "C018",
+        "C022",
+        "C041",
+        "C042"
+      ],
+      "nextAction": "Comparer le volume final daté et mesuré avec la source de 2020 avant de placer des fenêtres.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2997D:wall:001",
+      "buildingId": "2997D",
+      "orientation": "Sud-Ouest",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C010",
+        "C011",
+        "C012",
+        "C055",
+        "C053",
+        "C054"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2997D:wall:002",
+      "buildingId": "2997D",
+      "orientation": "Nord-Ouest",
+      "status": "partial",
+      "detailCount": 19,
+      "openingDetailCount": 6,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [
+        "RAWYL-FACADE-PILOT"
+      ],
+      "evidenceIds": [
+        "C055",
+        "C010",
+        "C011",
+        "C012",
+        "C053",
+        "C054"
+      ],
+      "candidateCaptureIds": [
+        "C010",
+        "C011",
+        "C012",
+        "C055",
+        "C053",
+        "C054"
+      ],
+      "nextAction": "Comparer les parties non traitées avec les photos et relever les ouvertures encore visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2997D:wall:003",
+      "buildingId": "2997D",
+      "orientation": "Nord-Ouest",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C010",
+        "C011",
+        "C012",
+        "C055",
+        "C053",
+        "C054"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2997D:wall:004",
+      "buildingId": "2997D",
+      "orientation": "Sud-Est",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C010",
+        "C011",
+        "C012",
+        "C055",
+        "C053",
+        "C054"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2997D:wall:005",
+      "buildingId": "2997D",
+      "orientation": "Nord-Est",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C010",
+        "C011",
+        "C012",
+        "C055",
+        "C053",
+        "C054"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2F7D6:wall:001",
+      "buildingId": "2F7D6",
+      "orientation": "Ouest",
+      "status": "partial",
+      "detailCount": 15,
+      "openingDetailCount": 6,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [
+        "SOUTH-RED-BALCONIES"
+      ],
+      "evidenceIds": [
+        "C030",
+        "C029",
+        "C026"
+      ],
+      "candidateCaptureIds": [
+        "C026",
+        "C029",
+        "C030"
+      ],
+      "nextAction": "Comparer les parties non traitées avec les photos et relever les ouvertures encore visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2F7D6:wall:002",
+      "buildingId": "2F7D6",
+      "orientation": "Ouest",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C026",
+        "C029",
+        "C030"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2F7D6:wall:003",
+      "buildingId": "2F7D6",
+      "orientation": "Nord",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C026",
+        "C029",
+        "C030"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2F7D6:wall:004",
+      "buildingId": "2F7D6",
+      "orientation": "Nord",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C026",
+        "C029",
+        "C030"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2F7D6:wall:005",
+      "buildingId": "2F7D6",
+      "orientation": "Sud",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C026",
+        "C029",
+        "C030"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2F7D6:wall:006",
+      "buildingId": "2F7D6",
+      "orientation": "Sud",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C026",
+        "C029",
+        "C030"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2F7D6:wall:007",
+      "buildingId": "2F7D6",
+      "orientation": "Sud-Est",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C026",
+        "C029",
+        "C030"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2F7D6:wall:008",
+      "buildingId": "2F7D6",
+      "orientation": "Est",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C026",
+        "C029",
+        "C030"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2F7D6:wall:009",
+      "buildingId": "2F7D6",
+      "orientation": "Est",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C026",
+        "C029",
+        "C030"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    },
+    {
+      "faceId": "2F7D6:wall:010",
+      "buildingId": "2F7D6",
+      "orientation": "Est",
+      "status": "not_reviewed",
+      "detailCount": 0,
+      "openingDetailCount": 0,
+      "totalWindowCount": null,
+      "complete": false,
+      "changeIds": [],
+      "evidenceIds": [],
+      "candidateCaptureIds": [
+        "C026",
+        "C029",
+        "C030"
+      ],
+      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "canFocus": true
+    }
+  ]
+}

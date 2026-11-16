@@ -73,3 +73,19 @@ test('unknown, unresolved and missing geometry targets leave the current focus u
   pilot.dispose();
   assert.equal(pilot.focusFacade(first.changeId), false);
 });
+
+test('inventory can inspect an unreviewed source plane without creating a documented façade', async t => {
+  const { pilot, focused } = await setup(t);
+  assert.equal(typeof pilot.focusFace, 'function');
+  const face = pilot.local.faces.find(face => face.buildingId === '2F7D6' && face.facadeAllowed && !face.orientationAmbiguous);
+  assert.equal(pilot.focusFace(face.id), true);
+  assert.equal(focused[0].face, face);
+  assert.equal(focused[0].change, undefined);
+  assert.equal(pilot.focusFace('missing-face'), false);
+  face.orientationAmbiguous = true;
+  assert.equal(pilot.focusFace(face.id), false);
+  assert.equal(focused.length, 1);
+  assert.equal(pilot.inventory.summary.faceCount, pilot.local.faces.length);
+  pilot.dispose();
+  assert.equal(pilot.focusFace(face.id), false);
+});

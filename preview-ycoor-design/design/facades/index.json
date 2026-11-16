@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "authoredAt": "2026-11-16",
+  "policy": "Source geometry unchanged. Visual IDs are not cadastral IDs. Documented visible façade zones only; positions, dimensions, colours, depths and rail/screen density are artistic estimates. No hidden-face extrapolation.",
+  "buildingOrder": [
+    "1A20B",
+    "2329F",
+    "2355E",
+    "26152",
+    "2997D",
+    "2F7D6"
+  ],
+  "observationOrder": [
+    "OBS-RAWYL-2024",
+    "OBS-SHOP-2025",
+    "OBS-SOUTH-2024",
+    "OBS-WEST-ENTRY-2024",
+    "OBS-NORTH-UNRESOLVED"
+  ],
+  "changeOrder": [
+    "RAWYL-FACADE-PILOT",
+    "SOUTH-RED-BALCONIES",
+    "NORTH-CONSTRUCTION-STATUS",
+    "WEST-SHUTTERS"
+  ]
+}

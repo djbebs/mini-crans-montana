@@ -1,0 +1,744 @@
+{
+  "buildingId": "2F7D6",
+  "match": {
+    "surveyIds": [
+      "B003"
+    ],
+    "status": "confirmed",
+    "evidenceIds": [
+      "C026",
+      "C029",
+      "C030"
+    ],
+    "reason": "Volume séparé au sud du passage : balcon à garde-corps rouges et rez vitré visibles dans C029/C030, côté opposé à B002 dans C026. Correspondance de silhouette et de situation, sans identité cadastrale revendiquée."
+  },
+  "observations": [
+    {
+      "observationId": "OBS-SOUTH-2024",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:001",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C030",
+        "C029",
+        "C026"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "high",
+      "statement": "La partie nord de la façade ouest de B003 montre quatre baies vitrées complètes dans un encadrement bois, trois garde-corps de balcon superposés rouge brun, des dalles claires et des claustras verticaux. Le vitrage derrière le balcon inférieur est partiellement visible.",
+      "limitations": [
+        "Quatre baies sont retenues dans le cadrage, pas comme total du bâtiment ; une baie supplémentaire est coupée à droite.",
+        "Véhicule, interface Google et cadrage masquent des parties de la façade. Les reflets et plantes ne sont pas modélisés.",
+        "La protection rouge au bord du toit paraît temporaire et n’est pas ajoutée comme ornement permanent.",
+        "La face ouest est vue en biais : le cap central 90° de C029/C030 pointe vers le retour nord, pas vers cette face. Attribution visuelle de contexte, sans calage photographique métrique.",
+        "Positions, altitudes des détails, dimensions, couleurs, profondeur et nombre de barreaux/lames sont des choix artistiques approximatifs. Aucun ajout sur le retour nord, le retrait supérieur ou le reste des 31 m de façade."
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "changeId": "SOUTH-RED-BALCONIES",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:001",
+      "status": "ready",
+      "title": "B003 · garde-corps rouges et rez vitré",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "C030",
+        "C029",
+        "C026"
+      ],
+      "observationIds": [
+        "OBS-SOUTH-2024"
+      ],
+      "reason": "Les vues C029/C030 documentent la partie nord du front ouest, recoupée par le contexte de C026. Quatre baies, le bois et trois balcons sont interprétés avec les mêmes éléments que le premier pilote ; aucune répétition sur le reste du bâtiment. Le cap central ne constitue pas un calage métrique de cette face oblique.",
+      "confidence": "medium",
+      "approximate": true,
+      "focus": {
+        "u": 4.1,
+        "height": 1505.0
+      },
+      "details": [
+        {
+          "id": "south-timber-surround",
+          "kind": "panel",
+          "u": 4.1,
+          "v": 1500.85,
+          "width": 7.5,
+          "height": 2.75,
+          "color": "#9b633e",
+          "label": "Encadrement bois du rez vitré · teinte et motifs simplifiés",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "C029",
+            "C030"
+          ]
+        },
+        {
+          "id": "south-ground-glass-1",
+          "kind": "window",
+          "u": 1.35,
+          "v": 1500.75,
+          "width": 1.5,
+          "height": 2.3,
+          "color": "#526971",
+          "label": "Première baie complète visible",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.11,
+            "color": "#a46d44"
+          },
+          "evidenceIds": [
+            "C029",
+            "C030"
+          ]
+        },
+        {
+          "id": "south-ground-glass-2",
+          "kind": "window",
+          "u": 3.15,
+          "v": 1500.75,
+          "width": 1.5,
+          "height": 2.3,
+          "color": "#526971",
+          "label": "Deuxième baie complète visible",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.11,
+            "color": "#a46d44"
+          },
+          "evidenceIds": [
+            "C029",
+            "C030"
+          ]
+        },
+        {
+          "id": "south-ground-glass-3",
+          "kind": "window",
+          "u": 4.95,
+          "v": 1500.75,
+          "width": 1.5,
+          "height": 2.3,
+          "color": "#526971",
+          "label": "Troisième baie complète visible",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.11,
+            "color": "#a46d44"
+          },
+          "evidenceIds": [
+            "C029",
+            "C030"
+          ]
+        },
+        {
+          "id": "south-ground-glass-4",
+          "kind": "window",
+          "u": 6.75,
+          "v": 1500.75,
+          "width": 1.5,
+          "height": 2.3,
+          "color": "#526971",
+          "label": "Quatrième baie complète visible · suite coupée dans la photo",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.11,
+            "color": "#a46d44"
+          },
+          "evidenceIds": [
+            "C029",
+            "C030"
+          ]
+        },
+        {
+          "id": "south-timber-lintel",
+          "kind": "beam",
+          "u": 4.1,
+          "v": 1502.12,
+          "width": 7.5,
+          "height": 0.55,
+          "color": "#8a5739",
+          "label": "Bandeau bois au-dessus des vitrages",
+          "depth": 0.04,
+          "offset": 0.025,
+          "evidenceIds": [
+            "C029",
+            "C030"
+          ]
+        },
+        {
+          "id": "south-lower-recess-glass-a",
+          "kind": "window",
+          "u": 2.8,
+          "v": 1503.65,
+          "width": 2.1,
+          "height": 2.1,
+          "color": "#435967",
+          "label": "Vitrage visible derrière le balcon inférieur · partie gauche",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.1,
+            "color": "#93613f"
+          },
+          "evidenceIds": [
+            "C029",
+            "C030"
+          ]
+        },
+        {
+          "id": "south-lower-recess-glass-b",
+          "kind": "window",
+          "u": 5.0,
+          "v": 1503.65,
+          "width": 2.1,
+          "height": 2.1,
+          "color": "#435967",
+          "label": "Vitrage visible derrière le balcon inférieur · partie droite",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.1,
+            "color": "#93613f"
+          },
+          "evidenceIds": [
+            "C029",
+            "C030"
+          ]
+        },
+        {
+          "id": "south-balcony-lower",
+          "kind": "balcony",
+          "u": 4.05,
+          "v": 1502.95,
+          "width": 7.8,
+          "height": 1.05,
+          "depth": 0.8,
+          "color": "#8e4135",
+          "floor": {
+            "height": 0.14,
+            "color": "#e5dfca"
+          },
+          "rails": [
+            {
+              "u": 0,
+              "v": 0.44,
+              "width": 7.8,
+              "height": 0.075,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#8e4135"
+            },
+            {
+              "u": 0,
+              "v": 0.15,
+              "width": 7.8,
+              "height": 0.065,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#8e4135"
+            },
+            {
+              "u": 0,
+              "v": -0.14,
+              "width": 7.8,
+              "height": 0.065,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#8e4135"
+            },
+            {
+              "u": 0,
+              "v": -0.43,
+              "width": 7.8,
+              "height": 0.065,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#8e4135"
+            },
+            {
+              "u": -3.7,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.98,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#794137"
+            },
+            {
+              "u": -1.25,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.98,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#794137"
+            },
+            {
+              "u": 1.25,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.98,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#794137"
+            },
+            {
+              "u": 3.7,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.98,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#794137"
+            }
+          ],
+          "evidenceIds": [
+            "C030",
+            "C029"
+          ],
+          "label": "Balcon visible · dalle claire, garde-corps rouge brun, barreaux symboliques"
+        },
+        {
+          "id": "south-balcony-middle",
+          "kind": "balcony",
+          "u": 4.05,
+          "v": 1505.75,
+          "width": 7.8,
+          "height": 1.05,
+          "depth": 0.8,
+          "color": "#8e4135",
+          "floor": {
+            "height": 0.14,
+            "color": "#e5dfca"
+          },
+          "rails": [
+            {
+              "u": 0,
+              "v": 0.44,
+              "width": 7.8,
+              "height": 0.075,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#8e4135"
+            },
+            {
+              "u": 0,
+              "v": 0.15,
+              "width": 7.8,
+              "height": 0.065,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#8e4135"
+            },
+            {
+              "u": 0,
+              "v": -0.14,
+              "width": 7.8,
+              "height": 0.065,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#8e4135"
+            },
+            {
+              "u": 0,
+              "v": -0.43,
+              "width": 7.8,
+              "height": 0.065,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#8e4135"
+            },
+            {
+              "u": -3.7,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.98,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#794137"
+            },
+            {
+              "u": -1.25,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.98,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#794137"
+            },
+            {
+              "u": 1.25,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.98,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#794137"
+            },
+            {
+              "u": 3.7,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.98,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#794137"
+            }
+          ],
+          "evidenceIds": [
+            "C030",
+            "C029"
+          ],
+          "label": "Balcon visible · dalle claire, garde-corps rouge brun, barreaux symboliques"
+        },
+        {
+          "id": "south-balcony-upper",
+          "kind": "balcony",
+          "u": 4.05,
+          "v": 1508.55,
+          "width": 7.8,
+          "height": 1.05,
+          "depth": 0.8,
+          "color": "#8e4135",
+          "floor": {
+            "height": 0.14,
+            "color": "#e5dfca"
+          },
+          "rails": [
+            {
+              "u": 0,
+              "v": 0.44,
+              "width": 7.8,
+              "height": 0.075,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#8e4135"
+            },
+            {
+              "u": 0,
+              "v": 0.15,
+              "width": 7.8,
+              "height": 0.065,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#8e4135"
+            },
+            {
+              "u": 0,
+              "v": -0.14,
+              "width": 7.8,
+              "height": 0.065,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#8e4135"
+            },
+            {
+              "u": 0,
+              "v": -0.43,
+              "width": 7.8,
+              "height": 0.065,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#8e4135"
+            },
+            {
+              "u": -3.7,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.98,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#794137"
+            },
+            {
+              "u": -1.25,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.98,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#794137"
+            },
+            {
+              "u": 1.25,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.98,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#794137"
+            },
+            {
+              "u": 3.7,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.98,
+              "depth": 0.07,
+              "offset": 0.71,
+              "color": "#794137"
+            }
+          ],
+          "evidenceIds": [
+            "C030",
+            "C029"
+          ],
+          "label": "Balcon visible · dalle claire, garde-corps rouge brun, barreaux symboliques"
+        },
+        {
+          "id": "south-screen-lower-north",
+          "kind": "balcony",
+          "u": 0.62,
+          "v": 1503.8,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra vertical visible · lames et profondeur interprétées",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "C030",
+            "C029"
+          ]
+        },
+        {
+          "id": "south-screen-lower-division",
+          "kind": "balcony",
+          "u": 7.3,
+          "v": 1503.8,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra vertical visible · lames et profondeur interprétées",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "C030",
+            "C029"
+          ]
+        },
+        {
+          "id": "south-screen-middle-division",
+          "kind": "balcony",
+          "u": 7.3,
+          "v": 1506.6,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra vertical visible · lames et profondeur interprétées",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "C030",
+            "C029"
+          ]
+        },
+        {
+          "id": "south-screen-upper-division",
+          "kind": "balcony",
+          "u": 7.3,
+          "v": 1509.4,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra vertical visible · lames et profondeur interprétées",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "C030",
+            "C029"
+          ]
+        }
+      ]
+    }
+  ]
+}

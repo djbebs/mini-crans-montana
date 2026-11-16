@@ -2,12 +2,13 @@
 
 [Ouvrir la prévisualisation](https://djbebs.github.io/mini-crans-montana/preview-ycoor-design/) · [Version stable](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/) · [Relevé original](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/)
 
-Cette prévisualisation réunit six volumes DXF locaux, des sources cliquables avec leurs correspondances et écarts, et deux parties de façades conçues à partir des observations Street View : Rawyl et B003. Elle contient 34 éléments explicites, dont 15 pour la deuxième façade.
+Cette base de travail alimente la [P0.6.7](../crans-montana-p067/), accessible depuis l’accueil. Elle réunit six volumes DXF locaux et trois parties de façades documentées : Rawyl (19 éléments), B003 (15) et la face ouest basse de B002 / 2355E (10), soit 44 éléments explicites.
 
 ## Utilisation
 
 - **Détails documentés : ON/OFF** compare l’interprétation au volume local sans ajouts.
-- **Façade à voir** choisit Rawyl ou B003 et cadre directement la partie documentée. Le bouton **Voir la façade choisie** permet de la retrouver après un déplacement. La dernière façade ajoutée s’ouvre au démarrage.
+- **Façade à voir** choisit l’une des trois parties documentées et la cadre directement. Le bouton **Voir la façade choisie** permet de la retrouver après un déplacement. La dernière façade ajoutée s’ouvre au démarrage.
+- **Inventaire des bâtiments** présente les six volumes et tous leurs plans de murs sources. Chaque face peut être cadrée et les preuves des détails appliqués restent accessibles. Les exports JSON/CSV préparent le travail par lots.
 - Cliquer un détail ouvre **Pourquoi ce détail ?**, avec ses photographies, dates et estimations.
 - **Sources et preuves** présente les sept entrées par priorité, les six correspondances géométriques et la liste des écarts à examiner.
 - Le bouton **DXF / Flux** compare les volumes locaux au service swisstopo ; les ajouts sont masqués pendant l’affichage du flux.
@@ -23,14 +24,16 @@ Les 19 éléments de la façade pilote sont des **interprétations pixel-art** :
 
 La deuxième façade, B003 / `2F7D6:wall:001`, reprend quatre baies complètes visibles, un encadrement bois, le vitrage partiel derrière le balcon inférieur, trois garde-corps et leurs dalles, ainsi que des claustras verticaux. Ses 15 éléments occupent environ les huit premiers mètres du front ouest, comme choix de composition approximatif. Les altitudes des détails et les densités de barreaux/lames ne sont pas mesurées. La protection rouge temporaire au bord du toit, les reflets et le reste du bâtiment ne sont pas ajoutés. Le cap central des captures vise le retour nord : la face ouest est attribuée par son contexte visible en biais, sans calibration métrique.
 
-B002 est un groupe visuel couvrant plusieurs volumes CAD. Les correspondances ne valent pas identification cadastrale. Le volume 26152, encore classé `Im Bau` par la source, conserve une attribution visuelle **à vérifier** ; sa hauteur et son statut ne sont pas modifiés. Voir le [registre de preuves](design/design-evidence.json), la [provenance DXF](assets/dxf-provenance.json) et l’[audit de conception](../docs/design/ycoor-design-audit.md).
+B002 est un groupe visuel couvrant plusieurs volumes CAD. Les correspondances ne valent pas identification cadastrale. La vérification multi-vues de 26152 étaye désormais B007 : les parties observées paraissent achevées en juin 2024, alors que le flux courant conserve une source de juin 2020 classée `Im Bau`. La forme finale, les hauteurs et l’état en 2026 ne sont pas vérifiés ; ses faces restent en attente d’une vérification géométrique avant ajout de fenêtres. Voir la [vérification détaillée](../docs/design/26152-verification.md), le [registre de preuves](design/design-evidence.json), la [provenance DXF](assets/dxf-provenance.json) et l’[audit de conception](../docs/design/ycoor-design-audit.md).
 
 ## Développement et contrôles
 
-Le cycle court pour les prochaines façades : **choisir une face documentée → réutiliser les éléments existants → examiner l’aperçu et corriger**. Les liens, dates, identifiants et contrôles de placement sont repris automatiquement. Seuls les nouveaux détails et les incertitudes nécessitent une nouvelle inspection. La source d’édition reste `tools/author-ycoor-evidence.py` ; une exécution régénère le registre, puis `npm test` contrôle les changements. Il n’est pas nécessaire de refaire le relevé original ou d’importer les volumes à chaque façade.
+Le cycle court : **choisir une face documentée → modifier le fichier du bâtiment → examiner l’aperçu**. Les six fichiers de `design/facades/` contiennent les correspondances, observations et détails explicites. `index.json` donne leur ordre. Les métadonnées originales sont reprises automatiquement. `python tools/update-ycoor.py` reconstruit les preuves, contrôle les placements, exporte l’inventaire et met à jour la P0.6.7 ; `--check` vérifie les sorties sans écrire. Voir le [guide du secteur](../docs/design/facade-workflow.md).
+
+L’inventaire couvre 43 plans de murs du modèle, pas 43 façades physiques complètes. Trois sont partiellement dessinés ; aucun n’a un relevé exhaustif validé. Le nombre total de fenêtres et le reste à dessiner sont inconnus. Le comptage des composants dessinés (fenêtres, vitrages, portes ou volets) ne vaut pas dénombrement de fenêtres physiques uniques.
 
 Dans `preview-ycoor-design/design/` : `npm ci`, puis `npm test`.
 
 Les tests couvrent les coordonnées, le changement d’origine verticale, les normales et groupes de faces, les arrondis CAD proches de la verticale, les doubles triangles de toiture, les détails explicitement placés, le refus des trous/recouvrements, les références photographiques, la sélection et la libération des ressources. Les géométries et preuves d’origine restent immuables.
 
-`tools/package-ycoor-dxf.py` prépare les petits fichiers à partir des archives et analyses locales de comparaison ; `--fetch-terrain` renouvelle explicitement l’instantané des neuf hauteurs. Ces analyses et archives sont des prérequis locaux, hors dépôt. `tools/author-ycoor-evidence.py` reproduit le registre des estimations explicites à partir des captures originales déjà publiées. Aucun de ces outils ne génère de fenêtres sur des faces inconnues.
+`tools/package-ycoor-dxf.py` prépare les petits fichiers à partir des archives et analyses locales de comparaison ; `--fetch-terrain` renouvelle explicitement l’instantané des neuf hauteurs. Ces analyses et archives sont des prérequis locaux, hors dépôt. `tools/author-ycoor-evidence.py` reste un raccourci compatible vers le constructeur du registre. Aucun outil ne génère de fenêtres sur des faces inconnues.

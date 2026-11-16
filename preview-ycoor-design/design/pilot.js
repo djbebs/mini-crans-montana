@@ -2,6 +2,7 @@ import { createLocalBuildings } from './local-buildings.js';
 import { createDesignEnhancements } from './design-enhancements.js';
 import { createDesignPanel } from './design-panel.js';
 import { assetUrl, validateDesignEvidence } from './design-model.js';
+import { buildFacadeInventory } from './coverage-model.js';
 
 /** Pick the nearest visible pilot surface, respecting foreground scene objects. */
 export function pickPilotGeometry(raycaster, { local, additions, maxDistance = Infinity }) {
@@ -21,7 +22,7 @@ async function readJson(base, path) {
 
 /** Coordinate the independent local source and its optional evidence additions. */
 export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, surveyBaseUrl,
-  originHeight, onTerrainSnapshot, onStatus, onPanelOpen, onPanelClose, onFocus }) {
+  originHeight, onTerrainSnapshot, onStatus, onPanelOpen, onPanelClose, onPanelViewChange, onFocus }) {
   const [data, snapshot] = await Promise.all([
     readJson(dataBaseUrl, 'ycoor-dxf.json'),
     readJson(dataBaseUrl, 'terrain-snapshot.json').catch(error => {
@@ -34,19 +35,20 @@ export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, su
   const local = createLocalBuildings({ THREE, scene, data, originHeight: datum,
     onSelect: building => {
       if (!panel) return;
-      onPanelOpen?.();
       panel.showBuilding(building.id);
+      onPanelOpen?.();
     },
   });
-  let panel = null, additions = null, evidence = null, visible = true, enabled = true, disposed = false;
+  let panel = null, additions = null, evidence = null, inventory = null, visible = true, enabled = true, disposed = false;
   const status = { buildings: local.buildings.length, changes: 0, details: 0, designReady: false, error: null };
   try {
     evidence = validateDesignEvidence(await readJson(designBaseUrl, 'design-evidence.json'));
+    inventory = buildFacadeInventory({ buildings: local.buildings, faces: local.faces, evidence });
     additions = createDesignEnhancements({ THREE, scene, changes: evidence.changes, faces: local.faces,
       originHeight: datum,
       onSelect: hit => {
-        onPanelOpen?.();
         panel?.showChange(hit.changeId, hit.detailId);
+        onPanelOpen?.();
       },
     });
     status.changes = evidence.changes.filter(change => change.status === 'ready').length;
@@ -54,8 +56,10 @@ export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, su
     status.designReady = true;
     additions.setEnabled(true);
     try {
-      panel = await createDesignPanel({ assetBaseUrl: designBaseUrl, surveyBaseUrl, evidence,
+      panel = await createDesignPanel({ assetBaseUrl: designBaseUrl, surveyBaseUrl, evidence, inventory,
         onFocusBuilding: id => onFocus?.({ building: local.buildings.find(building => building.id === id) }),
+        onFocusFace: focusFace, onFocusChange: focusFacade,
+        onViewChange: onPanelViewChange,
         onClose: () => onPanelClose?.(),
       });
       document.body.append(panel.element);
@@ -82,11 +86,20 @@ export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, su
     onFocus?.({ building, face, change });
     return true;
   }
+  function focusFace(faceId) {
+    if (disposed) return false;
+    const face = local.faces.find(face => face.id === faceId);
+    const building = face && local.buildings.find(building => building.id === face.buildingId);
+    if (!building || face.facadeAllowed === false || face.orientationAmbiguous) return false;
+    onFocus?.({ building, face });
+    return true;
+  }
   return {
-    local, data, evidence, status,
+    local, data, evidence, inventory, status,
     get designEnabled() { return visible && enabled && status.designReady; },
     get panelOpen() { return Boolean(panel && !panel.element.hidden); },
     get panelReady() { return Boolean(panel); },
+    get panelView() { return panel?.view ?? null; },
     setVisible(value) {
       if (disposed) return;
       visible = Boolean(value);
@@ -105,10 +118,15 @@ export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, su
     },
     openSources(value = true) {
       if (disposed || !panel) return;
-      if (value) onPanelOpen?.();
       if (value && panel.showSources) panel.showSources();
       else panel.setOpen(value);
+      if (value) onPanelOpen?.();
     },
+    openCoverage() {
+      if (disposed || !panel) return;
+      panel.showCoverage(); onPanelOpen?.();
+    },
+    focusFace,
     focusFacade,
     focusFirstFacade: () => focusFacade(),
     pick(raycaster, { maxDistance = Infinity } = {}) {

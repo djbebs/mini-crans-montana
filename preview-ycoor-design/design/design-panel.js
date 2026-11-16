@@ -1,4 +1,5 @@
 import { assetUrl, checkedSourceUrl, isStreetViewUrl, orderedSources, validateDesignEvidence } from './design-model.js';
+import { createCoverageSection } from './coverage-section.js';
 
 const labels = { missing_detail: 'Détail absent du volume', dated_change_supported: 'Évolution datée étayée', unresolved: 'À vérifier' };
 const confidenceLabels = { high: 'élevée', medium: 'moyenne', low: 'faible', unknown: 'non évaluée' };
@@ -25,7 +26,7 @@ const sourceDate = date => {
 };
 
 /** An optional, independent evidence drawer. Opening this never enables design geometry. */
-export async function createDesignPanel({ assetBaseUrl, surveyBaseUrl, evidence, onFocusBuilding, onClose, onStatus }) {
+export async function createDesignPanel({ assetBaseUrl, surveyBaseUrl, evidence, inventory, onFocusBuilding, onFocusFace, onFocusChange, onViewChange, onClose, onStatus }) {
   const response = await fetch(assetUrl('design-inputs.json', assetBaseUrl));
   if (!response.ok) throw new Error(`Sources de conception indisponibles (${response.status}).`);
   const sources = orderedSources(await response.json());
@@ -43,6 +44,7 @@ export async function createDesignPanel({ assetBaseUrl, surveyBaseUrl, evidence,
   let disposed = false;
   let previousFocus = null;
   let selectedBuilding = null;
+  let view = 'sources';
   const panel = node('section', 'design-panel');
   panel.id = 'design-panel';
   panel.hidden = true;
@@ -135,10 +137,30 @@ export async function createDesignPanel({ assetBaseUrl, surveyBaseUrl, evidence,
   const documents = node('nav', 'design-documents');
   documents.setAttribute('aria-label', 'Documents originaux du relevé');
   documents.append(link('Galerie originale ↗', galleryUrl), link('Index CSV original ↗', csvUrl));
-  body.append(intro, note, status, sourceSection, targetsSection, discrepancies, firstFace, selection, documents);
+  const readyChanges = new Set(data.changes.filter(change => change.status === 'ready').map(change => change.changeId));
+  const coverageInventory = inventory ? { ...inventory, faces: inventory.faces.map(face => ({
+    ...face, changeIds: face.changeIds.filter(id => readyChanges.has(id)),
+  })) } : null;
+  const coverage = createCoverageSection({
+    inventory: coverageInventory, assetBaseUrl,
+    onFocusFace: typeof onFocusFace === 'function' ? id => { if (onFocusFace(id) === true) closePanel(); } : undefined,
+    onShowChange: id => { onFocusChange?.(id); showChange(id); },
+  });
+  const normalContent = [intro, note, sourceSection, targetsSection, discrepancies, firstFace, selection, documents];
+  coverage.hidden = true;
+  body.append(intro, note, status, coverage, sourceSection, targetsSection, discrepancies, firstFace, selection, documents);
   panel.append(header, body);
 
   function announce(message) { status.textContent = message; onStatus?.(message); }
+  function setView(nextView) {
+    view = nextView;
+    const isCoverage = view === 'coverage';
+    for (const element of normalContent) element.hidden = isCoverage;
+    coverage.hidden = !isCoverage;
+    heading.textContent = isCoverage ? 'Ycoor · couverture des faces' : 'Conception · sources & preuves';
+    close.setAttribute('aria-label', isCoverage ? 'Fermer l’inventaire des faces' : 'Fermer les sources et preuves');
+    onViewChange?.(view);
+  }
   function setOpen(value) {
     if (disposed) return;
     const open = Boolean(value);
@@ -223,6 +245,7 @@ export async function createDesignPanel({ assetBaseUrl, surveyBaseUrl, evidence,
   }
   function showBuilding(id) {
     if (disposed) return;
+    setView('evidence');
     selectedBuilding = id;
     for (const [buildingId, row] of targetRows) row.classList.toggle('design-selected', buildingId === id);
     const change = changes.find(item => item.buildingId === id && item.status === 'ready') ?? changes.find(item => item.buildingId === id);
@@ -234,6 +257,7 @@ export async function createDesignPanel({ assetBaseUrl, surveyBaseUrl, evidence,
   }
   function showChange(id, detailId) {
     if (disposed) return;
+    setView('evidence');
     const change = changes.find(item => item.changeId === id);
     if (!change) { announce('Ce détail ne figure pas dans le registre.'); setOpen(true); return; }
     selectedBuilding = change.buildingId;
@@ -245,9 +269,17 @@ export async function createDesignPanel({ assetBaseUrl, surveyBaseUrl, evidence,
   }
   function showSources() {
     if (disposed) return;
+    setView('sources');
     setOpen(true);
     body.scrollTop = 0;
     announce(`${sources.length} entrées de conception · sources par priorité.`);
+  }
+  function showCoverage() {
+    if (disposed) return;
+    setView('coverage');
+    setOpen(true);
+    body.scrollTop = 0;
+    announce(inventory ? `${inventory.summary.buildingCount} volumes · ${inventory.summary.faceCount} faces sources · aucune façade déclarée terminée.` : 'Inventaire des faces indisponible.');
   }
   listen(close, 'click', closePanel);
   listen(document, 'keydown', event => {
@@ -256,7 +288,8 @@ export async function createDesignPanel({ assetBaseUrl, surveyBaseUrl, evidence,
   renderSelection(changes.find(change => change.status === 'ready') ?? changes[0]);
   status.textContent = `${data.buildingMatches.length} volumes · ${changes.filter(change => change.status === 'ready').length} proposition(s) documentée(s).`;
   return {
-    element: panel, showBuilding, showChange, showSources, setOpen,
+    element: panel, showBuilding, showChange, showSources, showCoverage, setOpen,
+    get view() { return view; },
     dispose() {
       if (disposed) return;
       disposed = true;

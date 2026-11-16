@@ -1,0 +1,70 @@
+{
+  "buildingId": "26152",
+  "match": {
+    "surveyIds": [
+      "B007"
+    ],
+    "status": "confirmed",
+    "evidenceIds": [
+      "C013",
+      "C014",
+      "C017",
+      "C018",
+      "C022",
+      "C041",
+      "C042"
+    ],
+    "reason": "B007 est une correspondance visuelle étayée : les vues successives C013/C014 sur Rawyl, C017/C018 au retour nord-est et C022 côté étang relient le front brun et les balcons, recoupés par C041/C042. Cette attribution architecturale n’établit pas une identité cadastrale. La source de juin 2020 conserve « Im Bau » ; l’apparence extérieure achevée dans les vues de juin 2024 ne mesure ni la forme finale ni l’état actuel en 2026."
+  },
+  "observations": [
+    {
+      "observationId": "OBS-NORTH-UNRESOLVED",
+      "buildingId": "26152",
+      "faceId": null,
+      "sourceId": "streetview",
+      "captureIds": [
+        "C013",
+        "C014",
+        "C017",
+        "C018",
+        "C041",
+        "C042"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "high",
+      "statement": "Les vues de juin 2024 relient le bardage brun du Rawyl au retour et aux balcons sur l’étang. Les parties observées paraissent achevées ; aucun chantier n’y est visible. L’attribution visuelle B007 est étayée, tandis que la géométrie finale reste à vérifier.",
+      "limitations": [
+        "L’apparence extérieure datée ne prouve ni réception des travaux, ni occupation, ni état de novembre 2026.",
+        "La source officielle courante conserve un état de juin 2020 classé Im Bau : sa génération en 2026 ne date pas une nouvelle observation de cet objet.",
+        "Ni hauteur absolue du toit, ni nouvelle masse mesurée ne sont déduites des images. Le modèle source est conservé, avec vérification géométrique préalable avant ajout de fenêtres."
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "changeId": "NORTH-CONSTRUCTION-STATUS",
+      "buildingId": "26152",
+      "faceId": null,
+      "status": "unresolved",
+      "title": "B007 · source de 2020, forme finale à vérifier",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C013",
+        "C014",
+        "C017",
+        "C018",
+        "C022",
+        "C041",
+        "C042"
+      ],
+      "observationIds": [
+        "OBS-NORTH-UNRESOLVED"
+      ],
+      "reason": "La correspondance visuelle est confirmée et les vues de juin 2024 montrent une enveloppe achevée en apparence. Le statut Im Bau appartient à la source de juin 2020, toujours diffusée dans le flux courant. La correction de hauteur/toiture demande une géométrie datée et mesurée ; l’état en 2026 n’est pas vérifié.",
+      "confidence": "medium",
+      "geometryReviewRequired": true,
+      "approximate": true,
+      "details": []
+    }
+  ]
+}

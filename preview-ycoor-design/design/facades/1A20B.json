@@ -1,0 +1,17 @@
+{
+  "buildingId": "1A20B",
+  "match": {
+    "surveyIds": [
+      "B002"
+    ],
+    "status": "confirmed",
+    "evidenceIds": [
+      "C005",
+      "C007",
+      "C008"
+    ],
+    "reason": "Partie centrale du groupe B002 : continuité des volumes le long de la route, succession des balcons et position entre les vues au nord et au sud. Correspondance visuelle multi-vues ; identité cadastrale non établie."
+  },
+  "observations": [],
+  "changes": []
+}

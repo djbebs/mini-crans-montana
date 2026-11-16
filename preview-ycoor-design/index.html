@@ -54,6 +54,7 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:2px 
 <section id="place" class="box"><b>Crans-Montana</b><small>Ycoor · atelier de conception</small><div>Aperçu · DXF et façades documentées</div>
 <div id="design-controls" aria-label="Conception documentée">
  <button id="design-open" type="button" aria-controls="design-panel" aria-expanded="false" disabled>Sources et preuves</button>
+ <button id="design-coverage" type="button" aria-controls="design-panel" aria-expanded="false" disabled>Inventaire des bâtiments</button>
  <button id="design-toggle" type="button" aria-pressed="false" disabled>Détails documentés : chargement…</button>
  <label for="design-facade">Façade à voir</label>
  <select id="design-facade" disabled><option>Aucune façade disponible</option></select>
@@ -112,7 +113,7 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:2px 
 <p><b>Couche « Jeux photo » :</b> cinq maquettes 3D approuvées par l’utilisateur : grande structure avec tunnel, toboggan tubulaire courbe, petite structure bleue et rouge, jeux de cordes et banc. Placement déterministe approximatif à l’intérieur du périmètre OpenStreetMap de l’aire de jeux. Le banc est un modèle approuvé, mais sa présence sur ce périmètre reste non confirmée. Les objets sont cliquables et séparés des données OSM et cadastrales. Le contour de l’aire de jeux est orange fluo (#ff6900).</p>
 <p>Des photos locales de 2025 confirment l'existence de structures à grimper et de toboggans à Ycoor, mais ne fournissent pas des coordonnées précises. <a href="https://www.crans-montana.ch/fr/?idcmt=Partenaire_Activite_4ff811345b2094222f969b680bb9ac78" target="_blank" rel="noopener noreferrer">Référence touristique officielle</a>.</p>
 <p><b>Relevé Street View des 15–16 novembre 2026 :</b> couche facultative de 24 positions de panoramas et 55 captures, avec dates, liens sources et 22 identifiants visuels. Les coordonnées et caps proviennent du visualiseur ; leur précision physique n'est pas vérifiée. Les identifiants visuels ne constituent pas une correspondance cadastrale. Les panoramas de contributeurs sont distingués et leurs caps ne sont pas orientés sur la carte. La couverture est partielle, avec lacunes documentées. <a href="../crans-montana-p06/assets/streetview-survey/2026-11-15/index.html" target="_blank" rel="noopener noreferrer">Dossier, carte et CSV du relevé</a>.</p>
-<p>La maquette conserve son rendu <b>pixel-art</b>. Les captures photographiques sont consultables dans le panneau du relevé ; elles ne produisent pas de géométrie ni de textures de façades.</p>
+<p>La maquette conserve son rendu <b>pixel-art</b>. Les détails documentés sont interprétés à partir des photos datées, accessibles dans les preuves. L’inventaire présente tous les plans de murs sources, les parties dessinées et les vérifications encore nécessaires. Le total de fenêtres reste inconnu.</p>
 <p><b>Sources :</b> <a href="https://sit.vs.ch/arcgis/rest/services/MO/MapServer" target="_blank" rel="noopener noreferrer">État du Valais, MO</a> · <a href="https://map.vsgis.ch/cransmontana/?lang=fr" target="_blank" rel="noopener noreferrer">VSGIS Crans-Montana</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors (ODbL)</a> · swisstopo swissBUILDINGS3D et végétation.</p></section>
 <nav id="tools" aria-label="Commandes de la carte">
  <button id="shot" title="Capture">▣</button><button id="reset" title="Caméra initiale">⌂</button>
@@ -198,6 +199,8 @@ function height(x,z){
 const terrainDatum=()=>terrainVals?.[1]?.[1]??1497.1;
 function focusDesignTarget({building,face,change}){
  if(!building)return;
+ if(buildingMode!=='local'){buildingMode='local';syncRoofs();}
+ if(change)$('design-facade').value=change.changeId;
  if(face){
   const centreU=change?.focus?.u??(face.bounds.minU+face.bounds.maxU)/2;
   const centreH=change?.focus?.height??(face.bounds.minV+face.bounds.maxV)/2;
@@ -218,6 +221,9 @@ function syncDesignControls(){
  $('design-toggle').setAttribute('aria-pressed',String(enabled));
  $('design-toggle').textContent='Détails documentés : '+(enabled?'ON':'OFF');
  $('design-open').disabled=!pilot?.panelReady;
+ $('design-coverage').disabled=!pilot?.panelReady;
+ $('design-open').setAttribute('aria-expanded',String(Boolean(pilot?.panelOpen&&pilot.panelView!=='coverage')));
+ $('design-coverage').setAttribute('aria-expanded',String(Boolean(pilot?.panelOpen&&pilot.panelView==='coverage')));
  const hasFacade=Boolean(pilot?.status.designReady&&$('design-facade').value);
  $('design-facade').disabled=!hasFacade;
  $('design-focus').disabled=!hasFacade;
@@ -226,7 +232,7 @@ async function startDesignPilot(){
  if(pilotLoading||pilot)return;
  pilotLoading=true;
  try{
-  const {createPilot}=await import('./design/pilot.js?v=2');
+  const {createPilot}=await import('./design/pilot.js?v=3');
   pilot=await createPilot({THREE,scene,
    dataBaseUrl:new URL('./assets/',import.meta.url).href,
    designBaseUrl:new URL('./design/',import.meta.url).href,
@@ -241,10 +247,11 @@ async function startDesignPilot(){
    onStatus:status=>{$('design-status').textContent=`${status.buildings} volume${status.buildings>1?'s':''} loca${status.buildings>1?'ux':'l'} · ${status.changes} façade${status.changes>1?'s':''} documentée${status.changes>1?'s':''} · ${status.details} élément${status.details>1?'s':''} interprété${status.details>1?'s':''}.`+(status.error?' '+status.error:'');},
    onPanelOpen:()=>{
     streetViewLayer?.setEnabled(false);
-    $('design-open').setAttribute('aria-expanded','true');
     $('sources').classList.remove('show');
+    syncDesignControls();
    },
-   onPanelClose:()=>{$('design-open').setAttribute('aria-expanded','false');$('design-open').focus({preventScroll:true});},
+   onPanelClose:()=>{syncDesignControls();$(pilot?.panelView==='coverage'?'design-coverage':'design-open').focus({preventScroll:true});},
+   onPanelViewChange:syncDesignControls,
    onFocus:focusDesignTarget,
   });
   const facades=pilot.evidence?.changes.filter(change=>change.status==='ready'&&pilot.local.faces.some(face=>face.id===change.faceId&&face.buildingId===change.buildingId&&face.facadeAllowed!==false&&!face.orientationAmbiguous))??[];
@@ -258,9 +265,10 @@ async function startDesignPilot(){
  }finally{pilotLoading=false;}
 }
 $('design-open').onclick=()=>{
- pilot?.openSources(!pilot.panelOpen);
- $('design-open').setAttribute('aria-expanded',String(pilot?.panelOpen??false));
+ pilot?.openSources(!pilot.panelOpen||pilot.panelView==='coverage');
+ syncDesignControls();
 };
+$('design-coverage').onclick=()=>{pilot?.openCoverage();syncDesignControls();};
 $('design-toggle').onclick=()=>{pilot?.setDesignEnabled(!pilot.designEnabled);syncDesignControls();};
 $('design-focus').onclick=()=>{
  if(buildingMode!=='local'){buildingMode='local';syncRoofs();}
@@ -287,7 +295,7 @@ $('streetview-switch').onclick=async()=>{
    onStatus:message=>{$('streetview-status').textContent=message;},
    onEnabledChange:enabled=>{
     syncStreetViewSwitch(enabled);
-    if(enabled){pilot?.openSources(false);$('design-open').setAttribute('aria-expanded','false');}
+    if(enabled){pilot?.openSources(false);syncDesignControls();}
     if(!enabled)$('streetview-switch').focus({preventScroll:true});
    },
    onFocusCamera:panorama=>{

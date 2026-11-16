@@ -6,10 +6,10 @@ Périmètre : six volumes intersectant le rectangle pilote de 100 × 100 m. Les 
 | --- | --- | --- | --- |
 | 1A20B | B002, partie centrale | Correspondance visuelle retenue ; aucun détail ajouté | [C005](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/index.html#C005), C007, C008 |
 | 2329F | B002, raccord au coude | Correspondance visuelle retenue ; aucun détail ajouté | [C008](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/index.html#C008), C012, C051 |
-| 2355E | B002, extrémité sud | Correspondance visuelle retenue ; volets et entrée inventoriés pour la suite | [C003](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/index.html#C003), C026, C027 |
+| 2355E | B002, extrémité sud | Face ouest documentée : deux volets fermés et entrée basse interprétés | [C003](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/index.html#C003), C026, C027 |
 | 2997D | B002, façade Rawyl | Partie commerciale documentée et interprétée en pixel-art | [C055](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/index.html#C055), C010, C011, C012, C053, C054 |
 | 2F7D6 | B003 | Partie nord du front ouest interprétée : vitrages, bois, trois balcons et claustras | [C029](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/index.html#C029), C030, C026 |
-| 26152 | B007 candidat | **Non résolu**, aucune correction de masse ou de statut | [C041](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/index.html#C041), C042 |
+| 26152 | B007 | Correspondance visuelle étayée ; forme finale et état actuel non vérifiés | [C013](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/index.html#C013), C014, C017, C018, C022, C041, C042 |
 
 ## Première façade
 
@@ -31,12 +31,22 @@ Quinze éléments explicites occupent une partie nord d’environ huit mètres, 
 
 Les mêmes éléments, captures et métadonnées sont réutilisés ; le sélecteur de façade permet d’examiner B003 et Rawyl directement. Les contrôles portent sur les nouveaux placements et la navigation, avec une inspection visuelle finale.
 
+## Troisième façade — B002, volets et entrée
+
+Les originaux JPG C003, C026 et C027 ont été inspectés, avec C005 comme vue de contexte du même groupe. La face ouest exacte est `2355E:wall:001`, obtenue avec `createLocalBuildings` et Three à partir des vrais triangles CAD. Sa normale extérieure vaut environ `[-0,99508, 0, 0,09908]`, sa largeur 11,193 m et ses bornes verticales H1493,872–H1512,902. Ces bornes proviennent de la géométrie ; les cotes des détails restent des estimations.
+
+Les coordonnées candidates et le cap 90° du visualiseur C003 donnent une intersection avant avec ce plan à environ 7,513 m de la caméra, à `u=5,082 m`, à l’intérieur de la face. Les axes centraux de C026/C027 passent au-delà de l’extrémité sud (`u≈15,382 m`) : ces captures montrent le retour et le passage vers B003 en biais et servent à confirmer la situation, sans attribuer de fenêtres supplémentaires au mur ouest. Ce contrôle de cohérence ne calibre ni la position physique de la caméra ni les pixels.
+
+C003 montre directement deux fenêtres basses occultées par des volets roulants rouge brun fermés, des bordures et appuis gris, ainsi que l’entrée en retrait à gauche : ombre, bois et jambage en pierre. Dix éléments explicites interprètent ces zones seulement : deux volets, deux bordures, deux appuis et quatre éléments d’entrée. Chaque détail cite C003 ; C026/C027 sont liés à l’observation et à la correspondance de situation. Aucun vitrage n’est inventé derrière les volets fermés, et aucun étage supérieur ou motif répétitif n’est extrapolé sous l’interface ou les balcons.
+
+Les dimensions, teintes, positions, altitudes et profondeurs des détails sont approximatives. Le creux de l’entrée est évoqué par une ombre mince sur le plan source ; le CAD n’est ni creusé ni déplacé. Escalier, voiture, végétation, zones masquées et balcons restent sans ajout dans ce cycle. Les captures et leurs métadonnées originales restent inchangées. Le contrôle réel des trois façades a échoué avec deux changements prêts, puis réussi après l’ajout de cette face ; chaque rectangle est validé contre l’union des triangles de sa face, et les 19 détails Rawyl ainsi que les 15 détails B003 sont conservés.
+
 ## Écarts et priorités restantes
 
 1. Façade Rawyl : détails absents du niveau de représentation des volumes, traités dans ce pilote. Ce manque de détail ne signifie pas à lui seul que le volume est ancien.
 2. B003 : partie nord du front ouest traitée ; retour nord, retrait supérieur et suite du front restent à documenter avant tout ajout.
-3. Volume 26152 : confirmer la correspondance B007 et le changement éventuel depuis la source de juin 2020, encore classée en construction.
-4. Autre face de B002 / 2355E : volets et entrée visibles, à compléter après un placement documenté.
+3. Volume 26152 : B007 est désormais visuellement étayé par le lien Rawyl–retour–étang. Les vues de 2024 montrent une enveloppe achevée en apparence ; le flux garde la source de juin 2020 classée en construction. La correction de forme et l’état de 2026 restent non résolus ; voir la [vérification détaillée](26152-verification.md).
+4. B002 / 2355E : deux volets et entrée basse de la face ouest traités ; étages et parties masquées restent à documenter avant tout ajout.
 5. Façades non visibles, détails occultés et bâtiments hors du rectangle : restent en attente de preuves.
 
 ## Fidélité géométrique et rendu

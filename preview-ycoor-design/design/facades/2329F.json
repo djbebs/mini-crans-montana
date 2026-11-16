@@ -1,0 +1,17 @@
+{
+  "buildingId": "2329F",
+  "match": {
+    "surveyIds": [
+      "B002"
+    ],
+    "status": "confirmed",
+    "evidenceIds": [
+      "C008",
+      "C012",
+      "C051"
+    ],
+    "reason": "Partie du groupe B002 proche du coude de la route : raccord au volume à bardage et alignement du front bâti dans les vues opposées. Un même repère visuel regroupe plusieurs volumes CAD."
+  },
+  "observations": [],
+  "changes": []
+}
