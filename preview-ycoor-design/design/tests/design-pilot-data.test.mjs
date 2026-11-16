@@ -35,20 +35,29 @@ test('linked capture records retain every original field, including imagery and 
   assert.ok(data.observations.some(observation => observation.observedAt === '2025-06'));
 });
 
-test('the authored details fit one actual northwest source face and leave unresolved changes absent', () => {
+test('both documented façades fit their actual source faces and leave unresolved changes absent', () => {
   const data = evidence();
   const scene = new THREE.Scene();
   const local = createLocalBuildings({ THREE, scene, data: read('../../assets/ycoor-dxf.json'), originHeight: 1497.1 });
   const ready = data.changes.filter(change => change.status === 'ready');
-  assert.equal(ready.length, 1);
+  assert.equal(ready.length, 2);
   assert.equal(ready[0].buildingId, '2997D');
   const face = local.faces.find(face => face.id === ready[0].faceId);
   assert.ok(face.facadeAllowed && !face.orientationAmbiguous);
   assert.ok(face.normal[0] < -.6 && face.normal[2] < -.6);
   assert.ok(face.maxPlanarityError < .005);
   const additions = createDesignEnhancements({ THREE, scene, changes: data.changes, faces: local.faces, originHeight: 1497.1 });
-  assert.equal(additions.group.children.length, ready[0].details.length);
-  for (const object of additions.group.children) assert.equal(object.userData.changeId, ready[0].changeId);
+  const south = ready.find(change => change.changeId === 'SOUTH-RED-BALCONIES');
+  assert.equal(south.buildingId, '2F7D6');
+  assert.equal(south.faceId, '2F7D6:wall:001');
+  const southFace = local.faces.find(face => face.id === south.faceId);
+  assert.ok(southFace.facadeAllowed && southFace.normal[0] < -.99 && southFace.normal[2] > .09);
+  assert.equal(south.details.filter(detail => detail.id.startsWith('south-balcony-')).length, 3);
+  assert.equal(south.details.filter(detail => detail.id.startsWith('south-ground-glass-')).length, 4);
+  assert.ok(south.details.every(detail => detail.u + detail.width / 2 < 8.5), 'only the documented northern frontage is interpreted');
+  assert.equal(ready[0].details.length, 19, 'the first authored façade remains intact');
+  assert.equal(additions.group.children.length, ready.reduce((sum, change) => sum + change.details.length, 0));
+  for (const object of additions.group.children) assert.ok(ready.some(change => change.changeId === object.userData.changeId));
   additions.dispose(); local.dispose();
   assert.equal(scene.children.length, 0);
 });

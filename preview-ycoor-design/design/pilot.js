@@ -71,6 +71,17 @@ export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, su
     console.warn('Ajouts documentés', error);
   }
   onStatus?.({ ...status });
+  function focusFacade(changeId) {
+    if (disposed || !status.designReady) return false;
+    const change = evidence?.changes.find(change => change.status === 'ready'
+      && (changeId === undefined || change.changeId === changeId));
+    if (!change) return false;
+    const building = local.buildings.find(building => building.id === change.buildingId);
+    const face = local.faces.find(face => face.id === change.faceId && face.buildingId === change.buildingId);
+    if (!building || !face || face.facadeAllowed === false || face.orientationAmbiguous) return false;
+    onFocus?.({ building, face, change });
+    return true;
+  }
   return {
     local, data, evidence, status,
     get designEnabled() { return visible && enabled && status.designReady; },
@@ -98,13 +109,8 @@ export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, su
       if (value && panel.showSources) panel.showSources();
       else panel.setOpen(value);
     },
-    focusFirstFacade() {
-      const change = evidence?.changes.find(change => change.status === 'ready');
-      if (!change) return;
-      const building = local.buildings.find(building => building.id === change.buildingId);
-      const face = local.faces.find(face => face.id === change.faceId);
-      onFocus?.({ building, face, change });
-    },
+    focusFacade,
+    focusFirstFacade: () => focusFacade(),
     pick(raycaster, { maxDistance = Infinity } = {}) {
       if (disposed || !visible) return false;
       return pickPilotGeometry(raycaster, { local, additions, maxDistance });

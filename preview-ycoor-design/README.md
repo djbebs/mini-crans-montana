@@ -2,12 +2,12 @@
 
 [Ouvrir la prévisualisation](https://djbebs.github.io/mini-crans-montana/preview-ycoor-design/) · [Version stable](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/) · [Relevé original](https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/)
 
-Cette prévisualisation réalise les étapes autorisées : six volumes DXF locaux, une liste de sources cliquables avec des correspondances et écarts documentés, puis une première partie de façade conçue à partir des observations Street View. La version stable et l’expérience P0.6.8 sont conservées.
+Cette prévisualisation réunit six volumes DXF locaux, des sources cliquables avec leurs correspondances et écarts, et deux parties de façades conçues à partir des observations Street View : Rawyl et B003. Elle contient 34 éléments explicites, dont 15 pour la deuxième façade.
 
 ## Utilisation
 
 - **Détails documentés : ON/OFF** compare l’interprétation au volume local sans ajouts.
-- **Voir la façade pilote** cadre la devanture sur Rawyl. Les côtés non documentés restent sans ajout.
+- **Façade à voir** choisit Rawyl ou B003 et cadre directement la partie documentée. Le bouton **Voir la façade choisie** permet de la retrouver après un déplacement. La dernière façade ajoutée s’ouvre au démarrage.
 - Cliquer un détail ouvre **Pourquoi ce détail ?**, avec ses photographies, dates et estimations.
 - **Sources et preuves** présente les sept entrées par priorité, les six correspondances géométriques et la liste des écarts à examiner.
 - Le bouton **DXF / Flux** compare les volumes locaux au service swisstopo ; les ajouts sont masqués pendant l’affichage du flux.
@@ -21,9 +21,13 @@ L’édition DXF est mai 2024. Les dates source des géométries correspondantes
 
 Les 19 éléments de la façade pilote sont des **interprétations pixel-art** : dimensions, niveaux, couleurs, profondeurs et densité des barreaux sont approximatifs. Le mur de pierre reflété dans les vitrines n’est pas reproduit comme un mur opaque. Le lettrage de l’enseigne n’est pas restitué. La partie restante de la façade et les autres côtés ne sont pas complétés par répétition.
 
+La deuxième façade, B003 / `2F7D6:wall:001`, reprend quatre baies complètes visibles, un encadrement bois, le vitrage partiel derrière le balcon inférieur, trois garde-corps et leurs dalles, ainsi que des claustras verticaux. Ses 15 éléments occupent environ les huit premiers mètres du front ouest, comme choix de composition approximatif. Les altitudes des détails et les densités de barreaux/lames ne sont pas mesurées. La protection rouge temporaire au bord du toit, les reflets et le reste du bâtiment ne sont pas ajoutés. Le cap central des captures vise le retour nord : la face ouest est attribuée par son contexte visible en biais, sans calibration métrique.
+
 B002 est un groupe visuel couvrant plusieurs volumes CAD. Les correspondances ne valent pas identification cadastrale. Le volume 26152, encore classé `Im Bau` par la source, conserve une attribution visuelle **à vérifier** ; sa hauteur et son statut ne sont pas modifiés. Voir le [registre de preuves](design/design-evidence.json), la [provenance DXF](assets/dxf-provenance.json) et l’[audit de conception](../docs/design/ycoor-design-audit.md).
 
 ## Développement et contrôles
+
+Le cycle court pour les prochaines façades : **choisir une face documentée → réutiliser les éléments existants → examiner l’aperçu et corriger**. Les liens, dates, identifiants et contrôles de placement sont repris automatiquement. Seuls les nouveaux détails et les incertitudes nécessitent une nouvelle inspection. La source d’édition reste `tools/author-ycoor-evidence.py` ; une exécution régénère le registre, puis `npm test` contrôle les changements. Il n’est pas nécessaire de refaire le relevé original ou d’importer les volumes à chaque façade.
 
 Dans `preview-ycoor-design/design/` : `npm ci`, puis `npm test`.
 
