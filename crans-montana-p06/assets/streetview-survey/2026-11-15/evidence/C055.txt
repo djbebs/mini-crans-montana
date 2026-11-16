@@ -1,0 +1,52 @@
+https://www.google.com/maps/place/Specialized+Crans-Montana/@46.3114352,7.4776328,1505a,75y,143.79h,90t/data=!3m7!1e1!3m5!1sob1EjSVlnSg4pDY-PzEOIg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3Dob1EjSVlnSg4pDY-PzEOIg%26yaw%3D143.79482!7i16384!8i8192!4m9!3m8!1s0x478ee100431d5f8d:0x5e8cb79f126978a1!8m2!3d46.3112734!4d7.4777407!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11vm9h5q5s?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D
+
+- generic "Google Maps":
+  - application "Street View"
+  - search:
+    - button "Back":
+      - generic: 
+    - combobox: Specialized Crans-Montana
+    - button "Search":
+      - generic: 
+    - button "Close":
+      - generic: 
+  - button "Expand side panel":
+    - generic: 
+  - navigation:
+    - heading "48 Rte du Rawyl" [level=1]
+    - heading "Crans-Montana, Valais" [level=2]
+    - heading "View Google Street View's profile Google Street View" [level=2]:
+      - link "View Google Street View's profile":
+        - /url: //www.google.com/streetview
+      - link "Google Street View":
+        - /url: //www.google.com/streetview
+    - generic: Jun 2024
+    - button "Menu":
+      - generic: 
+  - button "Share":
+    - generic: 
+    - generic: Share
+  - button "Close":
+    - generic: 
+  - button "Rotate the view counterclockwise"
+  - slider "Reset the view"
+  - button "Rotate the view clockwise"
+  - button "Zoom in":
+    - generic: 
+  - button "Zoom out":
+    - generic: 
+  - button "Interactive map"
+  - button "Expand":
+    - generic: 
+  - button "Previous":
+    - generic: 
+  - button "Next" [disabled]:
+    - generic: 
+  - contentinfo:
+    - generic: "Image capture: Jun 2024"
+    - generic: © 2026 Google
+    - button "Switzerland"
+    - button "Terms"
+    - button "Privacy"
+    - link "Report a problem":
+      - /url: //www.google.com/local/imagery/report/?cb_client=maps_sv.tactile&image_key=!1e2!2sob1EjSVlnSg4pDY-PzEOIg&hl=en&gl=ch&cbp=1%2C143%2C%2C0%2C0

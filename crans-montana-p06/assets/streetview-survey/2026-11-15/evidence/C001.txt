@@ -1,0 +1,55 @@
+https://www.google.com/maps/@46.3108635,7.4773651,1503a,75y,330.42h,90t/data=!3m7!1e1!3m5!1sKYyatjHZFHgI668LQ0aCGw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DKYyatjHZFHgI668LQ0aCGw%26yaw%3D330.4207811770898!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D
+
+- generic "Google Maps":
+  - application "Street View"
+  - search:
+    - button "Menu":
+      - generic: 
+    - generic: Search Google Maps
+    - combobox "Search Google Maps"
+    - button "Search":
+      - generic: 
+    - button "Directions":
+      - generic: 
+  - navigation:
+    - button "Back":
+      - generic: 
+    - heading "2 Rte des Sommets de Crans" [level=1]
+    - heading "Crans-Montana, Valais" [level=2]
+    - heading "View Google Street View's profile Google Street View" [level=2]:
+      - link "View Google Street View's profile":
+        - /url: //www.google.com/streetview
+      - link "Google Street View":
+        - /url: //www.google.com/streetview
+    - generic: Jun 2024
+    - button "Show location on map":
+      - generic: 
+    - button "Menu":
+      - generic: 
+  - button "Share":
+    - generic: 
+    - generic: Share
+  - button "Close":
+    - generic: 
+  - dialog
+  - button "Rotate the view counterclockwise"
+  - slider "Reset the view"
+  - button "Rotate the view clockwise"
+  - button "Zoom in":
+    - generic: 
+  - button "Zoom out":
+    - generic: 
+  - button "Show imagery":
+    - generic: 
+  - button "Interactive map"
+  - button "Expand":
+    - generic: 
+  - generic: Expand
+  - contentinfo:
+    - generic: "Image capture: Jun 2024"
+    - generic: © 2026 Google
+    - button "Switzerland"
+    - button "Terms"
+    - button "Privacy"
+    - link "Report a problem":
+      - /url: //www.google.com/local/imagery/report/?cb_client=maps_sv.tactile&image_key=!1e2!2sKYyatjHZFHgI668LQ0aCGw&hl=en&gl=ch&cbp=1%2C330%2C%2C0%2C0

@@ -2,6 +2,7 @@
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#173125">
 <title>Isometric Crans-Montana · P0.6.6 / Ycoor</title>
 <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="./streetview/survey.css?v=1" rel="stylesheet">
 <style>
 :root{--paper:#f6f0dd;--ink:#29291f;--red:#c92430;--blue:#2f5c9e;--edge:#1d221c}
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#263b29;color:var(--ink);font-family:'Pixelify Sans',monospace}
@@ -30,7 +31,7 @@ button,input{font:inherit;color:inherit}button{cursor:pointer;border:2px solid v
 }
 #place{max-height:calc(100dvh - 95px);overflow-y:auto}
 #furniture-control{margin-top:8px;padding-top:7px;border-top:2px dashed #bcb5a0;line-height:1.35;font-size:12px}
-#furniture-switch,#photo-switch,#people-switch{font-size:11px;padding:4px 7px;max-width:100%}
+#furniture-switch,#photo-switch,#people-switch,#streetview-switch{font-size:11px;padding:4px 7px;max-width:100%}
 #people-switch.active{background:#7198bb;color:#142e42}
 #photo-switch.active{background:#f5c858;color:#25291f}
 #furniture-control summary{cursor:pointer;color:#465239;font-weight:700;margin-top:6px;overflow-wrap:anywhere}
@@ -48,6 +49,11 @@ button,input{font:inherit;color:inherit}button{cursor:pointer;border:2px solid v
 <main id="map" aria-label="Maquette 3D isométrique de 100 mètres autour d'Ycoor"></main>
 <div id="real-status" role="status" aria-live="polite">Connexion aux toitures officielles…</div>
 <section id="place" class="box"><b>Crans-Montana</b><small>Ycoor · Valais · Suisse</small><div>P0 · 100 × 100 m</div><div class="weather">☀ <span id="weather">Météo simulée · clair</span><br><span id="origin">Mensuration officielle du Valais : chargement…</span><br><a style="color:#174e78;display:inline-block;margin-top:5px" href="https://map.geo.admin.ch/#/map?lang=fr&amp;center=2603036,1128849&amp;z=11" target="_blank" rel="noopener noreferrer" title="Ouvrir swisstopo et activer la vue 3D pour comparer les bâtiments">Comparer à swisstopo ↗</a></div><div id="geo-status" style="font-size:11px;line-height:1.3;margin-top:5px">Mensuration officielle : interrogation…</div><details id="mo-details" style="font-size:11px;margin-top:4px"><summary>Résultats cadastraux par couche</summary><div id="mo-report" style="padding:4px 0;overflow-wrap:anywhere">Aucune couche encore vérifiée</div></details><div id="mo-warning" style="font-size:11px;margin-top:5px;line-height:1.25;color:#665f44;font-weight:700">Sol : cadastre du Valais · Mobilier : OSM géolocalisé.</div>
+<div id="streetview-control" style="margin-top:7px;padding-top:7px;border-top:1px dashed #bcb5a0">
+ <button id="streetview-switch" type="button" aria-pressed="false" aria-controls="streetview-panel" title="Afficher les positions des panoramas et consulter les captures du relevé">📷 Relevé Street View : OFF</button>
+ <div id="streetview-status" role="status" aria-live="polite" style="font-size:11px;line-height:1.35;margin-top:4px">55 vues · 24 panoramas · couverture partielle.</div>
+ <a href="./assets/streetview-survey/2026-11-15/index.html" target="_blank" rel="noopener noreferrer" style="font-size:11px;color:#174e78">Ouvrir le dossier du relevé ↗</a>
+</div>
 <details id="ground-legend" style="font-size:11px;line-height:1.4;margin-top:6px">
 <summary>Couleurs du sol</summary>
 <div style="margin-top:4px"><span style="color:#748e5c">■</span> Vert : jardin cadastral / aire de jeux OSM</div>
@@ -90,7 +96,8 @@ button,input{font:inherit;color:inherit}button{cursor:pointer;border:2px solid v
 <p><b>Architecture extensible :</b> un moteur indépendant <code>people-motion.js</code> calcule les gestes et déplacements pour n'importe quelle zone. Les points d'interaction sont déclarés par modèle dans <code>photo-playground.js</code>, et <code>characters.js</code> distribue les adultes et enfants selon les polygones de jeux et les chemins réellement reçus. Une limite de population s'applique à chaque zone chargée pour préparer l'extension aux quartiers de Crans-Montana.</p>
 <p><b>Couche « Jeux photo » :</b> cinq maquettes 3D approuvées par l’utilisateur : grande structure avec tunnel, toboggan tubulaire courbe, petite structure bleue et rouge, jeux de cordes et banc. Placement déterministe approximatif à l’intérieur du périmètre OpenStreetMap de l’aire de jeux. Le banc est un modèle approuvé, mais sa présence sur ce périmètre reste non confirmée. Les objets sont cliquables et séparés des données OSM et cadastrales. Le contour de l’aire de jeux est orange fluo (#ff6900).</p>
 <p>Des photos locales de 2025 confirment l'existence de structures à grimper et de toboggans à Ycoor, mais ne fournissent pas des coordonnées précises. <a href="https://www.crans-montana.ch/fr/?idcmt=Partenaire_Activite_4ff811345b2094222f969b680bb9ac78" target="_blank" rel="noopener noreferrer">Référence touristique officielle</a>.</p>
-<p>Le rendu est <b>100 % pixel-art</b>, sans photographie ni géométrie dérivée de captures d'écran.</p>
+<p><b>Relevé Street View des 15–16 novembre 2026 :</b> couche facultative de 24 positions de panoramas et 55 captures, avec dates, liens sources et 22 identifiants visuels. Les coordonnées et caps proviennent du visualiseur ; leur précision physique n'est pas vérifiée. Les identifiants visuels ne constituent pas une correspondance cadastrale. Les panoramas de contributeurs sont distingués et leurs caps ne sont pas orientés sur la carte. La couverture est partielle, avec lacunes documentées. <a href="./assets/streetview-survey/2026-11-15/index.html" target="_blank" rel="noopener noreferrer">Dossier, carte et CSV du relevé</a>.</p>
+<p>La maquette conserve son rendu <b>pixel-art</b>. Les captures photographiques sont consultables dans le panneau du relevé ; elles ne produisent pas de géométrie ni de textures de façades.</p>
 <p><b>Sources :</b> <a href="https://sit.vs.ch/arcgis/rest/services/MO/MapServer" target="_blank" rel="noopener noreferrer">État du Valais, MO</a> · <a href="https://map.vsgis.ch/cransmontana/?lang=fr" target="_blank" rel="noopener noreferrer">VSGIS Crans-Montana</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors (ODbL)</a> · swisstopo swissBUILDINGS3D et végétation.</p></section>
 <nav id="tools" aria-label="Commandes de la carte">
  <button id="shot" title="Capture">▣</button><button id="reset" title="Caméra initiale">⌂</button>
@@ -141,6 +148,7 @@ let moData={shapes:[],results:[],state:'pending'},moUpdated=null,moPainter=null,
 let furnitureData={features:[],counts:null,status:'loading',errors:[]},furniturePainter=null,furnitureGroup=null,furnitureDrawn=[],furnitureVisible=true,furnitureBusy=false;
 let photoPainter=null,photoGroup=null,photoDrawn=[],photoVisible=true,photoReason='en attente';
 let peopleSystem=null,peopleModule=null,peopleEnabled=true,peopleGeneration=0,peopleStatus='en attente',peopleError=null;
+let streetViewLayer=null,streetViewLoading=false;
 const scene=new THREE.Scene();scene.background=new THREE.Color('#729da2');scene.fog=new THREE.Fog('#729da2',190,420);
 const camera=new THREE.OrthographicCamera(-95,95,75,-75,0.1,1500);
 const renderer=new THREE.WebGLRenderer({antialias:false,preserveDrawingBuffer:true,powerPreference:'low-power'});
@@ -162,6 +170,45 @@ function height(x,z){
  // Never fabricate slopes if official heights cannot be fetched.
  return 0;
 }
+function syncStreetViewSwitch(enabled){
+ const button=$('streetview-switch');
+ button.classList.toggle('active',enabled);
+ button.setAttribute('aria-pressed',String(enabled));
+ button.textContent='📷 Relevé Street View : '+(enabled?'ON':'OFF');
+}
+$('streetview-switch').onclick=async()=>{
+ if(streetViewLoading)return;
+ if(streetViewLayer){streetViewLayer.setEnabled(!streetViewLayer.enabled);return;}
+ streetViewLoading=true;
+ $('streetview-switch').disabled=true;
+ $('streetview-status').textContent='Chargement du relevé…';
+ try{
+  const {createStreetViewLayer}=await import('./streetview/survey-layer.js?v=1');
+  streetViewLayer=await createStreetViewLayer({
+   THREE,scene,project:local,height,
+   assetBaseUrl:new URL('./assets/streetview-survey/2026-11-15/',import.meta.url).href,
+   onStatus:message=>{$('streetview-status').textContent=message;},
+   onEnabledChange:enabled=>{
+    syncStreetViewSwitch(enabled);
+    if(!enabled)$('streetview-switch').focus({preventScroll:true});
+   },
+   onFocusCamera:panorama=>{
+    const point=local(panorama.position.lat,panorama.position.lon);
+    target.set(point.x,height(point.x,point.z),point.z);
+    state.zoom=Math.min(state.zoom,1.5);
+    needsResize=true;
+   },
+  });
+  streetViewLayer.setEnabled(true);
+ }catch(error){
+  console.warn('Relevé Street View',error);
+  $('streetview-status').textContent='Relevé indisponible. Réessayer ; si l’erreur persiste, recharger la page ou ouvrir le dossier.';
+  syncStreetViewSwitch(false);
+ }finally{
+  streetViewLoading=false;
+  $('streetview-switch').disabled=false;
+ }
+};
 function mt(color){return new THREE.MeshLambertMaterial({color,flatShading:true,side:THREE.DoubleSide})}
 function add(mesh,parent=world){mesh.castShadow=true;mesh.receiveShadow=true;parent.add(mesh);return mesh}
 function box(w,h,d,mat,x,y,z,parent=world){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);m.position.set(x,y,z);return add(m,parent)}
@@ -707,6 +754,7 @@ function build(){
  $('origin').textContent='Mensuration officielle Valais · toits swissBUILDINGS3D';
  $('status').textContent='P0.6.6 · '+ok+'/4 sources MO · '+moRendered.length+' géométries cadastre · '+furnitureDrawn.length+' objets OSM · '+photoDrawn.length+' jeux illustratifs · relief '+(terrainOk?'swisstopo interpolé':'non confirmé');
  updateGeoLabel();showCadastralAudit();updateFurniturePanel();updatePhotoPanel();syncRoofs();
+ streetViewLayer?.refreshHeights();
  startPeople();
 }
 /* swissBUILDINGS3D (3D Tiles -> Three.js), ECEF transformed to local Y-up. */
@@ -851,7 +899,9 @@ const raycaster=new THREE.Raycaster(),mouse=new THREE.Vector2();
 function selectAt(clientX,clientY){
  let rect=renderer.domElement.getBoundingClientRect();
  mouse.set(2*(clientX-rect.left)/rect.width-1,1-2*(clientY-rect.top)/rect.height);
- raycaster.setFromCamera(mouse,camera);let intersections=raycaster.intersectObjects(objects.filter(o=>(furnitureVisible||o.userData.source!=='osm')&&(photoVisible||o.userData.source!=='photo')&&(peopleEnabled||o.userData.source!=='people')),false);
+ raycaster.setFromCamera(mouse,camera);
+ if(streetViewLayer?.pick(raycaster))return;
+ let intersections=raycaster.intersectObjects(objects.filter(o=>(furnitureVisible||o.userData.source!=='osm')&&(photoVisible||o.userData.source!=='photo')&&(peopleEnabled||o.userData.source!=='people')),false);
  if(!intersections.length)return;
  let obj=intersections[0].object;if(!obj.userData.title)return;
  $('info-title').textContent=obj.userData.title;$('info-desc').textContent=obj.userData.desc;$('info').classList.add('show');
@@ -866,7 +916,9 @@ c.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;let pr
  let k=175/state.zoom/Math.max(320,Math.min(innerWidth,innerHeight));
  target.x=start.tx-(dx*Math.cos(state.angle)+dy*Math.sin(state.angle))*k;
  target.z=start.tz-(-dx*Math.sin(state.angle)+dy*Math.cos(state.angle))*k;
- target.x=Math.max(-60,Math.min(60,target.x));target.z=Math.max(-60,Math.min(60,target.z));
+ const surveyBounds=streetViewLayer?.enabled?streetViewLayer.bounds:null;
+ target.x=Math.max(Math.min(-60,(surveyBounds?.minX??-45)-15),Math.min(Math.max(60,(surveyBounds?.maxX??45)+15),target.x));
+ target.z=Math.max(Math.min(-60,(surveyBounds?.minZ??-45)-15),Math.min(Math.max(60,(surveyBounds?.maxZ??45)+15),target.z));
 });
 c.addEventListener('pointerup',e=>{if(start&&!start.moved&&pointers.size===1)selectAt(e.clientX,e.clientY);pointers.delete(e.pointerId);if(pointers.size<2)window.__prevPinch=null;if(!pointers.size)start=null});
 c.addEventListener('pointercancel',()=>{pointers.clear();start=null;window.__prevPinch=null});
@@ -884,7 +936,7 @@ $('hour').oninput=e=>{state.clock=Number(e.target.value);if(false)toReal('light'
 $('run').onclick=()=>{state.play=!state.play;$('run').textContent=state.play?'❚❚':'▶'};
 $('sun-mode').onclick=()=>{state.sun=!state.sun;$('sun-mode').classList.toggle('active',state.sun);$('sun-mode').textContent=state.sun?'real sun':'studio';if(false)toReal('light',{date:state.date,hour:state.clock,real:state.sun})};
 document.querySelectorAll('[data-season]').forEach(b=>b.onclick=()=>{state.season=b.dataset.season;document.querySelectorAll('[data-season]').forEach(x=>x.classList.toggle('active',x===b));build();if(false)toReal('season',{value:season()})});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){$('info').classList.remove('show');$('sources').classList.remove('show')}if(e.key==='+')zoom(1.2);if(e.key==='-')zoom(1/1.2);if(e.key==='ArrowLeft')state.angle-=.12;if(e.key==='ArrowRight')state.angle+=.12});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){$('info').classList.remove('show');$('sources').classList.remove('show')}if(e.target.closest?.('input,select,textarea,button,[contenteditable="true"]'))return;if(e.key==='+')zoom(1.2);if(e.key==='-')zoom(1/1.2);if(e.key==='ArrowLeft')state.angle-=.12;if(e.key==='ArrowRight')state.angle+=.12});
 build();requestAnimationFrame(loop);startRoofs();setTimeout(startVegetation,2800);
 setTimeout(()=>{if($('loading').style.display!=='none')$('loading').textContent='Sources externes lentes : les éléments sans géodonnées restent masqués';},12000);
 async function refreshData(){

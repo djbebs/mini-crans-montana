@@ -1,0 +1,49 @@
+https://www.google.com/maps/place/Specialized+Crans-Montana/@46.3113637,7.4779731,3a,75y,140h,90t/data=!3m8!1e1!3m6!1sCIABIhDoUaWw8gTFqcQ2SclAYn-w!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U-SvnIQPeS-3aXfxkAwnVO9aLOxWY_OWEOnfRhgkXWSGDSUXjg3fi55yd43ngX5adrKSleSlJ2onrecECNPgh4L00oCfEoWqdTrGWT8VHDFJE4zgIntj6nKPlgoZfj2abO_mmeHrahzRW-X%3Dw900-h600-k-no-pi0-ya9.329025268554688-ro0-fo100!7i8192!8i4096!4m9!3m8!1s0x478ee100431d5f8d:0x5e8cb79f126978a1!8m2!3d46.3112734!4d7.4777407!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11vm9h5q5s?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D
+
+- generic "Google Maps":
+  - application "Street View"
+  - search:
+    - button "Back":
+      - generic: 
+    - combobox: Specialized Crans-Montana
+    - button "Search":
+      - generic: 
+    - button "Close":
+      - generic: 
+  - button "Expand side panel" [active]:
+    - generic: 
+  - navigation:
+    - heading "Specialized Crans-Montana" [level=1]
+    - heading "View Go360's profile Go360" [level=2]:
+      - link "View Go360's profile":
+        - /url: //maps.google.com/maps/contrib/107096715706655021162
+      - link "Go360":
+        - /url: //maps.google.com/maps/contrib/107096715706655021162
+    - generic: Jun 2025
+    - button "Menu":
+      - generic: 
+  - button "Share":
+    - generic: 
+    - generic: Share
+  - button "Close":
+    - generic: 
+  - button "Rotate the view counterclockwise"
+  - slider "Reset the view"
+  - button "Rotate the view clockwise"
+  - button "Zoom in":
+    - generic: 
+  - button "Zoom out":
+    - generic: 
+  - button "Interactive map"
+  - button "Previous":
+    - generic: 
+  - button "Next":
+    - generic: 
+  - contentinfo:
+    - generic: "Image capture: Jun 2025"
+    - generic: Images may be subject to copyright.
+    - button "Switzerland"
+    - button "Terms"
+    - button "Privacy"
+    - link "Report a problem":
+      - /url: //www.google.com/local/content/rap/report?postId=!1e10!2sCIABIhDoUaWw8gTFqcQ2SclAYn-w&t=27&cb_client=maps_sv.tactile&hl=en&gl=ch&cbp=1%2C140%2C%2C0%2C0

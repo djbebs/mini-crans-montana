@@ -1,0 +1,48 @@
+https://www.google.com/maps/@46.3112586,7.4784379,3a,75y,285.09h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgICO25bBvwE!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_A23IrujoaLdrV9k4z50DBj8mowPURmzotdLL9Kj_CHm9gDUWlAj0wMRh97cADzpBvT1oh2s6pNsp3nImiOi4by01Fl0XyHBirGkOl4_xjBW7TbA5AR8D0xCm3QWPvC1wKKxnxyA%3Dw900-h600-k-no-pi0-ya285.08547579790354-ro0-fo100!7i8192!8i4096?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D
+
+- generic "Google Maps":
+  - application "Street View"
+  - search:
+    - button "Menu":
+      - generic: 
+    - generic: Search Google Maps
+    - combobox "Search Google Maps"
+    - button "Search":
+      - generic: 
+    - button "Directions":
+      - generic: 
+  - navigation:
+    - button "Back":
+      - generic: 
+    - heading "View Dany Gaule's profile Dany Gaule" [level=1]:
+      - link "View Dany Gaule's profile":
+        - /url: //maps.google.com/maps/contrib/116875499929384507457
+      - link "Dany Gaule":
+        - /url: //maps.google.com/maps/contrib/116875499929384507457
+    - generic: Jun 2022
+    - button "Menu":
+      - generic: 
+  - button "Share":
+    - generic: 
+    - generic: Share
+  - button "Close":
+    - generic: 
+  - dialog
+  - button "Rotate the view counterclockwise"
+  - slider "Reset the view"
+  - button "Rotate the view clockwise"
+  - button "Zoom in":
+    - generic: 
+  - button "Zoom out":
+    - generic: 
+  - button "Show imagery":
+    - generic: 
+  - button "Interactive map"
+  - contentinfo:
+    - generic: "Image capture: Jun 2022"
+    - generic: Images may be subject to copyright.
+    - button "Switzerland"
+    - button "Terms"
+    - button "Privacy"
+    - link "Report a problem":
+      - /url: //www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgICO25bBvwE&t=27&cb_client=maps_sv.tactile&hl=en&gl=ch&cbp=1%2C285%2C%2C0%2C0

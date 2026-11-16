@@ -1,0 +1,13 @@
+﻿gap_id,survey_ids,coverage_topic,status,notes
+G001,ALL,PANORAMA_ENUMERATION,UNVERIFIED,Not every accessible panorama or historical date was enumerated/captured; recorded views define actual coverage.
+G002,SHOP_TOUR,INDOOR_NODES,PARTIAL,32 loaded gallery tiles catalogued; 4 opened. Unopened full panorama metadata intentionally unavailable.
+G003,ALL,HISTORICAL_ROAD_IMAGERY,NOT_AUDITED_IN_FULL,No complete older-date road audit; never infer no older imagery exists.
+G004,B001,REAR_LAKESIDE_ELEVATION,NOT_VERIFIED_IN_FULL,North and road-facing sides recorded; complete rear/lakeside façade remains a gap.
+G005,B003,EAST_REAR_AND_SOUTH_ELEVATIONS,PARTIAL,Street and gap views captured; complete east/rear/south façade coverage unverified.
+G006,B008,COMPLEX_PERIMETER,PARTIAL,Pond/path-facing walls and volumes captured; connected extent and remaining perimeter unverified.
+G007,B004;B005;B006;B009;B011;B012;B014;B015,BACKGROUND_OR_CONTEXT_BUILDINGS,PARTIAL,"Only recorded visible portions; identities, individual segmentation and complete elevations unverified."
+G008,ALL,BUILDING_GPS_OFFICIAL_ID_AND_DIMENSIONS,UNAVAILABLE,"No building-centroid GPS, cadastral ID, verified postal address or dimensions supplied."
+G009,ALL,EXACT_PHYSICAL_CAMERA_HEADING,UNAVAILABLE_OR_UNVERIFIED,Numeric viewer heading recorded; no independent true-north calibration or survey-grade GPS accuracy.
+G010,ALL,VISIBILITY_AND_RESOLUTION,LIMITED,"624x667 original screenshots; controls, vegetation, walls, vehicles, blur and perspective obscure details."
+G011,U001;U002;U003;U004,CROSS_DATE_IDENTITY,UNVERIFIED,These references may duplicate another building/structure; no identity match invented.
+G012,S002;S003;S004;S005;B013,TEMPORARY_STRUCTURES,UNVERIFIED_PERMANENCE,Shown at recorded dates only; could be movable/temporary and may differ today.

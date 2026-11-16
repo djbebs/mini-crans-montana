@@ -1,0 +1,48 @@
+https://www.google.com/maps/@46.3107605,7.4788768,3a,75y,261.97h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDqxYLZ8QE!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U9skspLG6ag5AhUVmhD75as6L4An3qgiIpdbaiIdwVrRnpk3U39fcCaV5qBQvXt1Hudy1-2seyfZAQ4Eg2FsRc6VZHa-S_EQRY3sqSXMMcjNb05tNMgt7waqDfCY0OclCtaCOQ3xw%3Dw900-h600-k-no-pi0-ya261.9669095480664-ro0-fo100!7i5376!8i2688?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D
+
+- generic "Google Maps":
+  - application "Street View"
+  - search:
+    - button "Menu":
+      - generic: 
+    - generic: Search Google Maps
+    - combobox "Search Google Maps"
+    - button "Search":
+      - generic: 
+    - button "Directions":
+      - generic: 
+  - navigation:
+    - button "Back":
+      - generic: 
+    - heading "View De Douby's profile De Douby" [level=1]:
+      - link "View De Douby's profile":
+        - /url: //maps.google.com/maps/contrib/107797677541881408254
+      - link "De Douby":
+        - /url: //maps.google.com/maps/contrib/107797677541881408254
+    - generic: Feb 2019
+    - button "Menu":
+      - generic: 
+  - button "Share":
+    - generic: 
+    - generic: Share
+  - button "Close":
+    - generic: 
+  - dialog
+  - button "Rotate the view counterclockwise"
+  - slider "Reset the view"
+  - button "Rotate the view clockwise"
+  - button "Zoom in":
+    - generic: 
+  - button "Zoom out":
+    - generic: 
+  - button "Show imagery":
+    - generic: 
+  - button "Interactive map"
+  - contentinfo:
+    - generic: "Image capture: Feb 2019"
+    - generic: Images may be subject to copyright.
+    - button "Switzerland"
+    - button "Terms"
+    - button "Privacy"
+    - link "Report a problem":
+      - /url: //www.google.com/local/content/rap/report?postId=!1e10!2sCIHM0ogKEICAgIDqxYLZ8QE&t=27&cb_client=maps_sv.tactile&hl=en&gl=ch&cbp=1%2C261%2C%2C0%2C0
