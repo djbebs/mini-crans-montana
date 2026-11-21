@@ -5,7 +5,9 @@ from __future__ import annotations
 import argparse
 import copy
 import json
+import math
 from pathlib import Path
+import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -13,6 +15,12 @@ FACADES = ROOT / 'preview-ycoor-design/design/facades'
 GEOMETRY = ROOT / 'preview-ycoor-design/assets/ycoor-dxf.json'
 SURVEY = ROOT / 'crans-montana-p06/assets/streetview-survey/2026-11-15/survey-data.json'
 OUTPUT = ROOT / 'preview-ycoor-design/design/design-evidence.json'
+TEMPLATE_FIELDS = {'kind', 'width', 'height', 'depth', 'color', 'offset', 'frame', 'floor', 'rails'}
+TEMPLATE_PART_FIELDS = {
+    'frame': {'width', 'color'},
+    'floor': {'height', 'color'},
+    'rails': {'u', 'v', 'width', 'height', 'depth', 'offset', 'color'},
+}
 
 
 def indexed(records: list[dict], key: str, kind: str) -> dict:
@@ -44,8 +52,74 @@ def ordered(records: dict, order: list, kind: str) -> list:
     return [records[identifier] for identifier in order]
 
 
-def build_data(index: dict, facades: list[dict], geometry: dict, survey: dict) -> dict:
+def validate_visual_fields(values: dict, allowed: set[str], context: str) -> None:
+    if not isinstance(values, dict):
+        raise ValueError(f'{context} must be an object')
+    unexpected = values.keys() - allowed
+    if unexpected:
+        raise ValueError(f'{context} has unsupported fields: {sorted(unexpected)}')
+    for field, value in values.items():
+        if field in TEMPLATE_PART_FIELDS:
+            continue
+        valid = isinstance(value, str) if field in ('kind', 'color') else type(value) in (int, float)
+        if not valid:
+            raise ValueError(f'{context} has an invalid {field}')
+
+
+def validate_templates(templates: dict) -> None:
+    if not isinstance(templates, dict):
+        raise ValueError('Detail templates must be an object keyed by template ID')
+    for name, style in templates.items():
+        if not isinstance(name, str) or not re.fullmatch(r'[a-z][a-z0-9]*(?:-[a-z0-9]+)*', name):
+            raise ValueError(f'Invalid detail template ID: {name!r}')
+        context = f'Detail template {name}'
+        validate_visual_fields(style, TEMPLATE_FIELDS, context)
+        for field, allowed in TEMPLATE_PART_FIELDS.items():
+            if field not in style:
+                continue
+            parts = style[field] if field == 'rails' else [style[field]]
+            if not isinstance(parts, list):
+                raise ValueError(f'{context} {field} must be an array')
+            for part in parts:
+                validate_visual_fields(part, allowed, f'{context} {field}')
+
+
+def expand_detail(detail: dict, templates: dict) -> dict:
+    if 'template' not in detail:
+        return detail
+    name = detail['template']
+    if not isinstance(name, str) or name not in templates:
+        raise ValueError(f'Unknown detail template: {name!r} ({detail.get("id")})')
+    missing = {'id', 'u', 'v', 'label', 'evidenceIds'} - detail.keys()
+    if missing:
+        raise ValueError(f'Templated detail {detail.get("id")} needs explicit fields: {sorted(missing)}')
+    for field in ('u', 'v'):
+        value = detail[field]
+        if type(value) not in (int, float) or not math.isfinite(value):
+            raise ValueError(f'Templated detail {detail["id"]} needs a finite {field}')
+    if not isinstance(detail['label'], str) or not detail['label'].strip():
+        raise ValueError(f'Templated detail {detail["id"]} needs a label')
+    if not detail['evidenceIds']:
+        raise ValueError(f'Templated detail {detail["id"]} needs evidenceIds')
+
+    expanded = {**templates[name], **detail}
+    del expanded['template']
+    # Keep the published JSON's field order through migration. Remaining fields
+    # retain their template or instance order, including floor/rails and labels.
+    order = ['id', 'kind', 'u', 'v', 'width', 'height']
+    if 'rails' in expanded:
+        order.extend(['depth', 'color'])
+        if 'floor' not in expanded:
+            order.append('label')
+    else:
+        order.extend(['color', 'label', 'depth', 'offset', 'frame'])
+    return {key: expanded.pop(key) for key in order if key in expanded} | expanded
+
+
+def build_data(index: dict, facades: list[dict], geometry: dict, survey: dict, templates: dict | None = None) -> dict:
     """Join sources without modifying them or creating facade features."""
+    templates = {} if templates is None else templates
+    validate_templates(templates)
     buildings = indexed(geometry['buildings'], 'id', 'geometry building')
     survey_buildings = indexed(survey['buildings'], 'building_id', 'survey building')
     captures = indexed(survey['captures'], 'capture_id', 'capture')
@@ -98,7 +172,8 @@ def build_data(index: dict, facades: list[dict], geometry: dict, survey: dict) -
             validate_owner(change, building_id)
             use_captures(change['evidenceIds'], building_id, survey_ids)
             references(change['observationIds'], 'observation')
-            for detail in change['details']:
+            details = [expand_detail(detail, templates) for detail in change['details']]
+            for detail in details:
                 detail_id = detail.get('id')
                 if not isinstance(detail_id, str) or not detail_id:
                     raise ValueError(f'Missing detail ID in {change.get("changeId")}')
@@ -110,7 +185,7 @@ def build_data(index: dict, facades: list[dict], geometry: dict, survey: dict) -
                 if 'faceId' in detail and detail['faceId'] != change.get('faceId'):
                     raise ValueError(f'Invalid cross-building detail face: {detail_id}')
                 use_captures(detail['evidenceIds'], building_id, survey_ids)
-            all_changes.append(change)
+            all_changes.append({**change, 'details': details})
 
     observations = indexed(all_observations, 'observationId', 'observation')
     changes = indexed(all_changes, 'changeId', 'change')
@@ -143,7 +218,9 @@ def load_data(folder: Path = FACADES) -> dict:
         if path.stem != facade.get('buildingId'):
             raise ValueError(f'Building ID must match its file name: {path.name}')
         facades.append(facade)
-    return build_data(read_json(folder / 'index.json'), facades, read_json(GEOMETRY), read_json(SURVEY))
+    library = folder.parent / 'detail-templates.json'
+    templates = read_json(library) if library.exists() else None
+    return build_data(read_json(folder / 'index.json'), facades, read_json(GEOMETRY), read_json(SURVEY), templates)
 
 
 def main() -> int:

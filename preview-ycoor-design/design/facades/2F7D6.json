@@ -77,19 +77,10 @@
         },
         {
           "id": "south-ground-glass-1",
-          "kind": "window",
+          "template": "ground-floor-glazing",
           "u": 1.35,
           "v": 1500.75,
-          "width": 1.5,
-          "height": 2.3,
-          "color": "#526971",
           "label": "Première baie complète visible",
-          "depth": 0.02,
-          "offset": 0.035,
-          "frame": {
-            "width": 0.11,
-            "color": "#a46d44"
-          },
           "evidenceIds": [
             "C029",
             "C030"
@@ -97,19 +88,10 @@
         },
         {
           "id": "south-ground-glass-2",
-          "kind": "window",
+          "template": "ground-floor-glazing",
           "u": 3.15,
           "v": 1500.75,
-          "width": 1.5,
-          "height": 2.3,
-          "color": "#526971",
           "label": "Deuxième baie complète visible",
-          "depth": 0.02,
-          "offset": 0.035,
-          "frame": {
-            "width": 0.11,
-            "color": "#a46d44"
-          },
           "evidenceIds": [
             "C029",
             "C030"
@@ -117,19 +99,10 @@
         },
         {
           "id": "south-ground-glass-3",
-          "kind": "window",
+          "template": "ground-floor-glazing",
           "u": 4.95,
           "v": 1500.75,
-          "width": 1.5,
-          "height": 2.3,
-          "color": "#526971",
           "label": "Troisième baie complète visible",
-          "depth": 0.02,
-          "offset": 0.035,
-          "frame": {
-            "width": 0.11,
-            "color": "#a46d44"
-          },
           "evidenceIds": [
             "C029",
             "C030"
@@ -137,19 +110,10 @@
         },
         {
           "id": "south-ground-glass-4",
-          "kind": "window",
+          "template": "ground-floor-glazing",
           "u": 6.75,
           "v": 1500.75,
-          "width": 1.5,
-          "height": 2.3,
-          "color": "#526971",
           "label": "Quatrième baie complète visible · suite coupée dans la photo",
-          "depth": 0.02,
-          "offset": 0.035,
-          "frame": {
-            "width": 0.11,
-            "color": "#a46d44"
-          },
           "evidenceIds": [
             "C029",
             "C030"
@@ -173,19 +137,10 @@
         },
         {
           "id": "south-lower-recess-glass-a",
-          "kind": "window",
+          "template": "recess-glazing",
           "u": 2.8,
           "v": 1503.65,
-          "width": 2.1,
-          "height": 2.1,
-          "color": "#435967",
           "label": "Vitrage visible derrière le balcon inférieur · partie gauche",
-          "depth": 0.02,
-          "offset": 0.035,
-          "frame": {
-            "width": 0.1,
-            "color": "#93613f"
-          },
           "evidenceIds": [
             "C029",
             "C030"
@@ -193,19 +148,10 @@
         },
         {
           "id": "south-lower-recess-glass-b",
-          "kind": "window",
+          "template": "recess-glazing",
           "u": 5.0,
           "v": 1503.65,
-          "width": 2.1,
-          "height": 2.1,
-          "color": "#435967",
           "label": "Vitrage visible derrière le balcon inférieur · partie droite",
-          "depth": 0.02,
-          "offset": 0.035,
-          "frame": {
-            "width": 0.1,
-            "color": "#93613f"
-          },
           "evidenceIds": [
             "C029",
             "C030"
@@ -213,91 +159,9 @@
         },
         {
           "id": "south-balcony-lower",
-          "kind": "balcony",
+          "template": "wide-rust-balcony",
           "u": 4.05,
           "v": 1502.95,
-          "width": 7.8,
-          "height": 1.05,
-          "depth": 0.8,
-          "color": "#8e4135",
-          "floor": {
-            "height": 0.14,
-            "color": "#e5dfca"
-          },
-          "rails": [
-            {
-              "u": 0,
-              "v": 0.44,
-              "width": 7.8,
-              "height": 0.075,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
-            },
-            {
-              "u": 0,
-              "v": 0.15,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
-            },
-            {
-              "u": 0,
-              "v": -0.14,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
-            },
-            {
-              "u": 0,
-              "v": -0.43,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
-            },
-            {
-              "u": -3.7,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#794137"
-            },
-            {
-              "u": -1.25,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#794137"
-            },
-            {
-              "u": 1.25,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#794137"
-            },
-            {
-              "u": 3.7,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#794137"
-            }
-          ],
           "evidenceIds": [
             "C030",
             "C029"
@@ -306,91 +170,9 @@
         },
         {
           "id": "south-balcony-middle",
-          "kind": "balcony",
+          "template": "wide-rust-balcony",
           "u": 4.05,
           "v": 1505.75,
-          "width": 7.8,
-          "height": 1.05,
-          "depth": 0.8,
-          "color": "#8e4135",
-          "floor": {
-            "height": 0.14,
-            "color": "#e5dfca"
-          },
-          "rails": [
-            {
-              "u": 0,
-              "v": 0.44,
-              "width": 7.8,
-              "height": 0.075,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
-            },
-            {
-              "u": 0,
-              "v": 0.15,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
-            },
-            {
-              "u": 0,
-              "v": -0.14,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
-            },
-            {
-              "u": 0,
-              "v": -0.43,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
-            },
-            {
-              "u": -3.7,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#794137"
-            },
-            {
-              "u": -1.25,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#794137"
-            },
-            {
-              "u": 1.25,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#794137"
-            },
-            {
-              "u": 3.7,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#794137"
-            }
-          ],
           "evidenceIds": [
             "C030",
             "C029"
@@ -399,91 +181,9 @@
         },
         {
           "id": "south-balcony-upper",
-          "kind": "balcony",
+          "template": "wide-rust-balcony",
           "u": 4.05,
           "v": 1508.55,
-          "width": 7.8,
-          "height": 1.05,
-          "depth": 0.8,
-          "color": "#8e4135",
-          "floor": {
-            "height": 0.14,
-            "color": "#e5dfca"
-          },
-          "rails": [
-            {
-              "u": 0,
-              "v": 0.44,
-              "width": 7.8,
-              "height": 0.075,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
-            },
-            {
-              "u": 0,
-              "v": 0.15,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
-            },
-            {
-              "u": 0,
-              "v": -0.14,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
-            },
-            {
-              "u": 0,
-              "v": -0.43,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
-            },
-            {
-              "u": -3.7,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#794137"
-            },
-            {
-              "u": -1.25,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#794137"
-            },
-            {
-              "u": 1.25,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#794137"
-            },
-            {
-              "u": 3.7,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#794137"
-            }
-          ],
           "evidenceIds": [
             "C030",
             "C029"
@@ -492,61 +192,10 @@
         },
         {
           "id": "south-screen-lower-north",
-          "kind": "balcony",
+          "template": "vertical-timber-screen",
           "u": 0.62,
           "v": 1503.8,
-          "width": 0.75,
-          "height": 2.1,
-          "depth": 0.72,
-          "color": "#5e3933",
           "label": "Claustra vertical visible · lames et profondeur interprétées",
-          "rails": [
-            {
-              "u": -0.32,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            },
-            {
-              "u": -0.16,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            },
-            {
-              "u": 0,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            },
-            {
-              "u": 0.16,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            },
-            {
-              "u": 0.32,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            }
-          ],
           "evidenceIds": [
             "C030",
             "C029"
@@ -554,61 +203,10 @@
         },
         {
           "id": "south-screen-lower-division",
-          "kind": "balcony",
+          "template": "vertical-timber-screen",
           "u": 7.3,
           "v": 1503.8,
-          "width": 0.75,
-          "height": 2.1,
-          "depth": 0.72,
-          "color": "#5e3933",
           "label": "Claustra vertical visible · lames et profondeur interprétées",
-          "rails": [
-            {
-              "u": -0.32,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            },
-            {
-              "u": -0.16,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            },
-            {
-              "u": 0,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            },
-            {
-              "u": 0.16,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            },
-            {
-              "u": 0.32,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            }
-          ],
           "evidenceIds": [
             "C030",
             "C029"
@@ -616,61 +214,10 @@
         },
         {
           "id": "south-screen-middle-division",
-          "kind": "balcony",
+          "template": "vertical-timber-screen",
           "u": 7.3,
           "v": 1506.6,
-          "width": 0.75,
-          "height": 2.1,
-          "depth": 0.72,
-          "color": "#5e3933",
           "label": "Claustra vertical visible · lames et profondeur interprétées",
-          "rails": [
-            {
-              "u": -0.32,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            },
-            {
-              "u": -0.16,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            },
-            {
-              "u": 0,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            },
-            {
-              "u": 0.16,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            },
-            {
-              "u": 0.32,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            }
-          ],
           "evidenceIds": [
             "C030",
             "C029"
@@ -678,61 +225,10 @@
         },
         {
           "id": "south-screen-upper-division",
-          "kind": "balcony",
+          "template": "vertical-timber-screen",
           "u": 7.3,
           "v": 1509.4,
-          "width": 0.75,
-          "height": 2.1,
-          "depth": 0.72,
-          "color": "#5e3933",
           "label": "Claustra vertical visible · lames et profondeur interprétées",
-          "rails": [
-            {
-              "u": -0.32,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            },
-            {
-              "u": -0.16,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            },
-            {
-              "u": 0,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            },
-            {
-              "u": 0.16,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            },
-            {
-              "u": 0.32,
-              "v": 0,
-              "width": 0.055,
-              "height": 2.1,
-              "depth": 0.55,
-              "offset": 0.13,
-              "color": "#5e3933"
-            }
-          ],
           "evidenceIds": [
             "C030",
             "C029"

@@ -12,6 +12,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 BUILDER = ROOT / 'tools/build-design-evidence.py'
 FACADES = ROOT / 'preview-ycoor-design/design/facades'
+TEMPLATES = FACADES.with_name('detail-templates.json')
 EVIDENCE = ROOT / 'preview-ycoor-design/design/design-evidence.json'
 GEOMETRY = ROOT / 'preview-ycoor-design/assets/ycoor-dxf.json'
 SURVEY = ROOT / 'crans-montana-p06/assets/streetview-survey/2026-11-15/survey-data.json'
@@ -29,17 +30,80 @@ class BuildDesignEvidenceTests(unittest.TestCase):
         spec.loader.exec_module(self.builder)
         self.index = read(FACADES / 'index.json')
         self.facades = [read(path) for path in sorted(FACADES.glob('*.json')) if path.name != 'index.json']
+        self.templates = read(TEMPLATES) if TEMPLATES.exists() else {}
         self.geometry = read(GEOMETRY)
         self.survey = read(SURVEY)
 
     def build(self):
-        return self.builder.build_data(self.index, self.facades, self.geometry, self.survey)
+        return self.builder.build_data(self.index, self.facades, self.geometry, self.survey, self.templates)
 
     def facade(self, building_id):
         return next(item for item in self.facades if item['buildingId'] == building_id)
 
-    def test_existing_semantic_records_and_order_are_preserved(self):
-        self.assertEqual(read(EVIDENCE), self.build())
+    def test_expanded_records_and_order_are_preserved_byte_for_byte(self):
+        expanded = self.builder.load_data()
+        document = json.dumps(expanded, ensure_ascii=False, indent=2) + '\n'
+        self.assertEqual(EVIDENCE.read_bytes().replace(b'\r\n', b'\n'), document.encode('utf-8'))
+
+    def use_test_template(self):
+        details = self.facade('2355E')['changes'][0]['details']
+        instance = {key: details[0][key] for key in ('id', 'u', 'v', 'label', 'evidenceIds')}
+        instance['template'] = 'test-opening'
+        self.templates['test-opening'] = {
+            'kind': 'window', 'width': 1.2, 'height': 0.9, 'color': '#223344',
+            'frame': {'width': 0.08, 'color': '#765432'},
+        }
+        details[0] = instance
+        return instance
+
+    def test_template_expands_with_explicit_overrides_and_metadata(self):
+        instance = self.use_test_template()
+        instance['height'] = 1.4
+        instance['frame'] = {'width': 0.1, 'color': '#456789'}
+        instance['status'] = 'observed'
+        snapshot = copy.deepcopy((self.facades, self.templates))
+        actual = next(detail for change in self.build()['changes'] for detail in change['details']
+                      if detail['id'] == instance['id'])
+        self.assertEqual({
+            'id': instance['id'], 'u': instance['u'], 'v': instance['v'],
+            'label': instance['label'], 'evidenceIds': instance['evidenceIds'],
+            'kind': 'window', 'width': 1.2, 'height': 1.4, 'color': '#223344',
+            'frame': {'width': 0.1, 'color': '#456789'}, 'status': 'observed',
+        }, actual)
+        self.assertEqual(snapshot, (self.facades, self.templates))
+
+    def test_unknown_or_invalid_template_references_are_rejected(self):
+        instance = self.use_test_template()
+        for name in ('missing-template', '../test-opening', '__proto__', ['test-opening']):
+            with self.subTest(name=name):
+                instance['template'] = name
+                with self.assertRaisesRegex(ValueError, 'template'):
+                    self.build()
+
+    def test_template_library_cannot_supply_metadata_or_reference_other_templates(self):
+        self.use_test_template()
+        template = self.templates['test-opening']
+        for field in ('id', 'buildingId', 'faceId', 'u', 'v', 'evidenceIds', 'label', 'status', 'template'):
+            with self.subTest(field=field):
+                template[field] = 'unexpected'
+                with self.assertRaisesRegex(ValueError, f'template.*{field}'):
+                    self.build()
+                del template[field]
+        template['frame']['status'] = 'unexpected'
+        with self.assertRaisesRegex(ValueError, 'template.*status'):
+            self.build()
+
+    def test_templated_details_require_explicit_placement_label_and_evidence(self):
+        instance = self.use_test_template()
+        for field in ('id', 'u', 'v', 'label', 'evidenceIds'):
+            with self.subTest(field=field):
+                value = instance.pop(field)
+                with self.assertRaisesRegex(ValueError, field):
+                    self.build()
+                instance[field] = value
+        instance['evidenceIds'] = []
+        with self.assertRaisesRegex(ValueError, 'evidenceIds'):
+            self.build()
 
     def test_captures_remain_original_including_nulls_and_strings(self):
         # A future imported capture may contain nulls; never coerce source values.

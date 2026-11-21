@@ -2,11 +2,19 @@
 
 La P0.6.7 dispose d’un inventaire des **six volumes et 43 plans de murs sources**. B002 regroupe plusieurs volumes CAD : ce n’est ni un décompte de bâtiments cadastraux, ni une promesse de 43 façades physiques indépendantes. Les trois faces déjà traitées restent partielles. Le total de fenêtres et le nombre restant ne sont pas établis.
 
-## Un cycle par face
+## Un cycle par lot
+
+Préparer le contexte avec `node tools/prepare-facade-batch.mjs`. Il contient au plus cinq volumes admissibles, deux faces par volume et trois photos candidates. `--building 2355E --building 2F7D6` cible B002 et B003 ; `--faces`, `--photos` et `--limit` règlent la taille. `--output CHEMIN` enregistre le dossier au lieu de l’imprimer.
+
+Ce dossier court donne les fichiers à éditer, les plans sources et leurs triangles, les détails existants, les photos à examiner et les prochaines actions. Il liste aussi les faces et captures non incluses : la sélection ne signifie pas que le reste est terminé. Les volumes à vérifier sont exclus automatiquement ; une sélection explicite permet de les examiner en conservant le signalement du blocage.
 
 1. Dans **Inventaire des bâtiments**, choisir un volume puis **Voir cette face**. Vérifier les photographies candidates et attribuer des preuves à cette face ; une photo candidate pour le bâtiment n’est pas une preuve de toutes ses faces.
-2. Modifier uniquement `preview-ycoor-design/design/facades/<buildingId>.json`. Ajouter une observation et un changement explicite, avec un `faceId` existant, les captures originales et des détails placés individuellement. Réutiliser les fenêtres, volets, portes, bardages, cadres et garde-corps déjà disponibles. Les pièces d’un même vitrage ne prouvent pas plusieurs fenêtres physiques.
-3. Exécuter `python tools/update-ycoor.py`, examiner la face dans la P0.6.7 et corriger. Le constructeur rassemble les métadonnées originales, vérifie les références et les unions de triangles, régénère les exports et la page de version. `python tools/update-ycoor.py --check` vérifie tout sans écrire.
+2. Modifier les fichiers `preview-ycoor-design/design/facades/<buildingId>.json` du lot. Ajouter une observation et un changement explicite, avec un `faceId` existant, les captures originales et des détails placés individuellement. Réutiliser les fenêtres, volets, portes, bardages, cadres et garde-corps déjà disponibles. Les pièces d’un même vitrage ne prouvent pas plusieurs fenêtres physiques.
+3. Exécuter une fois `python tools/update-ycoor.py`, examiner les faces modifiées dans la P0.6.7 et corriger si nécessaire. Le constructeur rassemble les métadonnées originales, vérifie les références et les unions de triangles, régénère les exports et la page de version. Regrouper le compte rendu et la publication par lot. `python tools/update-ycoor.py --check` vérifie tout sans écrire.
+
+Les styles répétés sont dans `preview-ycoor-design/design/detail-templates.json`. Un détail peut référencer un `template` et garde obligatoirement ses propres `id`, `u`, `v`, `label` et `evidenceIds`. Les modèles ne portent ni position, ni identité, ni preuve. Les valeurs propres au détail remplacent celles du modèle ; un objet `frame`, `floor` ou un tableau `rails` est remplacé entièrement. Aucun modèle ne crée automatiquement une rangée de fenêtres.
+
+Lire uniquement le dossier du lot et ses preuves réduit le contexte envoyé au modèle. Les vérifications automatiques restent groupées ; une modification du moteur demande ses tests, alors qu’un ajout de données réutilise les contrôles existants. Une refactorisation donnant des sorties identiques ne demande pas de refaire la revue visuelle. Les économies de texte se mesurent ; elles ne garantissent pas un pourcentage identique de tokens facturés.
 
 L’ordre des bâtiments, observations et changements se règle dans `design/facades/index.json` ; ajouter les nouveaux identifiants à ces listes. La dernière proposition prête est cadrée au lancement. Les fichiers de preuves, inventaire et page P0.6.7 sont générés : leur source d’édition est le fichier du bâtiment ou l’HTML de travail, pas la sortie générée.
 
@@ -29,3 +37,9 @@ Continuer d’abord les parties directement visibles de B002 et B003, puis les a
 Pour **26152/B007**, la vérification distingue les façades achevées en apparence en juin 2024 et l’attribut `Im Bau` de la source de juin 2020, toujours diffusée dans le flux courant. Le booléen `geometryReviewRequired` bloque de nouveaux ajouts prêts sur ce volume jusqu’à résolution de la vérification ; le retirer demande les preuves datées et mesurées décrites dans [26152-verification.md](26152-verification.md). L’état en novembre 2026 n’est pas déduit de la date de sauvegarde des captures.
 
 Une future validation exhaustive devra établir, face par face, que les parties cachées ont été examinées et que toutes les ouvertures observées sont inventoriées. Les surfaces source, dates originales et captures intégrales restent conservées pendant ce travail.
+
+## Passer à tout le village
+
+Étendre le travail par secteurs : importer les volumes officiels, associer les vues utilisables, puis détailler les faces confirmées par lots. Conserver l’UUID et la tuile source lors des prochains imports pour éviter les collisions d’identifiants DXF. Les secteurs sans photos suffisantes restent signalés comme incomplets.
+
+À cette échelle, le moteur devra charger les secteurs et les détails selon la vue et la distance, tout en conservant les volumes officiels pour la vue d’ensemble. Ce chargement progressif reste à implémenter ; le présent changement simplifie la préparation et l’édition, sans prétendre que tout le village est déjà importé.
