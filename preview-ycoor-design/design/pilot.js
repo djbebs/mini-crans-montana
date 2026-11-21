@@ -1,6 +1,6 @@
 import { createLocalBuildings } from './local-buildings.js';
 import { createDesignEnhancements } from './design-enhancements.js';
-import { createDesignPanel } from './design-panel.js?v=4';
+import { createDesignPanel } from './design-panel.js?v=5';
 import { assetUrl, validateDesignEvidence } from './design-model.js';
 import { buildFacadeInventory } from './coverage-model.js?v=4';
 
@@ -32,13 +32,7 @@ export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, su
   ]);
   if (snapshot) onTerrainSnapshot?.(snapshot);
   const datum = typeof originHeight === 'function' ? originHeight() : originHeight;
-  const local = createLocalBuildings({ THREE, scene, data, originHeight: datum,
-    onSelect: building => {
-      if (!panel) return;
-      panel.showBuilding(building.id);
-      onPanelOpen?.();
-    },
-  });
+  const local = createLocalBuildings({ THREE, scene, data, originHeight: datum });
   let panel = null, additions = null, evidence = null, inventory = null, visible = true, enabled = true, disposed = false;
   const status = { buildings: local.buildings.length, changes: 0, details: 0, designReady: false, error: null };
   try {
@@ -46,26 +40,21 @@ export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, su
     inventory = buildFacadeInventory({ buildings: local.buildings, faces: local.faces, evidence });
     additions = createDesignEnhancements({ THREE, scene, changes: evidence.changes, faces: local.faces,
       originHeight: datum,
-      onSelect: hit => {
-        panel?.showChange(hit.changeId, hit.detailId);
-        onPanelOpen?.();
-      },
     });
     status.changes = evidence.changes.filter(change => change.status === 'ready').length;
     status.details = evidence.changes.filter(change => change.status === 'ready').reduce((sum, change) => sum + change.details.length, 0);
     status.designReady = true;
     additions.setEnabled(true);
     try {
-      panel = await createDesignPanel({ assetBaseUrl: designBaseUrl, surveyBaseUrl, evidence, inventory,
-        onFocusBuilding: id => onFocus?.({ building: local.buildings.find(building => building.id === id) }),
-        onFocusFace: focusFace, onFocusChange: focusFacade,
+      panel = await createDesignPanel({ assetBaseUrl: designBaseUrl, inventory,
+        onFocusFace: focusFace,
         onViewChange: onPanelViewChange,
         onClose: () => onPanelClose?.(),
       });
       document.body.append(panel.element);
     } catch (error) {
-      console.warn('Panneau des preuves', error);
-      status.error = 'Panneau des preuves indisponible.';
+      console.warn('Inventaire des faces', error);
+      status.error = 'Inventaire des faces indisponible.';
     }
   } catch (error) {
     additions?.dispose();
@@ -116,11 +105,9 @@ export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, su
       local.setOriginHeight(height);
       additions?.setOriginHeight(height);
     },
-    openSources(value = true) {
+    closePanel() {
       if (disposed || !panel) return;
-      if (value && panel.showSources) panel.showSources();
-      else panel.setOpen(value);
-      if (value) onPanelOpen?.();
+      panel.setOpen(false);
     },
     openCoverage() {
       if (disposed || !panel) return;

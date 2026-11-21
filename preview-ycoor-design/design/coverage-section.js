@@ -90,7 +90,7 @@ export function createCoverageSection({ inventory, onFocusFace, onShowChange, as
       if (!face.canFocus) focus.title = 'Cette face ne peut pas être ciblée dans la scène.';
       focus.addEventListener('click', () => onFocusFace?.(face.faceId));
       actions.append(focus);
-      for (const changeId of face.changeIds) {
+      for (const changeId of typeof onShowChange === 'function' ? face.changeIds : []) {
         const proof = node('button', 'coverage-proof', face.changeIds.length > 1 ? `Preuve · ${changeId}` : 'Voir la preuve');
         proof.type = 'button';
         proof.disabled = typeof onShowChange !== 'function';

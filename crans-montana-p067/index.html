@@ -51,7 +51,7 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:2px 
 #real-status.show{display:block}#real-status[data-failed='true']{cursor:pointer;text-decoration:underline;background:#f6e6dc;border-color:#b02d35}
 #real-toggle{background:#c52b30;color:#fff}
 #real-toggle.active{background:#306299}
-#design-controls{border-top:2px dashed #bcb5a0;margin-top:7px;padding-top:7px;font-size:11px;line-height:1.35}#design-controls button{font-size:11px;padding:4px 6px;margin:3px 2px 2px 0}#design-controls small{font-size:10px}#design-open{background:#e3c26c}#design-toggle.active{background:#2f5c9e;color:#fff}#design-status{margin-top:4px}
+#design-controls{border-top:2px dashed #bcb5a0;margin-top:7px;padding-top:7px;font-size:11px;line-height:1.35}#design-controls button{font-size:11px;padding:4px 6px;margin:3px 2px 2px 0}#design-controls small{font-size:10px}#design-toggle.active{background:#2f5c9e;color:#fff}#design-status{margin-top:4px}
 #design-facade{display:block;width:100%;min-width:0;margin:3px 0;padding:4px 2px;border:2px solid var(--edge);background:#fffaf0;font-size:11px}
 @media(max-width:650px){#real-status{top:auto;bottom:118px;max-width:calc(100vw - 24px);font-size:11px}}
 </style></head><body>
@@ -59,7 +59,6 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:2px 
 <div id="real-status" role="status" aria-live="polite">Connexion aux toitures officielles…</div>
 <section id="place" class="box"><b>Crans-Montana</b><small>Ycoor · version P0.6.7</small><div>DXF et façades documentées</div>
 <div id="design-controls" aria-label="Conception documentée">
- <button id="design-open" type="button" aria-controls="design-panel" aria-expanded="false" disabled>Sources et preuves</button>
  <button id="design-coverage" type="button" aria-controls="design-panel" aria-expanded="false" disabled>Inventaire des bâtiments</button>
  <button id="design-toggle" type="button" aria-pressed="false" disabled>Détails documentés : chargement…</button>
  <label for="design-facade">Façade à voir</label>
@@ -119,7 +118,7 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:2px 
 <p><b>Couche « Jeux photo » :</b> cinq maquettes 3D approuvées par l’utilisateur : grande structure avec tunnel, toboggan tubulaire courbe, petite structure bleue et rouge, jeux de cordes et banc. Placement déterministe approximatif à l’intérieur du périmètre OpenStreetMap de l’aire de jeux. Le banc est un modèle approuvé, mais sa présence sur ce périmètre reste non confirmée. Les objets sont cliquables et séparés des données OSM et cadastrales. Le contour de l’aire de jeux est orange fluo (#ff6900).</p>
 <p>Des photos locales de 2025 confirment l'existence de structures à grimper et de toboggans à Ycoor, mais ne fournissent pas des coordonnées précises. <a href="https://www.crans-montana.ch/fr/?idcmt=Partenaire_Activite_4ff811345b2094222f969b680bb9ac78" target="_blank" rel="noopener noreferrer">Référence touristique officielle</a>.</p>
 <p><b>Relevé Street View des 15–16 novembre 2026 :</b> couche facultative de 24 positions de panoramas et 55 captures, avec dates, liens sources et 22 identifiants visuels. Les coordonnées et caps proviennent du visualiseur ; leur précision physique n'est pas vérifiée. Les identifiants visuels ne constituent pas une correspondance cadastrale. Les panoramas de contributeurs sont distingués et leurs caps ne sont pas orientés sur la carte. La couverture est partielle, avec lacunes documentées. <a href="../crans-montana-p06/assets/streetview-survey/2026-11-15/index.html" target="_blank" rel="noopener noreferrer">Dossier, carte et CSV du relevé</a>.</p>
-<p>La maquette conserve son rendu <b>pixel-art</b>. Les détails documentés sont interprétés à partir des photos datées, accessibles dans les preuves. L’inventaire présente tous les plans de murs sources, les parties dessinées et les vérifications encore nécessaires. Le total de fenêtres reste inconnu.</p>
+<p>La maquette conserve son rendu <b>pixel-art</b>. Les détails documentés sont interprétés à partir des photos datées, conservées dans le dossier du projet. L’inventaire présente tous les plans de murs sources, les parties dessinées et les vérifications encore nécessaires. Le total de fenêtres reste inconnu.</p>
 <p><b>Sources :</b> <a href="https://sit.vs.ch/arcgis/rest/services/MO/MapServer" target="_blank" rel="noopener noreferrer">État du Valais, MO</a> · <a href="https://map.vsgis.ch/cransmontana/?lang=fr" target="_blank" rel="noopener noreferrer">VSGIS Crans-Montana</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors (ODbL)</a> · swisstopo swissBUILDINGS3D et végétation.</p></section>
 <nav id="tools" aria-label="Commandes de la carte">
  <button id="shot" title="Capture">▣</button><button id="reset" title="Caméra initiale">⌂</button>
@@ -226,9 +225,7 @@ function syncDesignControls(){
  $('design-toggle').classList.toggle('active',enabled);
  $('design-toggle').setAttribute('aria-pressed',String(enabled));
  $('design-toggle').textContent='Détails documentés : '+(enabled?'ON':'OFF');
- $('design-open').disabled=!pilot?.panelReady;
  $('design-coverage').disabled=!pilot?.panelReady;
- $('design-open').setAttribute('aria-expanded',String(Boolean(pilot?.panelOpen&&pilot.panelView!=='coverage')));
  $('design-coverage').setAttribute('aria-expanded',String(Boolean(pilot?.panelOpen&&pilot.panelView==='coverage')));
  const hasFacade=Boolean(pilot?.status.designReady&&$('design-facade').value);
  $('design-facade').disabled=!hasFacade;
@@ -238,7 +235,7 @@ async function startDesignPilot(){
  if(pilotLoading||pilot)return;
  pilotLoading=true;
  try{
-  const {createPilot}=await import('../preview-ycoor-design/design/pilot.js?v=4');
+  const {createPilot}=await import('../preview-ycoor-design/design/pilot.js?v=5');
   pilot=await createPilot({THREE,scene,
    dataBaseUrl:new URL('../preview-ycoor-design/assets/',import.meta.url).href,
    designBaseUrl:new URL('../preview-ycoor-design/design/',import.meta.url).href,
@@ -256,7 +253,7 @@ async function startDesignPilot(){
     $('sources').classList.remove('show');
     syncDesignControls();
    },
-   onPanelClose:()=>{syncDesignControls();$(pilot?.panelView==='coverage'?'design-coverage':'design-open').focus({preventScroll:true});},
+   onPanelClose:()=>{syncDesignControls();$('design-coverage').focus({preventScroll:true});},
    onPanelViewChange:syncDesignControls,
    onFocus:focusDesignTarget,
   });
@@ -270,10 +267,6 @@ async function startDesignPilot(){
   syncDesignControls();
  }finally{pilotLoading=false;}
 }
-$('design-open').onclick=()=>{
- pilot?.openSources(!pilot.panelOpen||pilot.panelView==='coverage');
- syncDesignControls();
-};
 $('design-coverage').onclick=()=>{pilot?.openCoverage();syncDesignControls();};
 $('design-toggle').onclick=()=>{pilot?.setDesignEnabled(!pilot.designEnabled);syncDesignControls();};
 $('design-focus').onclick=()=>{
@@ -301,7 +294,7 @@ $('streetview-switch').onclick=async()=>{
    onStatus:message=>{$('streetview-status').textContent=message;},
    onEnabledChange:enabled=>{
     syncStreetViewSwitch(enabled);
-    if(enabled){pilot?.openSources(false);syncDesignControls();}
+    if(enabled){pilot?.closePanel();syncDesignControls();}
     if(!enabled)$('streetview-switch').focus({preventScroll:true});
    },
    onFocusCamera:panorama=>{
