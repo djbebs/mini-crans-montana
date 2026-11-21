@@ -1,5 +1,5 @@
 import { assetUrl, checkedSourceUrl, isStreetViewUrl, orderedSources, validateDesignEvidence } from './design-model.js';
-import { createCoverageSection } from './coverage-section.js';
+import { createCoverageSection } from './coverage-section.js?v=4';
 
 const labels = { missing_detail: 'Détail absent du volume', dated_change_supported: 'Évolution datée étayée', unresolved: 'À vérifier' };
 const confidenceLabels = { high: 'élevée', medium: 'moyenne', low: 'faible', unknown: 'non évaluée' };

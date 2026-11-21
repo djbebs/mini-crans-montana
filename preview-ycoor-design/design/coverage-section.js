@@ -49,7 +49,9 @@ export function createCoverageSection({ inventory, onFocusFace, onShowChange, as
   downloads.setAttribute('aria-label', 'Télécharger l’inventaire des faces sources');
   for (const format of ['csv', 'json']) {
     const download = node('a', '', `Télécharger ${format.toUpperCase()}`);
-    download.href = assetUrl(`facade-inventory.${format}`, assetBaseUrl);
+    const url = new URL(assetUrl(`facade-inventory.${format}`, assetBaseUrl));
+    if (inventory.revision) url.searchParams.set('revision', inventory.revision);
+    download.href = url.href;
     download.download = `facade-inventory.${format}`;
     downloads.append(download);
   }

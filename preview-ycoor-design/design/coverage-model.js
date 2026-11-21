@@ -3,6 +3,12 @@ import { validateDesignEvidence } from './design-model.js';
 const openingKinds = new Set(['window', 'door', 'shutter']);
 const directions = ['Nord', 'Nord-Est', 'Est', 'Sud-Est', 'Sud', 'Sud-Ouest', 'Ouest', 'Nord-Ouest'];
 const unique = values => [...new Set(values)];
+// Cache version for downloads, not a cryptographic provenance claim.
+function revisionOf(value) {
+  let hash = 2166136261;
+  for (const character of JSON.stringify(value)) hash = Math.imul(hash ^ character.codePointAt(0), 16777619);
+  return `v1-${(hash >>> 0).toString(16).padStart(8, '0')}`;
+}
 function keyed(values, key, label) {
   if (!Array.isArray(values)) throw new Error(`Missing ${label} array.`);
   const result = new Map();
@@ -61,6 +67,7 @@ export function buildFacadeInventory({ buildings, faces, evidence }) {
   });
   return {
     schemaVersion: 1,
+    revision: revisionOf({ buildings, evidence }),
     scope: 'Source wall planes of the six DXF volumes intersecting the Ycoor pilot; visual groups are not cadastral identities.',
     countMeaning: 'Opening detail count means drawn window/door/shutter components, not unique physical windows. Full and remaining window totals are unknown. No face has a complete visual census.',
     summary: {

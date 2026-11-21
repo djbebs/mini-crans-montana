@@ -96,3 +96,14 @@ test('CSV distinguishes drawn opening components from unknown totals and escapes
   assert.ok(csv.includes('"\'=1+2"'), 'spreadsheet formulas must remain text');
   assert.ok(csv.includes(',"","false",'));
 });
+
+test('inventory download revision changes with a layout correction even when feature counts stay equal', () => {
+  const input = args(), original = buildFacadeInventory(input);
+  assert.equal(typeof original.revision, 'string');
+  assert.ok(original.revision.length > 4);
+  assert.equal(buildFacadeInventory(args()).revision, original.revision);
+  input.evidence.changes.find(change => change.status === 'ready').details[0].u += .01;
+  const corrected = buildFacadeInventory(input);
+  assert.equal(corrected.summary.detailCount, original.summary.detailCount);
+  assert.notEqual(corrected.revision, original.revision);
+});

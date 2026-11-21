@@ -1,8 +1,8 @@
 import { createLocalBuildings } from './local-buildings.js';
 import { createDesignEnhancements } from './design-enhancements.js';
-import { createDesignPanel } from './design-panel.js';
+import { createDesignPanel } from './design-panel.js?v=4';
 import { assetUrl, validateDesignEvidence } from './design-model.js';
-import { buildFacadeInventory } from './coverage-model.js';
+import { buildFacadeInventory } from './coverage-model.js?v=4';
 
 /** Pick the nearest visible pilot surface, respecting foreground scene objects. */
 export function pickPilotGeometry(raycaster, { local, additions, maxDistance = Infinity }) {
@@ -15,7 +15,7 @@ export function pickPilotGeometry(raycaster, { local, additions, maxDistance = I
 }
 
 async function readJson(base, path) {
-  const response = await fetch(assetUrl(path, base));
+  const response = await fetch(assetUrl(path, base), { cache: 'no-cache' });
   if (!response.ok) throw new Error(`${path} : HTTP ${response.status}`);
   return response.json();
 }

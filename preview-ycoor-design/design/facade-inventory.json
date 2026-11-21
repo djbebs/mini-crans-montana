@@ -1,5 +1,6 @@
 {
   "schemaVersion": 1,
+  "revision": "v1-5bdcdfa3",
   "scope": "Source wall planes of the six DXF volumes intersecting the Ycoor pilot; visual groups are not cadastral identities.",
   "countMeaning": "Opening detail count means drawn window/door/shutter components, not unique physical windows. Full and remaining window totals are unknown. No face has a complete visual census.",
   "summary": {
