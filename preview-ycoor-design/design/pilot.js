@@ -22,10 +22,11 @@ async function readJson(base, path) {
 
 /** Coordinate the independent local source and its optional evidence additions. */
 export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, surveyBaseUrl,
-  originHeight, onTerrainSnapshot, onStatus, onPanelOpen, onPanelClose, onPanelViewChange, onFocus }) {
+  originHeight, terrainSnapshot, onTerrainSnapshot, onStatus, onPanelOpen, onPanelClose, onPanelViewChange, onFocus }) {
   const [data, snapshot] = await Promise.all([
     readJson(dataBaseUrl, 'ycoor-dxf.json'),
-    readJson(dataBaseUrl, 'terrain-snapshot.json').catch(error => {
+    (terrainSnapshot !== undefined ? Promise.resolve(terrainSnapshot)
+      : readJson(dataBaseUrl, 'terrain-grid.json').catch(() => readJson(dataBaseUrl, 'terrain-snapshot.json'))).catch(error => {
       console.warn('Instantané du relief', error);
       return null;
     }),

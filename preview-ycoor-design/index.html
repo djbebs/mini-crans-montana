@@ -54,7 +54,7 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:2px 
 #design-facade{display:block;width:100%;min-width:0;margin:3px 0;padding:4px 2px;border:2px solid var(--edge);background:#fffaf0;font-size:11px}
 @media(max-width:650px){#real-status{top:auto;bottom:118px;max-width:calc(100vw - 24px);font-size:11px}}
 </style></head><body>
-<main id="map" aria-label="Maquette 3D isométrique de 100 mètres autour d'Ycoor"></main>
+<main id="map" aria-label="Maquette 3D isométrique du secteur Ycoor"></main>
 <div id="real-status" role="status" aria-live="polite">Connexion aux toitures officielles…</div>
 <section id="place" class="box"><b>Crans-Montana</b><small>Ycoor · atelier de conception</small><div>Aperçu · DXF et façades documentées</div>
 <div id="design-controls" aria-label="Conception documentée">
@@ -120,6 +120,7 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:2px 
 <p>Des photos locales de 2025 confirment l'existence de structures à grimper et de toboggans à Ycoor, mais ne fournissent pas des coordonnées précises. <a href="https://www.crans-montana.ch/fr/?idcmt=Partenaire_Activite_4ff811345b2094222f969b680bb9ac78" target="_blank" rel="noopener noreferrer">Référence touristique officielle</a>.</p>
 <p><b>Relevé Street View des 15–16 novembre 2026 :</b> couche facultative de 24 positions de panoramas et 55 captures, avec dates, liens sources et 22 identifiants visuels. Les coordonnées et caps proviennent du visualiseur ; leur précision physique n'est pas vérifiée. Les identifiants visuels ne constituent pas une correspondance cadastrale. Les panoramas de contributeurs sont distingués et leurs caps ne sont pas orientés sur la carte. La couverture est partielle, avec lacunes documentées. <a href="../crans-montana-p06/assets/streetview-survey/2026-11-15/index.html" target="_blank" rel="noopener noreferrer">Dossier, carte et CSV du relevé</a>.</p>
 <p>La maquette conserve son rendu <b>pixel-art</b>. Les détails documentés sont interprétés à partir des photos datées, conservées dans le dossier du projet. L’inventaire présente tous les plans de murs sources, les parties dessinées et les vérifications encore nécessaires. Le total de fenêtres reste inconnu.</p>
+<p><b>Relief :</b> terrain officiel <a href="https://www.swisstopo.admin.ch/en/height-model-swissalti3d" target="_blank" rel="noopener noreferrer">swissALTI3D</a>, millésime 2024, au pas de 2 m en LV95/LN02. Le terrain couvre les volumes entiers ; route et socle suivent le même relief. Le jour de mesure et les travaux ultérieurs restent à vérifier.</p>
 <p><b>Sources :</b> <a href="https://sit.vs.ch/arcgis/rest/services/MO/MapServer" target="_blank" rel="noopener noreferrer">État du Valais, MO</a> · <a href="https://map.vsgis.ch/cransmontana/?lang=fr" target="_blank" rel="noopener noreferrer">VSGIS Crans-Montana</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors (ODbL)</a> · swisstopo swissBUILDINGS3D et végétation.</p></section>
 <nav id="tools" aria-label="Commandes de la carte">
  <button id="shot" title="Capture">▣</button><button id="reset" title="Caméra initiale">⌂</button>
@@ -139,6 +140,9 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:2px 
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { createTerrainModel, createTerrainGeometry } from './design/terrain-model.js?v=7';
+import { triangulateOfficialPolygon } from './design/ground-surfaces.js?v=7';
+import { drawFurnitureGrounded, legacyPhotoHeight } from './design/ground-anchors.js?v=7';
 // Optional 3D Tiles library is loaded dynamically: the OSM view stays available if the CDN fails.
 window.__p0Booted=true;
 const $=(id)=>document.getElementById(id);
@@ -175,7 +179,8 @@ const buildingData=[],streetData=[],treeData=[],playgrounds=[],equipmentData=[],
 let officialPathState='en attente',officialPathCount=0;
 let osmPedCount=0,treeCount=0,playCount=0,parkStatus='OSM';
 let vegetationTiles=null,vegetationEnabled=true,vegetationReady=false,vegetationMeshes=0,treeLayer=null;
-let osmOk=false,terrainOk=false,terrainVals=null,frame=0,clockLast=performance.now(),selected=null;
+let terrainModel=null,terrainSnapshotData=null,terrainLoadPromise=null;
+let osmOk=false,terrainOk=false,frame=0,clockLast=performance.now(),selected=null;
 let moData={shapes:[],results:[],state:'pending'},moUpdated=null,moPainter=null,moRendered=[];
 let furnitureData={features:[],counts:null,status:'loading',errors:[]},furniturePainter=null,furnitureGroup=null,furnitureDrawn=[],furnitureVisible=true,furnitureBusy=false;
 let photoPainter=null,photoGroup=null,photoDrawn=[],photoVisible=true,photoReason='en attente';
@@ -184,7 +189,7 @@ let streetViewLayer=null,streetViewLoading=false;
 const scene=new THREE.Scene();scene.background=new THREE.Color('#729da2');scene.fog=new THREE.Fog('#729da2',190,420);
 const camera=new THREE.OrthographicCamera(-95,95,75,-75,0.1,1500);
 const renderer=new THREE.WebGLRenderer({antialias:false,preserveDrawingBuffer:true,powerPreference:'low-power'});
-renderer.setPixelRatio(1);renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.BasicShadowMap;
+renderer.setPixelRatio(1);renderer.localClippingEnabled=true;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.BasicShadowMap;
 renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;
 $('map').appendChild(renderer.domElement);
 const world=new THREE.Group();scene.add(world);
@@ -195,14 +200,26 @@ const up=new THREE.Vector3(0,1,0),target=new THREE.Vector3(0,0,0);
 const mats={ground:new THREE.MeshLambertMaterial({color:'#959d92',flatShading:true,side:THREE.DoubleSide}),road:new THREE.MeshLambertMaterial({color:'#48463d',flatShading:true,side:THREE.DoubleSide}),walk:new THREE.MeshLambertMaterial({color:'#cfb68e',flatShading:true,side:THREE.DoubleSide}),white:new THREE.MeshLambertMaterial({color:'#ded9c0',flatShading:true}),ink:new THREE.MeshLambertMaterial({color:'#26342b',flatShading:true}),roof:new THREE.MeshLambertMaterial({color:'#a05c44',flatShading:true,side:THREE.DoubleSide}),red:new THREE.MeshLambertMaterial({color:'#cc342c',flatShading:true}),black:new THREE.MeshLambertMaterial({color:'#202e2d',flatShading:true}),yellow:new THREE.MeshLambertMaterial({color:'#c9bd71',flatShading:true})};
 function seeded(n){let v=Math.sin(n*84.115+14.115)*43758.5453;return v-Math.floor(v)}
 function local(lat,lon){return {x:(lon-ORIGIN.lon)*111320*Math.cos(ORIGIN.lat*Math.PI/180),z:-(lat-ORIGIN.lat)*111320}}
-function height(x,z){
- if(terrainVals){let a=Math.max(0,Math.min(2,(x+50)/50)),b=Math.max(0,Math.min(2,(z+50)/50));let i=Math.min(1,Math.floor(a)),j=Math.min(1,Math.floor(b)),tx=a-i,tz=b-j;
- return (terrainVals[j][i]*(1-tx)*(1-tz)+terrainVals[j][i+1]*tx*(1-tz)+terrainVals[j+1][i]*(1-tx)*tz+terrainVals[j+1][i+1]*tx*tz)-terrainVals[1][1];
- }
- // Never fabricate slopes if official heights cannot be fetched.
- return 0;
+function height(x,z){return terrainModel?.height(x,z)??0;}
+const terrainDatum=()=>terrainModel?.datum??1497.1;
+const terrainLabel=()=>terrainModel?.schemaVersion===2
+ ? 'swissALTI3D '+terrainSnapshotData.sourceYear+' · pas '+terrainSnapshotData.gridStep+' m'
+ : terrainOk?'relief de secours · 9 points':'relief indisponible';
+function applyTerrainSnapshot(snapshot){
+ if(terrainModel&&terrainSnapshotData===snapshot)return;
+ if(terrainModel?.schemaVersion===2&&snapshot.schemaVersion!==2)return;
+ const model=createTerrainModel(snapshot);
+ if(model.origin.e!==ORIGIN.e||model.origin.n!==ORIGIN.n)throw new Error('Origine du relief incompatible.');
+ terrainModel=model;terrainSnapshotData=snapshot;terrainOk=true;
+ terrainSource=snapshot.schemaVersion===2?'swissalti3d':'snapshot';
+ for(const layer of [tiles,vegetationTiles])if(layer){layer.group.matrix.copy(toENU());layer.group.updateMatrixWorld(true);}
+ build();
 }
-const terrainDatum=()=>terrainVals?.[1]?.[1]??1497.1;
+function displayClipPlanes(){
+ const b=terrainModel?.bounds??{minX:-50,maxX:50,minZ:-50,maxZ:50};
+ return [new THREE.Plane(new THREE.Vector3(1,0,0),-b.minX),new THREE.Plane(new THREE.Vector3(-1,0,0),b.maxX),
+  new THREE.Plane(new THREE.Vector3(0,0,1),-b.minZ),new THREE.Plane(new THREE.Vector3(0,0,-1),b.maxZ)];
+}
 function focusDesignTarget({building,face,change}){
  if(!building)return;
  if(buildingMode!=='local'){buildingMode='local';syncRoofs();}
@@ -242,18 +259,15 @@ async function startDesignPilot(){
  if(pilotLoading||pilot)return;
  pilotLoading=true;
  try{
-  const {createPilot}=await import('./design/pilot.js?v=6');
+  await loadHeight();
+  const {createPilot}=await import('./design/pilot.js?v=7');
   pilot=await createPilot({THREE,scene,
    dataBaseUrl:new URL('./assets/',import.meta.url).href,
    designBaseUrl:new URL('./design/',import.meta.url).href,
    surveyBaseUrl:new URL('../crans-montana-p06/assets/streetview-survey/2026-11-15/',import.meta.url).href,
    originHeight:terrainDatum,
-   onTerrainSnapshot:snapshot=>{
-    if(terrainOk)return;
-    const grid=[[-50,0,50],[-50,0,50],[-50,0,50]].map((xs,j)=>xs.map(x=>snapshot.samples.find(s=>s.x===x&&s.z===[-50,0,50][j])?.height));
-    if(!grid.flat().every(Number.isFinite)||grid.flat().length!==9)return;
-    terrainVals=grid;terrainOk=true;terrainSource='snapshot';build();
-   },
+   terrainSnapshot:terrainSnapshotData,
+   onTerrainSnapshot:applyTerrainSnapshot,
    onStatus:status=>{$('design-status').textContent=`${status.buildings} volume${status.buildings>1?'s':''} loca${status.buildings>1?'ux':'l'} · ${status.faces} face${status.faces>1?'s':''} avec détails · ${status.details} élément${status.details>1?'s':''} interprété${status.details>1?'s':''}.`+(status.error?' '+status.error:'');},
    onPanelOpen:()=>{
     streetViewLayer?.setEnabled(false);
@@ -327,32 +341,16 @@ function add(mesh,parent=world){mesh.castShadow=true;mesh.receiveShadow=true;par
 function box(w,h,d,mat,x,y,z,parent=world){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);m.position.set(x,y,z);return add(m,parent)}
 function cone(radius,h,faces,mat,x,y,z,parent=world){let m=new THREE.Mesh(new THREE.ConeGeometry(radius,h,faces),mat);m.position.set(x,y,z);return add(m,parent)}
 function cyl(radius,h,faces,mat,x,y,z,parent=world){let m=new THREE.Mesh(new THREE.CylinderGeometry(radius,radius,h,faces),mat);m.position.set(x,y,z);return add(m,parent)}
-function lineGeom(points,width,mat,raise=.13,parent=world){
- // Subdivide real mapped OSM segments and drape each piece onto swisstopo terrain.
- // This replaces the old floating horizontal bar segments.
- const vertices=[],limit=49.6;
+function lineGeom(points,width,mat,raise=.035,parent=world){
+ if(!terrainModel)return;
  for(let i=1;i<points.length;i++){
-  const a=points[i-1],b=points[i],dx=b.x-a.x,dz=b.z-a.z;
-  const len=Math.hypot(dx,dz);if(len<.2)continue;
-  const px=-dz/len*width*.5,pz=dx/len*width*.5,steps=Math.ceil(len/2);
-  for(let j=0;j<steps;j++){
-   const t0=j/steps,t1=(j+1)/steps;
-   let ax=a.x+dx*t0,az=a.z+dz*t0,bx=a.x+dx*t1,bz=a.z+dz*t1;
-   if(Math.abs((ax+bx)/2)>limit||Math.abs((az+bz)/2)>limit)continue;
-   ax=Math.max(-50,Math.min(50,ax));bx=Math.max(-50,Math.min(50,bx));
-   az=Math.max(-50,Math.min(50,az));bz=Math.max(-50,Math.min(50,bz));
-   const A=[ax+px,height(ax+px,az+pz)+raise,az+pz];
-   const B=[ax-px,height(ax-px,az-pz)+raise,az-pz];
-   const C=[bx+px,height(bx+px,bz+pz)+raise,bz+pz];
-   const D=[bx-px,height(bx-px,bz-pz)+raise,bz-pz];
-   vertices.push(...A,...B,...C,...B,...D,...C);
-  }
+  const a=points[i-1],b=points[i],dx=b.x-a.x,dz=b.z-a.z,len=Math.hypot(dx,dz);if(len<.02)continue;
+  const px=-dz/len*width/2,pz=dx/len*width/2;
+  const ring=[{x:a.x+px,z:a.z+pz},{x:a.x-px,z:a.z-pz},{x:b.x-px,z:b.z-pz},{x:b.x+px,z:b.z+pz}];
+  const geometry=triangulateOfficialPolygon(THREE,[ring],height,{terrainModel,offset:Math.min(raise,.04)});
+  if(!geometry)continue;
+  const mesh=new THREE.Mesh(geometry,mat);mesh.receiveShadow=true;mesh.renderOrder=3;parent.add(mesh);
  }
- if(!vertices.length)return;
- const g=new THREE.BufferGeometry();
- g.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));
- g.computeVertexNormals();
- const m=new THREE.Mesh(g,mat);m.receiveShadow=true;m.castShadow=false;parent.add(m);
 }
 const treeMat=[mt('#314d32'),mt('#365e40'),mt('#56743b'),mt('#77914a')],autumnMat=[mt('#7f8336'),mt('#a88145'),mt('#c09455'),mt('#b56e43')],trunk=mt('#5c4734');
 function season(){if(state.season!=='auto')return state.season;let m=Number(state.date.split('-')[1]);return m===12||m<3?'winter':m<6?'spring':m<9?'summer':'autumn'}
@@ -392,7 +390,7 @@ $('people-switch').onclick=()=>{
 async function startPeople(){
  const generation=++peopleGeneration;
  peopleError=null;
- if(furnitureData.status!=='verified'){
+ if(!terrainModel||furnitureData.status!=='verified'){
   peopleStatus='waiting';updatePeoplePanel();return;
  }
  peopleStatus='loading';updatePeoplePanel();
@@ -401,7 +399,7 @@ async function startPeople(){
   if(!peopleModule)peopleModule=import('../crans-montana-p06/characters.js?v=6');
   const mod=await peopleModule;
   created=await mod.createPopulation({
-   THREE,season:season(),height,
+   THREE,season:season(),height:legacyPhotoHeight(height),
    furnitureData,photoDrawn,visible:peopleEnabled
   });
   if(generation!==peopleGeneration){created.dispose();return;}
@@ -583,9 +581,11 @@ $('veg-switch').onclick=()=>{
  if(vegetationEnabled&&!vegetationTiles)startVegetation();
 };
 async function startVegetation(){
- if(vegetationTiles)return;
+ await loadHeight();
+ if(vegetationTiles||!terrainModel)return;
  try{
   const {TilesRenderer}=await import('https://esm.sh/3d-tiles-renderer@0.4.28/three?external=three');
+  if(vegetationTiles)return;
   const t=new TilesRenderer('https://3d.geo.admin.ch/ch.swisstopo.vegetation.3d/v1/20250728/tileset.json');
   vegetationTiles=t;t.errorTarget=20;
   t.setCamera(camera);t.setResolutionFromRenderer(camera,renderer);
@@ -597,12 +597,7 @@ async function startVegetation(){
   t.group.matrixAutoUpdate=false;t.group.matrix.copy(toENU());
   t.group.name='swisstopo vegetation 3D georeferenced';
   scene.add(t.group);t.group.updateMatrixWorld(true);t.group.visible=vegetationEnabled;
-  const clip=[
-   new THREE.Plane(new THREE.Vector3(1,0,0),50),
-   new THREE.Plane(new THREE.Vector3(-1,0,0),50),
-   new THREE.Plane(new THREE.Vector3(0,0,1),50),
-   new THREE.Plane(new THREE.Vector3(0,0,-1),50)
-  ];
+  const clip=displayClipPlanes();
   t.addEventListener('load-model',({scene:model})=>{
    let count=0;
    model.traverse(obj=>{
@@ -630,14 +625,15 @@ async function startVegetation(){
  }
 }
 
+const terrainSideMaterial=mt('#514b37');
+const terrainEdgeMaterial=new THREE.LineBasicMaterial({color:'#5d5847',transparent:true,opacity:.6,depthWrite:false});
 function terrain(parent){
- const seg=26,v=[],ix=[];for(let j=0;j<=seg;j++)for(let i=0;i<=seg;i++){let x=-50+i*100/seg,z=-50+j*100/seg;v.push(x,height(x,z),z)}
- for(let j=0;j<seg;j++)for(let i=0;i<seg;i++){let a=j*(seg+1)+i,b=a+1,c=a+seg+1,d=c+1;ix.push(a,c,b,b,c,d)}
- let g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(v,3));g.setIndex(ix);g.computeVertexNormals();
- add(new THREE.Mesh(g,mats.ground),parent);
- let side=mt(season()==='winter'?'#b5a994':'#514b37');
- box(100,9,100,side,0,-5.5,0,parent).castShadow=false;
- let border=mt('#2f3027');for(let k of [-50,50]){box(100,.4,.5,border,0,height(0,k)+.25,k,parent);box(.5,.4,100,border,k,height(k,0)+.25,0,parent)}
+ if(!terrainModel)return;
+ const geometry=createTerrainGeometry({THREE,model:terrainModel});
+ const ground=new THREE.Mesh(geometry.surface,mats.ground);ground.receiveShadow=true;parent.add(ground);
+ terrainSideMaterial.color.set(season()==='winter'?'#b5a994':'#514b37');
+ const skirt=new THREE.Mesh(geometry.skirt,terrainSideMaterial);skirt.receiveShadow=true;parent.add(skirt);
+ const edge=new THREE.LineSegments(geometry.edge,terrainEdgeMaterial);edge.position.y=.005;parent.add(edge);
 }
 function planePoly(points,material,parent=world,yOffset=.1,followGround=true){
  if(!points||points.length<3)return null;
@@ -827,8 +823,8 @@ function marker(x,z,title,desc,parent=world){
    Polygon styling does not generate new footpath footprints. */
 function drawOfficialCadastral(parent){
  moRendered=[];
- if(!moPainter||!moData.shapes?.length)return;
- moRendered=moPainter(THREE,moData.shapes,height,parent,objects,lineGeom);
+ if(!terrainModel||!moPainter||!moData.shapes?.length)return;
+ moRendered=moPainter(THREE,moData.shapes,height,parent,objects,lineGeom,{terrainModel});
 }
 function build(){
  // Dispose per-character material clones; preserve shared original GLB geometry.
@@ -837,7 +833,7 @@ function build(){
  mats.ground.color.set(season()==='winter'?'#c9d1c4':season()==='autumn'?'#929887':'#959d92');
  // Dispose old per-tile / terrain geometry before rebuilding seasons.
  // Official streamed 3D Tiles are separate from world and remain untouched.
- world.traverse(node=>{if(node.isMesh&&node.geometry)node.geometry.dispose()});
+ world.traverse(node=>{if(node.geometry)node.geometry.dispose()});
  while(world.children.length)world.remove(world.children[0]);
  objects.length=0;animated.length=0;
  terrain(world);
@@ -845,15 +841,15 @@ function build(){
  buildingLayer=new THREE.Group();world.add(buildingLayer);
  drawOfficialCadastral(world);
  furnitureGroup=null;furnitureDrawn=[];
- if(furniturePainter&&furnitureData.status==='verified'){
-  const sceneItems=furniturePainter(THREE,furnitureData,height,world,objects,lineGeom);
+ if(terrainModel&&furniturePainter&&furnitureData.status==='verified'){
+  const sceneItems=drawFurnitureGrounded({THREE,painter:furniturePainter,data:furnitureData,height,terrainModel,parent:world,objects,lineGeom});
   furnitureGroup=sceneItems.group;
   furnitureGroup.visible=furnitureVisible;
   furnitureDrawn=sceneItems.drawn;
  }
  photoGroup=null;photoDrawn=[];photoReason='en attente';
- if(photoPainter&&furnitureData.status==='verified'){
-  const reconstructed=photoPainter(THREE,furnitureData.features,height,world,objects,photoVisible);
+ if(terrainModel&&photoPainter&&furnitureData.status==='verified'){
+  const reconstructed=photoPainter(THREE,furnitureData.features,legacyPhotoHeight(height),world,objects,photoVisible);
   photoGroup=reconstructed.group;
   photoDrawn=reconstructed.drawn;
   photoReason=reconstructed.reason;
@@ -865,7 +861,7 @@ function build(){
  }
  const ok=(moData.results||[]).filter(r=>r.status==='verified').length;
  $('origin').textContent='Mensuration officielle Valais · toits swissBUILDINGS3D';
- $('status').textContent='Atelier Ycoor · '+ok+'/4 sources MO · '+moRendered.length+' géométries cadastre · '+furnitureDrawn.length+' objets OSM · '+photoDrawn.length+' jeux illustratifs · relief '+(terrainOk?'swisstopo interpolé':'non confirmé');
+ $('status').textContent='Atelier Ycoor · '+ok+'/4 sources MO · '+moRendered.length+' géométries cadastre · '+furnitureDrawn.length+' objets OSM · '+photoDrawn.length+' jeux illustratifs · relief '+terrainLabel();
  updateGeoLabel();showCadastralAudit();updateFurniturePanel();updatePhotoPanel();syncRoofs();
  pilot?.setOriginHeight(terrainDatum());
  streetViewLayer?.refreshHeights();
@@ -882,11 +878,11 @@ function toENU(){
  const E=new THREE.Vector3(-Math.sin(lon),Math.cos(lon),0);
  const U=new THREE.Vector3(Math.cos(lat)*Math.cos(lon),Math.cos(lat)*Math.sin(lon),Math.sin(lat));
  const S=new THREE.Vector3(Math.sin(lat)*Math.cos(lon),Math.sin(lat)*Math.sin(lon),-Math.cos(lat));
- const P=ecef(ORIGIN.lon,ORIGIN.lat,terrainOk&&terrainVals?.[1]?.[1]?terrainVals[1][1]:1515);
+ const P=ecef(ORIGIN.lon,ORIGIN.lat,terrainDatum());
  return new THREE.Matrix4().set(E.x,E.y,E.z,-E.dot(P),U.x,U.y,U.z,-U.dot(P),S.x,S.y,S.z,-S.dot(P),0,0,0,1)
 }
 function materialForTiles(){
- const planes=[new THREE.Plane(new THREE.Vector3(1,0,0),50),new THREE.Plane(new THREE.Vector3(-1,0,0),50),new THREE.Plane(new THREE.Vector3(0,0,1),50),new THREE.Plane(new THREE.Vector3(0,0,-1),50)];
+ const planes=displayClipPlanes();
  const m=new THREE.MeshLambertMaterial({color:'#d5c6ac',flatShading:true,side:THREE.DoubleSide,clippingPlanes:planes});
  m.onBeforeCompile=shader=>{
  shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_begin>',
@@ -898,6 +894,7 @@ function materialForTiles(){
  return m;
 }
 async function startRoofs(older=false){
+ await loadHeight();
  note('Chargement des bâtiments officiels · '+(older?'révision 2025':'révision 2026')+'…');
  if(tiles){scene.remove(tiles.group);try{tiles.dispose()}catch(e){}try{tiles.userData?.dracoLoader?.dispose()}catch(e){}tiles=null}
  tilesMeshes=0;tilesState='loading';
@@ -995,20 +992,16 @@ function loop(now){
 function asyncAbort(url,timeout=9000){const c=new AbortController();let t=setTimeout(()=>c.abort(),timeout);return fetch(url,{signal:c.signal,cache:'no-store'}).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).finally(()=>clearTimeout(t))}
 
 async function loadHeight(){
- // Sparse official samples: deliberately only 9 requests, bilinear interpolation between samples.
- $('loading').textContent='Chargement du relief swisstopo...';let raw=Array.from({length:3},()=>Array(3).fill(null));
- let jobs=[];for(let j=0;j<3;j++)for(let i=0;i<3;i++){jobs.push({i,j,x:(i-1)*50,z:(j-1)*50})}
- let next=0,valid=0;
- async function worker(){
-  while(next<jobs.length){
-   let {i,j,x,z}=jobs[next++];
-   const url='https://api3.geo.admin.ch/rest/services/height?easting='+(ORIGIN.e+x).toFixed(2)+'&northing='+(ORIGIN.n-z).toFixed(2)+'&sr=2056';
-   try{let result=await asyncAbort(url,7500);let v=parseFloat(result.height);if(Number.isFinite(v)){raw[j][i]=v;valid++}}catch(e){}
-  }
- }
- await Promise.all([worker(),worker(),worker()]);
- if(valid===9){terrainVals=raw;terrainOk=true;terrainSource='service';if(tiles){tiles.group.matrix.copy(toENU());tiles.group.updateMatrixWorld(true)}if(vegetationTiles){vegetationTiles.group.matrix.copy(toENU());vegetationTiles.group.updateMatrixWorld(true)}build();$('loading').textContent='Relief swisstopo chargé';return true}
- return false;
+ if(terrainLoadPromise)return terrainLoadPromise;
+ terrainLoadPromise=(async()=>{
+  for(const file of ['terrain-grid.json','terrain-snapshot.json'])try{
+   const response=await fetch(new URL('./assets/'+file,import.meta.url),{cache:'no-cache'});
+   if(!response.ok)throw new Error('HTTP '+response.status);
+   applyTerrainSnapshot(await response.json());return true;
+  }catch(error){console.warn('Relief '+file,error);}
+  terrainLoadPromise=null;return false;
+ })();
+ return terrainLoadPromise;
 }
 const raycaster=new THREE.Raycaster(),mouse=new THREE.Vector2();
 function selectAt(clientX,clientY){
@@ -1063,7 +1056,7 @@ async function refreshData(){
  try{
   const [source,rendererModule]=await Promise.all([
    import('../crans-montana-p06/mo-valais-strict.js?v=2'),
-   import('../crans-montana-p06/cadastre-mesh.js?v=1')
+   import('./design/ground-surfaces.js?v=7')
   ]);
   moPainter=rendererModule.renderMOFeatures;
   moData=await source.loadAll(s=>{$('loading').textContent=s});

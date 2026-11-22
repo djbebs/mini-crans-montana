@@ -2,55 +2,118 @@
   "schemaVersion": 1,
   "sources": [
     {
-      "sourceId": "valais-mo", "priority": 1, "label": "Valais · mensuration officielle (MO)",
+      "sourceId": "valais-mo",
+      "priority": 1,
+      "label": "Valais · mensuration officielle (MO)",
       "url": "https://sit.vs.ch/arcgis/rest/services/MO/MapServer",
-      "uses": ["Socle des surfaces au sol et objets fixes mesurés ; contrôle des emprises bâties."],
-      "limitations": ["Les couches 270, 180 et 190 sont utilisées. La couche 260 fournit des comptages : ses emprises ne constituent pas ici une correspondance cadastrale vérifiée."],
-      "dateMeaning": "Date d’observation de chaque objet non enregistrée dans cet atlas.", "observedAt": null
+      "uses": [
+        "Socle des surfaces au sol et objets fixes mesurés ; contrôle des emprises bâties."
+      ],
+      "limitations": [
+        "Les couches 270, 180 et 190 sont utilisées. La couche 260 fournit des comptages : ses emprises ne constituent pas ici une correspondance cadastrale vérifiée."
+      ],
+      "dateMeaning": "Date d’observation de chaque objet non enregistrée dans cet atlas.",
+      "observedAt": null
     },
     {
-      "sourceId": "swissbuildings3d", "priority": 2, "label": "swisstopo · DXF local 1287-13 + 3D Tiles",
+      "sourceId": "swissbuildings3d",
+      "priority": 2,
+      "label": "swisstopo · DXF local 1287-13 + 3D Tiles",
       "url": "https://data.geo.admin.ch/api/stac/v1/collections/ch.swisstopo.swissbuildings3d_2/items/swissbuildings3d_2_2024-05_1287-13",
-      "links": [{"label": "Diffusion 3D Tiles", "url": "https://docs.geo.admin.ch/visualize-data/3d-tiles.html"}],
-      "uses": ["Volumes et toitures officiels ; géométrie DXF locale lisible et vérifiable, associée au flux 3D Tiles du même fournisseur."],
-      "limitations": ["Le DXF est un format de géométrie du même fournisseur, pas une observation plus récente et indépendante.", "Six volumes locaux : quatre ont des données sources de juin 2016, un de juin 2017 et un de juin 2020 ; voir chaque cible ci-dessous. Le jour d’observation n’est pas renseigné."],
-      "dateMeaning": "Édition DXF : mai 2024. Génération du flux : 20260520 (repli 20251121). Ces dates de publication ne sont pas des dates de prise de vue.", "observedAt": null
+      "links": [
+        {
+          "label": "Diffusion 3D Tiles",
+          "url": "https://docs.geo.admin.ch/visualize-data/3d-tiles.html"
+        }
+      ],
+      "uses": [
+        "Volumes et toitures officiels ; géométrie DXF locale lisible et vérifiable, associée au flux 3D Tiles du même fournisseur."
+      ],
+      "limitations": [
+        "Le DXF est un format de géométrie du même fournisseur, pas une observation plus récente et indépendante.",
+        "Six volumes locaux : quatre ont des données sources de juin 2016, un de juin 2017 et un de juin 2020 ; voir chaque cible ci-dessous. Le jour d’observation n’est pas renseigné."
+      ],
+      "dateMeaning": "Édition DXF : mai 2024. Génération du flux : 20260520 (repli 20251121). Ces dates de publication ne sont pas des dates de prise de vue.",
+      "observedAt": null
     },
     {
-      "sourceId": "streetview", "priority": 3, "label": "Relevé Street View · Ycoor",
+      "sourceId": "streetview",
+      "priority": 3,
+      "label": "Relevé Street View · Ycoor",
       "url": "https://djbebs.github.io/mini-crans-montana/crans-montana-p06/assets/streetview-survey/2026-11-15/index.html",
-      "uses": ["Entrée de conception pour les ajouts visibles : fenêtres, balcons, portes, vitrines, revêtements et couleurs.", "Chaque détail proposé relie une observation à une façade vérifiée ; les changements datés demandent une comparaison de la même caractéristique."],
-      "limitations": ["55 captures et 24 panoramas ; repères B/S/U visuels, sans identité cadastrale présumée. Les côtés cachés, dimensions et caps physiques restent inconnus ou approximatifs."],
-      "dateMeaning": "Libellés d’imagerie : février 2019 à juin 2025. Captures d’écran : 15–16 novembre 2026. La capture d’écran ne date pas l’état photographié.", "observedAt": null
+      "uses": [
+        "Entrée de conception pour les ajouts visibles : fenêtres, balcons, portes, vitrines, revêtements et couleurs.",
+        "Chaque détail proposé relie une observation à une façade vérifiée ; les changements datés demandent une comparaison de la même caractéristique."
+      ],
+      "limitations": [
+        "55 captures et 24 panoramas ; repères B/S/U visuels, sans identité cadastrale présumée. Les côtés cachés, dimensions et caps physiques restent inconnus ou approximatifs."
+      ],
+      "dateMeaning": "Libellés d’imagerie : février 2019 à juin 2025. Captures d’écran : 15–16 novembre 2026. La capture d’écran ne date pas l’état photographié.",
+      "observedAt": null
     },
     {
-      "sourceId": "tourism-photos", "priority": 4, "label": "Photographies touristiques + modèles approuvés",
+      "sourceId": "tourism-photos",
+      "priority": 4,
+      "label": "Photographies touristiques + modèles approuvés",
       "url": "https://www.crans-montana.ch/fr/?idcmt=Partenaire_Activite_4ff811345b2094222f969b680bb9ac78",
-      "links": [{"label": "Références des modèles de jeux", "url": "https://github.com/djbebs/mini-crans-montana/blob/main/crans-montana-p06/photo-playground.js"}],
-      "uses": ["Aspect et équipements visibles de la place de jeux ; modèles approuvés d’interprétation."],
-      "limitations": ["Une photographie clairement plus récente de la même caractéristique peut primer pour son aspect. Dimensions et placements des modèles illustratifs approximatifs."],
-      "dateMeaning": "Certaines images portent le libellé 2025. Leur date réelle de prise de vue n’est pas connue individuellement.", "observedAt": null
+      "links": [
+        {
+          "label": "Références des modèles de jeux",
+          "url": "https://github.com/djbebs/mini-crans-montana/blob/main/crans-montana-p06/photo-playground.js"
+        }
+      ],
+      "uses": [
+        "Aspect et équipements visibles de la place de jeux ; modèles approuvés d’interprétation."
+      ],
+      "limitations": [
+        "Une photographie clairement plus récente de la même caractéristique peut primer pour son aspect. Dimensions et placements des modèles illustratifs approximatifs."
+      ],
+      "dateMeaning": "Certaines images portent le libellé 2025. Leur date réelle de prise de vue n’est pas connue individuellement.",
+      "observedAt": null
     },
     {
-      "sourceId": "osm", "priority": 5, "label": "OpenStreetMap · Ycoor",
+      "sourceId": "osm",
+      "priority": 5,
+      "label": "OpenStreetMap · Ycoor",
       "url": "https://www.openstreetmap.org/#map=19/46.311036/7.478052",
-      "uses": ["Périmètre des jeux, cheminements piétons, équipements et mobilier lorsque les sources officielles ne les fournissent pas."],
-      "limitations": ["La requête actuelle ne récupère ni emprises de bâtiments ni arbres."],
-      "dateMeaning": "La date de récupération de la carte ne date pas l’observation d’un objet.", "observedAt": null
+      "uses": [
+        "Périmètre des jeux, cheminements piétons, équipements et mobilier lorsque les sources officielles ne les fournissent pas."
+      ],
+      "limitations": [
+        "La requête actuelle ne récupère ni emprises de bâtiments ni arbres."
+      ],
+      "dateMeaning": "La date de récupération de la carte ne date pas l’observation d’un objet.",
+      "observedAt": null
     },
     {
-      "sourceId": "swisstopo-height", "priority": 6, "label": "swisstopo · hauteur du terrain",
-      "url": "https://docs.geo.admin.ch/access-data/get-point-height.html",
-      "uses": ["Hauteurs officielles du terrain, échantillonnées en neuf points puis interpolées. L’autorité de cette source sur l’altitude ne dépend pas de son rang."],
-      "limitations": ["Le modèle retourné et sa date d’observation ne sont pas enregistrés ; il ne s’agit pas d’une intégration swissALTI3D à pleine résolution."],
-      "dateMeaning": "Date d’observation non enregistrée.", "observedAt": null
+      "sourceId": "swisstopo-height",
+      "priority": 6,
+      "label": "swisstopo · swissALTI3D 2024 · terrain à 2 m",
+      "url": "https://www.swisstopo.admin.ch/en/height-model-swissalti3d",
+      "uses": [
+        "Terrain officiel LV95/LN02 : 6 192 points natifs au pas de 2 m, couvrant les six volumes DXF complets.",
+        "Même modèle pour le sol, les revêtements et les raccords ; son autorité sur l’altitude ne dépend pas de son rang."
+      ],
+      "limitations": [
+        "Millésime des entrées STAC : 2024 ; jour d’acquisition non établi.",
+        "Le modèle représente le terrain sans végétation ni constructions ; les remblais, seuils et travaux postérieurs restent à vérifier."
+      ],
+      "dateMeaning": "Millésime STAC 2024 ; date de mesure précise inconnue. Extraction locale documentée dans docs/design/terrain-source.md.",
+      "observedAt": null
     },
     {
-      "sourceId": "swisstopo-vegetation", "priority": 7, "label": "swisstopo · végétation 3D",
+      "sourceId": "swisstopo-vegetation",
+      "priority": 7,
+      "label": "swisstopo · végétation 3D",
       "url": "https://3d.geo.admin.ch/ch.swisstopo.vegetation.3d/v1/20250728/tileset.json",
-      "uses": ["Volumes de végétation cartographiés ; les photographies peuvent signaler des évolutions à examiner."],
-      "limitations": ["La génération du jeu n’établit pas la date d’observation de chaque arbre."],
-      "dateMeaning": "Génération : 20250728 ; dates individuelles non vérifiées.", "observedAt": null
+      "uses": [
+        "Volumes de végétation cartographiés ; les photographies peuvent signaler des évolutions à examiner."
+      ],
+      "limitations": [
+        "La génération du jeu n’établit pas la date d’observation de chaque arbre."
+      ],
+      "dateMeaning": "Génération : 20250728 ; dates individuelles non vérifiées.",
+      "observedAt": null
     }
   ]
 }
