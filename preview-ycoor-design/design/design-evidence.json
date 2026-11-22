@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "authoredAt": "2026-11-16",
+  "authoredAt": "2026-11-22",
   "policy": "Source geometry unchanged. Visual IDs are not cadastral IDs. Documented visible façade zones only; positions, dimensions, colours, depths and rail/screen density are artistic estimates. No hidden-face extrapolation.",
   "buildingMatches": [
     {
@@ -219,6 +219,115 @@
         "L’apparence extérieure datée ne prouve ni réception des travaux, ni occupation, ni état de novembre 2026.",
         "La source officielle courante conserve un état de juin 2020 classé Im Bau : sa génération en 2026 ne date pas une nouvelle observation de cet objet.",
         "Ni hauteur absolue du toit, ni nouvelle masse mesurée ne sont déduites des images. Le modèle source est conservé, avec vérification géométrique préalable avant ajout de fenêtres."
+      ]
+    },
+    {
+      "observationId": "OBS-WEST-2024-EXTENDED",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:001",
+      "sourceId": "streetview",
+      "captureIds": [
+        "B003-N001",
+        "B003-N002",
+        "C029",
+        "C030",
+        "C033",
+        "C035",
+        "B003-N003",
+        "B003-N006",
+        "B003-N007"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "high",
+      "statement": "La vue large B003-N002 relie les parties nord et sud du front ouest : trois balcons filants à garde-corps rouge brun, dalles claires et claustras verticaux sont visibles. Le rez passe de deux groupes de vitrages dans le bois au nord à une entrée encadrée de pierre, puis un enduit clair avec cinq baies sombres et une porte au sud. Quelques vitrages résidentiels sont directement lisibles derrière les balcons dans B003-N001/N002, C033 et C035. B003-N003 précise les vitrages bois ; B003-N006 montre des volets roulants fermés sur le balcon inférieur sud et des équipements horizontaux gris sous le bandeau du rez. B003-N007 recoupe la continuité des trois niveaux depuis le coin sud-ouest.",
+      "limitations": [
+        "Les coordonnées et dimensions sont une interprétation artistique sur le plan source ; la perspective comprime fortement l’extrémité sud. Aucun calage photographique métrique n’est revendiqué.",
+        "Les garde-corps sont trois composants continus ; leurs supports et les lames des claustras sont symboliques et ne constituent pas un décompte physique.",
+        "Les vitrages derrière les balcons restent largement cachés par les garde-corps, claustras, reflets et ombres ; seules les zones lisibles reçoivent une baie explicite. Aucune trame de fenêtres n’est prolongée dans les zones masquées.",
+        "La protection rouge temporaire de toiture est omise. Le retrait supérieur wall:002 n’est pas assez visible pour recevoir des ouvertures.",
+        "Les parties sous le niveau du trottoir et les détails de menuiserie ne sont pas recensés. La façade reste partielle ; le nombre physique total de fenêtres est inconnu.",
+        "Les petits équipements gris sous le bandeau sont représentés par leurs seules formes visibles ; leur fonction n’est pas établie. Les tabliers de volets fermés ne prouvent pas le nombre de fenêtres situées derrière."
+      ]
+    },
+    {
+      "observationId": "OBS-B003-NORTH-2024",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:004",
+      "sourceId": "streetview",
+      "captureIds": [
+        "B003-N004",
+        "B003-N005",
+        "C026",
+        "C027"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "high",
+      "statement": "Les captures B003-N004 et B003-N005 montrent le retour nord de B003 depuis le passage : trois retours de balcons à garde-corps rouge brun et dalles claires, un parement de pierre près du coin ouest, une bande claire vers l’extrémité est et une petite porte vitrée nettement visible au balcon inférieur. Au rez, une petite ouverture occultée grisée, deux ouvertures sombres hautes et une ouverture sombre basse sont distinguées dans la partie dégagée. C026/C027 recoupent la situation du passage et l’attribution du retour, sans constituer un relevé des ouvertures cachées.",
+      "limitations": [
+        "La perspective est fortement oblique. Les positions, hauteurs, largeurs, couleurs et profondeurs sont des estimations artistiques sur le plan CAD wall:004 ; il ne s’agit pas d’une photogrammétrie.",
+        "Les garde-corps et le véhicule masquent des portions du mur et du rez. Les ouvertures cachées ou coupées restent inconnues ; aucune porte ou fenêtre supplémentaire n’est répétée aux étages supérieurs.",
+        "Les dalles et garde-corps représentent seulement les trois retours visibles. Le nombre de barreaux, de poteaux et les joints de pierre sont des motifs de dessin simplifiés.",
+        "La protection rouge du chantier en toiture est temporaire et exclue. Le volume supérieur en retrait wall:003 n’est pas renseigné par ces vues.",
+        "L’extrémité est et le sol ne sont pas intégralement dégagés. Ces détails ne suffisent pas à déclarer toutes les ouvertures ou l’intégralité de la façade recensées."
+      ]
+    },
+    {
+      "observationId": "OBS-B003-SOUTH-2024",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:005",
+      "sourceId": "streetview",
+      "captureIds": [
+        "B003-N007",
+        "C035"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "high",
+      "statement": "La capture B003-N007 montre le retour sud dans son ensemble depuis le coin sud-ouest : trois niveaux de balcons enveloppants à garde-corps rouge brun, rives et sous-faces de dalles claires et lames verticales sombres. Le parement de pierre du fond du balcon inférieur est nettement distinct près du coin ouest. C035 recoupe l’emplacement du coin et des véhicules, sans fournir un relevé des ouvertures du retour sud.",
+      "limitations": [
+        "La vue est oblique et comprime les derniers mètres vers l’est. Largeurs, positions, niveaux, couleurs, profondeur et densité des barreaux/lames sont des estimations artistiques ; aucune photogrammétrie n’est revendiquée.",
+        "Les garde-corps et ombres empêchent de distinguer sûrement les cadres de fenêtres, portes ou volets des balcons. Aucune nouvelle ouverture n’est donc ajoutée sur cette face.",
+        "Au rez, les camionnettes, la voiture et le matériel de chantier cachent de larges zones. Aucune porte, fenêtre ou composition derrière les véhicules n’est restituée.",
+        "Le parement de pierre est ajouté uniquement dans la zone inférieure clairement lisible ; sa continuité aux étages supérieurs n’est pas déduite.",
+        "Le filet rouge en toiture, l’échafaudage oriental, le tube de chantier et les véhicules sont temporaires et exclus.",
+        "Aucun détail n’est attribué au retrait supérieur wall:006 ni au mince pan wall:007. L’arrière du bâtiment et les ouvertures masquées restent à documenter."
+      ]
+    },
+    {
+      "observationId": "OBS-B003-REAR-008",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:008",
+      "sourceId": "streetview",
+      "captureIds": [
+        "B003-N008",
+        "B003-N009",
+        "B003-N010"
+      ],
+      "observedAt": null,
+      "confidence": "low",
+      "statement": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures.",
+      "limitations": [
+        "N008 est un contrôle de visibilité de juin 2024, sans façade B003 lisible.",
+        "N009/N010 sont des vues candidates de février 2019 ; leur cap de contributeur et leur attribution à B003 restent non vérifiés.",
+        "Aucune ouverture ni répétition de balcon n’est extrapolée depuis les autres côtés."
+      ]
+    },
+    {
+      "observationId": "OBS-B003-REAR-010",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:010",
+      "sourceId": "streetview",
+      "captureIds": [
+        "B003-N008",
+        "B003-N009",
+        "B003-N010"
+      ],
+      "observedAt": null,
+      "confidence": "low",
+      "statement": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures.",
+      "limitations": [
+        "N008 est un contrôle de visibilité de juin 2024, sans façade B003 lisible.",
+        "N009/N010 sont des vues candidates de février 2019 ; leur cap de contributeur et leur attribution à B003 restent non vérifiés.",
+        "Aucune ouverture ni répétition de balcon n’est extrapolée depuis les autres côtés."
       ]
     }
   ],
@@ -841,38 +950,43 @@
       "buildingId": "2F7D6",
       "faceId": "2F7D6:wall:001",
       "status": "ready",
-      "title": "B003 · garde-corps rouges et rez vitré",
+      "title": "B003 · front ouest, garde-corps rouges et rez vitré",
       "discrepancy": "missing_detail",
       "evidenceIds": [
         "C030",
         "C029",
-        "C026"
+        "C026",
+        "B003-N001",
+        "B003-N002"
       ],
       "observationIds": [
-        "OBS-SOUTH-2024"
+        "OBS-SOUTH-2024",
+        "OBS-WEST-2024-EXTENDED"
       ],
-      "reason": "Les vues C029/C030 documentent la partie nord du front ouest, recoupée par le contexte de C026. Quatre baies, le bois et trois balcons sont interprétés avec les mêmes éléments que le premier pilote ; aucune répétition sur le reste du bâtiment. Le cap central ne constitue pas un calage métrique de cette face oblique.",
+      "reason": "Les vues C029/C030 documentent la partie nord du front ouest. B003-N001/N002 confirment trois lignes de balcon continues jusqu’à la partie sud : les trois composants courts sont étendus ici, sans les superposer à des balcons supplémentaires. Les dimensions et les supports de garde-corps restent symboliques. Les baies et claustras complémentaires sont placés individuellement dans WEST-FRONTAGE-2024-EXTENSION.",
       "confidence": "medium",
       "approximate": true,
       "focus": {
-        "u": 4.1,
+        "u": 15.4,
         "height": 1505.0
       },
       "details": [
         {
           "id": "south-timber-surround",
           "kind": "panel",
-          "u": 4.1,
+          "u": 8.0,
           "v": 1500.85,
-          "width": 7.5,
+          "width": 15.3,
           "height": 2.75,
           "color": "#9b633e",
-          "label": "Encadrement bois du rez vitré · teinte et motifs simplifiés",
+          "label": "Bardage bois derrière les deux groupes de vitrages du rez · motifs et largeur approximatifs",
           "depth": 0.01,
           "offset": 0.004,
           "evidenceIds": [
             "C029",
-            "C030"
+            "C030",
+            "B003-N001",
+            "B003-N002"
           ]
         },
         {
@@ -883,7 +997,7 @@
           "width": 1.5,
           "height": 2.3,
           "color": "#526971",
-          "label": "Première baie complète visible",
+          "label": "Première baie complète visible · implantation approximative",
           "depth": 0.02,
           "offset": 0.035,
           "frame": {
@@ -903,7 +1017,7 @@
           "width": 1.5,
           "height": 2.3,
           "color": "#526971",
-          "label": "Deuxième baie complète visible",
+          "label": "Deuxième baie complète visible · implantation approximative",
           "depth": 0.02,
           "offset": 0.035,
           "frame": {
@@ -923,7 +1037,7 @@
           "width": 1.5,
           "height": 2.3,
           "color": "#526971",
-          "label": "Troisième baie complète visible",
+          "label": "Troisième baie complète visible · implantation approximative",
           "depth": 0.02,
           "offset": 0.035,
           "frame": {
@@ -943,7 +1057,7 @@
           "width": 1.5,
           "height": 2.3,
           "color": "#526971",
-          "label": "Quatrième baie complète visible · suite coupée dans la photo",
+          "label": "Quatrième baie vitrée observée dans le groupe nord · position approximative",
           "depth": 0.02,
           "offset": 0.035,
           "frame": {
@@ -958,17 +1072,19 @@
         {
           "id": "south-timber-lintel",
           "kind": "beam",
-          "u": 4.1,
+          "u": 8.0,
           "v": 1502.12,
-          "width": 7.5,
+          "width": 15.3,
           "height": 0.55,
           "color": "#8a5739",
-          "label": "Bandeau bois au-dessus des vitrages",
+          "label": "Bandeau bois continu du rez vitré · largeur approximative",
           "depth": 0.04,
           "offset": 0.025,
           "evidenceIds": [
             "C029",
-            "C030"
+            "C030",
+            "B003-N001",
+            "B003-N002"
           ]
         },
         {
@@ -979,7 +1095,7 @@
           "width": 2.1,
           "height": 2.1,
           "color": "#435967",
-          "label": "Vitrage visible derrière le balcon inférieur · partie gauche",
+          "label": "Vitrage visible derrière le balcon inférieur · partie gauche · implantation approximative",
           "depth": 0.02,
           "offset": 0.035,
           "frame": {
@@ -999,7 +1115,7 @@
           "width": 2.1,
           "height": 2.1,
           "color": "#435967",
-          "label": "Vitrage visible derrière le balcon inférieur · partie droite",
+          "label": "Vitrage visible derrière le balcon inférieur · partie droite · implantation approximative",
           "depth": 0.02,
           "offset": 0.035,
           "frame": {
@@ -1014,281 +1130,293 @@
         {
           "id": "south-balcony-lower",
           "kind": "balcony",
-          "u": 4.05,
+          "u": 15.4,
           "v": 1502.95,
-          "width": 7.8,
+          "width": 30.3,
           "height": 1.05,
           "depth": 0.8,
           "color": "#8e4135",
           "floor": {
-            "height": 0.14,
-            "color": "#e5dfca"
+            "color": "#e5dfca",
+            "height": 0.14
           },
           "rails": [
             {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.075,
+              "offset": 0.71,
               "u": 0,
               "v": 0.44,
-              "width": 7.8,
-              "height": 0.075,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
+              "width": 30.3
             },
             {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
               "u": 0,
               "v": 0.15,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
+              "width": 30.3
             },
             {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
               "u": 0,
               "v": -0.14,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
+              "width": 30.3
             },
             {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
               "u": 0,
               "v": -0.43,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
+              "width": 30.3
             },
             {
-              "u": -3.7,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
+              "color": "#794137",
               "depth": 0.07,
+              "height": 0.98,
               "offset": 0.71,
-              "color": "#794137"
+              "u": -14.55,
+              "v": 0,
+              "width": 0.065
             },
             {
-              "u": -1.25,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
+              "color": "#794137",
               "depth": 0.07,
+              "height": 0.98,
               "offset": 0.71,
-              "color": "#794137"
+              "u": -4.9,
+              "v": 0,
+              "width": 0.065
             },
             {
-              "u": 1.25,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
+              "color": "#794137",
               "depth": 0.07,
+              "height": 0.98,
               "offset": 0.71,
-              "color": "#794137"
+              "u": 4.9,
+              "v": 0,
+              "width": 0.065
             },
             {
-              "u": 3.7,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
+              "color": "#794137",
               "depth": 0.07,
+              "height": 0.98,
               "offset": 0.71,
-              "color": "#794137"
+              "u": 14.55,
+              "v": 0,
+              "width": 0.065
             }
           ],
           "evidenceIds": [
+            "C029",
             "C030",
-            "C029"
+            "C035",
+            "B003-N001",
+            "B003-N002",
+            "B003-N007"
           ],
-          "label": "Balcon visible · dalle claire, garde-corps rouge brun, barreaux symboliques"
+          "label": "Balcon continu observé sur le front ouest · dalle claire et garde-corps rouge brun, portée et supports symboliques"
         },
         {
           "id": "south-balcony-middle",
           "kind": "balcony",
-          "u": 4.05,
+          "u": 15.4,
           "v": 1505.75,
-          "width": 7.8,
+          "width": 30.3,
           "height": 1.05,
           "depth": 0.8,
           "color": "#8e4135",
           "floor": {
-            "height": 0.14,
-            "color": "#e5dfca"
+            "color": "#e5dfca",
+            "height": 0.14
           },
           "rails": [
             {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.075,
+              "offset": 0.71,
               "u": 0,
               "v": 0.44,
-              "width": 7.8,
-              "height": 0.075,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
+              "width": 30.3
             },
             {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
               "u": 0,
               "v": 0.15,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
+              "width": 30.3
             },
             {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
               "u": 0,
               "v": -0.14,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
+              "width": 30.3
             },
             {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
               "u": 0,
               "v": -0.43,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
+              "width": 30.3
             },
             {
-              "u": -3.7,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
+              "color": "#794137",
               "depth": 0.07,
+              "height": 0.98,
               "offset": 0.71,
-              "color": "#794137"
+              "u": -14.55,
+              "v": 0,
+              "width": 0.065
             },
             {
-              "u": -1.25,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
+              "color": "#794137",
               "depth": 0.07,
+              "height": 0.98,
               "offset": 0.71,
-              "color": "#794137"
+              "u": -4.9,
+              "v": 0,
+              "width": 0.065
             },
             {
-              "u": 1.25,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
+              "color": "#794137",
               "depth": 0.07,
+              "height": 0.98,
               "offset": 0.71,
-              "color": "#794137"
+              "u": 4.9,
+              "v": 0,
+              "width": 0.065
             },
             {
-              "u": 3.7,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
+              "color": "#794137",
               "depth": 0.07,
+              "height": 0.98,
               "offset": 0.71,
-              "color": "#794137"
+              "u": 14.55,
+              "v": 0,
+              "width": 0.065
             }
           ],
           "evidenceIds": [
+            "C029",
             "C030",
-            "C029"
+            "C035",
+            "B003-N001",
+            "B003-N002",
+            "B003-N007"
           ],
-          "label": "Balcon visible · dalle claire, garde-corps rouge brun, barreaux symboliques"
+          "label": "Balcon continu observé sur le front ouest · dalle claire et garde-corps rouge brun, portée et supports symboliques"
         },
         {
           "id": "south-balcony-upper",
           "kind": "balcony",
-          "u": 4.05,
+          "u": 15.4,
           "v": 1508.55,
-          "width": 7.8,
+          "width": 30.3,
           "height": 1.05,
           "depth": 0.8,
           "color": "#8e4135",
           "floor": {
-            "height": 0.14,
-            "color": "#e5dfca"
+            "color": "#e5dfca",
+            "height": 0.14
           },
           "rails": [
             {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.075,
+              "offset": 0.71,
               "u": 0,
               "v": 0.44,
-              "width": 7.8,
-              "height": 0.075,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
+              "width": 30.3
             },
             {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
               "u": 0,
               "v": 0.15,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
+              "width": 30.3
             },
             {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
               "u": 0,
               "v": -0.14,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
+              "width": 30.3
             },
             {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
               "u": 0,
               "v": -0.43,
-              "width": 7.8,
-              "height": 0.065,
-              "depth": 0.07,
-              "offset": 0.71,
-              "color": "#8e4135"
+              "width": 30.3
             },
             {
-              "u": -3.7,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
+              "color": "#794137",
               "depth": 0.07,
+              "height": 0.98,
               "offset": 0.71,
-              "color": "#794137"
+              "u": -14.55,
+              "v": 0,
+              "width": 0.065
             },
             {
-              "u": -1.25,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
+              "color": "#794137",
               "depth": 0.07,
+              "height": 0.98,
               "offset": 0.71,
-              "color": "#794137"
+              "u": -4.9,
+              "v": 0,
+              "width": 0.065
             },
             {
-              "u": 1.25,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
+              "color": "#794137",
               "depth": 0.07,
+              "height": 0.98,
               "offset": 0.71,
-              "color": "#794137"
+              "u": 4.9,
+              "v": 0,
+              "width": 0.065
             },
             {
-              "u": 3.7,
-              "v": 0,
-              "width": 0.065,
-              "height": 0.98,
+              "color": "#794137",
               "depth": 0.07,
+              "height": 0.98,
               "offset": 0.71,
-              "color": "#794137"
+              "u": 14.55,
+              "v": 0,
+              "width": 0.065
             }
           ],
           "evidenceIds": [
+            "C029",
             "C030",
-            "C029"
+            "C035",
+            "B003-N001",
+            "B003-N002",
+            "B003-N007"
           ],
-          "label": "Balcon visible · dalle claire, garde-corps rouge brun, barreaux symboliques"
+          "label": "Balcon continu observé sur le front ouest · dalle claire et garde-corps rouge brun, portée et supports symboliques"
         },
         {
           "id": "south-screen-lower-north",
@@ -1299,7 +1427,7 @@
           "height": 2.1,
           "depth": 0.72,
           "color": "#5e3933",
-          "label": "Claustra vertical visible · lames et profondeur interprétées",
+          "label": "Claustra vertical visible · lames et profondeur interprétées · implantation approximative",
           "rails": [
             {
               "u": -0.32,
@@ -1361,7 +1489,7 @@
           "height": 2.1,
           "depth": 0.72,
           "color": "#5e3933",
-          "label": "Claustra vertical visible · lames et profondeur interprétées",
+          "label": "Claustra vertical visible · lames et profondeur interprétées · implantation approximative",
           "rails": [
             {
               "u": -0.32,
@@ -1423,7 +1551,7 @@
           "height": 2.1,
           "depth": 0.72,
           "color": "#5e3933",
-          "label": "Claustra vertical visible · lames et profondeur interprétées",
+          "label": "Claustra vertical visible · lames et profondeur interprétées · implantation approximative",
           "rails": [
             {
               "u": -0.32,
@@ -1485,7 +1613,7 @@
           "height": 2.1,
           "depth": 0.72,
           "color": "#5e3933",
-          "label": "Claustra vertical visible · lames et profondeur interprétées",
+          "label": "Claustra vertical visible · lames et profondeur interprétées · implantation approximative",
           "rails": [
             {
               "u": -0.32,
@@ -1739,6 +1867,2709 @@
           ]
         }
       ]
+    },
+    {
+      "changeId": "WEST-FRONTAGE-2024-EXTENSION",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:001",
+      "status": "ready",
+      "title": "B003 · parties centrales et sud du front ouest",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "B003-N001",
+        "B003-N002",
+        "C029",
+        "C030",
+        "C033",
+        "C035",
+        "B003-N003",
+        "B003-N006",
+        "B003-N007"
+      ],
+      "observationIds": [
+        "OBS-WEST-2024-EXTENDED"
+      ],
+      "reason": "La vue large relie le rez bois au nord, l’entrée en pierre et les baies du rez sud vérifiées dans C033/C035. Les claustras et les quelques vitrages lisibles sont placés individuellement. Les trois balcons existants ont été étendus dans SOUTH-RED-BALCONIES pour suivre les lignes observées sans chevauchement. Aucun vitrage supérieur masqué n’est déduit de cette continuité.",
+      "confidence": "medium",
+      "approximate": true,
+      "focus": {
+        "u": 18.5,
+        "height": 1504.7
+      },
+      "details": [
+        {
+          "id": "west-ground-glass-5",
+          "kind": "window",
+          "u": 9.25,
+          "v": 1500.75,
+          "width": 1.5,
+          "height": 2.3,
+          "color": "#526971",
+          "label": "Baie observée dans le second groupe du rez en bois · implantation approximative",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.11,
+            "color": "#a46d44"
+          },
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002",
+            "B003-N003"
+          ]
+        },
+        {
+          "id": "west-ground-glass-6",
+          "kind": "window",
+          "u": 11.05,
+          "v": 1500.75,
+          "width": 1.5,
+          "height": 2.3,
+          "color": "#526971",
+          "label": "Baie observée dans le second groupe du rez en bois · implantation approximative",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.11,
+            "color": "#a46d44"
+          },
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002",
+            "B003-N003"
+          ]
+        },
+        {
+          "id": "west-ground-glass-7",
+          "kind": "window",
+          "u": 12.85,
+          "v": 1500.75,
+          "width": 1.5,
+          "height": 2.3,
+          "color": "#526971",
+          "label": "Baie observée dans le second groupe du rez en bois · implantation approximative",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.11,
+            "color": "#a46d44"
+          },
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002",
+            "B003-N003"
+          ]
+        },
+        {
+          "id": "west-ground-glass-8",
+          "kind": "window",
+          "u": 14.65,
+          "v": 1500.75,
+          "width": 1.5,
+          "height": 2.3,
+          "color": "#526971",
+          "label": "Baie observée dans le second groupe du rez en bois · implantation approximative",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.11,
+            "color": "#a46d44"
+          },
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002",
+            "B003-N003"
+          ]
+        },
+        {
+          "id": "west-screen-middle-north",
+          "kind": "balcony",
+          "u": 0.62,
+          "v": 1506.6,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra de rive nord observé, lames symboliques · implantation approximative",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-screen-upper-north",
+          "kind": "balcony",
+          "u": 0.62,
+          "v": 1509.4,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra de rive nord observé, lames symboliques · implantation approximative",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-screen-lower-central",
+          "kind": "balcony",
+          "u": 14.4,
+          "v": 1503.8,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra vertical visible du balcon lower · nombre de lames symbolique · implantation approximative",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-screen-lower-south-central",
+          "kind": "balcony",
+          "u": 20.6,
+          "v": 1503.8,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra vertical visible du balcon lower · nombre de lames symbolique · implantation approximative",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-screen-lower-south",
+          "kind": "balcony",
+          "u": 26.3,
+          "v": 1503.8,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra vertical visible du balcon lower · nombre de lames symbolique · implantation approximative",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-screen-lower-south-end",
+          "kind": "balcony",
+          "u": 30.1,
+          "v": 1503.8,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra vertical visible du balcon lower · nombre de lames symbolique · implantation approximative",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N002",
+            "C035"
+          ]
+        },
+        {
+          "id": "west-screen-middle-central",
+          "kind": "balcony",
+          "u": 14.4,
+          "v": 1506.6,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra vertical visible du balcon middle · nombre de lames symbolique · implantation approximative",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-screen-middle-south-central",
+          "kind": "balcony",
+          "u": 20.6,
+          "v": 1506.6,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra vertical visible du balcon middle · nombre de lames symbolique · implantation approximative",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-screen-middle-south",
+          "kind": "balcony",
+          "u": 26.3,
+          "v": 1506.6,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra vertical visible du balcon middle · nombre de lames symbolique · implantation approximative",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-screen-middle-south-end",
+          "kind": "balcony",
+          "u": 30.1,
+          "v": 1506.6,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra vertical visible du balcon middle · nombre de lames symbolique · implantation approximative",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N002",
+            "C035"
+          ]
+        },
+        {
+          "id": "west-screen-upper-central",
+          "kind": "balcony",
+          "u": 14.4,
+          "v": 1509.4,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra vertical visible du balcon upper · nombre de lames symbolique · implantation approximative",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-screen-upper-south-central",
+          "kind": "balcony",
+          "u": 20.6,
+          "v": 1509.4,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra vertical visible du balcon upper · nombre de lames symbolique · implantation approximative",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-screen-upper-south",
+          "kind": "balcony",
+          "u": 26.3,
+          "v": 1509.4,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra vertical visible du balcon upper · nombre de lames symbolique · implantation approximative",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-screen-upper-south-end",
+          "kind": "balcony",
+          "u": 30.1,
+          "v": 1509.4,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Claustra vertical visible du balcon upper · nombre de lames symbolique · implantation approximative",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N002",
+            "C035"
+          ]
+        },
+        {
+          "id": "west-lower-recess-glass-a",
+          "kind": "window",
+          "u": 10.0,
+          "v": 1503.65,
+          "width": 1.9,
+          "height": 2.1,
+          "color": "#435967",
+          "label": "Vitrage partiellement visible derrière le balcon inférieur, groupe central · implantation approximative",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.1,
+            "color": "#93613f"
+          },
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-lower-recess-glass-b",
+          "kind": "window",
+          "u": 12.2,
+          "v": 1503.65,
+          "width": 1.9,
+          "height": 2.1,
+          "color": "#435967",
+          "label": "Vitrage partiellement visible derrière le balcon inférieur, groupe central · implantation approximative",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.1,
+            "color": "#93613f"
+          },
+          "evidenceIds": [
+            "B003-N001",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-lower-recess-glass-south-central",
+          "kind": "window",
+          "u": 21.5,
+          "v": 1503.65,
+          "width": 2.25,
+          "height": 2.1,
+          "color": "#435967",
+          "label": "Vitrage à rideaux visible derrière le balcon inférieur côté sud · implantation approximative",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.1,
+            "color": "#93613f"
+          },
+          "evidenceIds": [
+            "C033",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-middle-recess-glass-south",
+          "kind": "window",
+          "u": 28.65,
+          "v": 1506.45,
+          "width": 2.3,
+          "height": 2.1,
+          "color": "#435967",
+          "label": "Vitrage reflétant le ciel visible à l’étage médian près du bout sud · implantation approximative",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.1,
+            "color": "#93613f"
+          },
+          "evidenceIds": [
+            "C035",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-stone-entry-north-pier",
+          "kind": "panel",
+          "u": 16.05,
+          "v": 1500.8,
+          "width": 0.65,
+          "height": 2.85,
+          "color": "#a7a393",
+          "label": "Piédroit en pierre de l’entrée du rez · dimensions et texture approximatives",
+          "depth": 0.035,
+          "offset": 0.025,
+          "evidenceIds": [
+            "C033",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-stone-entry-south-pier",
+          "kind": "panel",
+          "u": 18.7,
+          "v": 1500.8,
+          "width": 0.65,
+          "height": 2.85,
+          "color": "#a7a393",
+          "label": "Piédroit en pierre de l’entrée du rez · dimensions et texture approximatives",
+          "depth": 0.035,
+          "offset": 0.025,
+          "evidenceIds": [
+            "C033",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-ground-entry-glass",
+          "kind": "window",
+          "u": 17.4,
+          "v": 1500.7,
+          "width": 1.95,
+          "height": 2.3,
+          "color": "#526971",
+          "label": "Ensemble vitré de l’entrée entre les piédroits en pierre · implantation approximative",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "width": 0.08,
+            "color": "#b4b2a6"
+          },
+          "evidenceIds": [
+            "C033",
+            "B003-N002"
+          ]
+        },
+        {
+          "id": "west-south-cream-ground",
+          "kind": "panel",
+          "u": 24.8,
+          "v": 1500.85,
+          "width": 11.8,
+          "height": 2.65,
+          "color": "#e4e1d6",
+          "depth": 0.01,
+          "offset": 0.008,
+          "label": "Enduit clair du front sud du rez · dimensions et texture approximatives",
+          "evidenceIds": [
+            "C033",
+            "C035",
+            "B003-N002",
+            "B003-N006"
+          ]
+        },
+        {
+          "id": "west-south-dark-surround-a",
+          "kind": "panel",
+          "u": 19.65,
+          "v": 1500.7,
+          "width": 1.85,
+          "height": 1.5,
+          "color": "#3e3028",
+          "label": "Encadrement et volets sombres observés autour de la baie du rez · dimensions et texture approximatives",
+          "depth": 0.01,
+          "offset": 0.018,
+          "evidenceIds": [
+            "C033",
+            "B003-N002",
+            "B003-N006"
+          ]
+        },
+        {
+          "id": "west-south-ground-window-a",
+          "kind": "window",
+          "u": 19.65,
+          "v": 1500.7,
+          "width": 1.18,
+          "height": 1.12,
+          "color": "#3b505a",
+          "label": "Baie du rez sud visible dans l’encadrement sombre · implantation approximative",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "color": "#806b4b",
+            "width": 0.075
+          },
+          "evidenceIds": [
+            "C033",
+            "B003-N002",
+            "B003-N006"
+          ]
+        },
+        {
+          "id": "west-south-dark-surround-b",
+          "kind": "panel",
+          "u": 21.75,
+          "v": 1500.7,
+          "width": 1.85,
+          "height": 1.5,
+          "color": "#3e3028",
+          "label": "Encadrement et volets sombres observés autour de la baie du rez · dimensions et texture approximatives",
+          "depth": 0.01,
+          "offset": 0.018,
+          "evidenceIds": [
+            "C033",
+            "B003-N002",
+            "B003-N006"
+          ]
+        },
+        {
+          "id": "west-south-ground-window-b",
+          "kind": "window",
+          "u": 21.75,
+          "v": 1500.7,
+          "width": 1.18,
+          "height": 1.12,
+          "color": "#3b505a",
+          "label": "Baie du rez sud visible dans l’encadrement sombre · implantation approximative",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "color": "#806b4b",
+            "width": 0.075
+          },
+          "evidenceIds": [
+            "C033",
+            "B003-N002",
+            "B003-N006"
+          ]
+        },
+        {
+          "id": "west-south-dark-surround-c",
+          "kind": "panel",
+          "u": 25.05,
+          "v": 1500.7,
+          "width": 1.85,
+          "height": 1.5,
+          "color": "#3e3028",
+          "label": "Encadrement et volets sombres observés autour de la baie du rez · dimensions et texture approximatives",
+          "depth": 0.01,
+          "offset": 0.018,
+          "evidenceIds": [
+            "C033",
+            "C035",
+            "B003-N006"
+          ]
+        },
+        {
+          "id": "west-south-ground-window-c",
+          "kind": "window",
+          "u": 25.05,
+          "v": 1500.7,
+          "width": 1.18,
+          "height": 1.12,
+          "color": "#3b505a",
+          "label": "Baie du rez sud visible dans l’encadrement sombre · implantation approximative",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "color": "#806b4b",
+            "width": 0.075
+          },
+          "evidenceIds": [
+            "C033",
+            "C035",
+            "B003-N006"
+          ]
+        },
+        {
+          "id": "west-south-dark-surround-d",
+          "kind": "panel",
+          "u": 27.1,
+          "v": 1500.7,
+          "width": 1.85,
+          "height": 1.5,
+          "color": "#3e3028",
+          "label": "Encadrement et volets sombres observés autour de la baie du rez · dimensions et texture approximatives",
+          "depth": 0.01,
+          "offset": 0.018,
+          "evidenceIds": [
+            "C035",
+            "B003-N006"
+          ]
+        },
+        {
+          "id": "west-south-ground-window-d",
+          "kind": "window",
+          "u": 27.1,
+          "v": 1500.7,
+          "width": 1.18,
+          "height": 1.12,
+          "color": "#3b505a",
+          "label": "Baie du rez sud visible dans l’encadrement sombre · implantation approximative",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "color": "#806b4b",
+            "width": 0.075
+          },
+          "evidenceIds": [
+            "C035",
+            "B003-N006"
+          ]
+        },
+        {
+          "id": "west-south-dark-surround-e",
+          "kind": "panel",
+          "u": 29.15,
+          "v": 1500.7,
+          "width": 1.85,
+          "height": 1.5,
+          "color": "#3e3028",
+          "label": "Encadrement et volets sombres observés autour de la baie du rez · dimensions et texture approximatives",
+          "depth": 0.01,
+          "offset": 0.018,
+          "evidenceIds": [
+            "C035",
+            "B003-N006"
+          ]
+        },
+        {
+          "id": "west-south-ground-window-e",
+          "kind": "window",
+          "u": 29.15,
+          "v": 1500.7,
+          "width": 1.18,
+          "height": 1.12,
+          "color": "#3b505a",
+          "label": "Baie du rez sud visible dans l’encadrement sombre · implantation approximative",
+          "depth": 0.02,
+          "offset": 0.035,
+          "frame": {
+            "color": "#806b4b",
+            "width": 0.075
+          },
+          "evidenceIds": [
+            "C035",
+            "B003-N006"
+          ]
+        },
+        {
+          "id": "west-south-ground-door",
+          "kind": "door",
+          "u": 23.4,
+          "v": 1500.65,
+          "width": 0.9,
+          "height": 2.3,
+          "color": "#382e27",
+          "depth": 0.025,
+          "offset": 0.035,
+          "label": "Porte sombre observée entre les deux groupes de fenêtres du rez sud · implantation approximative",
+          "evidenceIds": [
+            "C033",
+            "C035",
+            "B003-N006"
+          ]
+        },
+        {
+          "id": "west-south-lower-closed-shutter-wide",
+          "kind": "panel",
+          "u": 27.25,
+          "v": 1503.8,
+          "width": 2.15,
+          "height": 1.8,
+          "color": "#b6b4ac",
+          "depth": 0.015,
+          "offset": 0.04,
+          "label": "Volet roulant large fermé observé derrière le balcon inférieur sud · dimensions approximatives, ouverture derrière inconnue",
+          "evidenceIds": [
+            "B003-N006",
+            "B003-N007"
+          ]
+        },
+        {
+          "id": "west-south-lower-closed-shutter-narrow",
+          "kind": "panel",
+          "u": 29.25,
+          "v": 1503.8,
+          "width": 0.7,
+          "height": 1.8,
+          "color": "#b6b4ac",
+          "depth": 0.015,
+          "offset": 0.04,
+          "label": "Volet roulant étroit fermé près du coin sud · dimensions approximatives, ouverture derrière inconnue",
+          "evidenceIds": [
+            "B003-N006"
+          ]
+        },
+        {
+          "id": "west-south-ground-fascia",
+          "kind": "beam",
+          "u": 24.8,
+          "v": 1502.08,
+          "width": 11.8,
+          "height": 0.16,
+          "color": "#c6c5b9",
+          "depth": 0.03,
+          "offset": 0.035,
+          "label": "Bandeau horizontal clair au-dessus du rez sud · dimensions approximatives",
+          "evidenceIds": [
+            "C033",
+            "C035",
+            "B003-N006"
+          ]
+        },
+        {
+          "id": "west-south-gray-fixture-a",
+          "kind": "beam",
+          "u": 19.3,
+          "v": 1501.75,
+          "width": 0.85,
+          "height": 0.16,
+          "color": "#8f8d82",
+          "label": "Petit équipement horizontal gris sous le bandeau · fonction inconnue, forme et implantation approximatives",
+          "depth": 0.035,
+          "offset": 0.04,
+          "evidenceIds": [
+            "B003-N006",
+            "C033"
+          ]
+        },
+        {
+          "id": "west-south-gray-fixture-b",
+          "kind": "beam",
+          "u": 22.3,
+          "v": 1501.75,
+          "width": 0.85,
+          "height": 0.16,
+          "color": "#8f8d82",
+          "label": "Petit équipement horizontal gris sous le bandeau · fonction inconnue, forme et implantation approximatives",
+          "depth": 0.035,
+          "offset": 0.04,
+          "evidenceIds": [
+            "B003-N006",
+            "C033"
+          ]
+        },
+        {
+          "id": "west-south-gray-fixture-c",
+          "kind": "beam",
+          "u": 26.4,
+          "v": 1501.75,
+          "width": 0.85,
+          "height": 0.16,
+          "color": "#8f8d82",
+          "label": "Petit équipement horizontal gris sous le bandeau · fonction inconnue, forme et implantation approximatives",
+          "depth": 0.035,
+          "offset": 0.04,
+          "evidenceIds": [
+            "B003-N006",
+            "C035"
+          ]
+        },
+        {
+          "id": "west-south-gray-fixture-d",
+          "kind": "beam",
+          "u": 29.6,
+          "v": 1501.75,
+          "width": 0.85,
+          "height": 0.16,
+          "color": "#8f8d82",
+          "label": "Petit équipement horizontal gris sous le bandeau · fonction inconnue, forme et implantation approximatives",
+          "depth": 0.035,
+          "offset": 0.04,
+          "evidenceIds": [
+            "B003-N006",
+            "C035"
+          ]
+        }
+      ]
+    },
+    {
+      "changeId": "B003-NORTH-RETURN",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:004",
+      "status": "ready",
+      "title": "B003 · retour nord, balcons et petites ouvertures visibles",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "B003-N004",
+        "B003-N005",
+        "C026",
+        "C027"
+      ],
+      "observationIds": [
+        "OBS-B003-NORTH-2024"
+      ],
+      "reason": "Les nouvelles vues plein cadre N004/N005 documentent les retours de trois balcons, la pierre au coin ouest, la bande claire orientale et plusieurs petites ouvertures effectivement visibles. Le dessin les place sur le seul plan nord principal ; dimensions et matière sont interprétées sans modifier le volume source. Aucun motif d’ouverture cachée ou détail de l’attique n’est déduit.",
+      "confidence": "medium",
+      "approximate": true,
+      "focus": {
+        "u": -7.55,
+        "height": 1505.5
+      },
+      "details": [
+        {
+          "id": "north-west-stone-panel",
+          "kind": "panel",
+          "u": -2.9,
+          "v": 1506.4,
+          "width": 4.8,
+          "height": 8.2,
+          "color": "#8e8b7a",
+          "depth": 0.012,
+          "offset": 0.018,
+          "label": "Parement de pierre au coin ouest du retour nord · surface et teinte simplifiées",
+          "evidenceIds": [
+            "B003-N004",
+            "B003-N005"
+          ]
+        },
+        {
+          "id": "north-east-light-strip",
+          "kind": "panel",
+          "u": -14.55,
+          "v": 1505.6,
+          "width": 1.1,
+          "height": 10.1,
+          "color": "#deddd0",
+          "depth": 0.012,
+          "offset": 0.02,
+          "label": "Bande verticale claire à l’extrémité est visible du retour nord",
+          "evidenceIds": [
+            "B003-N004",
+            "B003-N005"
+          ]
+        },
+        {
+          "id": "north-lower-balcony-door",
+          "kind": "door",
+          "u": -10.7,
+          "v": 1503.65,
+          "width": 0.85,
+          "height": 1.95,
+          "color": "#414c4e",
+          "label": "Petite porte vitrée du balcon inférieur · une seule ouverture nettement visible",
+          "evidenceIds": [
+            "B003-N004",
+            "B003-N005"
+          ],
+          "depth": 0.02,
+          "offset": 0.035
+        },
+        {
+          "id": "north-ground-left-shutter",
+          "kind": "shutter",
+          "u": -11.35,
+          "v": 1500.75,
+          "width": 0.9,
+          "height": 1.45,
+          "color": "#7a7b70",
+          "depth": 0.02,
+          "offset": 0.035,
+          "label": "Petite ouverture basse occultée et grisée, vers l’est · vitrage inconnu",
+          "evidenceIds": [
+            "B003-N004"
+          ]
+        },
+        {
+          "id": "north-ground-high-opening-east",
+          "kind": "window",
+          "u": -9.9,
+          "v": 1501.95,
+          "width": 0.5,
+          "height": 0.35,
+          "color": "#343a35",
+          "label": "Petite ouverture sombre haute du rez · côté est de la paire visible",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "B003-N004",
+            "B003-N005"
+          ]
+        },
+        {
+          "id": "north-ground-high-opening-west",
+          "kind": "window",
+          "u": -8.95,
+          "v": 1501.95,
+          "width": 0.5,
+          "height": 0.35,
+          "color": "#343a35",
+          "label": "Petite ouverture sombre haute du rez · côté ouest de la paire visible",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "B003-N004",
+            "B003-N005"
+          ]
+        },
+        {
+          "id": "north-ground-low-opening",
+          "kind": "window",
+          "u": -9.25,
+          "v": 1500.7,
+          "width": 0.65,
+          "height": 0.5,
+          "color": "#343a35",
+          "depth": 0.02,
+          "offset": 0.035,
+          "label": "Petite ouverture basse sombre au-dessus du véhicule · partie visible seulement",
+          "evidenceIds": [
+            "B003-N004"
+          ]
+        },
+        {
+          "id": "north-balcony-lower",
+          "kind": "balcony",
+          "u": -7.55,
+          "v": 1502.95,
+          "width": 14.1,
+          "height": 1.05,
+          "depth": 0.8,
+          "color": "#8e4135",
+          "floor": {
+            "color": "#e5dfca",
+            "height": 0.14
+          },
+          "rails": [
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.075,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0.44,
+              "width": 14.1
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0.15,
+              "width": 14.1
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": -0.14,
+              "width": 14.1
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": -0.43,
+              "width": 14.1
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": -6.85,
+              "v": 0,
+              "width": 0.065
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0,
+              "width": 0.065
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": 6.85,
+              "v": 0,
+              "width": 0.065
+            }
+          ],
+          "label": "Retour nord du balcon inférieur · garde-corps rouge brun, dalle claire et poteaux stylisés",
+          "evidenceIds": [
+            "B003-N004",
+            "B003-N005"
+          ]
+        },
+        {
+          "id": "north-balcony-middle",
+          "kind": "balcony",
+          "u": -7.55,
+          "v": 1505.75,
+          "width": 14.1,
+          "height": 1.05,
+          "depth": 0.8,
+          "color": "#8e4135",
+          "floor": {
+            "color": "#e5dfca",
+            "height": 0.14
+          },
+          "rails": [
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.075,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0.44,
+              "width": 14.1
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0.15,
+              "width": 14.1
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": -0.14,
+              "width": 14.1
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": -0.43,
+              "width": 14.1
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": -6.85,
+              "v": 0,
+              "width": 0.065
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0,
+              "width": 0.065
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": 6.85,
+              "v": 0,
+              "width": 0.065
+            }
+          ],
+          "label": "Retour nord du balcon intermédiaire · garde-corps rouge brun, dalle claire et poteaux stylisés",
+          "evidenceIds": [
+            "B003-N004",
+            "B003-N005"
+          ]
+        },
+        {
+          "id": "north-balcony-upper",
+          "kind": "balcony",
+          "u": -7.55,
+          "v": 1508.55,
+          "width": 14.1,
+          "height": 1.05,
+          "depth": 0.8,
+          "color": "#8e4135",
+          "floor": {
+            "color": "#e5dfca",
+            "height": 0.14
+          },
+          "rails": [
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.075,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0.44,
+              "width": 14.1
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0.15,
+              "width": 14.1
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": -0.14,
+              "width": 14.1
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": -0.43,
+              "width": 14.1
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": -6.85,
+              "v": 0,
+              "width": 0.065
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0,
+              "width": 0.065
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": 6.85,
+              "v": 0,
+              "width": 0.065
+            }
+          ],
+          "label": "Retour nord du balcon supérieur · garde-corps rouge brun, dalle claire et poteaux stylisés",
+          "evidenceIds": [
+            "B003-N004",
+            "B003-N005"
+          ]
+        },
+        {
+          "id": "north-stone-course-1",
+          "kind": "trim",
+          "u": -2.9,
+          "v": 1503.2,
+          "width": 4.7,
+          "height": 0.035,
+          "color": "#b3ae99",
+          "label": "Joint horizontal stylisé du parement nord 1 · texture artistique, pas un relevé des pierres",
+          "depth": 0.015,
+          "offset": 0.035,
+          "evidenceIds": [
+            "B003-N004",
+            "B003-N005"
+          ]
+        },
+        {
+          "id": "north-stone-course-2",
+          "kind": "trim",
+          "u": -2.9,
+          "v": 1504.15,
+          "width": 4.7,
+          "height": 0.035,
+          "color": "#b3ae99",
+          "label": "Joint horizontal stylisé du parement nord 2 · texture artistique, pas un relevé des pierres",
+          "depth": 0.015,
+          "offset": 0.035,
+          "evidenceIds": [
+            "B003-N004",
+            "B003-N005"
+          ]
+        },
+        {
+          "id": "north-stone-course-3",
+          "kind": "trim",
+          "u": -2.9,
+          "v": 1505.1,
+          "width": 4.7,
+          "height": 0.035,
+          "color": "#b3ae99",
+          "label": "Joint horizontal stylisé du parement nord 3 · texture artistique, pas un relevé des pierres",
+          "depth": 0.015,
+          "offset": 0.035,
+          "evidenceIds": [
+            "B003-N004",
+            "B003-N005"
+          ]
+        },
+        {
+          "id": "north-stone-course-4",
+          "kind": "trim",
+          "u": -2.9,
+          "v": 1506.1,
+          "width": 4.7,
+          "height": 0.035,
+          "color": "#b3ae99",
+          "label": "Joint horizontal stylisé du parement nord 4 · texture artistique, pas un relevé des pierres",
+          "depth": 0.015,
+          "offset": 0.035,
+          "evidenceIds": [
+            "B003-N004",
+            "B003-N005"
+          ]
+        },
+        {
+          "id": "north-stone-course-5",
+          "kind": "trim",
+          "u": -2.9,
+          "v": 1507.1,
+          "width": 4.7,
+          "height": 0.035,
+          "color": "#b3ae99",
+          "label": "Joint horizontal stylisé du parement nord 5 · texture artistique, pas un relevé des pierres",
+          "depth": 0.015,
+          "offset": 0.035,
+          "evidenceIds": [
+            "B003-N004",
+            "B003-N005"
+          ]
+        },
+        {
+          "id": "north-stone-course-6",
+          "kind": "trim",
+          "u": -2.9,
+          "v": 1508.1,
+          "width": 4.7,
+          "height": 0.035,
+          "color": "#b3ae99",
+          "label": "Joint horizontal stylisé du parement nord 6 · texture artistique, pas un relevé des pierres",
+          "depth": 0.015,
+          "offset": 0.035,
+          "evidenceIds": [
+            "B003-N004",
+            "B003-N005"
+          ]
+        },
+        {
+          "id": "north-stone-course-7",
+          "kind": "trim",
+          "u": -2.9,
+          "v": 1509.15,
+          "width": 4.7,
+          "height": 0.035,
+          "color": "#b3ae99",
+          "label": "Joint horizontal stylisé du parement nord 7 · texture artistique, pas un relevé des pierres",
+          "depth": 0.015,
+          "offset": 0.035,
+          "evidenceIds": [
+            "B003-N004",
+            "B003-N005"
+          ]
+        },
+        {
+          "id": "north-stone-course-8",
+          "kind": "trim",
+          "u": -2.9,
+          "v": 1510.1,
+          "width": 4.7,
+          "height": 0.035,
+          "color": "#b3ae99",
+          "label": "Joint horizontal stylisé du parement nord 8 · texture artistique, pas un relevé des pierres",
+          "depth": 0.015,
+          "offset": 0.035,
+          "evidenceIds": [
+            "B003-N004",
+            "B003-N005"
+          ]
+        }
+      ]
+    },
+    {
+      "changeId": "B003-SOUTH-RETURN",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:005",
+      "status": "ready",
+      "title": "B003 · retour sud, trois balcons et pierre visible",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "B003-N007",
+        "C035"
+      ],
+      "observationIds": [
+        "OBS-B003-SOUTH-2024"
+      ],
+      "reason": "La nouvelle capture N007 permet de représenter les trois retours de balcon sud, les dalles claires et les lames verticales, ainsi que le seul panneau de pierre inférieur lisible. Le dessin reste sur le plan sud principal wall:005 avec les altitudes des balcons déjà documentés côté ouest. Les ouvertures ambiguës ou cachées par les véhicules sont laissées inconnues, sans modification du volume CAD.",
+      "confidence": "medium",
+      "approximate": true,
+      "focus": {
+        "u": 7.55,
+        "height": 1505.5
+      },
+      "details": [
+        {
+          "id": "south-return-lower-stone-panel",
+          "kind": "panel",
+          "u": 2.7,
+          "v": 1503.75,
+          "width": 4.2,
+          "height": 2,
+          "color": "#8d8978",
+          "depth": 0.012,
+          "offset": 0.018,
+          "label": "Parement de pierre clairement visible derrière le balcon inférieur sud · teinte et surface simplifiées",
+          "evidenceIds": [
+            "B003-N007"
+          ]
+        },
+        {
+          "id": "south-return-balcony-lower",
+          "kind": "balcony",
+          "u": 7.55,
+          "v": 1502.95,
+          "width": 14.6,
+          "height": 1.05,
+          "depth": 0.8,
+          "color": "#8e4135",
+          "floor": {
+            "color": "#e5dfca",
+            "height": 0.14
+          },
+          "rails": [
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.075,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0.44,
+              "width": 14.6
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0.15,
+              "width": 14.6
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": -0.14,
+              "width": 14.6
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": -0.43,
+              "width": 14.6
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": -7.05,
+              "v": 0,
+              "width": 0.065
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0,
+              "width": 0.065
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": 7.05,
+              "v": 0,
+              "width": 0.065
+            }
+          ],
+          "label": "Retour sud du balcon inférieur · garde-corps rouge brun et rive de dalle claire",
+          "evidenceIds": [
+            "B003-N007"
+          ]
+        },
+        {
+          "id": "south-return-balcony-middle",
+          "kind": "balcony",
+          "u": 7.55,
+          "v": 1505.75,
+          "width": 14.6,
+          "height": 1.05,
+          "depth": 0.8,
+          "color": "#8e4135",
+          "floor": {
+            "color": "#e5dfca",
+            "height": 0.14
+          },
+          "rails": [
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.075,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0.44,
+              "width": 14.6
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0.15,
+              "width": 14.6
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": -0.14,
+              "width": 14.6
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": -0.43,
+              "width": 14.6
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": -7.05,
+              "v": 0,
+              "width": 0.065
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0,
+              "width": 0.065
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": 7.05,
+              "v": 0,
+              "width": 0.065
+            }
+          ],
+          "label": "Retour sud du balcon intermédiaire · garde-corps rouge brun et rive de dalle claire",
+          "evidenceIds": [
+            "B003-N007"
+          ]
+        },
+        {
+          "id": "south-return-balcony-upper",
+          "kind": "balcony",
+          "u": 7.55,
+          "v": 1508.55,
+          "width": 14.6,
+          "height": 1.05,
+          "depth": 0.8,
+          "color": "#8e4135",
+          "floor": {
+            "color": "#e5dfca",
+            "height": 0.14
+          },
+          "rails": [
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.075,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0.44,
+              "width": 14.6
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0.15,
+              "width": 14.6
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": -0.14,
+              "width": 14.6
+            },
+            {
+              "color": "#8e4135",
+              "depth": 0.07,
+              "height": 0.065,
+              "offset": 0.71,
+              "u": 0,
+              "v": -0.43,
+              "width": 14.6
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": -7.05,
+              "v": 0,
+              "width": 0.065
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": 0,
+              "v": 0,
+              "width": 0.065
+            },
+            {
+              "color": "#794137",
+              "depth": 0.07,
+              "height": 0.98,
+              "offset": 0.71,
+              "u": 7.05,
+              "v": 0,
+              "width": 0.065
+            }
+          ],
+          "label": "Retour sud du balcon supérieur · garde-corps rouge brun et rive de dalle claire",
+          "evidenceIds": [
+            "B003-N007"
+          ]
+        },
+        {
+          "id": "south-return-screen-lower-division",
+          "kind": "balcony",
+          "u": 5.6,
+          "v": 1503.8,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Lames verticales visibles du retour sud, niveau inférieur, séparation devant le fond de balcon · densité stylisée",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N007"
+          ]
+        },
+        {
+          "id": "south-return-screen-lower-east",
+          "kind": "balcony",
+          "u": 14,
+          "v": 1503.8,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Lames verticales visibles du retour sud, niveau inférieur, extrémité est · densité stylisée",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N007"
+          ]
+        },
+        {
+          "id": "south-return-screen-middle-division",
+          "kind": "balcony",
+          "u": 5.6,
+          "v": 1506.6,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Lames verticales visibles du retour sud, niveau intermédiaire, séparation devant le fond de balcon · densité stylisée",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N007"
+          ]
+        },
+        {
+          "id": "south-return-screen-middle-east",
+          "kind": "balcony",
+          "u": 14,
+          "v": 1506.6,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Lames verticales visibles du retour sud, niveau intermédiaire, extrémité est · densité stylisée",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N007"
+          ]
+        },
+        {
+          "id": "south-return-screen-upper-division",
+          "kind": "balcony",
+          "u": 5.6,
+          "v": 1509.4,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Lames verticales visibles du retour sud, niveau supérieur, séparation devant le fond de balcon · densité stylisée",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N007"
+          ]
+        },
+        {
+          "id": "south-return-screen-upper-east",
+          "kind": "balcony",
+          "u": 14,
+          "v": 1509.4,
+          "width": 0.75,
+          "height": 2.1,
+          "depth": 0.72,
+          "color": "#5e3933",
+          "label": "Lames verticales visibles du retour sud, niveau supérieur, extrémité est · densité stylisée",
+          "rails": [
+            {
+              "u": -0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": -0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.16,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            },
+            {
+              "u": 0.32,
+              "v": 0,
+              "width": 0.055,
+              "height": 2.1,
+              "depth": 0.55,
+              "offset": 0.13,
+              "color": "#5e3933"
+            }
+          ],
+          "evidenceIds": [
+            "B003-N007"
+          ]
+        },
+        {
+          "id": "south-return-stone-course-1",
+          "kind": "trim",
+          "u": 2.7,
+          "v": 1503.2,
+          "width": 4.1,
+          "height": 0.035,
+          "color": "#b4ae98",
+          "label": "Joint stylisé 1 du parement inférieur sud · texture artistique, pas un comptage des pierres",
+          "depth": 0.015,
+          "offset": 0.035,
+          "evidenceIds": [
+            "B003-N007"
+          ]
+        },
+        {
+          "id": "south-return-stone-course-2",
+          "kind": "trim",
+          "u": 2.7,
+          "v": 1503.75,
+          "width": 4.1,
+          "height": 0.035,
+          "color": "#b4ae98",
+          "label": "Joint stylisé 2 du parement inférieur sud · texture artistique, pas un comptage des pierres",
+          "depth": 0.015,
+          "offset": 0.035,
+          "evidenceIds": [
+            "B003-N007"
+          ]
+        },
+        {
+          "id": "south-return-stone-course-3",
+          "kind": "trim",
+          "u": 2.7,
+          "v": 1504.3,
+          "width": 4.1,
+          "height": 0.035,
+          "color": "#b4ae98",
+          "label": "Joint stylisé 3 du parement inférieur sud · texture artistique, pas un comptage des pierres",
+          "depth": 0.015,
+          "offset": 0.035,
+          "evidenceIds": [
+            "B003-N007"
+          ]
+        }
+      ]
+    },
+    {
+      "changeId": "B003-REAR-UNVERIFIED-008",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:008",
+      "status": "unresolved",
+      "title": "B003 · arrière à confirmer · 008",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "B003-N008",
+        "B003-N009",
+        "B003-N010"
+      ],
+      "observationIds": [
+        "OBS-B003-REAR-008"
+      ],
+      "reason": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "B003-REAR-UNVERIFIED-010",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:010",
+      "status": "unresolved",
+      "title": "B003 · arrière à confirmer · 010",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "B003-N008",
+        "B003-N009",
+        "B003-N010"
+      ],
+      "observationIds": [
+        "OBS-B003-REAR-010"
+      ],
+      "reason": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
     }
   ],
   "captures": [
@@ -2229,6 +5060,65 @@
       "viewer_direction": "E"
     },
     {
+      "capture_id": "C033",
+      "building_ids": [
+        "B003"
+      ],
+      "screenshot": "evidence/C033.jpg",
+      "panorama_id": "Ik0vd_tNx-X8oaT_eispzQ",
+      "latitude": "46.3105028",
+      "longitude": "7.4773993",
+      "heading_deg": "90",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "5 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3105028,7.4773993,1501a,75y,90h,90t/data=!3m7!1e1!3m5!1sIk0vd_tNx-X8oaT_eispzQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DIk0vd_tNx-X8oaT_eispzQ%26yaw%3D90!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "West-facing southern ground-floor frontage and balconies of B003; left strip blurred by Google.",
+      "captured_at_utc": "2026-11-15T22:51:19+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:51:19+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "E"
+    },
+    {
+      "capture_id": "C035",
+      "building_ids": [
+        "B003",
+        "B012"
+      ],
+      "screenshot": "evidence/C035.jpg",
+      "panorama_id": "_Vt647yG9SD2ND8Vg2w11Q",
+      "latitude": "46.310416",
+      "longitude": "7.4774083",
+      "heading_deg": "90",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "5 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.310416,7.4774083,1501a,75y,90h,90t/data=!3m7!1e1!3m5!1s_Vt647yG9SD2ND8Vg2w11Q!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D_Vt647yG9SD2ND8Vg2w11Q%26yaw%3D90!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Southwest corner/end of B003, parked vehicles obscure ground floor; pale detached house partly visible beyond trees.",
+      "captured_at_utc": "2026-11-15T22:52:02+00:00",
+      "captured_at_europe_zurich": "2026-11-15T23:52:02+01:00",
+      "capture_timestamp_source": "ORIGINAL_SCREENSHOT_FILE_MTIME",
+      "capture_kind": "EXTERIOR_FACADE_OR_CONTEXT_VIEW",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "viewer_direction": "E"
+    },
+    {
       "capture_id": "C041",
       "building_ids": [
         "B002",
@@ -2411,6 +5301,270 @@
       "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
       "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
       "viewer_direction": "SE"
+    },
+    {
+      "capture_id": "B003-N001",
+      "building_ids": [
+        "B003"
+      ],
+      "screenshot": "evidence/2026-11-21/B003-N001.jpg",
+      "panorama_id": "awx_7_jAbDeJRRZrPM_rtg",
+      "latitude": "46.3106806",
+      "longitude": "7.4773777",
+      "heading_deg": "90",
+      "pitch_url_t": "109.9",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "5 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3106806,7.4773777,1502a,75y,90h,109.9t/data=!3m7!1e1!3m5!1sawx_7_jAbDeJRRZrPM_rtg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-19.900000000000006%26panoid%3Dawx_7_jAbDeJRRZrPM_rtg%26yaw%3D90!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "North part of west elevation, three balcony storeys and ground glazing; right side clipped, roofs under temporary red safety protection.",
+      "captured_at_utc": "2026-11-21T18:55:26.833Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE"
+    },
+    {
+      "capture_id": "B003-N002",
+      "building_ids": [
+        "B003"
+      ],
+      "screenshot": "evidence/2026-11-21/B003-N002.jpg",
+      "panorama_id": "awx_7_jAbDeJRRZrPM_rtg",
+      "latitude": "46.3106806",
+      "longitude": "7.4773777",
+      "heading_deg": "142.86",
+      "pitch_url_t": "109.9",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "5 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3106806,7.4773777,1502a,75y,142.86h,109.9t/data=!3m7!1e1!3m5!1sawx_7_jAbDeJRRZrPM_rtg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-19.900000000000006%26panoid%3Dawx_7_jAbDeJRRZrPM_rtg%26yaw%3D142.85874916509079!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "West elevation looking south: continuous three balcony levels, vertical screens, timber-clad north glazing and stone/cream south ground-floor frontage. Perspective compresses far bays.",
+      "captured_at_utc": "2026-11-21T18:55:55.820Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE"
+    },
+    {
+      "capture_id": "B003-N003",
+      "building_ids": [
+        "B003"
+      ],
+      "screenshot": "evidence/2026-11-21/B003-N003.jpg",
+      "panorama_id": "awx_7_jAbDeJRRZrPM_rtg",
+      "latitude": "46.3106806",
+      "longitude": "7.4773777",
+      "heading_deg": "90",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "5 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3106806,7.4773777,1502a,75y,90h,90t/data=!3m7!1e1!3m5!1sawx_7_jAbDeJRRZrPM_rtg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3Dawx_7_jAbDeJRRZrPM_rtg%26yaw%3D90!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "North portion of west ground-floor frontage after a road-node move: timber framing and additional glazing; north return is not documented by this frame.",
+      "captured_at_utc": "2026-11-21T18:56:55.174Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE"
+    },
+    {
+      "capture_id": "B003-N004",
+      "building_ids": [
+        "B003"
+      ],
+      "screenshot": "evidence/2026-11-21/B003-N004.jpg",
+      "panorama_id": "c42YlOA468Caesfjk9YLxA",
+      "latitude": "46.3107713",
+      "longitude": "7.4773701",
+      "heading_deg": "90",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "2 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3107713,7.4773701,1502a,75y,90h,90t/data=!3m7!1e1!3m5!1sc42YlOA468Caesfjk9YLxA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3Dc42YlOA468Caesfjk9YLxA%26yaw%3D90!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "North-facing return from road: three balcony levels wrapping the corner, stone-faced panel, white vertical strip toward east, small ground openings. Upper edge clipped and parked car obscures lower corner.",
+      "captured_at_utc": "2026-11-21T18:57:46.477Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE"
+    },
+    {
+      "capture_id": "B003-N005",
+      "building_ids": [
+        "B003"
+      ],
+      "screenshot": "evidence/2026-11-21/B003-N005.jpg",
+      "panorama_id": "c42YlOA468Caesfjk9YLxA",
+      "latitude": "46.3107713",
+      "longitude": "7.4773701",
+      "heading_deg": "90",
+      "pitch_url_t": "115.02",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "2 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3107713,7.4773701,1502a,75y,90h,115.02t/data=!3m7!1e1!3m5!1sc42YlOA468Caesfjk9YLxA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-25.017968920871013%26panoid%3Dc42YlOA468Caesfjk9YLxA%26yaw%3D90!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Tilted full-height north return: three wraparound red-brown balcony rails with white slabs, stone-facing at the western corner, narrow pale eastern strip, one clearly visible lower balcony door and small ground openings. Roof safety mesh is temporary; upper recessed volume not resolved.",
+      "captured_at_utc": "2026-11-21T18:58:03.711Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE"
+    },
+    {
+      "capture_id": "B003-N006",
+      "building_ids": [
+        "B003"
+      ],
+      "screenshot": "evidence/2026-11-21/B003-N006.jpg",
+      "panorama_id": "_Vt647yG9SD2ND8Vg2w11Q",
+      "latitude": "46.310416",
+      "longitude": "7.4774083",
+      "heading_deg": "90",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "5 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.310416,7.4774083,1501a,75y,90h,90t/data=!3m7!1e1!3m5!1s_Vt647yG9SD2ND8Vg2w11Q!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D_Vt647yG9SD2ND8Vg2w11Q%26yaw%3D90!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "South end of west elevation: dark ground-floor glazing, central dark door, cream fascia with awnings and red-brown balconies. Parked vehicles and trees hide most south return.",
+      "captured_at_utc": "2026-11-21T18:58:56.900Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE"
+    },
+    {
+      "capture_id": "B003-N007",
+      "building_ids": [
+        "B003"
+      ],
+      "screenshot": "evidence/2026-11-21/B003-N007.jpg",
+      "panorama_id": "3kzHLLVOUxmwOmUoSql3-g",
+      "latitude": "46.3102964",
+      "longitude": "7.4774249",
+      "heading_deg": "36.6",
+      "pitch_url_t": "105.75",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "5 Rte des Sommets de Crans - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3102964,7.4774249,1501a,75y,36.6h,105.75t/data=!3m7!1e1!3m5!1s3kzHLLVOUxmwOmUoSql3-g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-15.751987872300901%26panoid%3D3kzHLLVOUxmwOmUoSql3-g%26yaw%3D36.59888278712125!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Full southwest-corner view from southern road node: entire west front and south return, three red-brown balcony levels wrapping the corner, white slab edges, stone cladding and visible balcony glazing/shutters; ground floor partly hidden by works vehicles. Temporary scaffolding and red roof safety mesh are excluded from permanent model.",
+      "captured_at_utc": "2026-11-21T18:59:31.463Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE"
+    },
+    {
+      "capture_id": "B003-N008",
+      "building_ids": [
+        "B003"
+      ],
+      "screenshot": "evidence/2026-11-21/B003-N008.jpg",
+      "panorama_id": "PRfZx6Pz9R05lo1p1-f7xQ",
+      "latitude": "46.3109398",
+      "longitude": "7.479384",
+      "heading_deg": "218.31",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "75",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "All. Katherine Mansfield - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3109398,7.479384,1500a,75y,218.31h,90t/data=!3m7!1e1!3m5!1sPRfZx6Pz9R05lo1p1-f7xQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DPRfZx6Pz9R05lo1p1-f7xQ%26yaw%3D218.31240425520156!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Rear-side access check from Mansfield: dense trees prevent an attributable B003 facade census; this is a coverage-gap/context view, not evidence of openings.",
+      "captured_at_utc": "2026-11-21T19:01:01.719Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE"
+    },
+    {
+      "capture_id": "B003-N009",
+      "building_ids": [
+        "B003"
+      ],
+      "screenshot": "evidence/2026-11-22/B003-N009.jpg",
+      "panorama_id": "CIHM0ogKEICAgIDqxdLl1wE",
+      "latitude": "46.3106401",
+      "longitude": "7.4785164",
+      "heading_deg": "180.4",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "15",
+      "imagery_date": "Feb 2019",
+      "provider": "De Douby · Google Maps photo sphere",
+      "title": "De Douby - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3106401,7.4785164,3a,15y,180.4h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDqxdLl1wE!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_qbObmhIXjUrVf6SAlZZbo4KYPE502GiYvcqxbzlsxKakl8idcE5kUwIz-tbOGfRIv4sSwFGfm_VRmCESbtlp4-lg4DmhRuQ3k0NnqLoCxj4mzV69LS_qniB9vs9z_swP8o1BYuA%3Dw900-h600-k-no-pi0-ya180.39654902470855-ro0-fo100!7i5376!8i2688?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;THIRD_PARTY_PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Winter rear-side candidate B003: pale basement, three balcony levels and stone/pale walls visible through bare trees. Contributor orientation is uncalibrated. Identity must be corroborated visually; no unseen openings may be inferred.",
+      "captured_at_utc": "2026-11-22T15:37:28.445Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_RECORDED_FROM_RESOLVED_VIEWER_URL;CONTRIBUTOR_PHYSICAL_POSITION_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "CONTRIBUTOR_VIEWER_HEADING_RECORDED;GEOGRAPHIC_ORIENTATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "building_identity_status": "CANDIDATE_ONLY;B003_AND_FACE_UNVERIFIED",
+      "capture_kind": "REAR_CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "capture_id": "B003-N010",
+      "building_ids": [
+        "B003"
+      ],
+      "screenshot": "evidence/2026-11-22/B003-N010.jpg",
+      "panorama_id": "CIHM0ogKEICAgIDqxdLl1wE",
+      "latitude": "46.3106401",
+      "longitude": "7.4785164",
+      "heading_deg": "180.4",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "30",
+      "imagery_date": "Feb 2019",
+      "provider": "De Douby · Google Maps photo sphere",
+      "title": "De Douby - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3106401,7.4785164,3a,30y,180.4h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDqxdLl1wE!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_qbObmhIXjUrVf6SAlZZbo4KYPE502GiYvcqxbzlsxKakl8idcE5kUwIz-tbOGfRIv4sSwFGfm_VRmCESbtlp4-lg4DmhRuQ3k0NnqLoCxj4mzV69LS_qniB9vs9z_swP8o1BYuA%3Dw900-h600-k-no-pi0-ya180.39654902470855-ro0-fo100!7i5376!8i2688?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;THIRD_PARTY_PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Wider winter candidate frame with roof and surrounding path, still masked by trees. Candidate building resembles B003 but attribution and geographic face remain unresolved; no ready geometry or opening count derives from this view.",
+      "captured_at_utc": "2026-11-22T15:39:53.566Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_RECORDED_FROM_RESOLVED_VIEWER_URL;CONTRIBUTOR_PHYSICAL_POSITION_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "CONTRIBUTOR_VIEWER_HEADING_RECORDED;GEOGRAPHIC_ORIENTATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "building_identity_status": "CANDIDATE_ONLY;B003_AND_FACE_UNVERIFIED",
+      "capture_kind": "REAR_CANDIDATE_NOT_APPLIED"
     }
   ]
 }

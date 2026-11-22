@@ -1,6 +1,6 @@
 # Compléter le petit secteur Ycoor
 
-La P0.6.7 dispose d’un inventaire des **six volumes et 43 plans de murs sources**. B002 regroupe plusieurs volumes CAD : ce n’est ni un décompte de bâtiments cadastraux, ni une promesse de 43 façades physiques indépendantes. Les trois faces déjà traitées restent partielles. Le total de fenêtres et le nombre restant ne sont pas établis.
+La P0.6.7 dispose d’un inventaire des **six volumes et 43 plans de murs sources**. B002 regroupe plusieurs volumes CAD : ce n’est ni un décompte de bâtiments cadastraux, ni une promesse de 43 façades physiques indépendantes. Les cinq faces déjà traitées restent partielles, dont trois côtés de B003 ([état détaillé](b003-facades.md)). Le total de fenêtres et le nombre restant ne sont pas établis.
 
 ## Un cycle par lot
 

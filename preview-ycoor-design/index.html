@@ -63,6 +63,8 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:2px 
  <label for="design-facade">Façade à voir</label>
  <select id="design-facade" disabled><option>Aucune façade disponible</option></select>
  <button id="design-focus" type="button" disabled>Voir la façade choisie</button>
+ <button id="design-building" type="button" disabled>Voir B003 en entier</button>
+ <small style="display:block">B003 · ouest, nord et sud dessinés ; arrière à vérifier.</small>
  <div id="design-status" role="status" aria-live="polite">Lecture des six volumes DXF…</div>
  <small>Géométrie officielle · détails interprétés, dimensions approximatives.</small>
  <a href="../crans-montana-p06/" style="display:block;color:#174e78;margin-top:5px">Ouvrir la version stable ↗</a>
@@ -210,6 +212,7 @@ function focusDesignTarget({building,face,change}){
   const centreH=change?.focus?.height??(face.bounds.minV+face.bounds.maxV)/2;
   target.set(face.origin[0]+face.u[0]*centreU,centreH-terrainDatum(),face.origin[2]+face.u[2]*centreU);
   state.angle=Math.atan2(face.normal[0],face.normal[2]);
+  if(face.id==='2F7D6:wall:004')state.angle+=Math.PI/4; // See the north return past the adjacent volume.
   state.zoom=4.3;state.view='facade';
  }else{
   const bounds=building.vertices.reduce((a,[e,n,h])=>[Math.min(a[0],e),Math.min(a[1],n),Math.min(a[2],h),Math.max(a[3],e),Math.max(a[4],n),Math.max(a[5],h)],[Infinity,Infinity,Infinity,-Infinity,-Infinity,-Infinity]);
@@ -218,6 +221,10 @@ function focusDesignTarget({building,face,change}){
  }
  needsResize=true;
 }
+function focusB003Building(){
+ const building=pilot?.local.buildings.find(item=>item.id==='2F7D6');
+ if(building){focusDesignTarget({building});state.angle=-Math.PI/4;state.zoom=3.4;state.view='facade';needsResize=true;}
+}
 function syncDesignControls(){
  const enabled=Boolean(pilot?.designEnabled);
  $('design-toggle').disabled=!pilot?.status.designReady||buildingMode!=='local';
@@ -225,6 +232,7 @@ function syncDesignControls(){
  $('design-toggle').setAttribute('aria-pressed',String(enabled));
  $('design-toggle').textContent='Détails documentés : '+(enabled?'ON':'OFF');
  $('design-coverage').disabled=!pilot?.panelReady;
+ $('design-building').disabled=!pilot?.status.designReady;
  $('design-coverage').setAttribute('aria-expanded',String(Boolean(pilot?.panelOpen&&pilot.panelView==='coverage')));
  const hasFacade=Boolean(pilot?.status.designReady&&$('design-facade').value);
  $('design-facade').disabled=!hasFacade;
@@ -234,7 +242,7 @@ async function startDesignPilot(){
  if(pilotLoading||pilot)return;
  pilotLoading=true;
  try{
-  const {createPilot}=await import('./design/pilot.js?v=5');
+  const {createPilot}=await import('./design/pilot.js?v=6');
   pilot=await createPilot({THREE,scene,
    dataBaseUrl:new URL('./assets/',import.meta.url).href,
    designBaseUrl:new URL('./design/',import.meta.url).href,
@@ -246,7 +254,7 @@ async function startDesignPilot(){
     if(!grid.flat().every(Number.isFinite)||grid.flat().length!==9)return;
     terrainVals=grid;terrainOk=true;terrainSource='snapshot';build();
    },
-   onStatus:status=>{$('design-status').textContent=`${status.buildings} volume${status.buildings>1?'s':''} loca${status.buildings>1?'ux':'l'} · ${status.changes} façade${status.changes>1?'s':''} documentée${status.changes>1?'s':''} · ${status.details} élément${status.details>1?'s':''} interprété${status.details>1?'s':''}.`+(status.error?' '+status.error:'');},
+   onStatus:status=>{$('design-status').textContent=`${status.buildings} volume${status.buildings>1?'s':''} loca${status.buildings>1?'ux':'l'} · ${status.faces} face${status.faces>1?'s':''} avec détails · ${status.details} élément${status.details>1?'s':''} interprété${status.details>1?'s':''}.`+(status.error?' '+status.error:'');},
    onPanelOpen:()=>{
     streetViewLayer?.setEnabled(false);
     $('sources').classList.remove('show');
@@ -259,7 +267,7 @@ async function startDesignPilot(){
   const facades=pilot.evidence?.changes.filter(change=>change.status==='ready'&&pilot.local.faces.some(face=>face.id===change.faceId&&face.buildingId===change.buildingId&&face.facadeAllowed!==false&&!face.orientationAmbiguous))??[];
   $('design-facade').replaceChildren(...facades.map(change=>new Option(change.title||change.changeId,change.changeId)));
   $('design-facade').value=facades.at(-1)?.changeId??'';
-  syncRoofs();syncDesignControls();pilot.focusFacade($('design-facade').value);
+  syncRoofs();syncDesignControls();focusB003Building();
  }catch(error){
   console.warn('Pilote DXF',error);
   $('design-status').textContent='Volumes locaux indisponibles. Recharger la page pour réessayer ; le flux officiel reste accessible avec le bouton DXF.';
@@ -267,6 +275,7 @@ async function startDesignPilot(){
  }finally{pilotLoading=false;}
 }
 $('design-coverage').onclick=()=>{pilot?.openCoverage();syncDesignControls();};
+$('design-building').onclick=focusB003Building;
 $('design-toggle').onclick=()=>{pilot?.setDesignEnabled(!pilot.designEnabled);syncDesignControls();};
 $('design-focus').onclick=()=>{
  if(buildingMode!=='local'){buildingMode='local';syncRoofs();}

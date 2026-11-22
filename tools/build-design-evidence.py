@@ -220,7 +220,10 @@ def load_data(folder: Path = FACADES) -> dict:
         facades.append(facade)
     library = folder.parent / 'detail-templates.json'
     templates = read_json(library) if library.exists() else None
-    return build_data(read_json(folder / 'index.json'), facades, read_json(GEOMETRY), read_json(SURVEY), templates)
+    survey = read_json(SURVEY)
+    for path in sorted(SURVEY.parent.glob('supplement-*.json')):
+        survey['captures'].extend(read_json(path)['captures'])
+    return build_data(read_json(folder / 'index.json'), facades, read_json(GEOMETRY), survey, templates)
 
 
 def main() -> int:

@@ -30,6 +30,7 @@ export function buildFacadeInventory({ buildings, faces, evidence }) {
   for (const match of data.buildingMatches) if (!buildingById.has(match.buildingId)) throw new Error(`Unknown building match: ${match.buildingId}.`);
   for (const face of faces) if (!buildingById.has(face.buildingId)) throw new Error(`Unknown face building: ${face.buildingId}.`);
   const changesByFace = new Map();
+  const pendingByFace = new Map(data.changes.filter(change => change.status === 'unresolved' && change.faceId && change.reason).map(change => [change.faceId, change.reason]));
   const geometryReview = new Set(data.changes.filter(change => change.status === 'unresolved' && change.geometryReviewRequired === true).map(change => change.buildingId));
   for (const change of data.changes.filter(change => change.status === 'ready')) {
     const face = faceById.get(change.faceId);
@@ -61,7 +62,7 @@ export function buildFacadeInventory({ buildings, faces, evidence }) {
         : status === 'identity_unresolved' ? 'Confirmer la correspondance visuelle avant d’attribuer des fenêtres à cette face.'
           : status === 'geometry_ambiguous' ? 'Vérifier le plan géométrique avant de placer des détails.'
             : status === 'geometry_review' ? 'Comparer le volume final daté et mesuré avec la source de 2020 avant de placer des fenêtres.'
-            : 'Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.',
+            : pendingByFace.get(face.id) ?? 'Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.',
       canFocus: !geometryAmbiguous,
     };
   });

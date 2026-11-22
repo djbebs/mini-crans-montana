@@ -2,7 +2,7 @@ import { createLocalBuildings } from './local-buildings.js';
 import { createDesignEnhancements } from './design-enhancements.js';
 import { createDesignPanel } from './design-panel.js?v=5';
 import { assetUrl, validateDesignEvidence } from './design-model.js';
-import { buildFacadeInventory } from './coverage-model.js?v=4';
+import { buildFacadeInventory } from './coverage-model.js?v=6';
 
 /** Pick the nearest visible pilot surface, respecting foreground scene objects. */
 export function pickPilotGeometry(raycaster, { local, additions, maxDistance = Infinity }) {
@@ -34,7 +34,7 @@ export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, su
   const datum = typeof originHeight === 'function' ? originHeight() : originHeight;
   const local = createLocalBuildings({ THREE, scene, data, originHeight: datum });
   let panel = null, additions = null, evidence = null, inventory = null, visible = true, enabled = true, disposed = false;
-  const status = { buildings: local.buildings.length, changes: 0, details: 0, designReady: false, error: null };
+  const status = { buildings: local.buildings.length, changes: 0, faces: 0, details: 0, designReady: false, error: null };
   try {
     evidence = validateDesignEvidence(await readJson(designBaseUrl, 'design-evidence.json'));
     inventory = buildFacadeInventory({ buildings: local.buildings, faces: local.faces, evidence });
@@ -42,6 +42,7 @@ export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, su
       originHeight: datum,
     });
     status.changes = evidence.changes.filter(change => change.status === 'ready').length;
+    status.faces = new Set(evidence.changes.filter(change => change.status === 'ready').map(change => change.faceId)).size;
     status.details = evidence.changes.filter(change => change.status === 'ready').reduce((sum, change) => sum + change.details.length, 0);
     status.designReady = true;
     additions.setEnabled(true);

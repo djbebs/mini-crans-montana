@@ -283,5 +283,302 @@
         "color": "#5e3933"
       }
     ]
+  },
+  "long-rust-balcony": {
+    "color": "#8e4135",
+    "depth": 0.8,
+    "floor": {
+      "color": "#e5dfca",
+      "height": 0.14
+    },
+    "height": 1.05,
+    "kind": "balcony",
+    "rails": [
+      {
+        "color": "#8e4135",
+        "depth": 0.07,
+        "height": 0.075,
+        "offset": 0.71,
+        "u": 0,
+        "v": 0.44,
+        "width": 30.3
+      },
+      {
+        "color": "#8e4135",
+        "depth": 0.07,
+        "height": 0.065,
+        "offset": 0.71,
+        "u": 0,
+        "v": 0.15,
+        "width": 30.3
+      },
+      {
+        "color": "#8e4135",
+        "depth": 0.07,
+        "height": 0.065,
+        "offset": 0.71,
+        "u": 0,
+        "v": -0.14,
+        "width": 30.3
+      },
+      {
+        "color": "#8e4135",
+        "depth": 0.07,
+        "height": 0.065,
+        "offset": 0.71,
+        "u": 0,
+        "v": -0.43,
+        "width": 30.3
+      },
+      {
+        "color": "#794137",
+        "depth": 0.07,
+        "height": 0.98,
+        "offset": 0.71,
+        "u": -14.55,
+        "v": 0,
+        "width": 0.065
+      },
+      {
+        "color": "#794137",
+        "depth": 0.07,
+        "height": 0.98,
+        "offset": 0.71,
+        "u": -4.9,
+        "v": 0,
+        "width": 0.065
+      },
+      {
+        "color": "#794137",
+        "depth": 0.07,
+        "height": 0.98,
+        "offset": 0.71,
+        "u": 4.9,
+        "v": 0,
+        "width": 0.065
+      },
+      {
+        "color": "#794137",
+        "depth": 0.07,
+        "height": 0.98,
+        "offset": 0.71,
+        "u": 14.55,
+        "v": 0,
+        "width": 0.065
+      }
+    ],
+    "width": 30.3
+  },
+  "stone-entry-pier": {
+    "color": "#a7a393",
+    "depth": 0.035,
+    "height": 2.85,
+    "kind": "panel",
+    "offset": 0.025,
+    "width": 0.65
+  },
+  "dark-ground-bay-surround": {
+    "color": "#3e3028",
+    "depth": 0.01,
+    "height": 1.5,
+    "kind": "panel",
+    "offset": 0.018,
+    "width": 1.85
+  },
+  "small-timber-ground-window": {
+    "color": "#3b505a",
+    "depth": 0.02,
+    "frame": {
+      "color": "#806b4b",
+      "width": 0.075
+    },
+    "height": 1.12,
+    "kind": "window",
+    "offset": 0.035,
+    "width": 1.18
+  },
+  "gray-horizontal-fixture": {
+    "color": "#8f8d82",
+    "depth": 0.035,
+    "height": 0.16,
+    "kind": "beam",
+    "offset": 0.04,
+    "width": 0.85
+  },
+  "small-dark-high-opening": {
+    "color": "#343a35",
+    "depth": 0.02,
+    "height": 0.35,
+    "kind": "window",
+    "offset": 0.035,
+    "width": 0.5
+  },
+  "north-rust-return-balcony": {
+    "color": "#8e4135",
+    "depth": 0.8,
+    "floor": {
+      "color": "#e5dfca",
+      "height": 0.14
+    },
+    "height": 1.05,
+    "kind": "balcony",
+    "rails": [
+      {
+        "color": "#8e4135",
+        "depth": 0.07,
+        "height": 0.075,
+        "offset": 0.71,
+        "u": 0,
+        "v": 0.44,
+        "width": 14.1
+      },
+      {
+        "color": "#8e4135",
+        "depth": 0.07,
+        "height": 0.065,
+        "offset": 0.71,
+        "u": 0,
+        "v": 0.15,
+        "width": 14.1
+      },
+      {
+        "color": "#8e4135",
+        "depth": 0.07,
+        "height": 0.065,
+        "offset": 0.71,
+        "u": 0,
+        "v": -0.14,
+        "width": 14.1
+      },
+      {
+        "color": "#8e4135",
+        "depth": 0.07,
+        "height": 0.065,
+        "offset": 0.71,
+        "u": 0,
+        "v": -0.43,
+        "width": 14.1
+      },
+      {
+        "color": "#794137",
+        "depth": 0.07,
+        "height": 0.98,
+        "offset": 0.71,
+        "u": -6.85,
+        "v": 0,
+        "width": 0.065
+      },
+      {
+        "color": "#794137",
+        "depth": 0.07,
+        "height": 0.98,
+        "offset": 0.71,
+        "u": 0,
+        "v": 0,
+        "width": 0.065
+      },
+      {
+        "color": "#794137",
+        "depth": 0.07,
+        "height": 0.98,
+        "offset": 0.71,
+        "u": 6.85,
+        "v": 0,
+        "width": 0.065
+      }
+    ],
+    "width": 14.1
+  },
+  "north-stone-course": {
+    "color": "#b3ae99",
+    "depth": 0.015,
+    "height": 0.035,
+    "kind": "trim",
+    "offset": 0.035,
+    "width": 4.7
+  },
+  "south-rust-return-balcony": {
+    "color": "#8e4135",
+    "depth": 0.8,
+    "floor": {
+      "color": "#e5dfca",
+      "height": 0.14
+    },
+    "height": 1.05,
+    "kind": "balcony",
+    "rails": [
+      {
+        "color": "#8e4135",
+        "depth": 0.07,
+        "height": 0.075,
+        "offset": 0.71,
+        "u": 0,
+        "v": 0.44,
+        "width": 14.6
+      },
+      {
+        "color": "#8e4135",
+        "depth": 0.07,
+        "height": 0.065,
+        "offset": 0.71,
+        "u": 0,
+        "v": 0.15,
+        "width": 14.6
+      },
+      {
+        "color": "#8e4135",
+        "depth": 0.07,
+        "height": 0.065,
+        "offset": 0.71,
+        "u": 0,
+        "v": -0.14,
+        "width": 14.6
+      },
+      {
+        "color": "#8e4135",
+        "depth": 0.07,
+        "height": 0.065,
+        "offset": 0.71,
+        "u": 0,
+        "v": -0.43,
+        "width": 14.6
+      },
+      {
+        "color": "#794137",
+        "depth": 0.07,
+        "height": 0.98,
+        "offset": 0.71,
+        "u": -7.05,
+        "v": 0,
+        "width": 0.065
+      },
+      {
+        "color": "#794137",
+        "depth": 0.07,
+        "height": 0.98,
+        "offset": 0.71,
+        "u": 0,
+        "v": 0,
+        "width": 0.065
+      },
+      {
+        "color": "#794137",
+        "depth": 0.07,
+        "height": 0.98,
+        "offset": 0.71,
+        "u": 7.05,
+        "v": 0,
+        "width": 0.065
+      }
+    ],
+    "width": 14.6
+  },
+  "south-stone-course": {
+    "color": "#b4ae98",
+    "depth": 0.015,
+    "height": 0.035,
+    "kind": "trim",
+    "offset": 0.035,
+    "width": 4.1
   }
 }

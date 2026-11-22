@@ -33,6 +33,8 @@ class BuildDesignEvidenceTests(unittest.TestCase):
         self.templates = read(TEMPLATES) if TEMPLATES.exists() else {}
         self.geometry = read(GEOMETRY)
         self.survey = read(SURVEY)
+        for path in sorted(SURVEY.parent.glob('supplement-*.json')):
+            self.survey['captures'].extend(read(path)['captures'])
 
     def build(self):
         return self.builder.build_data(self.index, self.facades, self.geometry, self.survey, self.templates)
@@ -119,6 +121,54 @@ class BuildDesignEvidenceTests(unittest.TestCase):
         snapshot = copy.deepcopy(self.survey)
         self.build()
         self.assertEqual(snapshot, self.survey)
+
+    def write_load_fixture(self, directory, supplements):
+        folder = directory / 'facades'
+        folder.mkdir()
+        (folder / 'index.json').write_text(json.dumps(self.index), encoding='utf-8')
+        for facade in self.facades:
+            (folder / f'{facade["buildingId"]}.json').write_text(json.dumps(facade), encoding='utf-8')
+        (directory / 'detail-templates.json').write_text(json.dumps(self.templates), encoding='utf-8')
+        self.builder.SURVEY = directory / 'survey-data.json'
+        self.builder.SURVEY.write_bytes(SURVEY.read_bytes())
+        for path in SURVEY.parent.glob('supplement-*.json'):
+            (directory / path.name).write_bytes(path.read_bytes())
+        for name, captures in supplements.items():
+            (directory / name).write_text(json.dumps({'captures': captures}), encoding='utf-8')
+        return folder
+
+    def test_load_data_merges_supplementary_captures_and_preserves_every_source_value(self):
+        captures = [dict(capture_id='C998', building_ids=['B002'], heading_deg='090.00',
+                         imagery_date=None, screenshot='evidence/2026-11-21/B003-N001.jpg',
+                         extra_metadata={'untouched': ['001', None, 0]}),
+                    dict(capture_id='C999', building_ids=['B002'], heading_deg=None,
+                         imagery_date='Jun 2024')]
+        self.facade('2355E')['match']['evidenceIds'].extend(['C998', 'C999'])
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            folder = self.write_load_fixture(directory, {
+                'supplement-b.json': [captures[1]], 'supplement-a.json': [captures[0]],
+            })
+            (directory / 'unrelated.json').write_text('not a survey supplement', encoding='utf-8')
+            snapshots = {path: path.read_bytes() for path in directory.glob('*.json')}
+            actual = self.builder.load_data(folder)['captures']
+            self.assertEqual(captures, actual[-2:])
+            original = {item['capture_id']: item for item in self.survey['captures']}
+            for item in actual[:-2]:
+                self.assertEqual(original[item['capture_id']], item)
+            self.assertEqual(snapshots, {path: path.read_bytes() for path in snapshots})
+
+    def test_load_data_rejects_capture_ids_repeated_across_source_files(self):
+        original_capture = copy.deepcopy(self.survey['captures'][0])
+        new_capture = dict(capture_id='C-NEW', building_ids=['B002'])
+        for supplements, duplicate_id in [
+            ({'supplement-a.json': [original_capture]}, original_capture['capture_id']),
+            ({'supplement-a.json': [new_capture], 'supplement-b.json': [new_capture]}, 'C-NEW'),
+        ]:
+            with self.subTest(duplicate_id=duplicate_id), tempfile.TemporaryDirectory() as temporary:
+                folder = self.write_load_fixture(Path(temporary), supplements)
+                with self.assertRaisesRegex(ValueError, f'Duplicate capture ID: {duplicate_id}'):
+                    self.builder.load_data(folder)
 
     def test_uuid_and_date_are_joined_from_geometry(self):
         building_id = self.index['buildingOrder'][0]

@@ -16,10 +16,11 @@ test('every actual source wall plane appears once without inventing complete fa�
   assert.equal(result.summary.buildingCount, 6);
   assert.equal(result.summary.faceCount, 43);
   assert.deepEqual(result.faces.map(face => face.faceId).sort(), local.faces.map(face => face.id).sort());
-  assert.equal(result.summary.partialFaceCount, 3);
+  const ready = input.evidence.changes.filter(change => change.status === 'ready');
+  assert.equal(result.summary.partialFaceCount, new Set(ready.map(change => change.faceId)).size);
   assert.equal(result.summary.completeFaceCount, 0);
   assert.equal(result.summary.totalWindowCount, null);
-  assert.equal(result.summary.detailCount, 44);
+  assert.equal(result.summary.detailCount, ready.reduce((sum, change) => sum + change.details.length, 0));
   for (const face of result.faces) {
     assert.equal(face.totalWindowCount, null);
     assert.equal(face.complete, false);
@@ -38,7 +39,7 @@ test('unresolved identity blocks attribution, and candidate photos are not claim
   assert.ok(uncertain.some(face => face.candidateCaptureIds.length));
   const south = result.faces.find(face => face.faceId === '2F7D6:wall:001');
   assert.equal(south.status, 'partial');
-  assert.deepEqual(south.changeIds, ['SOUTH-RED-BALCONIES']);
+  assert.deepEqual(south.changeIds, ['SOUTH-RED-BALCONIES', 'WEST-FRONTAGE-2024-EXTENSION']);
   assert.ok(south.evidenceIds.includes('C029'));
   assert.equal(south.orientation, 'Ouest');
 });
@@ -54,6 +55,22 @@ test('ready records cannot silently target missing, wrong-building or ambiguous 
   const input = args();
   input.faces.find(face => face.id === '2997D:wall:002').orientationAmbiguous = true;
   assert.throws(() => buildFacadeInventory(input), /ambiguous|face|plane/i);
+});
+
+test('unverified rear views explain the next action without becoming drawn face evidence', () => {
+  const input = args();
+  const pending = input.evidence.changes.find(change => change.changeId === 'B003-REAR-UNVERIFIED-008');
+  const result = buildFacadeInventory(input), rear = result.faces.find(face => face.faceId === pending.faceId);
+  assert.equal(rear.status, 'not_reviewed');
+  assert.equal(rear.detailCount, 0);
+  assert.deepEqual(rear.evidenceIds, []);
+  assert.deepEqual(rear.changeIds, []);
+  assert.equal(rear.nextAction, pending.reason);
+  assert.equal(rear.complete, false);
+  input.faces.find(face => face.id === pending.faceId).orientationAmbiguous = true;
+  const ambiguous = buildFacadeInventory(input).faces.find(face => face.faceId === pending.faceId);
+  assert.equal(ambiguous.status, 'geometry_ambiguous');
+  assert.match(ambiguous.nextAction, /plan géométrique/);
 });
 
 test('duplicate or orphan geometry records are rejected instead of disappearing from the queue', () => {

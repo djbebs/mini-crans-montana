@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "revision": "v1-5bdcdfa3",
+  "revision": "v1-56d754ef",
   "scope": "Source wall planes of the six DXF volumes intersecting the Ycoor pilot; visual groups are not cadastral identities.",
   "countMeaning": "Opening detail count means drawn window/door/shutter components, not unique physical windows. Full and remaining window totals are unknown. No face has a complete visual census.",
   "summary": {
     "buildingCount": 6,
     "faceCount": 43,
-    "partialFaceCount": 3,
-    "notReviewedFaceCount": 36,
+    "partialFaceCount": 5,
+    "notReviewedFaceCount": 34,
     "blockedFaceCount": 4,
-    "detailCount": 44,
-    "openingDetailCount": 15,
+    "detailCount": 119,
+    "openingDetailCount": 35,
     "completeFaceCount": 0,
     "totalWindowCount": null
   },
@@ -822,17 +822,25 @@
       "buildingId": "2F7D6",
       "orientation": "Ouest",
       "status": "partial",
-      "detailCount": 15,
-      "openingDetailCount": 6,
+      "detailCount": 59,
+      "openingDetailCount": 21,
       "totalWindowCount": null,
       "complete": false,
       "changeIds": [
-        "SOUTH-RED-BALCONIES"
+        "SOUTH-RED-BALCONIES",
+        "WEST-FRONTAGE-2024-EXTENSION"
       ],
       "evidenceIds": [
         "C030",
         "C029",
-        "C026"
+        "C026",
+        "B003-N001",
+        "B003-N002",
+        "C033",
+        "C035",
+        "B003-N003",
+        "B003-N006",
+        "B003-N007"
       ],
       "candidateCaptureIds": [
         "C026",
@@ -884,38 +892,50 @@
       "faceId": "2F7D6:wall:004",
       "buildingId": "2F7D6",
       "orientation": "Nord",
-      "status": "not_reviewed",
-      "detailCount": 0,
-      "openingDetailCount": 0,
+      "status": "partial",
+      "detailCount": 18,
+      "openingDetailCount": 5,
       "totalWindowCount": null,
       "complete": false,
-      "changeIds": [],
-      "evidenceIds": [],
+      "changeIds": [
+        "B003-NORTH-RETURN"
+      ],
+      "evidenceIds": [
+        "B003-N004",
+        "B003-N005",
+        "C026",
+        "C027"
+      ],
       "candidateCaptureIds": [
         "C026",
         "C029",
         "C030"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Comparer les parties non traitées avec les photos et relever les ouvertures encore visibles.",
       "canFocus": true
     },
     {
       "faceId": "2F7D6:wall:005",
       "buildingId": "2F7D6",
       "orientation": "Sud",
-      "status": "not_reviewed",
-      "detailCount": 0,
+      "status": "partial",
+      "detailCount": 13,
       "openingDetailCount": 0,
       "totalWindowCount": null,
       "complete": false,
-      "changeIds": [],
-      "evidenceIds": [],
+      "changeIds": [
+        "B003-SOUTH-RETURN"
+      ],
+      "evidenceIds": [
+        "B003-N007",
+        "C035"
+      ],
       "candidateCaptureIds": [
         "C026",
         "C029",
         "C030"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Comparer les parties non traitées avec les photos et relever les ouvertures encore visibles.",
       "canFocus": true
     },
     {
@@ -972,7 +992,7 @@
         "C029",
         "C030"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures.",
       "canFocus": true
     },
     {
@@ -1010,7 +1030,7 @@
         "C029",
         "C030"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures.",
       "canFocus": true
     }
   ]

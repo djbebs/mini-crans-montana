@@ -1,0 +1,62 @@
+{
+  "survey_date": "2026-11-22",
+  "scope": "B003 rear-side supplementary check, original survey unchanged.",
+  "captures": [
+    {
+      "capture_id": "B003-N009",
+      "building_ids": [
+        "B003"
+      ],
+      "screenshot": "evidence/2026-11-22/B003-N009.jpg",
+      "panorama_id": "CIHM0ogKEICAgIDqxdLl1wE",
+      "latitude": "46.3106401",
+      "longitude": "7.4785164",
+      "heading_deg": "180.4",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "15",
+      "imagery_date": "Feb 2019",
+      "provider": "De Douby · Google Maps photo sphere",
+      "title": "De Douby - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3106401,7.4785164,3a,15y,180.4h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDqxdLl1wE!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_qbObmhIXjUrVf6SAlZZbo4KYPE502GiYvcqxbzlsxKakl8idcE5kUwIz-tbOGfRIv4sSwFGfm_VRmCESbtlp4-lg4DmhRuQ3k0NnqLoCxj4mzV69LS_qniB9vs9z_swP8o1BYuA%3Dw900-h600-k-no-pi0-ya180.39654902470855-ro0-fo100!7i5376!8i2688?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;THIRD_PARTY_PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Winter rear-side candidate B003: pale basement, three balcony levels and stone/pale walls visible through bare trees. Contributor orientation is uncalibrated. Identity must be corroborated visually; no unseen openings may be inferred.",
+      "captured_at_utc": "2026-11-22T15:37:28.445Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_RECORDED_FROM_RESOLVED_VIEWER_URL;CONTRIBUTOR_PHYSICAL_POSITION_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "CONTRIBUTOR_VIEWER_HEADING_RECORDED;GEOGRAPHIC_ORIENTATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "building_identity_status": "CANDIDATE_ONLY;B003_AND_FACE_UNVERIFIED",
+      "capture_kind": "REAR_CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "capture_id": "B003-N010",
+      "building_ids": [
+        "B003"
+      ],
+      "screenshot": "evidence/2026-11-22/B003-N010.jpg",
+      "panorama_id": "CIHM0ogKEICAgIDqxdLl1wE",
+      "latitude": "46.3106401",
+      "longitude": "7.4785164",
+      "heading_deg": "180.4",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "30",
+      "imagery_date": "Feb 2019",
+      "provider": "De Douby · Google Maps photo sphere",
+      "title": "De Douby - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3106401,7.4785164,3a,30y,180.4h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDqxdLl1wE!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_qbObmhIXjUrVf6SAlZZbo4KYPE502GiYvcqxbzlsxKakl8idcE5kUwIz-tbOGfRIv4sSwFGfm_VRmCESbtlp4-lg4DmhRuQ3k0NnqLoCxj4mzV69LS_qniB9vs9z_swP8o1BYuA%3Dw900-h600-k-no-pi0-ya180.39654902470855-ro0-fo100!7i5376!8i2688?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;THIRD_PARTY_PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Wider winter candidate frame with roof and surrounding path, still masked by trees. Candidate building resembles B003 but attribution and geographic face remain unresolved; no ready geometry or opening count derives from this view.",
+      "captured_at_utc": "2026-11-22T15:39:53.566Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_RECORDED_FROM_RESOLVED_VIEWER_URL;CONTRIBUTOR_PHYSICAL_POSITION_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "CONTRIBUTOR_VIEWER_HEADING_RECORDED;GEOGRAPHIC_ORIENTATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "building_identity_status": "CANDIDATE_ONLY;B003_AND_FACE_UNVERIFIED",
+      "capture_kind": "REAR_CANDIDATE_NOT_APPLIED"
+    }
+  ]
+}
