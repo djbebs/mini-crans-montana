@@ -3,15 +3,20 @@ import { createDesignEnhancements } from './design-enhancements.js';
 import { createDesignPanel } from './design-panel.js?v=5';
 import { assetUrl, validateDesignEvidence } from './design-model.js';
 import { buildFacadeInventory } from './coverage-model.js?v=6';
+import { createPhotoReconstruction } from './photo-reconstruction.js';
 
 /** Pick the nearest visible pilot surface, respecting foreground scene objects. */
-export function pickPilotGeometry(raycaster, { local, additions, maxDistance = Infinity }) {
+export function pickPilotGeometry(raycaster, { local, additions, reconstruction, maxDistance = Infinity }) {
   if (!local.group.visible) return false;
-  local.group.updateWorldMatrix(true, true);
-  const surface = raycaster.intersectObjects(local.meshes, false)[0];
-  const limit = Math.min(maxDistance, surface?.distance ?? Infinity);
-  if (additions?.pick(raycaster, { maxDistance: limit })) return true;
-  return Boolean(surface && surface.distance <= maxDistance && local.pick(raycaster));
+  const visible = mesh => { let node = mesh; while (node) { if (!node.visible) return false; node = node.parent; } return true; };
+  const meshes = [...local.meshes, ...(additions?.meshes ?? []), ...(reconstruction?.meshes ?? [])].filter(visible);
+  for (const mesh of meshes) mesh.updateWorldMatrix(true, false);
+  const hit = raycaster.intersectObjects(meshes, false)[0];
+  if (!hit || hit.distance > maxDistance) return false;
+  const limit = Math.min(maxDistance, hit.distance + 1e-6);
+  if (additions?.meshes.includes(hit.object)) return additions.pick(raycaster, { maxDistance: limit });
+  if (reconstruction?.meshes.includes(hit.object)) return reconstruction.pick(raycaster, { maxDistance: limit });
+  return Boolean(local.pick(raycaster));
 }
 
 async function readJson(base, path) {
@@ -23,19 +28,20 @@ async function readJson(base, path) {
 /** Coordinate the independent local source and its optional evidence additions. */
 export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, surveyBaseUrl,
   originHeight, terrainSnapshot, onTerrainSnapshot, onStatus, onPanelOpen, onPanelClose, onPanelViewChange, onFocus }) {
-  const [data, snapshot] = await Promise.all([
+  const [data, snapshot, photoData] = await Promise.all([
     readJson(dataBaseUrl, 'ycoor-dxf.json'),
     (terrainSnapshot !== undefined ? Promise.resolve(terrainSnapshot)
       : readJson(dataBaseUrl, 'terrain-grid.json').catch(() => readJson(dataBaseUrl, 'terrain-snapshot.json'))).catch(error => {
       console.warn('Instantané du relief', error);
       return null;
     }),
+    readJson(designBaseUrl, 'photo-reconstruction.json').catch(() => null),
   ]);
   if (snapshot) onTerrainSnapshot?.(snapshot);
   const datum = typeof originHeight === 'function' ? originHeight() : originHeight;
   const local = createLocalBuildings({ THREE, scene, data, originHeight: datum });
-  let panel = null, additions = null, evidence = null, inventory = null, visible = true, enabled = true, disposed = false;
-  const status = { buildings: local.buildings.length, changes: 0, faces: 0, details: 0, designReady: false, error: null };
+  let panel = null, additions = null, reconstruction = null, evidence = null, inventory = null, visible = true, enabled = true, disposed = false;
+  const status = { buildings: local.buildings.length, changes: 0, faces: 0, details: 0, reconstructions: 0, photoDetails: 0, designReady: false, error: null };
   try {
     evidence = validateDesignEvidence(await readJson(designBaseUrl, 'design-evidence.json'));
     inventory = buildFacadeInventory({ buildings: local.buildings, faces: local.faces, evidence });
@@ -65,6 +71,18 @@ export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, su
     status.error = 'Ajouts indisponibles ; volumes DXF conservés.';
     console.warn('Ajouts documentés', error);
   }
+  if (photoData && status.designReady) {
+    try {
+      reconstruction = createPhotoReconstruction({ THREE, scene, data: photoData, source: data, originHeight: datum });
+      status.reconstructions = 1; status.photoDetails = reconstruction.detailCount;
+    } catch (error) { console.warn('Reconstitution photographique indisponible ; volume officiel conservé.', error); }
+  }
+  function syncReconstruction() {
+    const show = Boolean(reconstruction && visible && enabled);
+    reconstruction?.setEnabled(show);
+    for (const mesh of local.meshes) if (mesh.userData.buildingId === reconstruction?.buildingId) mesh.visible = !show;
+  }
+  syncReconstruction();
   onStatus?.({ ...status });
   function focusFacade(changeId) {
     if (disposed || !status.designReady) return false;
@@ -86,7 +104,7 @@ export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, su
     return true;
   }
   return {
-    local, data, evidence, inventory, status,
+    local, data, evidence, inventory, reconstruction, status,
     get designEnabled() { return visible && enabled && status.designReady; },
     get panelOpen() { return Boolean(panel && !panel.element.hidden); },
     get panelReady() { return Boolean(panel); },
@@ -96,16 +114,19 @@ export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, su
       visible = Boolean(value);
       local.setVisible(visible);
       additions?.setEnabled(visible && enabled);
+      syncReconstruction();
     },
     setDesignEnabled(value) {
       if (disposed) return;
       enabled = Boolean(value);
       additions?.setEnabled(visible && enabled);
+      syncReconstruction();
     },
     setOriginHeight(height) {
       if (disposed) return;
       local.setOriginHeight(height);
       additions?.setOriginHeight(height);
+      reconstruction?.setOriginHeight(height);
     },
     closePanel() {
       if (disposed || !panel) return;
@@ -120,13 +141,14 @@ export async function createPilot({ THREE, scene, dataBaseUrl, designBaseUrl, su
     focusFirstFacade: () => focusFacade(),
     pick(raycaster, { maxDistance = Infinity } = {}) {
       if (disposed || !visible) return false;
-      return pickPilotGeometry(raycaster, { local, additions, maxDistance });
+      return pickPilotGeometry(raycaster, { local, additions, reconstruction, maxDistance });
     },
     dispose() {
       if (disposed) return;
       disposed = true;
       panel?.dispose();
       additions?.dispose();
+      reconstruction?.dispose();
       local.dispose();
     },
   };

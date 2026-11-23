@@ -36,6 +36,8 @@ P0.6.7 separately associates documented visual groups with the six local DXF vol
 
 ## Deployment
 
+B007 now has a separately labelled [photographic reconstruction](docs/design/b007-reconstruction.md): three gables, dark timber, street frontage and lake balconies, with 71 interpreted components. Its roof heights and dimensions are estimates; the official 2020 volume and review flag remain intact. **Détails documentés: OFF** restores that source volume. The supplementary capture CSV and camera diagram now include 18 screenshots.
+
 Under repository Settings > Pages, select **Deploy from a branch**, `main`, `/(root)`.
 
 P0.6.7 opens directly at `/crans-montana-p067/`, with a visible version label and a prominent link on the project home. All earlier release and experiment URLs remain available.

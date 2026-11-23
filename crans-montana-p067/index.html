@@ -65,9 +65,11 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:2px 
  <select id="design-facade" disabled><option>Aucune façade disponible</option></select>
  <button id="design-focus" type="button" disabled>Voir la façade choisie</button>
  <button id="design-building" type="button" disabled>Voir tout le carré</button>
+ <button id="photo-building" type="button" disabled>Voir B007 reconstitué</button>
+ <small id="photo-status" style="display:block"></small>
  <small style="display:block">Détails visibles documentés · côtés cachés encore à vérifier.</small>
  <div id="design-status" role="status" aria-live="polite">Lecture des six volumes DXF…</div>
- <small>Géométrie officielle · détails interprétés, dimensions approximatives.</small>
+ <small>Volumes officiels et reconstitution photo · dimensions des ajouts estimées.</small>
  <a href="../crans-montana-p06/" style="display:block;color:#174e78;margin-top:5px">Ouvrir la version précédente P0.6.6 ↗</a>
 </div>
 <div class="weather">☀ <span id="weather">Météo simulée · clair</span><br><span id="origin">Mensuration officielle du Valais : chargement…</span><br><a style="color:#174e78;display:inline-block;margin-top:5px" href="https://map.geo.admin.ch/#/map?lang=fr&amp;center=2603036,1128849&amp;z=11" target="_blank" rel="noopener noreferrer" title="Ouvrir swisstopo et activer la vue 3D pour comparer les bâtiments">Comparer à swisstopo ↗</a></div><div id="geo-status" style="font-size:11px;line-height:1.3;margin-top:5px">Mensuration officielle : interrogation…</div><details id="mo-details" style="font-size:11px;margin-top:4px"><summary>Résultats cadastraux par couche</summary><div id="mo-report" style="padding:4px 0;overflow-wrap:anywhere">Aucune couche encore vérifiée</div></details><div id="mo-warning" style="font-size:11px;margin-top:5px;line-height:1.25;color:#665f44;font-weight:700">Sol : cadastre du Valais · Mobilier : OSM géolocalisé.</div>
@@ -156,12 +158,13 @@ function syncRoofs(){
  const ready=buildingMode==='stream'&&useOfficial&&tilesMeshes>0;
  pilot?.setVisible(!ready);
  if(buildingLayer)buildingLayer.visible=!ready&&!pilot;
- if($('credit-model'))$('credit-model').textContent=ready?'Flux swissBUILDINGS3D · génération 2026/2025':pilot?'6 volumes DXF · ajouts photographiques interprétés':'Volumes DXF en chargement';
+ const photo=Boolean(pilot?.reconstruction?.enabled);
+ if($('credit-model'))$('credit-model').textContent=ready?'Flux swissBUILDINGS3D · génération 2026/2025':photo?'5 volumes DXF + B007 reconstitué · hauteurs estimées':pilot?'6 volumes DXF · ajouts photographiques interprétés':'Volumes DXF en chargement';
  if(tiles)tiles.group.visible=ready;
  $('real-toggle').classList.toggle('active',!ready);
  $('real-toggle').setAttribute('aria-pressed',String(!ready));
  $('real-toggle').textContent=ready?'Flux':buildingMode==='stream'?'Flux…':'DXF';
- $('origin').textContent=ready?'Bâtiments du flux swisstopo · sol MO du Valais':'Volumes DXF locaux · sol MO du Valais';
+ $('origin').textContent=ready?'Bâtiments du flux swisstopo · sol MO du Valais':photo?'Volumes officiels + B007 photo · sol MO du Valais':'Volumes DXF locaux · sol MO du Valais';
  syncDesignControls();
  if(buildingMode==='local'&&tilesState!=='error')$('real-status').classList.remove('show');
 }
@@ -256,6 +259,8 @@ function syncDesignControls(){
  $('design-toggle').textContent='Détails documentés : '+(enabled?'ON':'OFF');
  $('design-coverage').disabled=!pilot?.panelReady;
  $('design-building').disabled=!pilot?.status.designReady;
+ $('photo-building').disabled=!pilot?.reconstruction;
+ $('photo-status').textContent=pilot?.reconstruction?(enabled?'B007 reconstitué d’après photos · hauteur et détails estimés.':'B007 : volume officiel de 2020 affiché.') : '';
  $('design-coverage').setAttribute('aria-expanded',String(Boolean(pilot?.panelOpen&&pilot.panelView==='coverage')));
  const hasFacade=Boolean(pilot?.status.designReady&&$('design-facade').value);
  $('design-facade').disabled=!hasFacade;
@@ -266,7 +271,7 @@ async function startDesignPilot(){
  pilotLoading=true;
  try{
   await loadHeight();
-  const {createPilot}=await import('../preview-ycoor-design/design/pilot.js?v=7');
+  const {createPilot}=await import('../preview-ycoor-design/design/pilot.js?v=8');
   pilot=await createPilot({THREE,scene,
    dataBaseUrl:new URL('../preview-ycoor-design/assets/',import.meta.url).href,
    designBaseUrl:new URL('../preview-ycoor-design/design/',import.meta.url).href,
@@ -296,7 +301,13 @@ async function startDesignPilot(){
 }
 $('design-coverage').onclick=()=>{pilot?.openCoverage();syncDesignControls();};
 $('design-building').onclick=focusYcoorSquare;
-$('design-toggle').onclick=()=>{pilot?.setDesignEnabled(!pilot.designEnabled);syncDesignControls();};
+$('photo-building').onclick=()=>{
+ const building=pilot?.reconstruction?.model.buildings[0];
+ if(!building)return;
+ pilot.setDesignEnabled(true);focusDesignTarget({building});
+ state.angle=-Math.PI*2/3;state.zoom=2.6;state.view='facade';needsResize=true;syncRoofs();
+};
+$('design-toggle').onclick=()=>{pilot?.setDesignEnabled(!pilot.designEnabled);syncRoofs();};
 $('design-focus').onclick=()=>{
  if(buildingMode!=='local'){buildingMode='local';syncRoofs();}
  pilot?.focusFacade($('design-facade').value);

@@ -135,6 +135,84 @@
       "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
       "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
       "building_identity_status": "B002_VISUAL_GROUP_CONFIRMED;B003_CANDIDATE_ONLY;CADASTRAL_IDENTITIES_UNVERIFIED"
+    },
+    {
+      "capture_id": "B007-N016",
+      "building_ids": [
+        "B007"
+      ],
+      "screenshot": "evidence/2026-11-23/B007-N016.jpg",
+      "panorama_id": "BBLeXAc6jghpIAnHH5qzww",
+      "latitude": "46.3114805",
+      "longitude": "7.4777436",
+      "heading_deg": "135.26",
+      "pitch_url_t": "110.05",
+      "vertical_fov_url_y": "90",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "50 Rte du Rawyl - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3114805,7.4777436,1505a,90y,135.26h,110.05t/data=!3m7!1e1!3m5!1sBBLeXAc6jghpIAnHH5qzww!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-20.05033030043569%26panoid%3DBBLeXAc6jghpIAnHH5qzww%26yaw%3D135.2642607996289!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Whole Rawyl frontage: dark horizontal timber, shop/garage ground floor, three visible residential window rows, three recessed upper loggias under shallow gables. Physical dimensions and roof heights not measured.",
+      "captured_at_utc": "2026-11-23T09:57:28.412Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE"
+    },
+    {
+      "capture_id": "B007-N017",
+      "building_ids": [
+        "B007"
+      ],
+      "screenshot": "evidence/2026-11-23/B007-N017.jpg",
+      "panorama_id": "CIHM0ogKEICAgICO25bBvwE",
+      "latitude": "46.3112586",
+      "longitude": "7.4784379",
+      "heading_deg": "180",
+      "pitch_url_t": "111.22",
+      "vertical_fov_url_y": "90",
+      "imagery_date": "Jun 2022",
+      "provider": "Dany Gaule",
+      "title": "Dany Gaule - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3112586,7.4784379,3a,90y,180h,111.22t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgICO25bBvwE!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U9c_fHlpUHnPXs9wH7o_TwZtqvDML88nB1jIbv7U-qKVO-8ilD2ZM-MLblbP_Hc81cwezJh2IxoNCmQi8Wd876QrOJPXzadNbHoSgjmk3PDhrwqUbPoa8YYP2zz0uHupRVynpjlHQ%3Dw900-h600-k-no-pi-21.22473009684171-ya180-ro0-fo100!7i8192!8i4096?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Lake-side context: projecting timber balcony fronts and dark piers, garage base; upper sphere heavily blurred so not used to measure roof height. Five balcony bands distinguishable, some upper edges obscured.",
+      "captured_at_utc": "2026-11-23T09:58:13.090Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_ONLY;CONTRIBUTOR_SPHERE_GEOGRAPHIC_ORIENTATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE"
+    },
+    {
+      "capture_id": "B007-N018",
+      "building_ids": [
+        "B007"
+      ],
+      "screenshot": "evidence/2026-11-23/B007-N018.jpg",
+      "panorama_id": "PRfZx6Pz9R05lo1p1-f7xQ",
+      "latitude": "46.3109398",
+      "longitude": "7.479384",
+      "heading_deg": "305",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "37.5",
+      "imagery_date": "Jun 2024",
+      "provider": "Google Street View",
+      "title": "All. Katherine Mansfield - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3109398,7.479384,1500a,37.5y,305h,90t/data=!3m7!1e1!3m5!1sPRfZx6Pz9R05lo1p1-f7xQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DPRfZx6Pz9R05lo1p1-f7xQ%26yaw%3D305!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Google June 2024 across-lake view: three gabled bays; six stacked balcony fronts distinguishable including the upper loggias, plus garage/base level. Central tree masks some lower glazing. Roof proportions visible, absolute height unmeasured.",
+      "captured_at_utc": "2026-11-23T10:01:29.824Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE"
     }
   ]
 }

@@ -1,5 +1,7 @@
 # Vérification du volume 26152
 
+**Complément du 23 novembre 2026 :** le contrôle du flux courant et de l’archive détaillée 3.0 confirme le maintien d’une forme basse. À la demande de l’utilisateur, une [reconstitution photographique explicitement estimée](b007-reconstruction.md) est maintenant affichée séparément. Le volume officiel et le blocage de sa correction métrique restent conservés ; la nouvelle représentation ne prétend pas résoudre cette mesure.
+
 Vérifié le **16 novembre 2026**, sans modification de la géométrie, des captures ou du registre de preuves.
 
 **Conclusion : B007 est une correspondance visuelle étayée pour le volume 26152, à l’échelle du volume architectural. Sa géométrie finale et son état en novembre 2026 restent non résolus.** Ne pas présenter `Im Bau` comme un chantier actuel ; conserver cet attribut uniquement comme état de la source de juin 2020. Ne pas corriger sa hauteur ou son toit à partir de ces seules images.

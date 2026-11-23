@@ -6,6 +6,8 @@ Le lot du 23 novembre ajoute 101 composants : front Rawyl, deux faces du volume 
 
 Les [15 captures complémentaires indexées](../../crans-montana-p06/assets/streetview-survey/2026-11-15/supplement-index.csv) et leur [schéma de positions de caméra](../../crans-montana-p06/assets/streetview-survey/2026-11-15/supplement-map.svg) complètent le relevé original sans le réécrire. Ce schéma ne représente ni les surfaces effectivement recensées ni une garantie de couverture exhaustive. Le GPS physique et le cap par rapport au nord vrai restent non calibrés.
 
+Un second lot du même jour porte ces compléments à **18 captures**. Il ajoute une [reconstitution photographique de B007](b007-reconstruction.md), avec 71 composants et des hauteurs explicitement estimées. Elle se charge séparément ; le volume source et ses quatre plans bloqués restent disponibles sans modification. Elle n’est pas comprise dans les neuf plans partiels ni dans les 220 composants du registre officiel.
+
 ## Un cycle par lot
 
 Préparer le contexte avec `node tools/prepare-facade-batch.mjs`. Il contient au plus cinq volumes admissibles, deux faces par volume et trois photos candidates. `--building 2355E --building 2F7D6` cible B002 et B003 ; `--faces`, `--photos` et `--limit` règlent la taille. `--output CHEMIN` enregistre le dossier au lieu de l’imprimer.

@@ -22,6 +22,7 @@ def main() -> int:
         return 1
     suffix = ['--check'] if args.check else []
     stages = [
+        [sys.executable, str(ROOT / 'tools/build-b007-reconstruction.py'), *suffix],
         [sys.executable, str(ROOT / 'tools/package-streetview-supplements.py'), *suffix],
         [sys.executable, str(ROOT / 'tools/build-design-evidence.py'), *suffix],
         [node, str(ROOT / 'tools/build-facade-inventory.mjs'), *suffix],

@@ -201,7 +201,7 @@ export function createLocalBuildings({THREE,scene,data,originHeight,onSelect}) {
     pick(raycaster){
       if(disposed||!group.visible)return null;
       group.updateMatrixWorld(true);
-      const intersection=raycaster.intersectObjects(meshes,false)[0];if(!intersection)return null;
+      const intersection=raycaster.intersectObjects(meshes.filter(mesh=>mesh.visible),false)[0];if(!intersection)return null;
       const building=intersection.object.userData.building;
       const hit={...intersection,building,buildingId:building.id,sourceFaceIndices:intersection.object.geometry.userData.sourceFaceIndices[intersection.faceIndex]};if(onSelect)onSelect(building,hit);return hit;
     },
