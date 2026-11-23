@@ -66,8 +66,9 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:2px 
  <button id="design-focus" type="button" disabled>Voir la façade choisie</button>
  <button id="design-building" type="button" disabled>Voir tout le carré</button>
  <button id="garden-facades" type="button" disabled>Voir côté jeux</button>
+ <button id="playground-focus" type="button" disabled>Voir les jeux</button>
  <button id="photo-building" type="button" disabled>Voir B007 reconstitué</button>
- <small id="photo-status" style="display:block"></small>
+ <small id="photo-building-status" style="display:block"></small>
  <small style="display:block">Détails visibles documentés · côtés cachés encore à vérifier.</small>
  <div id="design-status" role="status" aria-live="polite">Lecture des six volumes DXF…</div>
  <small>Volumes officiels et reconstitution photo · dimensions des ajouts estimées.</small>
@@ -93,8 +94,8 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:2px 
 <button id="furniture-retry" type="button" title="Relancer les requêtes OSM">↻ Actualiser OSM</button>
 </details>
 <div id="photo-control" style="margin-top:7px;padding-top:7px;border-top:1px dashed #bcb5a0">
-<button id="photo-switch" class="active" type="button" aria-pressed="true" title="Afficher ou masquer les jeux illustratifs approuvés d'après les photos d’Ycoor">🛝 Jeux photo : ON</button>
-<div id="photo-status" role="status" style="font-size:11px;margin-top:4px;line-height:1.35">Modèles approuvés · positions indicatives.</div>
+<button id="photo-switch" class="active" type="button" aria-pressed="true" title="Afficher ou masquer les jeux reconstitués d’après les vues d’Ycoor">🛝 Jeux d’Ycoor : ON</button>
+<div id="photo-status" role="status" style="font-size:11px;margin-top:4px;line-height:1.35">Reconstitution des jeux · positions estimées.</div>
 </div>
 <div id="people-control" style="margin-top:7px;padding-top:7px;border-top:1px dashed #bcb5a0">
  <button id="people-switch" type="button" class="active" aria-pressed="true" title="Activer les personnages 3D originaux, vêtements saisonniers et mouvements">👥 Personnages : ON</button>
@@ -114,14 +115,9 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:2px 
 <p>P0.6.7 : six volumes issus du DXF swisstopo 1287-13, géométrie LV95/LN02 conservée et des façades complétées d’après des captures datées. <b>Sources et preuves</b> décrit les correspondances et chaque ajout. Les dimensions des détails sont des estimations artistiques, pas des mesures.</p>
 <p><b>Sol, routes et jardins :</b> mensuration officielle du Valais, géométries LV95 conservées avec les numéros OBJECTID et les catégories GENRE.</p>
 <p><b>Mobilier urbain :</b> bancs, poubelles, lampadaires, arrêts, fontaines, tables et jeux issus de points OpenStreetMap portant un identifiant et des coordonnées. Ces petits modèles 3D sont <b>symboliques</b> : leurs formes, dimensions et orientations ne sont pas mesurées.</p>
-<p>Les polygones <code>leisure=playground</code> sont maintenant remplis en surface pixel-art. Les surfaces cadastrales de revêtements durs, chemins ou eau restent visuellement prioritaires. Les équipements sont affichés uniquement si un nœud OSM ou une géométrie OSM d'équipement existe. Pour un équipement dessiné comme voie, le symbole est placé au centre représentatif de sa géométrie (position indicative, dérivée de la source).</p>
-<p><b>Personnages :</b> les six modèles GLB fournis par l’utilisateur et conservés tels quels, avec vêtements de couleurs différentes selon la saison. La marche est synchronisée avec un véritable déplacement sur un chemin OSM. Pour les personnages immobiles : jambes fixes, mouvements de tête légers et gestes occasionnels des bras, pas de marche sur place.</p>
-<p><b>Jeux interactifs :</b> l'enfant du petit toboggan attend, glisse et retourne vers la plateforme en suivant des points du modèle 3D. Un autre enfant entre dans le grand tube et ressort à l'extrémité. Celui sur les cordes grimpe et descend. Les autres observent ou jouent au sol. Les positions restent illustratives, liées à la maquette photo, et non mesurées.</p>
-<p><b>Amélioration P0.6.5 :</b> les enfants montent réellement les marches visibles des trois jeux à escaliers, en levant alternativement les jambes et les bras. Les marches du petit jeu sont également modélisées. L’enfant du filet d’escalade avance de prise en prise vers le haut et sur le côté avec mouvements coordonnés des deux bras et des deux jambes, puis redescend. Les animations restent symboliques, sans capture de mouvement humain.</p>
-<p><b>P0.6.6 : anticollision et variantes :</b> les parcours sont contrôlés en continu, par échantillonnage des segments, à l’intérieur de l’aire de jeux et hors des volumes solides interdits approximés pour chaque maquette. Une variante qui échoue n’est pas assignée. Les personnages marchant sur des chemins OSM sont également écartés si leur trajet coupe l’emprise d’un jeu. Le filet propose trois circuits différents qui alternent à chaque boucle. Le petit toboggan et le grand tube proposent des fins différentes : glissade, réception parfois sur les fesses, pause assise, redressement puis retour à pied. Ces collisions sont des approximations géométriques 3D, non une simulation physique complète.</p>
-<p><b>Architecture extensible :</b> un moteur indépendant <code>people-motion.js</code> calcule les gestes et déplacements pour n'importe quelle zone. Les points d'interaction sont déclarés par modèle dans <code>photo-playground.js</code>, et <code>characters.js</code> distribue les adultes et enfants selon les polygones de jeux et les chemins réellement reçus. Une limite de population s'applique à chaque zone chargée pour préparer l'extension aux quartiers de Crans-Montana.</p>
-<p><b>Couche « Jeux photo » :</b> cinq maquettes 3D approuvées par l’utilisateur : grande structure avec tunnel, toboggan tubulaire courbe, petite structure bleue et rouge, jeux de cordes et banc. Placement déterministe approximatif à l’intérieur du périmètre OpenStreetMap de l’aire de jeux. Le banc est un modèle approuvé, mais sa présence sur ce périmètre reste non confirmée. Les objets sont cliquables et séparés des données OSM et cadastrales. Le contour de l’aire de jeux est orange fluo (#ff6900).</p>
-<p>Des photos locales de 2025 confirment l'existence de structures à grimper et de toboggans à Ycoor, mais ne fournissent pas des coordonnées précises. <a href="https://www.crans-montana.ch/fr/?idcmt=Partenaire_Activite_4ff811345b2094222f969b680bb9ac78" target="_blank" rel="noopener noreferrer">Référence touristique officielle</a>.</p>
+<p><b>Aire de jeux :</b> sept équipements sont reconstitués d’après les panoramas de 2022/2024 et les photographies touristiques libellées 2025. Les emprises officielles sont conservées ; le sol vert est une interprétation des photos. Positions, dimensions et orientations des jeux restent estimées.</p>
+<p><b>Enfants :</b> les six modèles de personnages fournis par l’utilisateur sont conservés. Les enfants montent les marches, traversent le pont, glissent, grimpent au filet, marchent en équilibre et utilisent les balançoires et les jeux à ressort. Les sièges et leurs utilisateurs suivent la même animation. Masquer les jeux masque aussi leurs utilisateurs.</p>
+<p>Les parcours restent dans la zone cartographiée et évitent les volumes interdits approximés. Ce rendu ne constitue pas une simulation physique ni une vérification de l’état actuel. <a href="https://www.crans-montana.ch/fr/?idcmt=Partenaire_Activite_4ff811345b2094222f969b680bb9ac78" target="_blank" rel="noopener noreferrer">Photographies de référence de l’office du tourisme</a>.</p>
 <p><b>Relevé Street View des 15–16 novembre 2026 :</b> couche facultative de 24 positions de panoramas et 55 captures, avec dates, liens sources et 22 identifiants visuels. Les coordonnées et caps proviennent du visualiseur ; leur précision physique n'est pas vérifiée. Les identifiants visuels ne constituent pas une correspondance cadastrale. Les panoramas de contributeurs sont distingués et leurs caps ne sont pas orientés sur la carte. La couverture est partielle, avec lacunes documentées. <a href="../crans-montana-p06/assets/streetview-survey/2026-11-15/index.html" target="_blank" rel="noopener noreferrer">Dossier, carte et CSV du relevé</a>.</p>
 <p>La maquette conserve son rendu <b>pixel-art</b>. Les détails documentés sont interprétés à partir des photos datées, conservées dans le dossier du projet. L’inventaire présente tous les plans de murs sources, les parties dessinées et les vérifications encore nécessaires. Le total de fenêtres reste inconnu.</p>
 <p><b>Relief :</b> terrain officiel <a href="https://www.swisstopo.admin.ch/en/height-model-swissalti3d" target="_blank" rel="noopener noreferrer">swissALTI3D</a>, millésime 2024, au pas de 2 m en LV95/LN02. Le terrain couvre les volumes entiers ; route et socle suivent le même relief. Le jour de mesure et les travaux ultérieurs restent à vérifier.</p>
@@ -268,7 +264,7 @@ function syncDesignControls(){
  $('design-building').disabled=!pilot?.status.designReady;
  $('garden-facades').disabled=!pilot?.status.designReady;
  $('photo-building').disabled=!pilot?.reconstruction;
- $('photo-status').textContent=pilot?.reconstruction?(enabled?'B007 reconstitué d’après photos · hauteur et détails estimés.':'B007 : volume officiel de 2020 affiché.') : '';
+ $('photo-building-status').textContent=pilot?.reconstruction?(enabled?'B007 reconstitué d’après photos · hauteur et détails estimés.':'B007 : volume officiel de 2020 affiché.') : '';
  $('design-coverage').setAttribute('aria-expanded',String(Boolean(pilot?.panelOpen&&pilot.panelView==='coverage')));
  const hasFacade=Boolean(pilot?.status.designReady&&$('design-facade').value);
  $('design-facade').disabled=!hasFacade;
@@ -310,6 +306,12 @@ async function startDesignPilot(){
 $('design-coverage').onclick=()=>{pilot?.openCoverage();syncDesignControls();};
 $('design-building').onclick=focusYcoorSquare;
 $('garden-facades').onclick=focusPlaygroundFacades;
+$('playground-focus').onclick=()=>{
+ if(!photoDrawn.length)return;
+ const x=-1,z=-8;
+ target.set(x,height(x,z)+1.2,z);
+ state.angle=Math.PI/3;state.zoom=3.6;state.view='playground';needsResize=true;
+};
 $('photo-building').onclick=()=>{
  const building=pilot?.reconstruction?.model.buildings[0];
  if(!building)return;
@@ -405,7 +407,7 @@ function updatePeoplePanel(){
  const n=peopleSystem?.actors?.length||0;
  el.textContent=n?
   (peopleSystem.adults+' adultes · '+peopleSystem.children+' enfants · '+season()+
-  '. Parcours validés hors volumes interdits. Filet : 3 trajets alternés. Toboggans : réceptions assises ou debout. Tenues saisonnières.'):
+  '. Escalade, glisse, équilibre, balançoires et jeux à ressort. Tenues saisonnières.'):
   'Aucun personnage placé : pas de zone ni de chemin exploitable.';
 }
 $('people-switch').onclick=()=>{
@@ -422,7 +424,7 @@ async function startPeople(){
  peopleStatus='loading';updatePeoplePanel();
  let created=null;
  try{
-  if(!peopleModule)peopleModule=import('../crans-montana-p06/characters.js?v=6');
+  if(!peopleModule)peopleModule=import('../crans-montana-p06/characters.js?v=7');
   const mod=await peopleModule;
   created=await mod.createPopulation({
    THREE,season:season(),height:legacyPhotoHeight(height),
@@ -449,15 +451,16 @@ function updatePhotoPanel(){
  const button=$('photo-switch');
  button.classList.toggle('active',photoVisible);
  button.setAttribute('aria-pressed',String(photoVisible));
- button.textContent='🛝 Jeux photo : '+(photoVisible?'ON':'OFF');
+ button.textContent='🛝 Jeux d’Ycoor : '+(photoVisible?'ON':'OFF');
+ $('playground-focus').disabled=!photoDrawn.length;
  const display=$('photo-status');
  if(furnitureData.status==='loading'){
   display.textContent='Recherche du périmètre cartographié de l’aire de jeux…';
  }else if(furnitureData.status!=='verified'){
   display.textContent='Aire de jeux non récupérée : modèles photo non placés.';
  }else if(photoDrawn.length){
-  display.textContent=photoDrawn.length+'/5 modèles photo-approuvés placés à titre indicatif dans le périmètre OSM. '+
-    'Les positions, tailles et orientations ne sont pas mesurées.';
+  display.textContent=photoDrawn.length+' équipements reconstitués d’après les vues 2022–2025. '+
+    'Disposition, dimensions et orientations estimées ; état actuel non confirmé.';
  }else{
   display.textContent=photoReason==='missing-playground-polygon'?
    'Aucun polygone OSM d’aire de jeux trouvé : aucun placement illustratif.':
@@ -542,10 +545,10 @@ async function startFurniture(){
   const [source,visual,photoModels]=await Promise.all([
    import('../crans-montana-p06/furniture-source.js?v=3'),
    import('../crans-montana-p06/furniture-mesh.js?v=3'),
-   import('../crans-montana-p06/photo-playground.js?v=6')
+   import('../preview-ycoor-design/design/playground-models.js?v=2')
   ]);
   furniturePainter=visual.drawFurniture;
-  photoPainter=photoModels.drawPhotoModels;
+  photoPainter=photoModels.drawObservedPlayground;
   furnitureData=await source.fetchFurniture(message=>{
    $('furniture-summary').textContent=message;
   });
@@ -875,7 +878,8 @@ function build(){
  }
  photoGroup=null;photoDrawn=[];photoReason='en attente';
  if(terrainModel&&photoPainter&&furnitureData.status==='verified'){
-  const reconstructed=photoPainter(THREE,furnitureData.features,legacyPhotoHeight(height),world,objects,photoVisible);
+  const reconstructed=photoPainter(THREE,furnitureData.features,legacyPhotoHeight(height),world,objects,photoVisible,
+   {groundHeight:height,terrainModel,groundFeatures:moData.shapes});
   photoGroup=reconstructed.group;
   photoDrawn=reconstructed.drawn;
   photoReason=reconstructed.reason;
@@ -887,7 +891,7 @@ function build(){
  }
  const ok=(moData.results||[]).filter(r=>r.status==='verified').length;
  $('origin').textContent='Mensuration officielle Valais · toits swissBUILDINGS3D';
- $('status').textContent='Atelier Ycoor · '+ok+'/4 sources MO · '+moRendered.length+' géométries cadastre · '+furnitureDrawn.length+' objets OSM · '+photoDrawn.length+' jeux illustratifs · relief '+terrainLabel();
+ $('status').textContent='Atelier Ycoor · '+ok+'/4 sources MO · '+moRendered.length+' géométries cadastre · '+furnitureDrawn.length+' objets OSM · '+photoDrawn.length+' jeux reconstitués · relief '+terrainLabel();
  updateGeoLabel();showCadastralAudit();updateFurniturePanel();updatePhotoPanel();syncRoofs();
  pilot?.setOriginHeight(terrainDatum());
  streetViewLayer?.refreshHeights();

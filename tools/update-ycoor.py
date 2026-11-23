@@ -24,6 +24,7 @@ def main() -> int:
     stages = [
         [sys.executable, str(ROOT / 'tools/build-b007-reconstruction.py'), *suffix],
         [sys.executable, str(ROOT / 'tools/package-streetview-supplements.py'), *suffix],
+        [sys.executable, str(ROOT / 'tools/package-playground-evidence.py'), *suffix],
         [sys.executable, str(ROOT / 'tools/build-design-evidence.py'), *suffix],
         [node, str(ROOT / 'tools/build-facade-inventory.mjs'), *suffix],
         [sys.executable, str(ROOT / 'tools/build-p067.py'), *suffix],

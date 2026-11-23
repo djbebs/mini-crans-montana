@@ -170,6 +170,8 @@ export function motionAt(spec,t,height,cache={}){
   pose.y=height(center.x,center.z)+.27+sampled.y;
   pose.visible=sampled.visible;pose.phase=sampled.phase;
   pose.variantName=active.variantName;pose.cycleIndex=active.cycleIndex;
+  pose.motionTime=active.elapsed;
+  if(spec.groundedPhases?.includes(sampled.phase))pose.y=height(pose.x,pose.z)+.31;
   if(sampled.moving)pose.heading=sampled.heading;
   else pose.heading=spec.facing??pose.heading;
   const u=clamp(sampled.progress,0,1);
@@ -211,6 +213,16 @@ export function motionAt(spec,t,height,cache={}){
    pose.armL=-1.0;pose.armR=-.97;pose.legL=.12;pose.legR=.12;
    pose.armLZ=.08;pose.armRZ=-.08;
    pose.bodyX=-.11;
+  }else if(sampled.phase==='swing'||sampled.phase==='rocker'){
+   pose.heading=spec.facing??pose.heading;
+   pose.legL=1.12;pose.legR=1.12;
+   pose.armL=-.72;pose.armR=-.72;
+   pose.bodyX=.04;
+  }else if(sampled.phase==='balance'){
+   const pace=secs*5.2;
+   pose.armLZ=.85;pose.armRZ=-.85;
+   pose.legL=.17*Math.sin(pace);pose.legR=-pose.legL;
+   pose.bodyZ=.035*Math.sin(pace);
   }else if(sampled.phase==='slide'){
    // Sitting slide posture: no walking-style leg cycle on the ramp.
    pose.armL=-.24;pose.armR=-.24;

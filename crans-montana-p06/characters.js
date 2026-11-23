@@ -5,7 +5,7 @@
  */
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { originalGlbBuffers, CHARACTER_FILES, SOURCE } from './characters-assets.js';
-import { compileWalkPath, motionAt } from './people-motion.js?v=4';
+import { compileWalkPath, motionAt } from './people-motion.js?v=5';
 import { chooseSafeVariants, guardLivePose, sampleSweptSegment } from './playground-collision.js?v=2';
 
 const COLORS={
@@ -171,6 +171,9 @@ export function planPopulationForZones({walkPaths=[],zones=[],maxActors=12,tileH
      track:safeVariants[0]?.track||null,
      sequence:safeVariants[0]?.sequence||null,
      variants:safeVariants.length?safeVariants:null,
+     onPose:typeof item.onPose==='function'?item.onPose:null,
+     contactName:item.contactName||null,
+     groundedPhases:Array.isArray(item.groundedPhases)?item.groundedPhases:null,
      minY:typeof item.minY==='number'?item.minY*scale:undefined,
      maxY:typeof item.maxY==='number'?item.maxY*scale:undefined
     });
@@ -280,6 +283,7 @@ function buildActors(T,lib,planned,season,height,enabled){
    actor.elapsed+=step;
    const raw=motionAt(actor.spec,actor.elapsed,height,actor.cache);
    const pose=guardLivePose(raw,actor.spec,actor.cache);
+   actor.spec.onPose?.(pose);
    const {anchor,parts,neutral,neutralZ,spec}=actor;
    anchor.position.set(pose.x,pose.y,pose.z);
    anchor.rotation.y=pose.heading;

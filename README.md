@@ -44,4 +44,6 @@ P0.6.7 opens directly at `/crans-montana-p067/`, with a visible version label an
 
 The former salmon roof palette is now neutral grey, based on the user's undated aerial reference. This is a visual interpretation, with unverified roofs using a neutral default; see [roof colours and source limitations](docs/design/roof-colours.md). B007 retains its separately documented dark roof.
 
+P0.6.7 now has seven [reconstructed playground models](docs/design/playground.md) and eight children using them, including synchronized swings and spring seats. **Voir les jeux** frames the new layout. Equipment positions and dimensions remain estimates based on 2022/2024 panoramas and tourism photographs labelled 2025; the current 2026 state is unverified. The [separate playground reference index](preview-ycoor-design/assets/playground-evidence/2026-11-23/index.csv) is maintained by the same `tools/update-ycoor.py` command.
+
 The canonical Ycoor page is `preview-ycoor-design/index.html`. After editing it, run `python tools/build-p067.py` to refresh the release page, then `python tools/build-p067.py --check` to verify that it is current and that its local links, dynamic imports and data-directory references resolve. The generated page uses the same engine, design modules and datasets at their original paths; deploy those shared directories together with the release.
