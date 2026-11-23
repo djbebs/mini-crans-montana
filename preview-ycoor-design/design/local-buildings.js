@@ -125,9 +125,10 @@ function useVisibleSurfaceColor(material) {
     shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_begin>',
       '#include <normal_fragment_begin>\n'+
       'float ycoorVisibleRoof = smoothstep(0.4, 0.72, dot(normalize(normal), normalize((viewMatrix * vec4(0.0, 1.0, 0.0, 0.0)).xyz)));\n'+
-      'diffuseColor.rgb = mix(vec3(0.83, 0.78, 0.67), vec3(0.66, 0.35, 0.26), ycoorVisibleRoof);\n');
+      // Neutral grey interpreted from the user's aerial reference; not a measured material colour.
+      'diffuseColor.rgb = mix(vec3(0.83, 0.78, 0.67), vec3(0.60, 0.62, 0.63), ycoorVisibleRoof);\n');
   };
-  material.customProgramCacheKey=()=> 'ycoor-local-visible-world-up-v1';
+  material.customProgramCacheKey=()=> 'ycoor-local-visible-world-up-v2';
 }
 
 function wallGroups(building,vertices,triangles) {
@@ -178,7 +179,7 @@ export function createLocalBuildings({THREE,scene,data,originHeight,onSelect}) {
   if(!THREE||!scene?.add)throw new TypeError('THREE and scene are required');
   const group=new THREE.Group();group.name='ycoor-local-dxf';group.position.y=-originHeight;
   const wall=new THREE.MeshLambertMaterial({color:0xe4d6b5,flatShading:true,side:THREE.DoubleSide});
-  const roof=new THREE.MeshLambertMaterial({color:0xa35e46,flatShading:true,side:THREE.DoubleSide});
+  const roof=new THREE.MeshLambertMaterial({color:0xaeb3b5,flatShading:true,side:THREE.DoubleSide});
   useVisibleSurfaceColor(wall);useVisibleSurfaceColor(roof);
   const meshes=[],faces=[],buildings=data.buildings;
   for(const b of buildings) {

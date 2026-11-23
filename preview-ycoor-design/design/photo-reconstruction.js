@@ -1,4 +1,4 @@
-import { createLocalBuildings } from './local-buildings.js';
+import { createLocalBuildings } from './local-buildings.js?v=2';
 import { createDesignEnhancements } from './design-enhancements.js?v=2';
 
 /** An explicitly approximate interpretation; never replaces the source dataset. */

@@ -152,7 +152,7 @@ test('coincident opposite real roof triangles render once with upward roof color
   for(let i=0;i<p.count;i+=3){const key=[0,1,2].map(j=>[p.getX(i+j),p.getY(i+j),p.getZ(i+j)].join(',')).sort().join('|');assert.ok(!keys.has(key),'no coincident rendered triangle coordinate sets');keys.add(key);}
   const representatives=mesh.geometry.userData.sourceFaceIndices.map((source,i)=>({source,i})).filter(({source})=>source.includes(0)||source.includes(41));
   assert.equal(representatives.length,1);assert.deepEqual(representatives[0].source,[0,41]);
-  const index=representatives[0].i;assert.equal(mesh.geometry.groups[index].materialIndex,1,'real duplicated sloped roof is terracotta');
+  const index=representatives[0].i;assert.equal(mesh.geometry.groups[index].materialIndex,1,'real duplicated sloped roof uses the roof material');
   assert.ok(mesh.geometry.attributes.normal.getY(index*3)>0,'roof representative faces upward');
   assert.equal(app.faces.length,43,'layoutmetadata face IDs and extraction are unchanged');
   app.dispose();

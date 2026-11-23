@@ -1,4 +1,4 @@
-import { createLocalBuildings } from './local-buildings.js';
+import { createLocalBuildings } from './local-buildings.js?v=2';
 import { createDesignEnhancements } from './design-enhancements.js?v=2';
 import { createDesignPanel } from './design-panel.js?v=5';
 import { assetUrl, validateDesignEvidence } from './design-model.js';

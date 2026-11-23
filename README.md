@@ -42,4 +42,6 @@ Under repository Settings > Pages, select **Deploy from a branch**, `main`, `/(r
 
 P0.6.7 opens directly at `/crans-montana-p067/`, with a visible version label and a prominent link on the project home. All earlier release and experiment URLs remain available.
 
+The former salmon roof palette is now neutral grey, based on the user's undated aerial reference. This is a visual interpretation, with unverified roofs using a neutral default; see [roof colours and source limitations](docs/design/roof-colours.md). B007 retains its separately documented dark roof.
+
 The canonical Ycoor page is `preview-ycoor-design/index.html`. After editing it, run `python tools/build-p067.py` to refresh the release page, then `python tools/build-p067.py --check` to verify that it is current and that its local links, dynamic imports and data-directory references resolve. The generated page uses the same engine, design modules and datasets at their original paths; deploy those shared directories together with the release.

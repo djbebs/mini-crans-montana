@@ -201,7 +201,7 @@ const hemi=new THREE.HemisphereLight(0xe9eeff,0x38432e,2.3);scene.add(hemi);
 const sun=new THREE.DirectionalLight(0xffe9bc,3.3);sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);
 sun.shadow.camera.left=-95;sun.shadow.camera.right=95;sun.shadow.camera.top=95;sun.shadow.camera.bottom=-95;sun.shadow.camera.near=0.5;sun.shadow.camera.far=320;sun.shadow.bias=-0.00015;scene.add(sun);scene.add(sun.target);
 const up=new THREE.Vector3(0,1,0),target=new THREE.Vector3(0,0,0);
-const mats={ground:new THREE.MeshLambertMaterial({color:'#959d92',flatShading:true,side:THREE.DoubleSide}),road:new THREE.MeshLambertMaterial({color:'#48463d',flatShading:true,side:THREE.DoubleSide}),walk:new THREE.MeshLambertMaterial({color:'#cfb68e',flatShading:true,side:THREE.DoubleSide}),white:new THREE.MeshLambertMaterial({color:'#ded9c0',flatShading:true}),ink:new THREE.MeshLambertMaterial({color:'#26342b',flatShading:true}),roof:new THREE.MeshLambertMaterial({color:'#a05c44',flatShading:true,side:THREE.DoubleSide}),red:new THREE.MeshLambertMaterial({color:'#cc342c',flatShading:true}),black:new THREE.MeshLambertMaterial({color:'#202e2d',flatShading:true}),yellow:new THREE.MeshLambertMaterial({color:'#c9bd71',flatShading:true})};
+const mats={ground:new THREE.MeshLambertMaterial({color:'#959d92',flatShading:true,side:THREE.DoubleSide}),road:new THREE.MeshLambertMaterial({color:'#48463d',flatShading:true,side:THREE.DoubleSide}),walk:new THREE.MeshLambertMaterial({color:'#cfb68e',flatShading:true,side:THREE.DoubleSide}),white:new THREE.MeshLambertMaterial({color:'#ded9c0',flatShading:true}),ink:new THREE.MeshLambertMaterial({color:'#26342b',flatShading:true}),roof:new THREE.MeshLambertMaterial({color:'#aeb3b5',flatShading:true,side:THREE.DoubleSide}),red:new THREE.MeshLambertMaterial({color:'#cc342c',flatShading:true}),black:new THREE.MeshLambertMaterial({color:'#202e2d',flatShading:true}),yellow:new THREE.MeshLambertMaterial({color:'#c9bd71',flatShading:true})};
 function seeded(n){let v=Math.sin(n*84.115+14.115)*43758.5453;return v-Math.floor(v)}
 function local(lat,lon){return {x:(lon-ORIGIN.lon)*111320*Math.cos(ORIGIN.lat*Math.PI/180),z:-(lat-ORIGIN.lat)*111320}}
 function height(x,z){return terrainModel?.height(x,z)??0;}
@@ -278,7 +278,7 @@ async function startDesignPilot(){
  pilotLoading=true;
  try{
   await loadHeight();
-  const {createPilot}=await import('./design/pilot.js?v=9');
+  const {createPilot}=await import('./design/pilot.js?v=10');
   pilot=await createPilot({THREE,scene,
    dataBaseUrl:new URL('./assets/',import.meta.url).href,
    designBaseUrl:new URL('./design/',import.meta.url).href,
@@ -913,9 +913,9 @@ function materialForTiles(){
  shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_begin>',
  '#include <normal_fragment_begin>\n'+
  'float r=smoothstep(0.4,0.72,dot(normalize(normal),normalize((viewMatrix*vec4(0.,1.,0.,0.)).xyz)));\n'+
- 'diffuseColor.rgb=mix(vec3(.83,.78,.67),vec3(.66,.35,.26),r);\n');
+ 'diffuseColor.rgb=mix(vec3(.83,.78,.67),vec3(.60,.62,.63),r);\n');
  };
- m.customProgramCacheKey=()=> 'ycoor-p05';
+ m.customProgramCacheKey=()=> 'ycoor-p067-grey-roofs-v1';
  return m;
 }
 async function startRoofs(older=false){
