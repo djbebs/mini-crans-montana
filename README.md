@@ -32,6 +32,8 @@ Coverage is partial. Coordinates and numeric headings are verified as displayed 
 
 The separate P0.6.8 façade experiment is unchanged. To validate the survey assets and layer, run `python tools/validate-streetview-assets.py` and, in `crans-montana-p06/streetview/`, `npm ci` followed by `npm test`.
 
+P0.6.7 separately associates documented visual groups with the six local DXF volumes. As of November 23, 2026, it draws 220 interpreted components on nine partial source wall planes. Hidden openings remain unknown and the final geometry of 26152/B007 still requires verification. The [supplementary capture CSV](crans-montana-p06/assets/streetview-survey/2026-11-15/supplement-index.csv) and [camera-position diagram](crans-montana-p06/assets/streetview-survey/2026-11-15/supplement-map.svg) cover 15 additional screenshots, separately from the immutable original survey. See the [sector workflow and limits](docs/design/facade-workflow.md). `python tools/update-ycoor.py` rebuilds the supplementary indexes, evidence, face inventory and release together; `--check` verifies them without writing.
+
 ## Deployment
 
 Under repository Settings > Pages, select **Deploy from a branch**, `main`, `/(root)`.

@@ -12,6 +12,554 @@
     ],
     "reason": "Partie centrale du groupe B002 : continuité des volumes le long de la route, succession des balcons et position entre les vues au nord et au sud. Correspondance visuelle multi-vues ; identité cadastrale non établie."
   },
-  "observations": [],
-  "changes": []
+  "observations": [
+    {
+      "observationId": "OBS-B002-CENTRAL-WEST-2024",
+      "buildingId": "1A20B",
+      "faceId": "1A20B:wall:001",
+      "sourceId": "streetview",
+      "captureIds": [
+        "YCOOR-N011",
+        "C007",
+        "C008",
+        "C005"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "high",
+      "statement": "YCOOR-N011 montre le front ouest central : trois niveaux de balcon à garde-corps gris vieillis et main courante brune à gauche de la bande de pierre, trois fenêtres au niveau bas et quatre volets roulants rouges fermés dans la bande de pierre. Deux portions hautes de volets fermés sont visibles derrière le balcon inférieur. C007/C008 situent la continuité vers le nord ; C005 recoupe la séparation avec le volume sud 2355E.",
+      "limitations": [
+        "Les balcons du bloc de droite de N011 appartiennent à 2355E et ne sont pas doublés sur 1A20B. La bande de pierre est placée autour de u≈22,3 m, avant la limite source de u≈24,36 m ; le contrôle des rayons ne constitue pas une calibration photogrammétrique.",
+        "Les fenêtres basses sont relevées individuellement autour de u≈10,3, 13,9 et 18,2 m. Les parties hors cadre au nord restent inconnues ; aucun vitrage ne se déduit des volets, des rideaux ou des ombres.",
+        "L’interface Google, les dalles, les garde-corps et les séparations de balcon masquent de nombreuses ouvertures. Les deux petits tabliers représentés au balcon inférieur ne décrivent que leur partie directement visible ; leur partie basse cachée est omise.",
+        "Positions, altitudes LN02, dimensions, profondeurs, teintes et densité des barreaux sont des estimations artistiques. Les motifs de pierre et les garde-corps ne sont pas des décomptes physiques. Aucun toit, volume, escalier ou hauteur source n’est modifié."
+      ]
+    },
+    {
+      "observationId": "OBS-B002-CENTRAL-SOUTH-UNRESOLVED",
+      "buildingId": "1A20B",
+      "faceId": "1A20B:wall:002",
+      "sourceId": "streetview",
+      "captureIds": [
+        "YCOOR-N011",
+        "YCOOR-N012",
+        "C026",
+        "C027"
+      ],
+      "observedAt": null,
+      "confidence": "low",
+      "statement": "Le plan sud source n’est qu’une bande haute entre 1512,902 et 1514,062 m, au-dessus du volume voisin 2355E. Les vues de rue ne distinguent aucune ouverture attribuable à cette bande ; une façade entière ou un balcon ne peut pas y être reporté.",
+      "limitations": [
+        "Aucun détail ajouté sur cette face tant que l’attribution et les zones visibles ne sont pas établies."
+      ]
+    },
+    {
+      "observationId": "OBS-B002-CENTRAL-EAST-UNRESOLVED",
+      "buildingId": "1A20B",
+      "faceId": "1A20B:wall:003",
+      "sourceId": "streetview",
+      "captureIds": [
+        "YCOOR-N015",
+        "C022",
+        "C041",
+        "C042"
+      ],
+      "observedAt": null,
+      "confidence": "low",
+      "statement": "N015 (sphère Dany Gaule, juin 2022) montre clairement le front blanc et ses longues lignes de balcons bois derrière le groupe sombre du premier plan. C022 et les vues de juin 2024 C041/C042 recoupent le groupe B002 depuis l’étang. La séparation des pans de 1A20B et des volumes voisins reste masquée ou non calibrée : les limites photographiques ne suffisent pas à placer individuellement des baies sur le plan source est, long de 19,50 m. Aucun balcon ni vitrage n’est reporté sans cette attribution.",
+      "limitations": [
+        "N015 et C022 datent de juin 2022 ; C041/C042 de juin 2024. Le cap de la sphère de contributeur n’est pas calibré et aucune continuité d’état n’est déduite entre ces deux dates.",
+        "Les balcons, arbres, reflets, zones sombres et parties masquées ne prouvent ni les limites source ni un nombre de fenêtres. Aucun détail n’est extrapolé des autres côtés."
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "changeId": "B002-CENTRAL-WEST-2024-DETAILS",
+      "buildingId": "1A20B",
+      "faceId": "1A20B:wall:001",
+      "status": "ready",
+      "title": "B002 central · balcons, pierre, fenêtres basses et volets fermés",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "YCOOR-N011",
+        "C007",
+        "C008",
+        "C005"
+      ],
+      "observationIds": [
+        "OBS-B002-CENTRAL-WEST-2024"
+      ],
+      "reason": "Les trois balcons, les trois fenêtres basses et les quatre volets de la bande de pierre sont directement distingués dans N011. Les deux portions de volets au balcon inférieur restent partielles. Aucun vitrage caché n’est déduit ; les balcons du volume sud sont traités séparément sur 2355E.",
+      "confidence": "medium",
+      "approximate": true,
+      "details": [
+        {
+          "id": "b002-central-west-plaster-visible",
+          "kind": "panel",
+          "u": 13.4,
+          "v": 1507.5,
+          "width": 14.1,
+          "height": 12.65,
+          "color": "#d6d3bf",
+          "label": "Enduit clair dans la zone directement lisible du front central · limites approximatives",
+          "depth": 0.004,
+          "offset": 0.001,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-gray-plinth",
+          "kind": "panel",
+          "u": 13.4,
+          "v": 1501.65,
+          "width": 14.1,
+          "height": 1.2,
+          "color": "#a9a99b",
+          "label": "Bande basse gris beige visible sous les fenêtres · largeur partielle",
+          "depth": 0.004,
+          "offset": 0.001,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-stone-stair-bay",
+          "kind": "panel",
+          "u": 22.35,
+          "v": 1507.5,
+          "width": 3.25,
+          "height": 12.7,
+          "color": "#858c80",
+          "label": "Bande de parement pierre de la cage d’escalier · joints simplifiés",
+          "depth": 0.004,
+          "offset": 0.001,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-balcony-lower",
+          "u": 10.4,
+          "v": 1506.65,
+          "label": "Balcon central lower visible · trois niveaux distincts, garde-corps et densité stylisés",
+          "evidenceIds": [
+            "YCOOR-N011",
+            "C007"
+          ],
+          "template": "b002-central-west-balcony-lower-style"
+        },
+        {
+          "id": "b002-central-west-balcony-middle",
+          "u": 10.4,
+          "v": 1509.45,
+          "label": "Balcon central middle visible · trois niveaux distincts, garde-corps et densité stylisés",
+          "evidenceIds": [
+            "YCOOR-N011",
+            "C007"
+          ],
+          "template": "b002-central-west-balcony-lower-style"
+        },
+        {
+          "id": "b002-central-west-balcony-upper",
+          "u": 10.4,
+          "v": 1512.25,
+          "label": "Balcon central upper visible · trois niveaux distincts, garde-corps et densité stylisés",
+          "evidenceIds": [
+            "YCOOR-N011",
+            "C007"
+          ],
+          "template": "b002-central-west-balcony-lower-style"
+        },
+        {
+          "id": "b002-central-west-ground-north-visible",
+          "kind": "window",
+          "u": 10.3,
+          "v": 1504.2,
+          "width": 2.05,
+          "height": 1.5,
+          "color": "#3c4a43",
+          "label": "Fenêtre basse north-visible directement visible · cadres bois, reflets simplifiés",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ],
+          "frame": {
+            "width": 0.1,
+            "color": "#795a3d"
+          }
+        },
+        {
+          "id": "b002-central-west-ground-north-visible-sill",
+          "kind": "trim",
+          "u": 10.3,
+          "v": 1503.4,
+          "width": 2.17,
+          "height": 0.09,
+          "color": "#8e8c7c",
+          "label": "Appui gris visible de la fenêtre basse north-visible",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-ground-middle-visible",
+          "kind": "window",
+          "u": 13.9,
+          "v": 1504.2,
+          "width": 1.2,
+          "height": 1.5,
+          "color": "#3c4a43",
+          "label": "Fenêtre basse middle-visible directement visible · cadres bois, reflets simplifiés",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ],
+          "frame": {
+            "width": 0.1,
+            "color": "#795a3d"
+          }
+        },
+        {
+          "id": "b002-central-west-ground-middle-visible-sill",
+          "kind": "trim",
+          "u": 13.9,
+          "v": 1503.4,
+          "width": 1.3199999999999998,
+          "height": 0.09,
+          "color": "#8e8c7c",
+          "label": "Appui gris visible de la fenêtre basse middle-visible",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-ground-south-visible",
+          "kind": "window",
+          "u": 18.2,
+          "v": 1504.2,
+          "width": 1.6,
+          "height": 1.5,
+          "color": "#3c4a43",
+          "label": "Fenêtre basse south-visible directement visible · cadres bois, reflets simplifiés",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ],
+          "frame": {
+            "width": 0.1,
+            "color": "#795a3d"
+          }
+        },
+        {
+          "id": "b002-central-west-ground-south-visible-sill",
+          "kind": "trim",
+          "u": 18.2,
+          "v": 1503.4,
+          "width": 1.7200000000000002,
+          "height": 0.09,
+          "color": "#8e8c7c",
+          "label": "Appui gris visible de la fenêtre basse south-visible",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-ground-north-visible-mullion",
+          "kind": "trim",
+          "u": 10.3,
+          "v": 1504.2,
+          "width": 0.055,
+          "height": 1.28,
+          "color": "#795a3d",
+          "label": "Meneau directement visible de la fenêtre basse north-visible",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-ground-south-visible-mullion",
+          "kind": "trim",
+          "u": 18.2,
+          "v": 1504.2,
+          "width": 0.055,
+          "height": 1.28,
+          "color": "#795a3d",
+          "label": "Meneau directement visible de la fenêtre basse south-visible",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-stair-lowest-surround",
+          "kind": "panel",
+          "u": 22.3,
+          "v": 1504.2,
+          "width": 1.5999999999999999,
+          "height": 1.55,
+          "color": "#a7aaa0",
+          "label": "Entourage clair visible du volet de l’escalier lowest",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-stair-lowest-shutter",
+          "kind": "shutter",
+          "u": 22.3,
+          "v": 1504.2,
+          "width": 1.4,
+          "height": 1.35,
+          "color": "#9a4c46",
+          "label": "Volet roulant rouge fermé de l’escalier lowest · aucun vitrage ajouté derrière",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-stair-lowest-sill",
+          "kind": "trim",
+          "u": 22.3,
+          "v": 1503.4650000000001,
+          "width": 1.68,
+          "height": 0.09,
+          "color": "#777e70",
+          "label": "Appui visible sous le volet de l’escalier lowest",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-stair-lower-middle-surround",
+          "kind": "panel",
+          "u": 22.3,
+          "v": 1506.85,
+          "width": 1.5,
+          "height": 1.5,
+          "color": "#a7aaa0",
+          "label": "Entourage clair visible du volet de l’escalier lower-middle",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-stair-lower-middle-shutter",
+          "kind": "shutter",
+          "u": 22.3,
+          "v": 1506.85,
+          "width": 1.3,
+          "height": 1.3,
+          "color": "#9a4c46",
+          "label": "Volet roulant rouge fermé de l’escalier lower-middle · aucun vitrage ajouté derrière",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-stair-lower-middle-sill",
+          "kind": "trim",
+          "u": 22.3,
+          "v": 1506.1399999999999,
+          "width": 1.58,
+          "height": 0.09,
+          "color": "#777e70",
+          "label": "Appui visible sous le volet de l’escalier lower-middle",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-stair-upper-middle-surround",
+          "kind": "panel",
+          "u": 22.3,
+          "v": 1509.5,
+          "width": 1.45,
+          "height": 1.45,
+          "color": "#a7aaa0",
+          "label": "Entourage clair visible du volet de l’escalier upper-middle",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-stair-upper-middle-shutter",
+          "kind": "shutter",
+          "u": 22.3,
+          "v": 1509.5,
+          "width": 1.25,
+          "height": 1.25,
+          "color": "#9a4c46",
+          "label": "Volet roulant rouge fermé de l’escalier upper-middle · aucun vitrage ajouté derrière",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-stair-upper-middle-sill",
+          "kind": "trim",
+          "u": 22.3,
+          "v": 1508.815,
+          "width": 1.53,
+          "height": 0.09,
+          "color": "#777e70",
+          "label": "Appui visible sous le volet de l’escalier upper-middle",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-stair-highest-surround",
+          "kind": "panel",
+          "u": 22.3,
+          "v": 1512.1,
+          "width": 1.4,
+          "height": 1.3499999999999999,
+          "color": "#a7aaa0",
+          "label": "Entourage clair visible du volet de l’escalier highest",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-stair-highest-shutter",
+          "kind": "shutter",
+          "u": 22.3,
+          "v": 1512.1,
+          "width": 1.2,
+          "height": 1.15,
+          "color": "#9a4c46",
+          "label": "Volet roulant rouge fermé de l’escalier highest · aucun vitrage ajouté derrière",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-stair-highest-sill",
+          "kind": "trim",
+          "u": 22.3,
+          "v": 1511.465,
+          "width": 1.48,
+          "height": 0.09,
+          "color": "#777e70",
+          "label": "Appui visible sous le volet de l’escalier highest",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-balcony-lower-north-visible-shutter-visible",
+          "kind": "shutter",
+          "u": 10.3,
+          "v": 1507.52,
+          "width": 2.05,
+          "height": 0.48,
+          "color": "#8b4941",
+          "label": "Partie haute rouge du volet visible au-dessus du garde-corps inférieur north-visible · suite cachée omise",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        },
+        {
+          "id": "b002-central-west-balcony-lower-south-visible-shutter-visible",
+          "kind": "shutter",
+          "u": 18.2,
+          "v": 1507.52,
+          "width": 1.6,
+          "height": 0.48,
+          "color": "#8b4941",
+          "label": "Partie haute rouge du volet visible au-dessus du garde-corps inférieur south-visible · suite cachée omise",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011"
+          ]
+        }
+      ],
+      "focus": {
+        "u": 12,
+        "height": 1506
+      }
+    },
+    {
+      "changeId": "B002-CENTRAL-SOUTH-UNRESOLVED",
+      "buildingId": "1A20B",
+      "faceId": "1A20B:wall:002",
+      "status": "unresolved",
+      "title": "B002 central · south à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "YCOOR-N011",
+        "YCOOR-N012",
+        "C026",
+        "C027"
+      ],
+      "observationIds": [
+        "OBS-B002-CENTRAL-SOUTH-UNRESOLVED"
+      ],
+      "reason": "Le plan sud source n’est qu’une bande haute entre 1512,902 et 1514,062 m, au-dessus du volume voisin 2355E. Les vues de rue ne distinguent aucune ouverture attribuable à cette bande ; une façade entière ou un balcon ne peut pas y être reporté.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "B002-CENTRAL-EAST-UNRESOLVED",
+      "buildingId": "1A20B",
+      "faceId": "1A20B:wall:003",
+      "status": "unresolved",
+      "title": "B002 central · east à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "YCOOR-N015",
+        "C022",
+        "C041",
+        "C042"
+      ],
+      "observationIds": [
+        "OBS-B002-CENTRAL-EAST-UNRESOLVED"
+      ],
+      "reason": "N015 (sphère Dany Gaule, juin 2022) montre clairement le front blanc et ses longues lignes de balcons bois derrière le groupe sombre du premier plan. C022 et les vues de juin 2024 C041/C042 recoupent le groupe B002 depuis l’étang. La séparation des pans de 1A20B et des volumes voisins reste masquée ou non calibrée : les limites photographiques ne suffisent pas à placer individuellement des baies sur le plan source est, long de 19,50 m. Aucun balcon ni vitrage n’est reporté sans cette attribution.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    }
+  ]
 }

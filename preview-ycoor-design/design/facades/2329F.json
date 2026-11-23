@@ -8,10 +8,2527 @@
     "evidenceIds": [
       "C008",
       "C012",
-      "C051"
+      "C051",
+      "C007",
+      "YCOOR-N014"
     ],
     "reason": "Partie du groupe B002 proche du coude de la route : raccord au volume à bardage et alignement du front bâti dans les vues opposées. Un même repère visuel regroupe plusieurs volumes CAD."
   },
-  "observations": [],
-  "changes": []
+  "observations": [
+    {
+      "observationId": "OBS-2329F-002-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:002",
+      "sourceFaceId": "2329F:wall:002",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C007",
+        "C008",
+        "C051",
+        "YCOOR-N014"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "medium",
+      "statement": "Le petit retour vers la route des Sommets porte un enduit clair, un soubassement minéral, une petite baie sombre au rez-de-chaussée et trois retours de balcons à garde-corps en bois grisé. Deux plages de volets rouges sont lisibles aux niveaux supérieurs. Les grandes travées voisines appartiennent au volume 1A20B et ne sont pas dupliquées ici.",
+      "limitations": [
+        "Le retour inférieur du plan source ne mesure que 2,71 m ; la partie u>2,71 m est limitée au bandeau supérieur, et reste sans détail.",
+        "La petite baie basse est partiellement masquée par la signalisation. Les autres ouvertures derrière les garde-corps ne sont pas assez lisibles pour être individualisées et restent inconnues.",
+        "La photographie prouve l’apparence, pas les limites cadastrales ; positions, niveaux, dimensions, couleurs et densité des lames sont des estimations artistiques.",
+        "Le grand fond inférieur du DXF descend sous le terrain visible et ne reçoit pas de détails."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-003-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:003",
+      "sourceFaceId": "2329F:wall:003",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C012",
+        "C051",
+        "YCOOR-N014"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "medium",
+      "statement": "Le front oblique sur Rawyl présente trois niveaux de balcons continus, des garde-corps verticaux en bois grisé, un fond d’enduit clair et deux plages de volets rouges par étage. La vue complémentaire YCOOR-N014 rend lisibles une baie centrale sombre et les deux plages opaques de chaque niveau. Au rez-de-chaussée, deux vitrines encadrent une entrée vitrée centrale au cadre sombre et au seuil surélevé.",
+      "limitations": [
+        "Les vitrines et l’entrée sont distinguées dans la vue complémentaire ; les reflets et la résolution empêchent un inventaire fiable de toutes leurs subdivisions et vantaux.",
+        "Les baies cachées derrière les volets rouges restent inconnues. Les panneaux routiers et les garde-corps masquent encore certaines parties des étages et du petit retour occidental.",
+        "La lecture reste partielle malgré la largeur et les trois étages couverts ; aucune exhaustivité ni décompte de fenêtres n’est établi.",
+        "Les positions, dimensions, teintes, profondeurs et lames du garde-corps sont une interprétation artistique non métrique."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-001-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:001",
+      "sourceFaceId": "2329F:wall:001",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "low",
+      "statement": "Bande haute occidentale, au-dessus de 1A20B : le cadrage et l’interface masquent une attribution certaine des matériaux et du raccord de toiture. Aucune ouverture propre à cette bande n’est établie.",
+      "limitations": [
+        "Ces captures sont des contrôles de contexte du volume B002 ; elles ne constituent pas une preuve de couverture de ce plan.",
+        "La bande source reste conservée sans modification ; absence de détail signifie inconnu et non absence d’ouverture."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-004-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:004",
+      "sourceFaceId": "2329F:wall:004",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "low",
+      "statement": "Étroite bande oblique au raccord avec 2997D : la séparation du parement du voisin et de ce plan de 0,80 m n’est pas vérifiable dans les vues disponibles.",
+      "limitations": [
+        "Ces captures sont des contrôles de contexte du volume B002 ; elles ne constituent pas une preuve de couverture de ce plan.",
+        "La bande source reste conservée sans modification ; absence de détail signifie inconnu et non absence d’ouverture."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-005-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:005",
+      "sourceFaceId": "2329F:wall:005",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "low",
+      "statement": "Retour nord de 0,35 m au raccord avec le chalet : plan étroit non isolable dans les photos ; aucune ouverture n’est attribuée.",
+      "limitations": [
+        "Ces captures sont des contrôles de contexte du volume B002 ; elles ne constituent pas une preuve de couverture de ce plan.",
+        "La bande source reste conservée sans modification ; absence de détail signifie inconnu et non absence d’ouverture."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-006-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:006",
+      "sourceFaceId": "2329F:wall:006",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "low",
+      "statement": "Plan sud quasi dégénéré de 2 mm, au raccord des volumes sources : aucune façade physique observable indépendante ne peut être attribuée à cette bande.",
+      "limitations": [
+        "Ces captures sont des contrôles de contexte du volume B002 ; elles ne constituent pas une preuve de couverture de ce plan.",
+        "La bande source reste conservée sans modification ; absence de détail signifie inconnu et non absence d’ouverture."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-007-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:007",
+      "sourceFaceId": "2329F:wall:007",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "low",
+      "statement": "Bande haute sud de 0,18 m, en retrait : aucune vue attribuable de ce petit raccord derrière le front n’est disponible.",
+      "limitations": [
+        "Ces captures sont des contrôles de contexte du volume B002 ; elles ne constituent pas une preuve de couverture de ce plan.",
+        "La bande source reste conservée sans modification ; absence de détail signifie inconnu et non absence d’ouverture."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-008-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:008",
+      "sourceFaceId": "2329F:wall:008",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "low",
+      "statement": "Bande haute sud de 0,29 m : le raccord au toit voisin reste caché ou trop petit dans les vues publiques.",
+      "limitations": [
+        "Ces captures sont des contrôles de contexte du volume B002 ; elles ne constituent pas une preuve de couverture de ce plan.",
+        "La bande source reste conservée sans modification ; absence de détail signifie inconnu et non absence d’ouverture."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-009-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:009",
+      "sourceFaceId": "2329F:wall:009",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "low",
+      "statement": "Bande haute sud de 8,18 m, au-dessus de 1A20B : les vues depuis la rue documentent le front et ses balcons mais pas ce revers de toiture.",
+      "limitations": [
+        "Ces captures sont des contrôles de contexte du volume B002 ; elles ne constituent pas une preuve de couverture de ce plan.",
+        "La bande source reste conservée sans modification ; absence de détail signifie inconnu et non absence d’ouverture."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-010-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:010",
+      "sourceFaceId": "2329F:wall:010",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "low",
+      "statement": "Bande haute sud de 6,45 m sur le revers : aucune photo disponible ne montre ce plan avec une attribution fiable.",
+      "limitations": [
+        "Ces captures sont des contrôles de contexte du volume B002 ; elles ne constituent pas une preuve de couverture de ce plan.",
+        "La bande source reste conservée sans modification ; absence de détail signifie inconnu et non absence d’ouverture."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-011-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:011",
+      "sourceFaceId": "2329F:wall:011",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "low",
+      "statement": "Retour nord-est de 0,12 m, à la jonction des volumes : plan non isolable photographiquement, sans ouverture déduite.",
+      "limitations": [
+        "Ces captures sont des contrôles de contexte du volume B002 ; elles ne constituent pas une preuve de couverture de ce plan.",
+        "La bande source reste conservée sans modification ; absence de détail signifie inconnu et non absence d’ouverture."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-012-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:012",
+      "sourceFaceId": "2329F:wall:012",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "low",
+      "statement": "Retour sud-est de 0,22 m, proche du volume mitoyen : aucune surface indépendante lisible n’est attestée.",
+      "limitations": [
+        "Ces captures sont des contrôles de contexte du volume B002 ; elles ne constituent pas une preuve de couverture de ce plan.",
+        "La bande source reste conservée sans modification ; absence de détail signifie inconnu et non absence d’ouverture."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-013-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:013",
+      "sourceFaceId": "2329F:wall:013",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "low",
+      "statement": "Bande haute sud-est de moins de 5 cm : aucune façade physique indépendante lisible dans les captures.",
+      "limitations": [
+        "Ces captures sont des contrôles de contexte du volume B002 ; elles ne constituent pas une preuve de couverture de ce plan.",
+        "La bande source reste conservée sans modification ; absence de détail signifie inconnu et non absence d’ouverture."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-014-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:014",
+      "sourceFaceId": "2329F:wall:014",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "low",
+      "statement": "Plan sud-est de 3,06 m sur le revers du coin : les vues de rue ne montrent pas ses ouvertures. Une vue de l’arrière est nécessaire.",
+      "limitations": [
+        "Ces captures sont des contrôles de contexte du volume B002 ; elles ne constituent pas une preuve de couverture de ce plan.",
+        "La bande source reste conservée sans modification ; absence de détail signifie inconnu et non absence d’ouverture."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-015-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:015",
+      "sourceFaceId": "2329F:wall:015",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "low",
+      "statement": "Retour nord-est de 1,89 m au raccord avec 2997D : partie masquée ou mitoyenne dans les vues disponibles ; ne pas prolonger les fenêtres du front.",
+      "limitations": [
+        "Ces captures sont des contrôles de contexte du volume B002 ; elles ne constituent pas une preuve de couverture de ce plan.",
+        "La bande source reste conservée sans modification ; absence de détail signifie inconnu et non absence d’ouverture."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-016-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:016",
+      "sourceFaceId": "2329F:wall:016",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "low",
+      "statement": "Bande haute est de 1,14 m, en retrait de la toiture : aucune vue attribuable ne justifie un détail.",
+      "limitations": [
+        "Ces captures sont des contrôles de contexte du volume B002 ; elles ne constituent pas une preuve de couverture de ce plan.",
+        "La bande source reste conservée sans modification ; absence de détail signifie inconnu et non absence d’ouverture."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-017-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:017",
+      "sourceFaceId": "2329F:wall:017",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "low",
+      "statement": "Bande haute est de 0,79 m : le revers reste non documenté ; aucune fenêtre n’est supposée.",
+      "limitations": [
+        "Ces captures sont des contrôles de contexte du volume B002 ; elles ne constituent pas une preuve de couverture de ce plan.",
+        "La bande source reste conservée sans modification ; absence de détail signifie inconnu et non absence d’ouverture."
+      ]
+    },
+    {
+      "observationId": "OBS-2329F-018-2024",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:018",
+      "sourceFaceId": "2329F:wall:018",
+      "sourceId": "streetview",
+      "captureIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observedAt": "Jun 2024",
+      "confidence": "low",
+      "statement": "Bande haute est de 2,06 m au décrochement de toiture : le volume source est conservé et le détail attend une vue lisible.",
+      "limitations": [
+        "Ces captures sont des contrôles de contexte du volume B002 ; elles ne constituent pas une preuve de couverture de ce plan.",
+        "La bande source reste conservée sans modification ; absence de détail signifie inconnu et non absence d’ouverture."
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "changeId": "2329F-FACADE-002",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:002",
+      "sourceFaceId": "2329F:wall:002",
+      "status": "ready",
+      "title": "2329F · petit retour vers les Sommets",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "C007",
+        "C008",
+        "C051",
+        "YCOOR-N014"
+      ],
+      "observationIds": [
+        "OBS-2329F-002-2024"
+      ],
+      "reason": "Détailler seulement la partie visible du retour ouest, dans les triangles source, sans continuer les balcons de 1A20B sur ce volume.",
+      "confidence": "medium",
+      "approximate": true,
+      "details": [
+        {
+          "id": "2329f-west-plaster",
+          "kind": "panel",
+          "u": 1.35,
+          "v": 1508.65,
+          "width": 2.5,
+          "height": 10.4,
+          "color": "#dcd9ca",
+          "label": "Enduit clair du petit retour occidental",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "C007",
+            "C008",
+            "C051",
+            "YCOOR-N014"
+          ]
+        },
+        {
+          "id": "2329f-west-stone-ground",
+          "template": "stone-entry-pier",
+          "u": 1.35,
+          "v": 1505.15,
+          "label": "Parement minéral gris du soubassement visible",
+          "evidenceIds": [
+            "C007",
+            "C008",
+            "C051",
+            "YCOOR-N014"
+          ],
+          "width": 2.5,
+          "height": 3.2,
+          "color": "#a6aaa0",
+          "depth": 0.018,
+          "offset": 0.014
+        },
+        {
+          "id": "2329f-west-lower-balcony",
+          "template": "narrow-timber-balcony",
+          "u": 1.35,
+          "v": 1507.45,
+          "label": "Petit retour de balcon · bois grisé et dalle claire",
+          "evidenceIds": [
+            "C007",
+            "C008",
+            "C051",
+            "YCOOR-N014"
+          ],
+          "width": 2.5,
+          "height": 1.0,
+          "depth": 0.65,
+          "color": "#a3a093",
+          "rails": [
+            {
+              "u": 0,
+              "v": 0.43,
+              "width": 2.5,
+              "height": 0.09,
+              "depth": 0.075,
+              "offset": 0.56,
+              "color": "#876650"
+            },
+            {
+              "u": 0,
+              "v": -0.42,
+              "width": 2.5,
+              "height": 0.08,
+              "depth": 0.075,
+              "offset": 0.56,
+              "color": "#817d70"
+            },
+            {
+              "u": -1.15,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -0.8625,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -0.575,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -0.2875,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 0.0,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 0.2875,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 0.575,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 0.8625,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 1.15,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            }
+          ],
+          "floor": {
+            "height": 0.15,
+            "color": "#cbc8b6"
+          }
+        },
+        {
+          "id": "2329f-west-middle-balcony",
+          "template": "narrow-timber-balcony",
+          "u": 1.35,
+          "v": 1510.25,
+          "label": "Petit retour de balcon · bois grisé et dalle claire",
+          "evidenceIds": [
+            "C007",
+            "C008",
+            "C051",
+            "YCOOR-N014"
+          ],
+          "width": 2.5,
+          "height": 1.0,
+          "depth": 0.65,
+          "color": "#a3a093",
+          "rails": [
+            {
+              "u": 0,
+              "v": 0.43,
+              "width": 2.5,
+              "height": 0.09,
+              "depth": 0.075,
+              "offset": 0.56,
+              "color": "#876650"
+            },
+            {
+              "u": 0,
+              "v": -0.42,
+              "width": 2.5,
+              "height": 0.08,
+              "depth": 0.075,
+              "offset": 0.56,
+              "color": "#817d70"
+            },
+            {
+              "u": -1.15,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -0.8625,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -0.575,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -0.2875,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 0.0,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 0.2875,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 0.575,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 0.8625,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 1.15,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            }
+          ],
+          "floor": {
+            "height": 0.15,
+            "color": "#cbc8b6"
+          }
+        },
+        {
+          "id": "2329f-west-upper-balcony",
+          "template": "narrow-timber-balcony",
+          "u": 1.35,
+          "v": 1513.05,
+          "label": "Petit retour de balcon · bois grisé et dalle claire",
+          "evidenceIds": [
+            "C007",
+            "C008",
+            "C051",
+            "YCOOR-N014"
+          ],
+          "width": 2.5,
+          "height": 1.0,
+          "depth": 0.65,
+          "color": "#a3a093",
+          "rails": [
+            {
+              "u": 0,
+              "v": 0.43,
+              "width": 2.5,
+              "height": 0.09,
+              "depth": 0.075,
+              "offset": 0.56,
+              "color": "#876650"
+            },
+            {
+              "u": 0,
+              "v": -0.42,
+              "width": 2.5,
+              "height": 0.08,
+              "depth": 0.075,
+              "offset": 0.56,
+              "color": "#817d70"
+            },
+            {
+              "u": -1.15,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -0.8625,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -0.575,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -0.2875,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 0.0,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 0.2875,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 0.575,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 0.8625,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 1.15,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            }
+          ],
+          "floor": {
+            "height": 0.15,
+            "color": "#cbc8b6"
+          }
+        },
+        {
+          "id": "2329f-west-middle-red-shutter",
+          "kind": "shutter",
+          "u": 1.35,
+          "v": 1510.88,
+          "width": 1.0,
+          "height": 1.65,
+          "color": "#9e5147",
+          "label": "Volet rouge opaque visible au retour médian",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C007",
+            "C008",
+            "C051",
+            "YCOOR-N014"
+          ]
+        },
+        {
+          "id": "2329f-west-upper-red-shutter",
+          "kind": "shutter",
+          "u": 1.35,
+          "v": 1513.68,
+          "width": 1.0,
+          "height": 1.55,
+          "color": "#9e5147",
+          "label": "Volet rouge opaque visible au retour supérieur",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C007",
+            "C008",
+            "C051",
+            "YCOOR-N014"
+          ]
+        },
+        {
+          "id": "2329f-west-ground-small-window",
+          "template": "small-timber-ground-window",
+          "u": 1.25,
+          "v": 1505.35,
+          "width": 0.68,
+          "height": 1.05,
+          "color": "#46524d",
+          "frame": {
+            "width": 0.07,
+            "color": "#9c9e91"
+          },
+          "label": "Petite baie sombre du soubassement occidental · panneau routier proche",
+          "evidenceIds": [
+            "YCOOR-N014",
+            "C007"
+          ]
+        }
+      ]
+    },
+    {
+      "changeId": "2329F-FACADE-003",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:003",
+      "sourceFaceId": "2329F:wall:003",
+      "status": "ready",
+      "title": "2329F · front oblique Rawyl",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "C012",
+        "C051",
+        "YCOOR-N014"
+      ],
+      "observationIds": [
+        "OBS-2329F-003-2024"
+      ],
+      "reason": "Étendre l’apparence observée sur la largeur visible et les trois étages du front, en conservant séparément les volets opaques et les baies effectivement lisibles.",
+      "confidence": "medium",
+      "approximate": true,
+      "details": [
+        {
+          "id": "2329f-nw-plaster-upper",
+          "kind": "panel",
+          "u": -5.0,
+          "v": 1511.06,
+          "width": 9.8,
+          "height": 8.28,
+          "color": "#dcd9ca",
+          "label": "Enduit clair des trois étages du front oblique",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "C012",
+            "C051",
+            "YCOOR-N014"
+          ]
+        },
+        {
+          "id": "2329f-nw-ground-mineral",
+          "template": "stone-entry-pier",
+          "u": -5.0,
+          "v": 1505.2,
+          "label": "Soubassement et encadrement minéraux du front oblique",
+          "evidenceIds": [
+            "C012",
+            "C051",
+            "YCOOR-N014"
+          ],
+          "width": 9.8,
+          "height": 3.3,
+          "color": "#b3b5a9",
+          "depth": 0.018,
+          "offset": 0.014
+        },
+        {
+          "id": "2329f-nw-ground-left-jamb",
+          "template": "light-entry-jamb",
+          "u": -9.45,
+          "v": 1505.2,
+          "label": "Montant clair gauche de la devanture",
+          "evidenceIds": [
+            "C012",
+            "C051",
+            "YCOOR-N014"
+          ],
+          "width": 0.16,
+          "height": 2.7
+        },
+        {
+          "id": "2329f-nw-ground-right-jamb",
+          "template": "light-entry-jamb",
+          "u": -0.55,
+          "v": 1505.2,
+          "label": "Montant clair droit de la devanture",
+          "evidenceIds": [
+            "C012",
+            "C051",
+            "YCOOR-N014"
+          ],
+          "width": 0.16,
+          "height": 2.7
+        },
+        {
+          "id": "2329f-nw-ground-head",
+          "kind": "beam",
+          "u": -5.0,
+          "v": 1506.6,
+          "width": 9.6,
+          "height": 0.22,
+          "color": "#d3d0bf",
+          "label": "Bandeau clair sous le premier balcon",
+          "depth": 0.04,
+          "offset": 0.03,
+          "evidenceIds": [
+            "C012",
+            "C051",
+            "YCOOR-N014"
+          ]
+        },
+        {
+          "id": "2329f-nw-lower-balcony",
+          "template": "narrow-timber-balcony",
+          "u": -5.0,
+          "v": 1507.45,
+          "label": "Balcon du front oblique · garde-corps en bois patiné",
+          "evidenceIds": [
+            "C012",
+            "C051",
+            "YCOOR-N014"
+          ],
+          "width": 9.8,
+          "height": 1.0,
+          "depth": 0.65,
+          "color": "#a3a093",
+          "rails": [
+            {
+              "u": 0,
+              "v": 0.43,
+              "width": 9.8,
+              "height": 0.09,
+              "depth": 0.075,
+              "offset": 0.56,
+              "color": "#876650"
+            },
+            {
+              "u": 0,
+              "v": -0.42,
+              "width": 9.8,
+              "height": 0.08,
+              "depth": 0.075,
+              "offset": 0.56,
+              "color": "#817d70"
+            },
+            {
+              "u": -4.8,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -4.4903,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -4.1806,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -3.871,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -3.5613,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -3.2516,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -2.9419,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -2.6323,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -2.3226,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -2.0129,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -1.7032,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -1.3935,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -1.0839,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -0.7742,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -0.4645,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -0.1548,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 0.1548,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 0.4645,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 0.7742,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 1.0839,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 1.3935,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 1.7032,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 2.0129,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 2.3226,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 2.6323,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 2.9419,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 3.2516,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 3.5613,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 3.871,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 4.1806,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 4.4903,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 4.8,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            }
+          ],
+          "floor": {
+            "height": 0.15,
+            "color": "#cbc8b6"
+          }
+        },
+        {
+          "id": "2329f-nw-lower-red-shutter",
+          "kind": "shutter",
+          "u": -8.3,
+          "v": 1508.17,
+          "width": 1.05,
+          "height": 1.65,
+          "color": "#975044",
+          "label": "Plage de volet rouge visible · vitrage caché inconnu",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C012",
+            "C051",
+            "YCOOR-N014"
+          ]
+        },
+        {
+          "id": "2329f-nw-lower-visible-recess",
+          "template": "recess-glazing",
+          "u": -6.1,
+          "v": 1508.17,
+          "label": "Baie sombre lisible derrière le garde-corps · dimensions estimées",
+          "evidenceIds": [
+            "C012",
+            "C051",
+            "YCOOR-N014"
+          ],
+          "width": 1.2,
+          "height": 1.9,
+          "color": "#4d5655",
+          "frame": {
+            "width": 0.09,
+            "color": "#d2d2c2"
+          }
+        },
+        {
+          "id": "2329f-nw-middle-balcony",
+          "template": "narrow-timber-balcony",
+          "u": -5.0,
+          "v": 1510.25,
+          "label": "Balcon du front oblique · garde-corps en bois patiné",
+          "evidenceIds": [
+            "C012",
+            "C051",
+            "YCOOR-N014"
+          ],
+          "width": 9.8,
+          "height": 1.0,
+          "depth": 0.65,
+          "color": "#a3a093",
+          "rails": [
+            {
+              "u": 0,
+              "v": 0.43,
+              "width": 9.8,
+              "height": 0.09,
+              "depth": 0.075,
+              "offset": 0.56,
+              "color": "#876650"
+            },
+            {
+              "u": 0,
+              "v": -0.42,
+              "width": 9.8,
+              "height": 0.08,
+              "depth": 0.075,
+              "offset": 0.56,
+              "color": "#817d70"
+            },
+            {
+              "u": -4.8,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -4.4903,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -4.1806,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -3.871,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -3.5613,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -3.2516,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -2.9419,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -2.6323,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -2.3226,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -2.0129,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -1.7032,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -1.3935,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -1.0839,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -0.7742,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -0.4645,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -0.1548,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 0.1548,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 0.4645,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 0.7742,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 1.0839,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 1.3935,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 1.7032,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 2.0129,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 2.3226,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 2.6323,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 2.9419,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 3.2516,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 3.5613,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 3.871,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 4.1806,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 4.4903,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 4.8,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            }
+          ],
+          "floor": {
+            "height": 0.15,
+            "color": "#cbc8b6"
+          }
+        },
+        {
+          "id": "2329f-nw-middle-red-shutter",
+          "kind": "shutter",
+          "u": -8.3,
+          "v": 1510.97,
+          "width": 1.05,
+          "height": 1.65,
+          "color": "#975044",
+          "label": "Plage de volet rouge visible · vitrage caché inconnu",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C012",
+            "C051",
+            "YCOOR-N014"
+          ]
+        },
+        {
+          "id": "2329f-nw-middle-visible-recess",
+          "template": "recess-glazing",
+          "u": -6.1,
+          "v": 1510.97,
+          "label": "Baie sombre lisible derrière le garde-corps · dimensions estimées",
+          "evidenceIds": [
+            "C012",
+            "C051",
+            "YCOOR-N014"
+          ],
+          "width": 1.2,
+          "height": 1.9,
+          "color": "#4d5655",
+          "frame": {
+            "width": 0.09,
+            "color": "#d2d2c2"
+          }
+        },
+        {
+          "id": "2329f-nw-upper-balcony",
+          "template": "narrow-timber-balcony",
+          "u": -5.0,
+          "v": 1513.05,
+          "label": "Balcon du front oblique · garde-corps en bois patiné",
+          "evidenceIds": [
+            "C012",
+            "C051",
+            "YCOOR-N014"
+          ],
+          "width": 9.8,
+          "height": 1.0,
+          "depth": 0.65,
+          "color": "#a3a093",
+          "rails": [
+            {
+              "u": 0,
+              "v": 0.43,
+              "width": 9.8,
+              "height": 0.09,
+              "depth": 0.075,
+              "offset": 0.56,
+              "color": "#876650"
+            },
+            {
+              "u": 0,
+              "v": -0.42,
+              "width": 9.8,
+              "height": 0.08,
+              "depth": 0.075,
+              "offset": 0.56,
+              "color": "#817d70"
+            },
+            {
+              "u": -4.8,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -4.4903,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -4.1806,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -3.871,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -3.5613,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -3.2516,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -2.9419,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -2.6323,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -2.3226,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -2.0129,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -1.7032,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -1.3935,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -1.0839,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": -0.7742,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -0.4645,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": -0.1548,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 0.1548,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 0.4645,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 0.7742,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 1.0839,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 1.3935,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 1.7032,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 2.0129,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 2.3226,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 2.6323,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 2.9419,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 3.2516,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 3.5613,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 3.871,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 4.1806,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            },
+            {
+              "u": 4.4903,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#898d83"
+            },
+            {
+              "u": 4.8,
+              "v": 0,
+              "width": 0.065,
+              "height": 0.85,
+              "depth": 0.075,
+              "offset": 0.57,
+              "color": "#a3a093"
+            }
+          ],
+          "floor": {
+            "height": 0.15,
+            "color": "#cbc8b6"
+          }
+        },
+        {
+          "id": "2329f-nw-upper-red-shutter",
+          "kind": "shutter",
+          "u": -8.3,
+          "v": 1513.77,
+          "width": 1.05,
+          "height": 1.65,
+          "color": "#975044",
+          "label": "Plage de volet rouge visible · vitrage caché inconnu",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "C012",
+            "C051",
+            "YCOOR-N014"
+          ]
+        },
+        {
+          "id": "2329f-nw-upper-visible-recess",
+          "template": "recess-glazing",
+          "u": -6.1,
+          "v": 1513.77,
+          "label": "Baie sombre lisible derrière le garde-corps · dimensions estimées",
+          "evidenceIds": [
+            "C012",
+            "C051",
+            "YCOOR-N014"
+          ],
+          "width": 1.2,
+          "height": 1.9,
+          "color": "#4d5655",
+          "frame": {
+            "width": 0.09,
+            "color": "#d2d2c2"
+          }
+        },
+        {
+          "id": "2329f-nw-roof-fascia",
+          "kind": "beam",
+          "u": -5.0,
+          "v": 1515.08,
+          "width": 9.8,
+          "height": 0.24,
+          "color": "#c4c2b2",
+          "label": "Rive horizontale de la couverture plate du front",
+          "depth": 0.04,
+          "offset": 0.03,
+          "evidenceIds": [
+            "C012",
+            "C051",
+            "YCOOR-N014"
+          ]
+        },
+        {
+          "id": "2329f-nw-lower-right-red-shutter",
+          "kind": "shutter",
+          "u": -3.6,
+          "v": 1508.17,
+          "width": 1.15,
+          "height": 1.65,
+          "color": "#975044",
+          "label": "Second volet rouge opaque visible au même étage",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N014",
+            "C012"
+          ]
+        },
+        {
+          "id": "2329f-nw-middle-right-red-shutter",
+          "kind": "shutter",
+          "u": -3.6,
+          "v": 1510.97,
+          "width": 1.15,
+          "height": 1.65,
+          "color": "#975044",
+          "label": "Second volet rouge opaque visible au même étage",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N014",
+            "C012"
+          ]
+        },
+        {
+          "id": "2329f-nw-upper-right-red-shutter",
+          "kind": "shutter",
+          "u": -3.6,
+          "v": 1513.77,
+          "width": 1.15,
+          "height": 1.65,
+          "color": "#975044",
+          "label": "Second volet rouge opaque visible au même étage",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N014",
+            "C012"
+          ]
+        },
+        {
+          "id": "2329f-nw-ground-left-display",
+          "template": "ground-floor-glazing",
+          "kind": "window",
+          "u": -8.1,
+          "v": 1505.2,
+          "width": 2.6,
+          "height": 2.45,
+          "color": "#50656b",
+          "label": "Vitrine gauche de la devanture",
+          "frame": {
+            "width": 0.1,
+            "color": "#d8dacf"
+          },
+          "evidenceIds": [
+            "YCOOR-N014",
+            "C012"
+          ]
+        },
+        {
+          "id": "2329f-nw-ground-entry",
+          "kind": "door",
+          "u": -5.7,
+          "v": 1505.2,
+          "width": 1.75,
+          "height": 2.45,
+          "color": "#50656b",
+          "label": "Entrée vitrée centrale à cadre sombre · vantaux groupés",
+          "evidenceIds": [
+            "YCOOR-N014",
+            "C012"
+          ],
+          "depth": 0.02,
+          "offset": 0.035
+        },
+        {
+          "id": "2329f-nw-ground-right-display",
+          "template": "ground-floor-glazing",
+          "kind": "window",
+          "u": -2.85,
+          "v": 1505.2,
+          "width": 3.6,
+          "height": 2.45,
+          "color": "#50656b",
+          "label": "Vitrine droite de la devanture",
+          "frame": {
+            "width": 0.1,
+            "color": "#d8dacf"
+          },
+          "evidenceIds": [
+            "YCOOR-N014",
+            "C012"
+          ]
+        },
+        {
+          "id": "2329f-nw-entry-left-jamb",
+          "template": "light-entry-jamb",
+          "u": -6.65,
+          "v": 1505.2,
+          "width": 0.13,
+          "height": 2.65,
+          "label": "Montant clair de l’entrée vitrée",
+          "evidenceIds": [
+            "YCOOR-N014"
+          ]
+        },
+        {
+          "id": "2329f-nw-entry-right-jamb",
+          "template": "light-entry-jamb",
+          "u": -4.75,
+          "v": 1505.2,
+          "width": 0.13,
+          "height": 2.65,
+          "label": "Montant clair de l’entrée vitrée",
+          "evidenceIds": [
+            "YCOOR-N014"
+          ]
+        },
+        {
+          "id": "2329f-nw-entry-step",
+          "kind": "trim",
+          "u": -5.7,
+          "v": 1503.87,
+          "width": 2.0,
+          "height": 0.12,
+          "depth": 0.035,
+          "offset": 0.035,
+          "color": "#b8b7a9",
+          "label": "Seuil et première marche visibles devant l’entrée",
+          "evidenceIds": [
+            "YCOOR-N014"
+          ]
+        }
+      ]
+    },
+    {
+      "changeId": "2329F-UNRESOLVED-001",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:001",
+      "sourceFaceId": "2329F:wall:001",
+      "status": "unresolved",
+      "title": "2329F · plan 001 à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observationIds": [
+        "OBS-2329F-001-2024"
+      ],
+      "reason": "Bande haute occidentale, au-dessus de 1A20B : le cadrage et l’interface masquent une attribution certaine des matériaux et du raccord de toiture. Aucune ouverture propre à cette bande n’est établie.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "2329F-UNRESOLVED-004",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:004",
+      "sourceFaceId": "2329F:wall:004",
+      "status": "unresolved",
+      "title": "2329F · plan 004 à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observationIds": [
+        "OBS-2329F-004-2024"
+      ],
+      "reason": "Étroite bande oblique au raccord avec 2997D : la séparation du parement du voisin et de ce plan de 0,80 m n’est pas vérifiable dans les vues disponibles.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "2329F-UNRESOLVED-005",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:005",
+      "sourceFaceId": "2329F:wall:005",
+      "status": "unresolved",
+      "title": "2329F · plan 005 à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observationIds": [
+        "OBS-2329F-005-2024"
+      ],
+      "reason": "Retour nord de 0,35 m au raccord avec le chalet : plan étroit non isolable dans les photos ; aucune ouverture n’est attribuée.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "2329F-UNRESOLVED-006",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:006",
+      "sourceFaceId": "2329F:wall:006",
+      "status": "unresolved",
+      "title": "2329F · plan 006 à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observationIds": [
+        "OBS-2329F-006-2024"
+      ],
+      "reason": "Plan sud quasi dégénéré de 2 mm, au raccord des volumes sources : aucune façade physique observable indépendante ne peut être attribuée à cette bande.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "2329F-UNRESOLVED-007",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:007",
+      "sourceFaceId": "2329F:wall:007",
+      "status": "unresolved",
+      "title": "2329F · plan 007 à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observationIds": [
+        "OBS-2329F-007-2024"
+      ],
+      "reason": "Bande haute sud de 0,18 m, en retrait : aucune vue attribuable de ce petit raccord derrière le front n’est disponible.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "2329F-UNRESOLVED-008",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:008",
+      "sourceFaceId": "2329F:wall:008",
+      "status": "unresolved",
+      "title": "2329F · plan 008 à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observationIds": [
+        "OBS-2329F-008-2024"
+      ],
+      "reason": "Bande haute sud de 0,29 m : le raccord au toit voisin reste caché ou trop petit dans les vues publiques.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "2329F-UNRESOLVED-009",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:009",
+      "sourceFaceId": "2329F:wall:009",
+      "status": "unresolved",
+      "title": "2329F · plan 009 à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observationIds": [
+        "OBS-2329F-009-2024"
+      ],
+      "reason": "Bande haute sud de 8,18 m, au-dessus de 1A20B : les vues depuis la rue documentent le front et ses balcons mais pas ce revers de toiture.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "2329F-UNRESOLVED-010",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:010",
+      "sourceFaceId": "2329F:wall:010",
+      "status": "unresolved",
+      "title": "2329F · plan 010 à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observationIds": [
+        "OBS-2329F-010-2024"
+      ],
+      "reason": "Bande haute sud de 6,45 m sur le revers : aucune photo disponible ne montre ce plan avec une attribution fiable.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "2329F-UNRESOLVED-011",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:011",
+      "sourceFaceId": "2329F:wall:011",
+      "status": "unresolved",
+      "title": "2329F · plan 011 à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observationIds": [
+        "OBS-2329F-011-2024"
+      ],
+      "reason": "Retour nord-est de 0,12 m, à la jonction des volumes : plan non isolable photographiquement, sans ouverture déduite.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "2329F-UNRESOLVED-012",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:012",
+      "sourceFaceId": "2329F:wall:012",
+      "status": "unresolved",
+      "title": "2329F · plan 012 à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observationIds": [
+        "OBS-2329F-012-2024"
+      ],
+      "reason": "Retour sud-est de 0,22 m, proche du volume mitoyen : aucune surface indépendante lisible n’est attestée.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "2329F-UNRESOLVED-013",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:013",
+      "sourceFaceId": "2329F:wall:013",
+      "status": "unresolved",
+      "title": "2329F · plan 013 à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observationIds": [
+        "OBS-2329F-013-2024"
+      ],
+      "reason": "Bande haute sud-est de moins de 5 cm : aucune façade physique indépendante lisible dans les captures.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "2329F-UNRESOLVED-014",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:014",
+      "sourceFaceId": "2329F:wall:014",
+      "status": "unresolved",
+      "title": "2329F · plan 014 à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observationIds": [
+        "OBS-2329F-014-2024"
+      ],
+      "reason": "Plan sud-est de 3,06 m sur le revers du coin : les vues de rue ne montrent pas ses ouvertures. Une vue de l’arrière est nécessaire.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "2329F-UNRESOLVED-015",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:015",
+      "sourceFaceId": "2329F:wall:015",
+      "status": "unresolved",
+      "title": "2329F · plan 015 à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observationIds": [
+        "OBS-2329F-015-2024"
+      ],
+      "reason": "Retour nord-est de 1,89 m au raccord avec 2997D : partie masquée ou mitoyenne dans les vues disponibles ; ne pas prolonger les fenêtres du front.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "2329F-UNRESOLVED-016",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:016",
+      "sourceFaceId": "2329F:wall:016",
+      "status": "unresolved",
+      "title": "2329F · plan 016 à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observationIds": [
+        "OBS-2329F-016-2024"
+      ],
+      "reason": "Bande haute est de 1,14 m, en retrait de la toiture : aucune vue attribuable ne justifie un détail.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "2329F-UNRESOLVED-017",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:017",
+      "sourceFaceId": "2329F:wall:017",
+      "status": "unresolved",
+      "title": "2329F · plan 017 à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observationIds": [
+        "OBS-2329F-017-2024"
+      ],
+      "reason": "Bande haute est de 0,79 m : le revers reste non documenté ; aucune fenêtre n’est supposée.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "2329F-UNRESOLVED-018",
+      "buildingId": "2329F",
+      "faceId": "2329F:wall:018",
+      "sourceFaceId": "2329F:wall:018",
+      "status": "unresolved",
+      "title": "2329F · plan 018 à documenter",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "C008",
+        "C012",
+        "C051"
+      ],
+      "observationIds": [
+        "OBS-2329F-018-2024"
+      ],
+      "reason": "Bande haute est de 2,06 m au décrochement de toiture : le volume source est conservé et le détail attend une vue lisible.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    }
+  ]
 }

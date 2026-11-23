@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "revision": "v1-56d754ef",
+  "revision": "v1-c910186f",
   "scope": "Source wall planes of the six DXF volumes intersecting the Ycoor pilot; visual groups are not cadastral identities.",
   "countMeaning": "Opening detail count means drawn window/door/shutter components, not unique physical windows. Full and remaining window totals are unknown. No face has a complete visual census.",
   "summary": {
     "buildingCount": 6,
     "faceCount": 43,
-    "partialFaceCount": 5,
-    "notReviewedFaceCount": 34,
+    "partialFaceCount": 9,
+    "notReviewedFaceCount": 30,
     "blockedFaceCount": 4,
-    "detailCount": 119,
-    "openingDetailCount": 35,
+    "detailCount": 220,
+    "openingDetailCount": 72,
     "completeFaceCount": 0,
     "totalWindowCount": null
   },
@@ -148,19 +148,26 @@
       "faceId": "1A20B:wall:001",
       "buildingId": "1A20B",
       "orientation": "Ouest",
-      "status": "not_reviewed",
-      "detailCount": 0,
-      "openingDetailCount": 0,
+      "status": "partial",
+      "detailCount": 28,
+      "openingDetailCount": 9,
       "totalWindowCount": null,
       "complete": false,
-      "changeIds": [],
-      "evidenceIds": [],
+      "changeIds": [
+        "B002-CENTRAL-WEST-2024-DETAILS"
+      ],
+      "evidenceIds": [
+        "YCOOR-N011",
+        "C007",
+        "C008",
+        "C005"
+      ],
       "candidateCaptureIds": [
         "C005",
         "C007",
         "C008"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Comparer les parties non traitées avec les photos et relever les ouvertures encore visibles.",
       "canFocus": true
     },
     {
@@ -179,7 +186,7 @@
         "C007",
         "C008"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Le plan sud source n’est qu’une bande haute entre 1512,902 et 1514,062 m, au-dessus du volume voisin 2355E. Les vues de rue ne distinguent aucune ouverture attribuable à cette bande ; une façade entière ou un balcon ne peut pas y être reporté.",
       "canFocus": true
     },
     {
@@ -198,7 +205,7 @@
         "C007",
         "C008"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "N015 (sphère Dany Gaule, juin 2022) montre clairement le front blanc et ses longues lignes de balcons bois derrière le groupe sombre du premier plan. C022 et les vues de juin 2024 C041/C042 recoupent le groupe B002 depuis l’étang. La séparation des pans de 1A20B et des volumes voisins reste masquée ou non calibrée : les limites photographiques ne suffisent pas à placer individuellement des baies sur le plan source est, long de 19,50 m. Aucun balcon ni vitrage n’est reporté sans cette attribution.",
       "canFocus": true
     },
     {
@@ -215,47 +222,66 @@
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Bande haute occidentale, au-dessus de 1A20B : le cadrage et l’interface masquent une attribution certaine des matériaux et du raccord de toiture. Aucune ouverture propre à cette bande n’est établie.",
       "canFocus": true
     },
     {
       "faceId": "2329F:wall:002",
       "buildingId": "2329F",
       "orientation": "Ouest",
-      "status": "not_reviewed",
-      "detailCount": 0,
-      "openingDetailCount": 0,
+      "status": "partial",
+      "detailCount": 8,
+      "openingDetailCount": 3,
       "totalWindowCount": null,
       "complete": false,
-      "changeIds": [],
-      "evidenceIds": [],
+      "changeIds": [
+        "2329F-FACADE-002"
+      ],
+      "evidenceIds": [
+        "C007",
+        "C008",
+        "C051",
+        "YCOOR-N014"
+      ],
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Comparer les parties non traitées avec les photos et relever les ouvertures encore visibles.",
       "canFocus": true
     },
     {
       "faceId": "2329F:wall:003",
       "buildingId": "2329F",
       "orientation": "Nord-Ouest",
-      "status": "not_reviewed",
-      "detailCount": 0,
-      "openingDetailCount": 0,
+      "status": "partial",
+      "detailCount": 24,
+      "openingDetailCount": 12,
       "totalWindowCount": null,
       "complete": false,
-      "changeIds": [],
-      "evidenceIds": [],
+      "changeIds": [
+        "2329F-FACADE-003"
+      ],
+      "evidenceIds": [
+        "C012",
+        "C051",
+        "YCOOR-N014"
+      ],
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Comparer les parties non traitées avec les photos et relever les ouvertures encore visibles.",
       "canFocus": true
     },
     {
@@ -272,9 +298,11 @@
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Étroite bande oblique au raccord avec 2997D : la séparation du parement du voisin et de ce plan de 0,80 m n’est pas vérifiable dans les vues disponibles.",
       "canFocus": true
     },
     {
@@ -291,9 +319,11 @@
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Retour nord de 0,35 m au raccord avec le chalet : plan étroit non isolable dans les photos ; aucune ouverture n’est attribuée.",
       "canFocus": true
     },
     {
@@ -310,9 +340,11 @@
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Plan sud quasi dégénéré de 2 mm, au raccord des volumes sources : aucune façade physique observable indépendante ne peut être attribuée à cette bande.",
       "canFocus": true
     },
     {
@@ -329,9 +361,11 @@
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Bande haute sud de 0,18 m, en retrait : aucune vue attribuable de ce petit raccord derrière le front n’est disponible.",
       "canFocus": true
     },
     {
@@ -348,9 +382,11 @@
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Bande haute sud de 0,29 m : le raccord au toit voisin reste caché ou trop petit dans les vues publiques.",
       "canFocus": true
     },
     {
@@ -367,9 +403,11 @@
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Bande haute sud de 8,18 m, au-dessus de 1A20B : les vues depuis la rue documentent le front et ses balcons mais pas ce revers de toiture.",
       "canFocus": true
     },
     {
@@ -386,9 +424,11 @@
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Bande haute sud de 6,45 m sur le revers : aucune photo disponible ne montre ce plan avec une attribution fiable.",
       "canFocus": true
     },
     {
@@ -405,9 +445,11 @@
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Retour nord-est de 0,12 m, à la jonction des volumes : plan non isolable photographiquement, sans ouverture déduite.",
       "canFocus": true
     },
     {
@@ -424,9 +466,11 @@
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Retour sud-est de 0,22 m, proche du volume mitoyen : aucune surface indépendante lisible n’est attestée.",
       "canFocus": true
     },
     {
@@ -443,9 +487,11 @@
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Bande haute sud-est de moins de 5 cm : aucune façade physique indépendante lisible dans les captures.",
       "canFocus": true
     },
     {
@@ -462,9 +508,11 @@
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Plan sud-est de 3,06 m sur le revers du coin : les vues de rue ne montrent pas ses ouvertures. Une vue de l’arrière est nécessaire.",
       "canFocus": true
     },
     {
@@ -481,9 +529,11 @@
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Retour nord-est de 1,89 m au raccord avec 2997D : partie masquée ou mitoyenne dans les vues disponibles ; ne pas prolonger les fenêtres du front.",
       "canFocus": true
     },
     {
@@ -500,9 +550,11 @@
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Bande haute est de 1,14 m, en retrait de la toiture : aucune vue attribuable ne justifie un détail.",
       "canFocus": true
     },
     {
@@ -519,9 +571,11 @@
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Bande haute est de 0,79 m : le revers reste non documenté ; aucune fenêtre n’est supposée.",
       "canFocus": true
     },
     {
@@ -538,9 +592,11 @@
       "candidateCaptureIds": [
         "C008",
         "C012",
-        "C051"
+        "C051",
+        "C007",
+        "YCOOR-N014"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Bande haute est de 2,06 m au décrochement de toiture : le volume source est conservé et le détail attend une vue lisible.",
       "canFocus": true
     },
     {
@@ -548,17 +604,20 @@
       "buildingId": "2355E",
       "orientation": "Ouest",
       "status": "partial",
-      "detailCount": 10,
-      "openingDetailCount": 3,
+      "detailCount": 18,
+      "openingDetailCount": 6,
       "totalWindowCount": null,
       "complete": false,
       "changeIds": [
-        "WEST-SHUTTERS"
+        "WEST-SHUTTERS",
+        "B002-SOUTHEND-WEST-2024-EXTENSION"
       ],
       "evidenceIds": [
         "C003",
         "C026",
-        "C027"
+        "C027",
+        "YCOOR-N011",
+        "YCOOR-N012"
       ],
       "candidateCaptureIds": [
         "C003",
@@ -572,19 +631,25 @@
       "faceId": "2355E:wall:002",
       "buildingId": "2355E",
       "orientation": "Sud",
-      "status": "not_reviewed",
-      "detailCount": 0,
-      "openingDetailCount": 0,
+      "status": "partial",
+      "detailCount": 9,
+      "openingDetailCount": 3,
       "totalWindowCount": null,
       "complete": false,
-      "changeIds": [],
-      "evidenceIds": [],
+      "changeIds": [
+        "B002-SOUTHEND-SOUTH-2024-DETAILS"
+      ],
+      "evidenceIds": [
+        "YCOOR-N012",
+        "C026",
+        "C027"
+      ],
       "candidateCaptureIds": [
         "C003",
         "C026",
         "C027"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Comparer les parties non traitées avec les photos et relever les ouvertures encore visibles.",
       "canFocus": true
     },
     {
@@ -603,7 +668,7 @@
         "C026",
         "C027"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "N015 (sphère Dany Gaule, juin 2022) recoupe le front du groupe B002 côté étang, mais les grands sapins cachent la partie sud correspondant au voisinage de 2355E. C022/C041/C042 ne dégagent pas une limite fiable entre ce petit volume et le front blanc central. Les ouvertures de 2355E:wall:003 restent donc non attribuables dans les captures examinées.",
       "canFocus": true
     },
     {
@@ -715,9 +780,10 @@
         "C012",
         "C055",
         "C053",
-        "C054"
+        "C054",
+        "YCOOR-N013"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Plan sud-ouest limitrophe des volumes voisins : la partie réellement exposée, notamment au-dessus de leur toiture, n’est pas identifiable avec assez de précision dans les vues Rawyl. Obtenir une vue attribuable du retour avant de placer des ouvertures.",
       "canFocus": true
     },
     {
@@ -725,12 +791,13 @@
       "buildingId": "2997D",
       "orientation": "Nord-Ouest",
       "status": "partial",
-      "detailCount": 19,
-      "openingDetailCount": 6,
+      "detailCount": 43,
+      "openingDetailCount": 13,
       "totalWindowCount": null,
       "complete": false,
       "changeIds": [
-        "RAWYL-FACADE-PILOT"
+        "RAWYL-FACADE-PILOT",
+        "RAWYL-RIGHT-FRONTAGE-2024"
       ],
       "evidenceIds": [
         "C055",
@@ -738,7 +805,8 @@
         "C011",
         "C012",
         "C053",
-        "C054"
+        "C054",
+        "YCOOR-N013"
       ],
       "candidateCaptureIds": [
         "C010",
@@ -746,7 +814,8 @@
         "C012",
         "C055",
         "C053",
-        "C054"
+        "C054",
+        "YCOOR-N013"
       ],
       "nextAction": "Comparer les parties non traitées avec les photos et relever les ouvertures encore visibles.",
       "canFocus": true
@@ -768,9 +837,10 @@
         "C012",
         "C055",
         "C053",
-        "C054"
+        "C054",
+        "YCOOR-N013"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Petit décroché nord-ouest à l’extrémité du front : les vues obliques disponibles ne distinguent pas assez sûrement ce plan de la grande face 002. Obtenir une vue rapprochée du raccord avant d’y attribuer des détails.",
       "canFocus": true
     },
     {
@@ -790,9 +860,10 @@
         "C012",
         "C055",
         "C053",
-        "C054"
+        "C054",
+        "YCOOR-N013"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Arrière sud-est non documenté par les vues de la rue du Rawyl utilisées ici. Obtenir une photographie attribuable de ce côté ; aucune ouverture cachée n’est extrapolée depuis le front.",
       "canFocus": true
     },
     {
@@ -812,9 +883,10 @@
         "C012",
         "C055",
         "C053",
-        "C054"
+        "C054",
+        "YCOOR-N013"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Retour nord-est non documenté de manière attribuable dans les captures Rawyl retenues. Obtenir une vue de ce côté et confirmer ses limites avant de placer des ouvertures.",
       "canFocus": true
     },
     {
@@ -866,7 +938,7 @@
         "C029",
         "C030"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Bande supérieure en retrait au-dessus des balcons ouest ; bord du toit et protection temporaire masquent le plan. Aucun nombre de fenêtres ne peut être établi.",
       "canFocus": true
     },
     {
@@ -885,7 +957,7 @@
         "C029",
         "C030"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Petit retour supérieur nord en retrait. Le bord de toiture masque la surface dans la vue du passage ; la finition et les ouvertures restent non vérifiées.",
       "canFocus": true
     },
     {
@@ -954,7 +1026,7 @@
         "C029",
         "C030"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Petit retour supérieur sud en retrait, au-dessus des trois balcons. Surface insuffisamment dégagée pour placer des ouvertures.",
       "canFocus": true
     },
     {
@@ -973,7 +1045,7 @@
         "C029",
         "C030"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Biseau source de seulement 0,60 m au coin sud-est ; aucune image ne permet d’y attribuer une ouverture indépendante. Ce plan CAD ne constitue pas une façade physique recensée.",
       "canFocus": true
     },
     {
@@ -992,7 +1064,7 @@
         "C029",
         "C030"
       ],
-      "nextAction": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures.",
+      "nextAction": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures. Le contrôle côté jardin YCOOR-N015 ne dégage pas ces murs.",
       "canFocus": true
     },
     {
@@ -1011,7 +1083,7 @@
         "C029",
         "C030"
       ],
-      "nextAction": "Attribuer des photos à cette face, puis relever uniquement les ouvertures visibles.",
+      "nextAction": "Bande haute arrière en retrait ; arbres, distance et bord de toit empêchent de lire le plan. Ne pas reproduire les fenêtres des autres côtés.",
       "canFocus": true
     },
     {
@@ -1030,7 +1102,7 @@
         "C029",
         "C030"
       ],
-      "nextAction": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures.",
+      "nextAction": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures. Le contrôle côté jardin YCOOR-N015 ne dégage pas ces murs.",
       "canFocus": true
     }
   ]

@@ -580,5 +580,449 @@
     "kind": "trim",
     "offset": 0.035,
     "width": 4.1
+  },
+  "b002-central-west-balcony-lower-style": {
+    "color": "#8c8e84",
+    "depth": 0.84,
+    "floor": {
+      "color": "#bcb9a5",
+      "height": 0.18
+    },
+    "height": 1.05,
+    "kind": "balcony",
+    "rails": [
+      {
+        "color": "#8f634a",
+        "depth": 0.08,
+        "height": 0.08,
+        "offset": 0.71,
+        "u": 0,
+        "v": 0.44,
+        "width": 20.35
+      },
+      {
+        "color": "#8b8e83",
+        "depth": 0.08,
+        "height": 0.09,
+        "offset": 0.71,
+        "u": 0,
+        "v": -0.4,
+        "width": 20.35
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -9.361,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -7.733,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -6.105,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -4.477,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -2.849,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -1.221,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 0.407,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 2.035,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 3.663,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 5.291,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 6.919,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 8.547,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 9.361,
+        "v": 0,
+        "width": 0.055
+      }
+    ],
+    "width": 20.35
+  },
+  "b002-southend-west-balcony-lower-style": {
+    "color": "#8c8e84",
+    "depth": 0.84,
+    "floor": {
+      "color": "#bcb9a5",
+      "height": 0.18
+    },
+    "height": 1.05,
+    "kind": "balcony",
+    "rails": [
+      {
+        "color": "#8f634a",
+        "depth": 0.08,
+        "height": 0.08,
+        "offset": 0.71,
+        "u": 0,
+        "v": 0.44,
+        "width": 10.85
+      },
+      {
+        "color": "#8b8e83",
+        "depth": 0.08,
+        "height": 0.09,
+        "offset": 0.71,
+        "u": 0,
+        "v": -0.4,
+        "width": 10.85
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -4.991,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -4.123,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -3.255,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -2.387,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -1.519,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -0.651,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 0.217,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 1.085,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 1.953,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 2.821,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 3.689,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 4.557,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 4.991,
+        "v": 0,
+        "width": 0.055
+      }
+    ],
+    "width": 10.85
+  },
+  "b002-southend-south-balcony-lowest-style": {
+    "color": "#8c8e84",
+    "depth": 0.84,
+    "floor": {
+      "color": "#bcb9a5",
+      "height": 0.18
+    },
+    "height": 1.05,
+    "kind": "balcony",
+    "rails": [
+      {
+        "color": "#8f634a",
+        "depth": 0.08,
+        "height": 0.08,
+        "offset": 0.71,
+        "u": 0,
+        "v": 0.44,
+        "width": 14.65
+      },
+      {
+        "color": "#8b8e83",
+        "depth": 0.08,
+        "height": 0.09,
+        "offset": 0.71,
+        "u": 0,
+        "v": -0.4,
+        "width": 14.65
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -6.739,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -5.567,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -4.395,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -3.223,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -2.051,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": -0.879,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 0.293,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 1.465,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 2.637,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 3.809,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 4.981,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 6.153,
+        "v": 0,
+        "width": 0.055
+      },
+      {
+        "color": "#8c8e84",
+        "depth": 0.065,
+        "height": 0.84,
+        "offset": 0.72,
+        "u": 6.739,
+        "v": 0,
+        "width": 0.055
+      }
+    ],
+    "width": 14.65
   }
 }

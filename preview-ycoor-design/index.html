@@ -63,8 +63,8 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:2px 
  <label for="design-facade">Façade à voir</label>
  <select id="design-facade" disabled><option>Aucune façade disponible</option></select>
  <button id="design-focus" type="button" disabled>Voir la façade choisie</button>
- <button id="design-building" type="button" disabled>Voir B003 en entier</button>
- <small style="display:block">B003 · ouest, nord et sud dessinés ; arrière à vérifier.</small>
+ <button id="design-building" type="button" disabled>Voir tout le carré</button>
+ <small style="display:block">Détails visibles documentés · côtés cachés encore à vérifier.</small>
  <div id="design-status" role="status" aria-live="polite">Lecture des six volumes DXF…</div>
  <small>Géométrie officielle · détails interprétés, dimensions approximatives.</small>
  <a href="../crans-montana-p06/" style="display:block;color:#174e78;margin-top:5px">Ouvrir la version stable ↗</a>
@@ -230,6 +230,7 @@ function focusDesignTarget({building,face,change}){
   target.set(face.origin[0]+face.u[0]*centreU,centreH-terrainDatum(),face.origin[2]+face.u[2]*centreU);
   state.angle=Math.atan2(face.normal[0],face.normal[2]);
   if(face.id==='2F7D6:wall:004')state.angle+=Math.PI/4; // See the north return past the adjacent volume.
+  if(face.id==='2355E:wall:002')state.angle-=Math.PI/4; // See the south return through the street-side gap.
   state.zoom=4.3;state.view='facade';
  }else{
   const bounds=building.vertices.reduce((a,[e,n,h])=>[Math.min(a[0],e),Math.min(a[1],n),Math.min(a[2],h),Math.max(a[3],e),Math.max(a[4],n),Math.max(a[5],h)],[Infinity,Infinity,Infinity,-Infinity,-Infinity,-Infinity]);
@@ -238,9 +239,13 @@ function focusDesignTarget({building,face,change}){
  }
  needsResize=true;
 }
-function focusB003Building(){
- const building=pilot?.local.buildings.find(item=>item.id==='2F7D6');
- if(building){focusDesignTarget({building});state.angle=-Math.PI/4;state.zoom=3.4;state.view='facade';needsResize=true;}
+function focusYcoorSquare(){
+ const vertices=pilot?.local.buildings.flatMap(building=>building.vertices)??[];
+ if(!vertices.length)return;
+ const bounds=vertices.reduce((a,[e,n,h])=>[Math.min(a[0],e),Math.min(a[1],n),Math.min(a[2],h),Math.max(a[3],e),Math.max(a[4],n),Math.max(a[5],h)],[Infinity,Infinity,Infinity,-Infinity,-Infinity,-Infinity]);
+ if(buildingMode!=='local'){buildingMode='local';syncRoofs();}
+ const x=(bounds[0]+bounds[3])/2-ORIGIN.e,z=ORIGIN.n-(bounds[1]+bounds[4])/2;
+ target.set(x,height(x,z)+6,z);state.angle=-Math.PI*2/3;state.zoom=1.45;state.view='overview';needsResize=true;
 }
 function syncDesignControls(){
  const enabled=Boolean(pilot?.designEnabled);
@@ -281,7 +286,7 @@ async function startDesignPilot(){
   const facades=pilot.evidence?.changes.filter(change=>change.status==='ready'&&pilot.local.faces.some(face=>face.id===change.faceId&&face.buildingId===change.buildingId&&face.facadeAllowed!==false&&!face.orientationAmbiguous))??[];
   $('design-facade').replaceChildren(...facades.map(change=>new Option(change.title||change.changeId,change.changeId)));
   $('design-facade').value=facades.at(-1)?.changeId??'';
-  syncRoofs();syncDesignControls();focusB003Building();
+  syncRoofs();syncDesignControls();focusYcoorSquare();
  }catch(error){
   console.warn('Pilote DXF',error);
   $('design-status').textContent='Volumes locaux indisponibles. Recharger la page pour réessayer ; le flux officiel reste accessible avec le bouton DXF.';
@@ -289,7 +294,7 @@ async function startDesignPilot(){
  }finally{pilotLoading=false;}
 }
 $('design-coverage').onclick=()=>{pilot?.openCoverage();syncDesignControls();};
-$('design-building').onclick=focusB003Building;
+$('design-building').onclick=focusYcoorSquare;
 $('design-toggle').onclick=()=>{pilot?.setDesignEnabled(!pilot.designEnabled);syncDesignControls();};
 $('design-focus').onclick=()=>{
  if(buildingMode!=='local'){buildingMode='local';syncRoofs();}

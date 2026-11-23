@@ -113,7 +113,8 @@
       "captureIds": [
         "B003-N008",
         "B003-N009",
-        "B003-N010"
+        "B003-N010",
+        "YCOOR-N015"
       ],
       "observedAt": null,
       "confidence": "low",
@@ -121,7 +122,8 @@
       "limitations": [
         "N008 est un contrôle de visibilité de juin 2024, sans façade B003 lisible.",
         "N009/N010 sont des vues candidates de février 2019 ; leur cap de contributeur et leur attribution à B003 restent non vérifiés.",
-        "Aucune ouverture ni répétition de balcon n’est extrapolée depuis les autres côtés."
+        "Aucune ouverture ni répétition de balcon n’est extrapolée depuis les autres côtés.",
+        "Le contrôle YCOOR-N015, sphère de juin 2022, laisse B003 lointain derrière les arbres. Il ne permet pas de recenser les ouvertures ni de lever l’incertitude sur la sphère hivernale de 2019."
       ]
     },
     {
@@ -132,7 +134,8 @@
       "captureIds": [
         "B003-N008",
         "B003-N009",
-        "B003-N010"
+        "B003-N010",
+        "YCOOR-N015"
       ],
       "observedAt": null,
       "confidence": "low",
@@ -140,7 +143,83 @@
       "limitations": [
         "N008 est un contrôle de visibilité de juin 2024, sans façade B003 lisible.",
         "N009/N010 sont des vues candidates de février 2019 ; leur cap de contributeur et leur attribution à B003 restent non vérifiés.",
-        "Aucune ouverture ni répétition de balcon n’est extrapolée depuis les autres côtés."
+        "Aucune ouverture ni répétition de balcon n’est extrapolée depuis les autres côtés.",
+        "Le contrôle YCOOR-N015, sphère de juin 2022, laisse B003 lointain derrière les arbres. Il ne permet pas de recenser les ouvertures ni de lever l’incertitude sur la sphère hivernale de 2019."
+      ]
+    },
+    {
+      "observationId": "OBS-B003-UNVERIFIED-002",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:002",
+      "sourceId": "streetview",
+      "captureIds": [
+        "B003-N001"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "low",
+      "statement": "Bande supérieure en retrait au-dessus des balcons ouest ; bord du toit et protection temporaire masquent le plan. Aucun nombre de fenêtres ne peut être établi.",
+      "limitations": [
+        "Vérification de visibilité uniquement ; aucune ouverture ou absence d’ouverture n’est affirmée."
+      ]
+    },
+    {
+      "observationId": "OBS-B003-UNVERIFIED-003",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:003",
+      "sourceId": "streetview",
+      "captureIds": [
+        "B003-N005"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "low",
+      "statement": "Petit retour supérieur nord en retrait. Le bord de toiture masque la surface dans la vue du passage ; la finition et les ouvertures restent non vérifiées.",
+      "limitations": [
+        "Vérification de visibilité uniquement ; aucune ouverture ou absence d’ouverture n’est affirmée."
+      ]
+    },
+    {
+      "observationId": "OBS-B003-UNVERIFIED-006",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:006",
+      "sourceId": "streetview",
+      "captureIds": [
+        "B003-N007"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "low",
+      "statement": "Petit retour supérieur sud en retrait, au-dessus des trois balcons. Surface insuffisamment dégagée pour placer des ouvertures.",
+      "limitations": [
+        "Vérification de visibilité uniquement ; aucune ouverture ou absence d’ouverture n’est affirmée."
+      ]
+    },
+    {
+      "observationId": "OBS-B003-UNVERIFIED-007",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:007",
+      "sourceId": "streetview",
+      "captureIds": [
+        "B003-N008"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "low",
+      "statement": "Biseau source de seulement 0,60 m au coin sud-est ; aucune image ne permet d’y attribuer une ouverture indépendante. Ce plan CAD ne constitue pas une façade physique recensée.",
+      "limitations": [
+        "Vérification de visibilité uniquement ; aucune ouverture ou absence d’ouverture n’est affirmée."
+      ]
+    },
+    {
+      "observationId": "OBS-B003-UNVERIFIED-009",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:009",
+      "sourceId": "streetview",
+      "captureIds": [
+        "YCOOR-N015"
+      ],
+      "observedAt": "2022-06",
+      "confidence": "low",
+      "statement": "Bande haute arrière en retrait ; arbres, distance et bord de toit empêchent de lire le plan. Ne pas reproduire les fenêtres des autres côtés.",
+      "limitations": [
+        "Vérification de visibilité uniquement ; aucune ouverture ou absence d’ouverture n’est affirmée."
       ]
     }
   ],
@@ -1343,12 +1422,13 @@
       "evidenceIds": [
         "B003-N008",
         "B003-N009",
-        "B003-N010"
+        "B003-N010",
+        "YCOOR-N015"
       ],
       "observationIds": [
         "OBS-B003-REAR-008"
       ],
-      "reason": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures.",
+      "reason": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures. Le contrôle côté jardin YCOOR-N015 ne dégage pas ces murs.",
       "confidence": "low",
       "approximate": true,
       "details": []
@@ -1363,12 +1443,103 @@
       "evidenceIds": [
         "B003-N008",
         "B003-N009",
-        "B003-N010"
+        "B003-N010",
+        "YCOOR-N015"
       ],
       "observationIds": [
         "OBS-B003-REAR-010"
       ],
-      "reason": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures.",
+      "reason": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures. Le contrôle côté jardin YCOOR-N015 ne dégage pas ces murs.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "B003-UNVERIFIED-002",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:002",
+      "status": "unresolved",
+      "title": "B003 · Retrait haut ouest",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "B003-N001"
+      ],
+      "observationIds": [
+        "OBS-B003-UNVERIFIED-002"
+      ],
+      "reason": "Bande supérieure en retrait au-dessus des balcons ouest ; bord du toit et protection temporaire masquent le plan. Aucun nombre de fenêtres ne peut être établi.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "B003-UNVERIFIED-003",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:003",
+      "status": "unresolved",
+      "title": "B003 · Retrait haut nord",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "B003-N005"
+      ],
+      "observationIds": [
+        "OBS-B003-UNVERIFIED-003"
+      ],
+      "reason": "Petit retour supérieur nord en retrait. Le bord de toiture masque la surface dans la vue du passage ; la finition et les ouvertures restent non vérifiées.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "B003-UNVERIFIED-006",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:006",
+      "status": "unresolved",
+      "title": "B003 · Retrait haut sud",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "B003-N007"
+      ],
+      "observationIds": [
+        "OBS-B003-UNVERIFIED-006"
+      ],
+      "reason": "Petit retour supérieur sud en retrait, au-dessus des trois balcons. Surface insuffisamment dégagée pour placer des ouvertures.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "B003-UNVERIFIED-007",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:007",
+      "status": "unresolved",
+      "title": "B003 · Biseau sud-est",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "B003-N008"
+      ],
+      "observationIds": [
+        "OBS-B003-UNVERIFIED-007"
+      ],
+      "reason": "Biseau source de seulement 0,60 m au coin sud-est ; aucune image ne permet d’y attribuer une ouverture indépendante. Ce plan CAD ne constitue pas une façade physique recensée.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
+    },
+    {
+      "changeId": "B003-UNVERIFIED-009",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:009",
+      "status": "unresolved",
+      "title": "B003 · Retrait haut est",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "YCOOR-N015"
+      ],
+      "observationIds": [
+        "OBS-B003-UNVERIFIED-009"
+      ],
+      "reason": "Bande haute arrière en retrait ; arbres, distance et bord de toit empêchent de lire le plan. Ne pas reproduire les fenêtres des autres côtés.",
       "confidence": "low",
       "approximate": true,
       "details": []

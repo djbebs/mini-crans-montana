@@ -1,6 +1,10 @@
 # Compléter le petit secteur Ycoor
 
-La P0.6.7 dispose d’un inventaire des **six volumes et 43 plans de murs sources**. B002 regroupe plusieurs volumes CAD : ce n’est ni un décompte de bâtiments cadastraux, ni une promesse de 43 façades physiques indépendantes. Les cinq faces déjà traitées restent partielles, dont trois côtés de B003 ([état détaillé](b003-facades.md)). Le total de fenêtres et le nombre restant ne sont pas établis.
+La P0.6.7 dispose d’un inventaire des **six volumes et 43 plans de murs sources**. B002 regroupe plusieurs volumes CAD : ce n’est ni un décompte de bâtiments cadastraux, ni une promesse de 43 façades physiques indépendantes. Au 23 novembre 2026, **220 composants sont dessinés sur neuf plans partiels**, dont trois côtés de B003 ([état détaillé](b003-facades.md)). Le total de fenêtres et le nombre restant ne sont pas établis.
+
+Le lot du 23 novembre ajoute 101 composants : front Rawyl, deux faces du volume d’angle 2329F, face ouest centrale 1A20B et extrémité 2355E à l’ouest et au sud. Cinq nouvelles captures intégrales conservent URL, coordonnées/cap du visualiseur et date affichée (quatre vues de juin 2024, une sphère de juin 2022). Les 30 plans sans détails ont un motif d’attente ; les quatre plans de 26152 restent bloqués par la vérification du volume. Les côtés cachés, petits retraits hauts et contacts entre volumes ne reçoivent pas de fenêtres extrapolées.
+
+Les [15 captures complémentaires indexées](../../crans-montana-p06/assets/streetview-survey/2026-11-15/supplement-index.csv) et leur [schéma de positions de caméra](../../crans-montana-p06/assets/streetview-survey/2026-11-15/supplement-map.svg) complètent le relevé original sans le réécrire. Ce schéma ne représente ni les surfaces effectivement recensées ni une garantie de couverture exhaustive. Le GPS physique et le cap par rapport au nord vrai restent non calibrés.
 
 ## Un cycle par lot
 
@@ -16,7 +20,7 @@ Les styles répétés sont dans `preview-ycoor-design/design/detail-templates.js
 
 Lire uniquement le dossier du lot et ses preuves réduit le contexte envoyé au modèle. Les vérifications automatiques restent groupées ; une modification du moteur demande ses tests, alors qu’un ajout de données réutilise les contrôles existants. Une refactorisation donnant des sorties identiques ne demande pas de refaire la revue visuelle. Les économies de texte se mesurent ; elles ne garantissent pas un pourcentage identique de tokens facturés.
 
-L’ordre des bâtiments, observations et changements se règle dans `design/facades/index.json` ; ajouter les nouveaux identifiants à ces listes. La dernière proposition prête est cadrée au lancement. Les fichiers de preuves, inventaire et page P0.6.7 sont générés : leur source d’édition est le fichier du bâtiment ou l’HTML de travail, pas la sortie générée.
+L’ordre des bâtiments, observations et changements se règle dans `design/facades/index.json` ; ajouter les nouveaux identifiants à ces listes. Le lancement cadre tout le carré ; le sélecteur permet d’examiner une façade. Les fichiers de preuves, inventaire et page P0.6.7 sont générés : leur source d’édition est le fichier du bâtiment ou l’HTML de travail, pas la sortie générée. La même commande régénère désormais aussi le CSV, le schéma et les sommes de contrôle des captures complémentaires.
 
 Prérequis : Python, Node.js et `npm ci` dans `preview-ycoor-design/design/`. Aucun service payant ni nouvelle dépendance n’est ajouté. Le paramètre `--node CHEMIN` permet de choisir l’exécutable Node. Les tests concernés se lancent avec `npm test` dans ce dossier et `python tools/test_build_design_evidence.py` pour les sources par bâtiment.
 

@@ -32,6 +32,68 @@
         "Le rayon central est du visualiseur C003 rejoint la face ouest à u≈5,08 m ; celui de C026/C027 passe au-delà de son extrémité sud. Ce contrôle attribue le plan, sans calibration physique des pixels.",
         "Positions, altitudes, dimensions et teintes sont des estimations artistiques. L’entrée en retrait est évoquée par des éléments minces posés sur le plan CAD ; aucun creusement ni escalier métrique n’est ajouté."
       ]
+    },
+    {
+      "observationId": "OBS-B002-SOUTHEND-WEST-2024",
+      "buildingId": "2355E",
+      "faceId": "2355E:wall:001",
+      "sourceId": "streetview",
+      "captureIds": [
+        "YCOOR-N011",
+        "YCOOR-N012",
+        "C003",
+        "C026",
+        "C027"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "high",
+      "statement": "N011/N012 distinguent les trois niveaux du front ouest du volume sud, avec garde-corps gris vieillis, main courante bois et dalles minérales. Les deux volets du niveau bas et l’entrée déjà relevés dans C003 sont conservés. Au premier balcon, trois portions de tabliers rouge brun sont directement visibles au-dessus du garde-corps ; les vitrages et le reste des ouvertures des balcons restent cachés.",
+      "limitations": [
+        "La limite nord est celle du plan 2355E:wall:001 ; les quatre volets de la bande de pierre située au nord sont affectés à 1A20B, sans duplication.",
+        "Les garde-corps, sous-faces, ombres et le poteau de rue cachent la majorité des fenêtres des étages. Les trois portions de tabliers ajoutées ne représentent ni les vitrages ni la totalité de leur tablier caché.",
+        "Les dix composants du rez déjà relevés dans C003 sont conservés. Le retrait de l’entrée reste évoqué sur le plan source sans creusement.",
+        "Positions, dimensions, teintes, niveaux et densité des barreaux sont des estimations artistiques. Aucun toit, hauteur, escalier ou volume CAD n’est modifié."
+      ]
+    },
+    {
+      "observationId": "OBS-B002-SOUTHEND-SOUTH-2024",
+      "buildingId": "2355E",
+      "faceId": "2355E:wall:002",
+      "sourceId": "streetview",
+      "captureIds": [
+        "YCOOR-N012",
+        "C026",
+        "C027"
+      ],
+      "observedAt": "2024-06",
+      "confidence": "high",
+      "statement": "Le retour sud visible dans N012 et C026/C027 comprend les trois retours des balcons hauts du front ouest et un balcon bas supplémentaire au-dessus du garage dégagé par la pente. Le bas montre une fermeture large brune et une ouverture sombre vers l’est. Au balcon le plus bas, deux ouvertures verticales sont directement lisibles dans l’enduit clair, dont une porte vitrée près du coin ouest.",
+      "limitations": [
+        "La vue est très oblique : l’extrémité est est comprimée. Les positions, dimensions, altitudes, couleurs et profondeurs sont des estimations artistiques sur le plan source, sans photogrammétrie.",
+        "L’interface Google masque une partie haute et les garde-corps occultent les ouvertures des trois niveaux supérieurs. Aucune porte, fenêtre, volet ni trame répétée n’est ajoutée derrière ces garde-corps.",
+        "Le balcon le plus bas est directement distinct des trois retours supérieurs. Les garde-corps gris et leurs barreaux sont des motifs de dessin simplifiés, sans décompte physique.",
+        "La fermeture basse brune et l’ouverture sombre sont décrites par leurs formes visibles ; le garage n’est pas creusé et son intérieur n’est pas restitué. Le véhicule, les aménagements du passage, le poteau et la végétation sont omis.",
+        "Le bord du toit et le volume CAD sont conservés. Cette face reste partiellement documentée ; les fenêtres physiques totales sont inconnues."
+      ]
+    },
+    {
+      "observationId": "OBS-B002-SOUTHEND-EAST-UNRESOLVED",
+      "buildingId": "2355E",
+      "faceId": "2355E:wall:003",
+      "sourceId": "streetview",
+      "captureIds": [
+        "YCOOR-N015",
+        "C022",
+        "C041",
+        "C042"
+      ],
+      "observedAt": null,
+      "confidence": "low",
+      "statement": "N015 (sphère Dany Gaule, juin 2022) recoupe le front du groupe B002 côté étang, mais les grands sapins cachent la partie sud correspondant au voisinage de 2355E. C022/C041/C042 ne dégagent pas une limite fiable entre ce petit volume et le front blanc central. Les ouvertures de 2355E:wall:003 restent donc non attribuables dans les captures examinées.",
+      "limitations": [
+        "N015 et C022 datent de juin 2022 ; C041/C042 de juin 2024. Le cap de la sphère de contributeur n’est pas calibré et aucune continuité d’état n’est déduite entre ces deux dates.",
+        "Les balcons, arbres, reflets, zones sombres et parties masquées ne prouvent ni les limites source ni un nombre de fenêtres. Aucun détail n’est extrapolé des autres côtés."
+      ]
     }
   ],
   "changes": [
@@ -209,6 +271,333 @@
           ]
         }
       ]
+    },
+    {
+      "changeId": "B002-SOUTHEND-WEST-2024-EXTENSION",
+      "buildingId": "2355E",
+      "faceId": "2355E:wall:001",
+      "status": "ready",
+      "title": "B002 sud · trois balcons ouest et portions de volets",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "YCOOR-N011",
+        "YCOOR-N012",
+        "C003",
+        "C026",
+        "C027"
+      ],
+      "observationIds": [
+        "OBS-B002-SOUTHEND-WEST-2024"
+      ],
+      "reason": "N011 et N012 documentent directement les trois balcons et les parties supérieures de trois volets au balcon inférieur. Les dix détails existants de WEST-SHUTTERS sont conservés sans duplication.",
+      "confidence": "medium",
+      "approximate": true,
+      "details": [
+        {
+          "id": "b002-southend-west-visible-plaster",
+          "kind": "panel",
+          "u": 5.6,
+          "v": 1506.9,
+          "width": 10.85,
+          "height": 11.65,
+          "color": "#d6d3c2",
+          "label": "Enduit clair visible du front ouest sud · matière simplifiée",
+          "depth": 0.004,
+          "offset": 0.001,
+          "evidenceIds": [
+            "YCOOR-N011",
+            "YCOOR-N012"
+          ]
+        },
+        {
+          "id": "b002-southend-west-gray-plinth",
+          "kind": "panel",
+          "u": 5.6,
+          "v": 1501.25,
+          "width": 10.85,
+          "height": 0.9,
+          "color": "#a6a69a",
+          "label": "Soubassement gris visible du front ouest sud",
+          "depth": 0.004,
+          "offset": 0.001,
+          "evidenceIds": [
+            "YCOOR-N011",
+            "YCOOR-N012"
+          ]
+        },
+        {
+          "id": "b002-southend-west-balcony-lower",
+          "u": 5.6,
+          "v": 1505.25,
+          "label": "Balcon ouest sud lower · niveau directement visible, barreaux stylisés",
+          "evidenceIds": [
+            "YCOOR-N011",
+            "YCOOR-N012"
+          ],
+          "template": "b002-southend-west-balcony-lower-style"
+        },
+        {
+          "id": "b002-southend-west-balcony-middle",
+          "u": 5.6,
+          "v": 1508.05,
+          "label": "Balcon ouest sud middle · niveau directement visible, barreaux stylisés",
+          "evidenceIds": [
+            "YCOOR-N011",
+            "YCOOR-N012"
+          ],
+          "template": "b002-southend-west-balcony-lower-style"
+        },
+        {
+          "id": "b002-southend-west-balcony-upper",
+          "u": 5.6,
+          "v": 1510.85,
+          "label": "Balcon ouest sud upper · niveau directement visible, barreaux stylisés",
+          "evidenceIds": [
+            "YCOOR-N011",
+            "YCOOR-N012"
+          ],
+          "template": "b002-southend-west-balcony-lower-style"
+        },
+        {
+          "id": "b002-southend-west-lower-balcony-north-visible-shutter-visible",
+          "kind": "shutter",
+          "u": 1.8,
+          "v": 1506.2,
+          "width": 0.9,
+          "height": 0.55,
+          "color": "#88453e",
+          "label": "Partie haute visible du volet fermé north-visible au premier balcon · vitrage caché omis",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011",
+            "YCOOR-N012"
+          ]
+        },
+        {
+          "id": "b002-southend-west-lower-balcony-middle-visible-shutter-visible",
+          "kind": "shutter",
+          "u": 4.9,
+          "v": 1506.2,
+          "width": 0.9,
+          "height": 0.55,
+          "color": "#88453e",
+          "label": "Partie haute visible du volet fermé middle-visible au premier balcon · vitrage caché omis",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011",
+            "YCOOR-N012"
+          ]
+        },
+        {
+          "id": "b002-southend-west-lower-balcony-south-visible-shutter-visible",
+          "kind": "shutter",
+          "u": 8.7,
+          "v": 1506.2,
+          "width": 1.6,
+          "height": 0.55,
+          "color": "#88453e",
+          "label": "Partie haute visible du volet fermé south-visible au premier balcon · vitrage caché omis",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N011",
+            "YCOOR-N012"
+          ]
+        }
+      ],
+      "focus": {
+        "u": 6,
+        "height": 1506
+      }
+    },
+    {
+      "changeId": "B002-SOUTHEND-SOUTH-2024-DETAILS",
+      "buildingId": "2355E",
+      "faceId": "2355E:wall:002",
+      "status": "ready",
+      "title": "B002 sud · quatre retours de balcon et accès inférieurs",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "YCOOR-N012",
+        "C026",
+        "C027"
+      ],
+      "observationIds": [
+        "OBS-B002-SOUTHEND-SOUTH-2024"
+      ],
+      "reason": "Les quatre garde-corps sont directement distincts dans N012/C026/C027 : trois retours des niveaux hauts et un niveau bas supplémentaire. Deux ouvertures du balcon bas et les formes du garage inférieur sont relevées individuellement. Les ouvertures derrière les trois balcons hauts restent inconnues.",
+      "confidence": "medium",
+      "approximate": true,
+      "details": [
+        {
+          "id": "b002-southend-south-balcony-lowest",
+          "u": 7.5,
+          "v": 1502.45,
+          "label": "Retour sud du balcon lowest directement visible · densité des barreaux stylisée",
+          "evidenceIds": [
+            "YCOOR-N012",
+            "C026",
+            "C027"
+          ],
+          "template": "b002-southend-south-balcony-lowest-style"
+        },
+        {
+          "id": "b002-southend-south-balcony-lower",
+          "u": 7.5,
+          "v": 1505.25,
+          "label": "Retour sud du balcon lower directement visible · densité des barreaux stylisée",
+          "evidenceIds": [
+            "YCOOR-N012",
+            "C026",
+            "C027"
+          ],
+          "template": "b002-southend-south-balcony-lowest-style"
+        },
+        {
+          "id": "b002-southend-south-balcony-middle",
+          "u": 7.5,
+          "v": 1508.05,
+          "label": "Retour sud du balcon middle directement visible · densité des barreaux stylisée",
+          "evidenceIds": [
+            "YCOOR-N012",
+            "C026",
+            "C027"
+          ],
+          "template": "b002-southend-south-balcony-lowest-style"
+        },
+        {
+          "id": "b002-southend-south-balcony-upper",
+          "u": 7.5,
+          "v": 1510.85,
+          "label": "Retour sud du balcon upper directement visible · densité des barreaux stylisée",
+          "evidenceIds": [
+            "YCOOR-N012",
+            "C026",
+            "C027"
+          ],
+          "template": "b002-southend-south-balcony-lowest-style"
+        },
+        {
+          "id": "b002-southend-south-lowest-west-glazed-door",
+          "kind": "window",
+          "u": 2.0,
+          "v": 1503.05,
+          "width": 0.95,
+          "height": 2.05,
+          "color": "#3e4943",
+          "label": "Porte vitrée directement visible près du coin ouest du balcon bas · bois brun",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N012",
+            "C026",
+            "C027"
+          ],
+          "frame": {
+            "width": 0.09,
+            "color": "#785a40"
+          }
+        },
+        {
+          "id": "b002-southend-south-lowest-east-opening",
+          "kind": "window",
+          "u": 9.8,
+          "v": 1503.05,
+          "width": 1.2,
+          "height": 1.85,
+          "color": "#4b5148",
+          "label": "Deuxième ouverture verticale directement visible au balcon bas · détails du vitrage non résolus",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N012",
+            "C026",
+            "C027"
+          ],
+          "frame": {
+            "width": 0.09,
+            "color": "#8b765b"
+          }
+        },
+        {
+          "id": "b002-southend-south-brown-garage-closure",
+          "kind": "door",
+          "u": 3.8,
+          "v": 1500.05,
+          "width": 5.1,
+          "height": 2.35,
+          "color": "#75563f",
+          "label": "Fermeture large brune visible sous le balcon bas · panneaux simplifiés",
+          "depth": 0.02,
+          "offset": 0.035,
+          "evidenceIds": [
+            "YCOOR-N012",
+            "C026",
+            "C027"
+          ]
+        },
+        {
+          "id": "b002-southend-south-dark-low-opening",
+          "kind": "panel",
+          "u": 12.3,
+          "v": 1500.25,
+          "width": 2.5,
+          "height": 2.4,
+          "color": "#383b31",
+          "label": "Ouverture sombre visible vers l’est au niveau inférieur · intérieur non restitué",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "YCOOR-N012",
+            "C026",
+            "C027"
+          ]
+        },
+        {
+          "id": "b002-southend-south-lowest-stone-pier",
+          "kind": "panel",
+          "u": 7.1,
+          "v": 1500.15,
+          "width": 0.6,
+          "height": 2.6,
+          "color": "#b0ae9d",
+          "label": "Pilier clair visible entre la fermeture brune et l’ouverture sombre · position approximative",
+          "depth": 0.01,
+          "offset": 0.004,
+          "evidenceIds": [
+            "YCOOR-N012",
+            "C026",
+            "C027"
+          ]
+        }
+      ],
+      "focus": {
+        "u": 6,
+        "height": 1506
+      }
+    },
+    {
+      "changeId": "B002-SOUTHEND-EAST-UNRESOLVED",
+      "buildingId": "2355E",
+      "faceId": "2355E:wall:003",
+      "status": "unresolved",
+      "title": "B002 sud · est à attribuer",
+      "discrepancy": "unresolved",
+      "evidenceIds": [
+        "YCOOR-N015",
+        "C022",
+        "C041",
+        "C042"
+      ],
+      "observationIds": [
+        "OBS-B002-SOUTHEND-EAST-UNRESOLVED"
+      ],
+      "reason": "N015 (sphère Dany Gaule, juin 2022) recoupe le front du groupe B002 côté étang, mais les grands sapins cachent la partie sud correspondant au voisinage de 2355E. C022/C041/C042 ne dégagent pas une limite fiable entre ce petit volume et le front blanc central. Les ouvertures de 2355E:wall:003 restent donc non attribuables dans les captures examinées.",
+      "confidence": "low",
+      "approximate": true,
+      "details": []
     }
   ]
 }

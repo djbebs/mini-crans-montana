@@ -287,7 +287,7 @@ class UpdateYcoorTests(unittest.TestCase):
         tools.mkdir()
         (tools / self.updater.name).write_bytes(self.updater.read_bytes())
         self.log = self.root / 'calls.jsonl'
-        for filename in ['build-design-evidence.py', 'build-facade-inventory.mjs', 'build-p067.py']:
+        for filename in ['package-streetview-supplements.py', 'build-design-evidence.py', 'build-facade-inventory.mjs', 'build-p067.py']:
             (tools / filename).write_text(
                 'import json, pathlib, sys\n'
                 'with (pathlib.Path(__file__).resolve().parents[1] / "calls.jsonl").open("a") as log:\n'
@@ -302,7 +302,8 @@ class UpdateYcoorTests(unittest.TestCase):
         result = self.run_updater('--node', sys.executable, '--check')
         self.assertEqual(0, result.returncode, result.stderr)
         calls = [json.loads(line) for line in self.log.read_text().splitlines()]
-        self.assertEqual([['build-design-evidence.py', ['--check']],
+        self.assertEqual([['package-streetview-supplements.py', ['--check']],
+                          ['build-design-evidence.py', ['--check']],
                           ['build-facade-inventory.mjs', ['--check']],
                           ['build-p067.py', ['--check']]], calls)
 
@@ -310,7 +311,7 @@ class UpdateYcoorTests(unittest.TestCase):
         (self.root / 'tools/build-facade-inventory.mjs').write_text('import sys; sys.exit(7)\n')
         result = self.run_updater('--node', sys.executable)
         self.assertEqual(7, result.returncode)
-        self.assertEqual([['build-design-evidence.py', []]],
+        self.assertEqual([['package-streetview-supplements.py', []], ['build-design-evidence.py', []]],
                          [json.loads(line) for line in self.log.read_text().splitlines()])
 
     def test_missing_node_fails_clearly_before_writing(self):
