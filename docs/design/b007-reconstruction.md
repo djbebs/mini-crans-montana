@@ -26,9 +26,9 @@ Les niveaux, dimensions des ouvertures, projections des balcons, teintes, loggia
 
 ## Conservation et usage
 
-Le fichier officiel `assets/ycoor-dxf.json`, ses six volumes, leurs attributs et l’indicateur `geometryReviewRequired` de 26152 sont inchangés. L’inventaire des plans officiels conserve donc ses quatre plans à vérifier. Les 220 composants sur géométrie officielle sont distincts des 71 composants du modèle photo.
+Le fichier officiel `assets/ycoor-dxf.json`, ses six volumes, leurs attributs et l’indicateur `geometryReviewRequired` de 26152 sont inchangés. L’inventaire des plans officiels conserve donc ses quatre plans à vérifier. Les 269 composants sur géométrie officielle sont distincts des 71 composants du modèle photo.
 
-La source d’édition est `design/reconstructions/26152.json`. `tools/build-b007-reconstruction.py` génère `design/photo-reconstruction.json`, chargé comme interprétation facultative. La correspondance UUID et les limites du volume source sont contrôlées avant affichage ; une évolution incompatible de la source entraîne le maintien du DXF.
+La source d’édition est `design/reconstructions/26152.json`. `tools/build-b007-reconstruction.py` génère `design/photo-reconstruction.json`, chargé comme interprétation facultative. La correspondance UUID, les limites et les sommets/triangles du volume source sont contrôlés avant affichage ; une évolution incompatible de la source entraîne le maintien du DXF.
 
 Le bouton **Voir B007 reconstitué** cadre ce bâtiment. **Détails documentés : OFF** rétablit exactement le volume officiel. Le mode de comparaison avec le flux officiel masque également la reconstitution. Son absence ou une erreur de validation laisse les autres bâtiments utilisables. Les objets masqués ne participent pas à la sélection ; les ressources sont libérées avec le reste de la scène.
 

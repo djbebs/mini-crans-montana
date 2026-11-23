@@ -1024,5 +1024,852 @@
       }
     ],
     "width": 14.65
+  },
+  "garden-central-balcony": {
+    "kind": "balcony",
+    "width": 17.2,
+    "height": 1.15,
+    "depth": 1.1,
+    "color": "#82756a",
+    "rails": [
+      {
+        "u": 0,
+        "v": -0.35,
+        "width": 17.2,
+        "height": 0.065,
+        "depth": 0.07,
+        "offset": 0.9800000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 0,
+        "v": 0.08,
+        "width": 17.2,
+        "height": 0.065,
+        "depth": 0.07,
+        "offset": 0.9800000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 0,
+        "v": 0.47,
+        "width": 17.2,
+        "height": 0.09,
+        "depth": 0.07,
+        "offset": 0.9800000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": -8.5,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": -7.2857,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": -6.0714,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": -4.8571,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": -3.6429,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": -2.4286,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": -1.2143,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 0.0,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 1.2143,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 2.4286,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 3.6429,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 4.8571,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 6.0714,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 7.2857,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 8.5,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      }
+    ],
+    "floor": {
+      "height": 0.15,
+      "color": "#d0cbb7"
+    }
+  },
+  "garden-southend-balcony": {
+    "kind": "balcony",
+    "width": 10.3,
+    "height": 1.15,
+    "depth": 1.1,
+    "color": "#82756a",
+    "rails": [
+      {
+        "u": 0,
+        "v": -0.35,
+        "width": 10.3,
+        "height": 0.065,
+        "depth": 0.07,
+        "offset": 0.9800000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 0,
+        "v": 0.08,
+        "width": 10.3,
+        "height": 0.065,
+        "depth": 0.07,
+        "offset": 0.9800000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 0,
+        "v": 0.47,
+        "width": 10.3,
+        "height": 0.09,
+        "depth": 0.07,
+        "offset": 0.9800000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": -5.05,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": -4.3286,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": -3.6071,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": -2.8857,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": -2.1643,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": -1.4429,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": -0.7214,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 0.0,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 0.7214,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 1.4429,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 2.1643,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 2.8857,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 3.6071,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 4.3286,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      },
+      {
+        "u": 5.05,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.9900000000000001,
+        "color": "#82756a"
+      }
+    ],
+    "floor": {
+      "height": 0.15,
+      "color": "#d0cbb7"
+    }
+  },
+  "garden-b003-north-balcony": {
+    "kind": "balcony",
+    "width": 12.3,
+    "height": 1.15,
+    "depth": 1,
+    "color": "#793f36",
+    "rails": [
+      {
+        "u": 0,
+        "v": -0.35,
+        "width": 12.3,
+        "height": 0.065,
+        "depth": 0.07,
+        "offset": 0.88,
+        "color": "#793f36"
+      },
+      {
+        "u": 0,
+        "v": 0.08,
+        "width": 12.3,
+        "height": 0.065,
+        "depth": 0.07,
+        "offset": 0.88,
+        "color": "#793f36"
+      },
+      {
+        "u": 0,
+        "v": 0.47,
+        "width": 12.3,
+        "height": 0.09,
+        "depth": 0.07,
+        "offset": 0.88,
+        "color": "#793f36"
+      },
+      {
+        "u": -6.05,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": -5.1857,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": -4.3214,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": -3.4571,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": -2.5929,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": -1.7286,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": -0.8643,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": 0.0,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": 0.8643,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": 1.7286,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": 2.5929,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": 3.4571,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": 4.3214,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": 5.1857,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": 6.05,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      }
+    ],
+    "floor": {
+      "height": 0.15,
+      "color": "#d0cbb7"
+    }
+  },
+  "garden-b003-south-balcony": {
+    "kind": "balcony",
+    "width": 15.8,
+    "height": 1.15,
+    "depth": 1,
+    "color": "#793f36",
+    "rails": [
+      {
+        "u": 0,
+        "v": -0.35,
+        "width": 15.8,
+        "height": 0.065,
+        "depth": 0.07,
+        "offset": 0.88,
+        "color": "#793f36"
+      },
+      {
+        "u": 0,
+        "v": 0.08,
+        "width": 15.8,
+        "height": 0.065,
+        "depth": 0.07,
+        "offset": 0.88,
+        "color": "#793f36"
+      },
+      {
+        "u": 0,
+        "v": 0.47,
+        "width": 15.8,
+        "height": 0.09,
+        "depth": 0.07,
+        "offset": 0.88,
+        "color": "#793f36"
+      },
+      {
+        "u": -7.8,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": -6.6857,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": -5.5714,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": -4.4571,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": -3.3429,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": -2.2286,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": -1.1143,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": 0.0,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": 1.1143,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": 2.2286,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": 3.3429,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": 4.4571,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": 5.5714,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": 6.6857,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      },
+      {
+        "u": 7.8,
+        "v": 0.02,
+        "width": 0.06,
+        "height": 0.98,
+        "depth": 0.06,
+        "offset": 0.89,
+        "color": "#793f36"
+      }
+    ],
+    "floor": {
+      "height": 0.15,
+      "color": "#d0cbb7"
+    }
+  },
+  "garden-rawyl-upper-balcony": {
+    "kind": "balcony",
+    "width": 26.1,
+    "height": 1.15,
+    "depth": 1.2,
+    "color": "#8d775c",
+    "rails": [
+      {
+        "u": 0,
+        "v": -0.04,
+        "width": 26.1,
+        "height": 0.83,
+        "depth": 0.1,
+        "offset": 1.03,
+        "color": "#8d775c"
+      },
+      {
+        "u": 0,
+        "v": -0.26,
+        "width": 26.1,
+        "height": 0.025,
+        "depth": 0.025,
+        "offset": 1.14,
+        "color": "#6c5a46"
+      },
+      {
+        "u": 0,
+        "v": 0.1,
+        "width": 26.1,
+        "height": 0.025,
+        "depth": 0.025,
+        "offset": 1.14,
+        "color": "#6c5a46"
+      },
+      {
+        "u": 0,
+        "v": 0.36,
+        "width": 26.1,
+        "height": 0.025,
+        "depth": 0.025,
+        "offset": 1.14,
+        "color": "#6c5a46"
+      }
+    ],
+    "floor": {
+      "height": 0.15,
+      "color": "#d0cbb7"
+    }
+  },
+  "garden-rawyl-low-balcony": {
+    "kind": "balcony",
+    "width": 5,
+    "height": 1.15,
+    "depth": 0.7,
+    "color": "#8d775c",
+    "rails": [
+      {
+        "u": 0,
+        "v": -0.04,
+        "width": 5,
+        "height": 0.83,
+        "depth": 0.1,
+        "offset": 0.5299999999999999,
+        "color": "#8d775c"
+      },
+      {
+        "u": 0,
+        "v": -0.26,
+        "width": 5,
+        "height": 0.025,
+        "depth": 0.025,
+        "offset": 0.6399999999999999,
+        "color": "#6c5a46"
+      },
+      {
+        "u": 0,
+        "v": 0.1,
+        "width": 5,
+        "height": 0.025,
+        "depth": 0.025,
+        "offset": 0.6399999999999999,
+        "color": "#6c5a46"
+      },
+      {
+        "u": 0,
+        "v": 0.36,
+        "width": 5,
+        "height": 0.025,
+        "depth": 0.025,
+        "offset": 0.6399999999999999,
+        "color": "#6c5a46"
+      }
+    ],
+    "floor": {
+      "height": 0.15,
+      "color": "#d0cbb7"
+    }
+  },
+  "garden-rawyl-partial-lowest-upper": {
+    "kind": "balcony",
+    "width": 20.5,
+    "height": 1.15,
+    "depth": 1.2,
+    "color": "#8d775c",
+    "rails": [
+      {
+        "u": 0,
+        "v": -0.04,
+        "width": 20.5,
+        "height": 0.83,
+        "depth": 0.1,
+        "offset": 1.03,
+        "color": "#8d775c"
+      },
+      {
+        "u": 0,
+        "v": -0.26,
+        "width": 20.5,
+        "height": 0.025,
+        "depth": 0.025,
+        "offset": 1.14,
+        "color": "#6c5a46"
+      },
+      {
+        "u": 0,
+        "v": 0.1,
+        "width": 20.5,
+        "height": 0.025,
+        "depth": 0.025,
+        "offset": 1.14,
+        "color": "#6c5a46"
+      },
+      {
+        "u": 0,
+        "v": 0.36,
+        "width": 20.5,
+        "height": 0.025,
+        "depth": 0.025,
+        "offset": 1.14,
+        "color": "#6c5a46"
+      }
+    ],
+    "floor": {
+      "height": 0.15,
+      "color": "#d0cbb7"
+    }
   }
 }

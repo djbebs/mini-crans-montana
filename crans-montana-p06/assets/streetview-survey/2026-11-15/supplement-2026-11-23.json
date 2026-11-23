@@ -213,6 +213,88 @@
       "heading_status": "VIEWER_REPORTED_HEADING_AT_RECORDED_URL_PRECISION;TRUE_NORTH_CALIBRATION_UNVERIFIED",
       "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
       "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE"
+    },
+    {
+      "capture_id": "YCOOR-N019",
+      "building_ids": [
+        "B003",
+        "B002"
+      ],
+      "screenshot": "evidence/2026-11-23/YCOOR-N019.jpg",
+      "panorama_id": "CIHM0ogKEICAgIDqxdLl1wE",
+      "latitude": "46.3106401",
+      "longitude": "7.4785164",
+      "heading_deg": "218.37",
+      "pitch_url_t": "90",
+      "vertical_fov_url_y": "60",
+      "imagery_date": "Feb 2019",
+      "provider": "De Douby",
+      "title": "De Douby - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3106401,7.4785164,3a,60y,218.37h,90t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDqxdLl1wE!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U_qbObmhIXjUrVf6SAlZZbo4KYPE502GiYvcqxbzlsxKakl8idcE5kUwIz-tbOGfRIv4sSwFGfm_VRmCESbtlp4-lg4DmhRuQ3k0NnqLoCxj4mzV69LS_qniB9vs9z_swP8o1BYuA%3Dw900-h600-k-no-pi0-ya218.3652572976467-ro0-fo100!7i5376!8i2688?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Winter context connects three-balcony B003 east side at left with gabled Rawyl block at right and pyramid landmark beyond. Centre B002 facades masked by conifers. Contributor geographic orientation uncalibrated; historic appearance only.",
+      "captured_at_utc": "2026-11-23T11:44:15.897Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_ONLY;CONTRIBUTOR_SPHERE_GEOGRAPHIC_ORIENTATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "building_identity_status": "VISUAL_ATTRIBUTION_ONLY;NOT_CADASTRAL_IDENTITY"
+    },
+    {
+      "capture_id": "YCOOR-N020",
+      "building_ids": [
+        "B002"
+      ],
+      "screenshot": "evidence/2026-11-23/YCOOR-N020.jpg",
+      "panorama_id": "CIHM0ogKEICAgIDqxYLZ8QE",
+      "latitude": "46.3107605",
+      "longitude": "7.4788768",
+      "heading_deg": "53.88",
+      "pitch_url_t": "95.13",
+      "vertical_fov_url_y": "15",
+      "imagery_date": "Feb 2019",
+      "provider": "De Douby",
+      "title": "De Douby - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3107605,7.4788768,3a,15y,53.88h,95.13t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDqxYLZ8QE!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U8dv8njVsLE5Po5aoD22RT1HKqFXjSEHGlXVjURlGqjn1eNuaZeM58F3jJOiasDJbyfCiOByGJN3TPB7T49bzEUNQyz4oFBXRKt7fDYNaJsmgu4McUHI0zABwnykqFMolHUwmQ5Vg%3Dw900-h600-k-no-pi-5.1299838483323725-ya53.88305361200463-ro0-fo100!7i5376!8i2688?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Central and southern B002 east facades behind bare branches: three stacked balcony bands, pale infill, darker rails, a vertical stone core and lower pale basement. Spatial continuity with Rawyl gables and B003 separates the source volumes. Openings behind branches and guards remain unreadable.",
+      "captured_at_utc": "2026-11-23T11:48:39.807Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_ONLY;CONTRIBUTOR_SPHERE_GEOGRAPHIC_ORIENTATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "building_identity_status": "VISUAL_ATTRIBUTION_ONLY;NOT_CADASTRAL_IDENTITY"
+    },
+    {
+      "capture_id": "YCOOR-N021",
+      "building_ids": [
+        "B002"
+      ],
+      "screenshot": "evidence/2026-11-23/YCOOR-N021.jpg",
+      "panorama_id": "CIHM0ogKEICAgIDqxYLZ8QE",
+      "latitude": "46.3107605",
+      "longitude": "7.4788768",
+      "heading_deg": "81.45",
+      "pitch_url_t": "95.13",
+      "vertical_fov_url_y": "30",
+      "imagery_date": "Feb 2019",
+      "provider": "De Douby",
+      "title": "De Douby - Google Maps",
+      "streetview_url": "https://www.google.com/maps/@46.3107605,7.4788768,3a,30y,81.45h,95.13t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDqxYLZ8QE!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAM4Q-U8dv8njVsLE5Po5aoD22RT1HKqFXjSEHGlXVjURlGqjn1eNuaZeM58F3jJOiasDJbyfCiOByGJN3TPB7T49bzEUNQyz4oFBXRKt7fDYNaJsmgu4McUHI0zABwnykqFMolHUwmQ5Vg%3Dw900-h600-k-no-pi-5.1299838483323725-ya81.44519794976699-ro0-fo100!7i5376!8i2688?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D",
+      "metadata_status": "VIEWER_URL_AND_DISPLAYED_DATE_RECORDED;PHYSICAL_GPS_AND_TRUE_HEADING_UNVERIFIED",
+      "notes": "Gabled Rawyl south-east facade: four continuous upper timber balcony bands, small attic openings, large pale closed panels below and a lower gallery/garage zone. Winter trees and foreground objects mask the south-west end and basement. Historical February 2019 appearance; dimensions estimated.",
+      "captured_at_utc": "2026-11-23T11:49:33.877Z",
+      "capture_timestamp_source": "ACTUAL_BROWSER_SCREENSHOT_TIME",
+      "gps_status": "CAMERA_COORDINATES_VERIFIED_FROM_RESOLVED_VIEWER_URL;PHYSICAL_POSITIONAL_ACCURACY_UNVERIFIED",
+      "building_gps_status": "UNAVAILABLE;CAMERA_COORDINATES_ARE_NOT_BUILDING_COORDINATES",
+      "heading_status": "VIEWER_REPORTED_HEADING_ONLY;CONTRIBUTOR_SPHERE_GEOGRAPHIC_ORIENTATION_UNVERIFIED",
+      "exact_physical_heading_status": "UNAVAILABLE_OR_UNVERIFIED;NO_INDEPENDENT_PHYSICAL_CALIBRATION",
+      "imagery_date_status": "VERIFIED_DISPLAYED_IMAGE_CAPTURE_MONTH_YEAR;NOT_SCREENSHOT_DATE",
+      "building_identity_status": "VISUAL_ATTRIBUTION_ONLY;NOT_CADASTRAL_IDENTITY"
     }
   ]
 }

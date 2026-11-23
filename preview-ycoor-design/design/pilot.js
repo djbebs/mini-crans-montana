@@ -1,5 +1,5 @@
 import { createLocalBuildings } from './local-buildings.js';
-import { createDesignEnhancements } from './design-enhancements.js';
+import { createDesignEnhancements } from './design-enhancements.js?v=2';
 import { createDesignPanel } from './design-panel.js?v=5';
 import { assetUrl, validateDesignEvidence } from './design-model.js';
 import { buildFacadeInventory } from './coverage-model.js?v=6';

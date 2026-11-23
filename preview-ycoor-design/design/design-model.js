@@ -35,6 +35,7 @@ export function validateDesignEvidence(data) {
   }
   for (const change of data.changes) {
     if (!['ready', 'unresolved'].includes(change.status)) throw new Error(`Invalid change status: ${change.changeId}.`);
+    if (change.receiveShadow !== undefined && typeof change.receiveShadow !== 'boolean') throw new Error(`Invalid receiveShadow flag: ${change.changeId}.`);
     if (!['missing_detail', 'dated_change_supported', 'unresolved'].includes(change.discrepancy)) throw new Error(`Invalid discrepancy: ${change.changeId}.`);
     const evidenceIds = refs(change.evidenceIds, captures, 'capture evidence');
     const observationIds = refs(change.observationIds, observations, 'observation');

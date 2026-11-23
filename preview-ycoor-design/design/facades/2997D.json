@@ -74,6 +74,29 @@
         "Les véhicules masquent une partie de la devanture. Le bloc à balcons et toiture plate plus à droite appartient à un autre volume et n’est pas dessiné dans ce changement.",
         "La vue du front ne documente pas les autres côtés ; aucune face n’est déclarée complète."
       ]
+    },
+    {
+      "observationId": "OBS-RAWYL-GARDEN-SOUTHEAST",
+      "buildingId": "2997D",
+      "faceId": "2997D:wall:004",
+      "sourceId": "streetview",
+      "captureIds": [
+        "YCOOR-N021",
+        "YCOOR-N015",
+        "C022"
+      ],
+      "observedAt": null,
+      "confidence": "medium",
+      "statement": "YCOOR-N021 situe le front sud-est à trois pignons du Rawyl, adjacent au futur B007 et au front bas de B002. N015/C022 le recoupent depuis l’étang en juin 2022. Quatre longues bandes de garde-corps bois, des zones vitrées lisibles, un étage de grands panneaux opaques clairs, une galerie basse entre piliers et deux fermetures orange sont distingués. La hauteur et l’emprise sources sont conservées ; les parties cachées au sud-ouest ne reçoivent pas de baies supposées.",
+      "limitations": [
+        "Positions, dimensions, altitudes, couleurs, projections des balcons et motifs de garde-corps sont des estimations artistiques sur les plans sources, pas des mesures photographiques.",
+        "Les coordonnées sont celles des caméras du visualiseur ; les sphères tierces ne fournissent pas un cap géographique calibré. La correspondance visuelle n’est pas une identité cadastrale.",
+        "Les parties masquées par les arbres et les garde-corps restent inconnues. Aucun total physique de fenêtres ou état actuel en 2026 n’est déduit.",
+        "Les images datent de février 2019, juin 2022 et, pour le contexte B007-N018, juin 2024. Aucune identité cadastrale ou vérification de l’état actuel n’est déduite.",
+        "Le front arrière appartient à 2997D, pas aux grands plans est 1A20B/2355E : son orientation oblique, ses trois pignons et sa position contre B007 ont été contrôlés sur les emprises.",
+        "Les galeries, bandes vitrées et garde-corps sont regroupés en composants de dessin. Les portions masquées, le nombre de vantaux et la totalité des ouvertures restent inconnus.",
+        "Le plan 004 ne porte pas son extrémité nord-est u>21,588 m sous 1506,133 m. Les composants bas y sont omis ; la bande de balcon la plus basse est raccourcie à la partie réellement supportée, sans modifier les volumes sources."
+      ]
     }
   ],
   "changes": [
@@ -1063,7 +1086,7 @@
       "discrepancy": "unresolved",
       "evidenceIds": [],
       "observationIds": [],
-      "reason": "Arrière sud-est non documenté par les vues de la rue du Rawyl utilisées ici. Obtenir une photographie attribuable de ce côté ; aucune ouverture cachée n’est extrapolée depuis le front.",
+      "reason": "Le front arrière est désormais documenté par N021/N015 et ses zones visibles sont dessinées. Le coin sud-ouest derrière les arbres, les détails des vitrages et les portions cachées restent à examiner.",
       "confidence": "low",
       "approximate": true,
       "details": []
@@ -1081,6 +1104,396 @@
       "confidence": "low",
       "approximate": true,
       "details": []
+    },
+    {
+      "changeId": "RAWYL-GARDEN-SOUTHEAST",
+      "buildingId": "2997D",
+      "faceId": "2997D:wall:004",
+      "status": "ready",
+      "title": "Rawyl · balcons et galerie côté jeux",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "YCOOR-N021",
+        "YCOOR-N015",
+        "C022"
+      ],
+      "observationIds": [
+        "OBS-RAWYL-GARDEN-SOUTHEAST"
+      ],
+      "reason": "YCOOR-N021 situe le front sud-est à trois pignons du Rawyl, adjacent au futur B007 et au front bas de B002. N015/C022 le recoupent depuis l’étang en juin 2022. Quatre longues bandes de garde-corps bois, des zones vitrées lisibles, un étage de grands panneaux opaques clairs, une galerie basse entre piliers et deux fermetures orange sont distingués. La hauteur et l’emprise sources sont conservées ; les parties cachées au sud-ouest ne reçoivent pas de baies supposées.",
+      "confidence": "medium",
+      "approximate": true,
+      "focus": {
+        "u": 13.786088671786796,
+        "height": 1507
+      },
+      "details": [
+        {
+          "id": "rawyl-garden-upper-balcony-1",
+          "u": 10.8,
+          "v": 1505,
+          "label": "Garde-corps bois filant côté jeux · quatre bandes visibles, longueur stylisée · seule la portion portée par le plan source est dessinée",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "garden-rawyl-partial-lowest-upper"
+        },
+        {
+          "id": "rawyl-garden-glazing-1-2",
+          "u": 13.5,
+          "v": 1505.95,
+          "label": "Zone vitrée lisible au-dessus du garde-corps · regroupement artistique, pas nombre de fenêtres",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "ground-floor-glazing",
+          "width": 6.2,
+          "height": 1.65,
+          "frame": {
+            "width": 0.08,
+            "color": "#8d7552"
+          }
+        },
+        {
+          "id": "rawyl-garden-upper-balcony-2",
+          "u": 13.7,
+          "v": 1508.2,
+          "label": "Garde-corps bois filant côté jeux · quatre bandes visibles, longueur stylisée",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "garden-rawyl-upper-balcony"
+        },
+        {
+          "id": "rawyl-garden-glazing-2-2",
+          "u": 13.5,
+          "v": 1509.15,
+          "label": "Zone vitrée lisible au-dessus du garde-corps · regroupement artistique, pas nombre de fenêtres",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "ground-floor-glazing",
+          "width": 6.2,
+          "height": 1.65,
+          "frame": {
+            "width": 0.08,
+            "color": "#8d7552"
+          }
+        },
+        {
+          "id": "rawyl-garden-glazing-2-3",
+          "u": 22.5,
+          "v": 1509.15,
+          "label": "Zone vitrée lisible au-dessus du garde-corps · regroupement artistique, pas nombre de fenêtres",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "ground-floor-glazing",
+          "width": 6.2,
+          "height": 1.65,
+          "frame": {
+            "width": 0.08,
+            "color": "#8d7552"
+          }
+        },
+        {
+          "id": "rawyl-garden-upper-balcony-3",
+          "u": 13.7,
+          "v": 1511.4,
+          "label": "Garde-corps bois filant côté jeux · quatre bandes visibles, longueur stylisée",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "garden-rawyl-upper-balcony"
+        },
+        {
+          "id": "rawyl-garden-glazing-3-2",
+          "u": 13.5,
+          "v": 1512.3500000000001,
+          "label": "Zone vitrée lisible au-dessus du garde-corps · regroupement artistique, pas nombre de fenêtres",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "ground-floor-glazing",
+          "width": 6.2,
+          "height": 1.65,
+          "frame": {
+            "width": 0.08,
+            "color": "#8d7552"
+          }
+        },
+        {
+          "id": "rawyl-garden-glazing-3-3",
+          "u": 22.5,
+          "v": 1512.3500000000001,
+          "label": "Zone vitrée lisible au-dessus du garde-corps · regroupement artistique, pas nombre de fenêtres",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "ground-floor-glazing",
+          "width": 6.2,
+          "height": 1.65,
+          "frame": {
+            "width": 0.08,
+            "color": "#8d7552"
+          }
+        },
+        {
+          "id": "rawyl-garden-upper-balcony-4",
+          "u": 13.7,
+          "v": 1514.6,
+          "label": "Garde-corps bois filant côté jeux · quatre bandes visibles, longueur stylisée",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "garden-rawyl-upper-balcony"
+        },
+        {
+          "id": "rawyl-garden-glazing-4-2",
+          "u": 13.5,
+          "v": 1515.55,
+          "label": "Zone vitrée lisible au-dessus du garde-corps · regroupement artistique, pas nombre de fenêtres",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "ground-floor-glazing",
+          "width": 6.2,
+          "height": 1.65,
+          "frame": {
+            "width": 0.08,
+            "color": "#8d7552"
+          }
+        },
+        {
+          "id": "rawyl-garden-glazing-4-3",
+          "u": 22.5,
+          "v": 1515.55,
+          "label": "Zone vitrée lisible au-dessus du garde-corps · regroupement artistique, pas nombre de fenêtres",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "ground-floor-glazing",
+          "width": 6.2,
+          "height": 1.65,
+          "frame": {
+            "width": 0.08,
+            "color": "#8d7552"
+          }
+        },
+        {
+          "id": "rawyl-garden-low-balcony-1",
+          "u": 9,
+          "v": 1501.35,
+          "label": "Section de la galerie basse visible entre les piliers blancs · partie sud-ouest masquée omise",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "garden-rawyl-low-balcony"
+        },
+        {
+          "id": "rawyl-garden-low-glazing-1",
+          "u": 9,
+          "v": 1501.9,
+          "label": "Baie de la galerie basse visible derrière le bois · subdivision non recensée",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "ground-floor-glazing",
+          "width": 3.6,
+          "height": 1.4,
+          "frame": {
+            "width": 0.08,
+            "color": "#9f8261"
+          }
+        },
+        {
+          "id": "rawyl-garden-pale-closed-panel-1",
+          "u": 9,
+          "v": 1503.45,
+          "label": "Grand panneau clair opaque visible · fonction non établie, aucun vitrage déduit",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "kind": "panel",
+          "width": 5.1,
+          "height": 1.2,
+          "color": "#ced0c6",
+          "depth": 0.02,
+          "offset": 0.025
+        },
+        {
+          "id": "rawyl-garden-clerestory-1",
+          "u": 9,
+          "v": 1504.2,
+          "label": "Fente sombre haute au-dessus du panneau opaque · forme visible seulement",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "small-dark-high-opening",
+          "width": 4.5,
+          "height": 0.18
+        },
+        {
+          "id": "rawyl-garden-low-balcony-2",
+          "u": 16,
+          "v": 1501.35,
+          "label": "Section de la galerie basse visible entre les piliers blancs · partie sud-ouest masquée omise",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "garden-rawyl-low-balcony"
+        },
+        {
+          "id": "rawyl-garden-low-glazing-2",
+          "u": 16,
+          "v": 1501.9,
+          "label": "Baie de la galerie basse visible derrière le bois · subdivision non recensée",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "ground-floor-glazing",
+          "width": 3.6,
+          "height": 1.4,
+          "frame": {
+            "width": 0.08,
+            "color": "#9f8261"
+          }
+        },
+        {
+          "id": "rawyl-garden-pale-closed-panel-2",
+          "u": 16,
+          "v": 1503.45,
+          "label": "Grand panneau clair opaque visible · fonction non établie, aucun vitrage déduit",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "kind": "panel",
+          "width": 5.1,
+          "height": 1.2,
+          "color": "#ced0c6",
+          "depth": 0.02,
+          "offset": 0.025
+        },
+        {
+          "id": "rawyl-garden-clerestory-2",
+          "u": 16,
+          "v": 1504.2,
+          "label": "Fente sombre haute au-dessus du panneau opaque · forme visible seulement",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "small-dark-high-opening",
+          "width": 4.5,
+          "height": 0.18
+        },
+        {
+          "id": "rawyl-garden-attic-1",
+          "u": 13.5,
+          "v": 1517.05,
+          "label": "Petite ouverture haute visible sous un pignon · la troisième zone masquée est omise",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "small-timber-ground-window",
+          "width": 1.3,
+          "height": 0.5,
+          "frame": {
+            "width": 0.06,
+            "color": "#8c8e80"
+          }
+        },
+        {
+          "id": "rawyl-garden-attic-2",
+          "u": 22.5,
+          "v": 1517.05,
+          "label": "Petite ouverture haute visible sous un pignon · la troisième zone masquée est omise",
+          "evidenceIds": [
+            "YCOOR-N021",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "small-timber-ground-window",
+          "width": 1.3,
+          "height": 0.5,
+          "frame": {
+            "width": 0.06,
+            "color": "#8c8e80"
+          }
+        },
+        {
+          "id": "rawyl-garden-orange-closure-1",
+          "u": 18.2,
+          "v": 1499.15,
+          "label": "Fermeture orange visible au soubassement · fonction exacte non établie",
+          "evidenceIds": [
+            "YCOOR-N015",
+            "C022"
+          ],
+          "kind": "door",
+          "width": 1.25,
+          "height": 2.3,
+          "color": "#9b4d32",
+          "depth": 0.025,
+          "offset": 0.035
+        },
+        {
+          "id": "rawyl-garden-orange-closure-2",
+          "u": 20,
+          "v": 1499.15,
+          "label": "Fermeture orange visible au soubassement · fonction exacte non établie",
+          "evidenceIds": [
+            "YCOOR-N015",
+            "C022"
+          ],
+          "kind": "door",
+          "width": 1.25,
+          "height": 2.3,
+          "color": "#9b4d32",
+          "depth": 0.025,
+          "offset": 0.035
+        }
+      ],
+      "receiveShadow": false
     }
   ]
 }

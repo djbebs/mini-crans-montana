@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "revision": "v1-c910186f",
+  "revision": "v1-17daf0c8",
   "scope": "Source wall planes of the six DXF volumes intersecting the Ycoor pilot; visual groups are not cadastral identities.",
   "countMeaning": "Opening detail count means drawn window/door/shutter components, not unique physical windows. Full and remaining window totals are unknown. No face has a complete visual census.",
   "summary": {
     "buildingCount": 6,
     "faceCount": 43,
-    "partialFaceCount": 9,
-    "notReviewedFaceCount": 30,
+    "partialFaceCount": 14,
+    "notReviewedFaceCount": 25,
     "blockedFaceCount": 4,
-    "detailCount": 220,
-    "openingDetailCount": 72,
+    "detailCount": 269,
+    "openingDetailCount": 92,
     "completeFaceCount": 0,
     "totalWindowCount": null
   },
@@ -193,19 +193,25 @@
       "faceId": "1A20B:wall:003",
       "buildingId": "1A20B",
       "orientation": "Est",
-      "status": "not_reviewed",
-      "detailCount": 0,
+      "status": "partial",
+      "detailCount": 5,
       "openingDetailCount": 0,
       "totalWindowCount": null,
       "complete": false,
-      "changeIds": [],
-      "evidenceIds": [],
+      "changeIds": [
+        "1A20B-GARDEN-EAST-BALCONIES"
+      ],
+      "evidenceIds": [
+        "YCOOR-N020",
+        "YCOOR-N015",
+        "C022"
+      ],
       "candidateCaptureIds": [
         "C005",
         "C007",
         "C008"
       ],
-      "nextAction": "N015 (sphère Dany Gaule, juin 2022) montre clairement le front blanc et ses longues lignes de balcons bois derrière le groupe sombre du premier plan. C022 et les vues de juin 2024 C041/C042 recoupent le groupe B002 depuis l’étang. La séparation des pans de 1A20B et des volumes voisins reste masquée ou non calibrée : les limites photographiques ne suffisent pas à placer individuellement des baies sur le plan source est, long de 19,50 m. Aucun balcon ni vitrage n’est reporté sans cette attribution.",
+      "nextAction": "Comparer les parties non traitées avec les photos et relever les ouvertures encore visibles.",
       "canFocus": true
     },
     {
@@ -656,19 +662,25 @@
       "faceId": "2355E:wall:003",
       "buildingId": "2355E",
       "orientation": "Est",
-      "status": "not_reviewed",
-      "detailCount": 0,
+      "status": "partial",
+      "detailCount": 4,
       "openingDetailCount": 0,
       "totalWindowCount": null,
       "complete": false,
-      "changeIds": [],
-      "evidenceIds": [],
+      "changeIds": [
+        "2355E-GARDEN-EAST-BALCONIES"
+      ],
+      "evidenceIds": [
+        "YCOOR-N020",
+        "YCOOR-N015",
+        "C022"
+      ],
       "candidateCaptureIds": [
         "C003",
         "C026",
         "C027"
       ],
-      "nextAction": "N015 (sphère Dany Gaule, juin 2022) recoupe le front du groupe B002 côté étang, mais les grands sapins cachent la partie sud correspondant au voisinage de 2355E. C022/C041/C042 ne dégagent pas une limite fiable entre ce petit volume et le front blanc central. Les ouvertures de 2355E:wall:003 restent donc non attribuables dans les captures examinées.",
+      "nextAction": "Comparer les parties non traitées avec les photos et relever les ouvertures encore visibles.",
       "canFocus": true
     },
     {
@@ -847,13 +859,19 @@
       "faceId": "2997D:wall:004",
       "buildingId": "2997D",
       "orientation": "Sud-Est",
-      "status": "not_reviewed",
-      "detailCount": 0,
-      "openingDetailCount": 0,
+      "status": "partial",
+      "detailCount": 23,
+      "openingDetailCount": 15,
       "totalWindowCount": null,
       "complete": false,
-      "changeIds": [],
-      "evidenceIds": [],
+      "changeIds": [
+        "RAWYL-GARDEN-SOUTHEAST"
+      ],
+      "evidenceIds": [
+        "YCOOR-N021",
+        "YCOOR-N015",
+        "C022"
+      ],
       "candidateCaptureIds": [
         "C010",
         "C011",
@@ -863,7 +881,7 @@
         "C054",
         "YCOOR-N013"
       ],
-      "nextAction": "Arrière sud-est non documenté par les vues de la rue du Rawyl utilisées ici. Obtenir une photographie attribuable de ce côté ; aucune ouverture cachée n’est extrapolée depuis le front.",
+      "nextAction": "Comparer les parties non traitées avec les photos et relever les ouvertures encore visibles.",
       "canFocus": true
     },
     {
@@ -1052,19 +1070,25 @@
       "faceId": "2F7D6:wall:008",
       "buildingId": "2F7D6",
       "orientation": "Est",
-      "status": "not_reviewed",
-      "detailCount": 0,
-      "openingDetailCount": 0,
+      "status": "partial",
+      "detailCount": 7,
+      "openingDetailCount": 2,
       "totalWindowCount": null,
       "complete": false,
-      "changeIds": [],
-      "evidenceIds": [],
+      "changeIds": [
+        "B003-GARDEN-EAST-008"
+      ],
+      "evidenceIds": [
+        "B003-N010",
+        "B003-N009",
+        "YCOOR-N019"
+      ],
       "candidateCaptureIds": [
         "C026",
         "C029",
         "C030"
       ],
-      "nextAction": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures. Le contrôle côté jardin YCOOR-N015 ne dégage pas ces murs.",
+      "nextAction": "Comparer les parties non traitées avec les photos et relever les ouvertures encore visibles.",
       "canFocus": true
     },
     {
@@ -1090,19 +1114,25 @@
       "faceId": "2F7D6:wall:010",
       "buildingId": "2F7D6",
       "orientation": "Est",
-      "status": "not_reviewed",
-      "detailCount": 0,
-      "openingDetailCount": 0,
+      "status": "partial",
+      "detailCount": 10,
+      "openingDetailCount": 3,
       "totalWindowCount": null,
       "complete": false,
-      "changeIds": [],
-      "evidenceIds": [],
+      "changeIds": [
+        "B003-GARDEN-EAST-010"
+      ],
+      "evidenceIds": [
+        "B003-N010",
+        "B003-N009",
+        "YCOOR-N019"
+      ],
       "candidateCaptureIds": [
         "C026",
         "C029",
         "C030"
       ],
-      "nextAction": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures. Le contrôle côté jardin YCOOR-N015 ne dégage pas ces murs.",
+      "nextAction": "Comparer les parties non traitées avec les photos et relever les ouvertures encore visibles.",
       "canFocus": true
     }
   ]

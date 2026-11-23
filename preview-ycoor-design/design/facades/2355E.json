@@ -89,10 +89,32 @@
       ],
       "observedAt": null,
       "confidence": "low",
-      "statement": "N015 (sphère Dany Gaule, juin 2022) recoupe le front du groupe B002 côté étang, mais les grands sapins cachent la partie sud correspondant au voisinage de 2355E. C022/C041/C042 ne dégagent pas une limite fiable entre ce petit volume et le front blanc central. Les ouvertures de 2355E:wall:003 restent donc non attribuables dans les captures examinées.",
+      "statement": "État du premier contrôle, avant le recoupement YCOOR-N020 : N015 (sphère Dany Gaule, juin 2022) recoupe le front du groupe B002 côté étang, mais les grands sapins cachent la partie sud correspondant au voisinage de 2355E. C022/C041/C042 ne dégagent pas une limite fiable entre ce petit volume et le front blanc central. Les ouvertures de 2355E:wall:003 restent donc non attribuables dans les captures examinées.",
       "limitations": [
         "N015 et C022 datent de juin 2022 ; C041/C042 de juin 2024. Le cap de la sphère de contributeur n’est pas calibré et aucune continuité d’état n’est déduite entre ces deux dates.",
         "Les balcons, arbres, reflets, zones sombres et parties masquées ne prouvent ni les limites source ni un nombre de fenêtres. Aucun détail n’est extrapolé des autres côtés."
+      ]
+    },
+    {
+      "observationId": "OBS-2355E-GARDEN-EAST-BALCONIES",
+      "buildingId": "2355E",
+      "faceId": "2355E:wall:003",
+      "sourceId": "streetview",
+      "captureIds": [
+        "YCOOR-N020",
+        "YCOOR-N015",
+        "C022"
+      ],
+      "observedAt": null,
+      "confidence": "medium",
+      "statement": "Les vues YCOOR-N020 et N015 recoupent le front est blanc à balcons et le noyau en pierre : les trois bandes hautes et le niveau bas côté jardin sont distingués malgré les branches. La continuité avec le retour sud, les limites des volumes et les différences de toiture séparent 1A20B de 2355E. Quatre garde-corps et leurs dalles sont interprétés ; les fenêtres cachées derrière ces lignes ne sont pas répétées.",
+      "limitations": [
+        "Positions, dimensions, altitudes, couleurs, projections des balcons et motifs de garde-corps sont des estimations artistiques sur les plans sources, pas des mesures photographiques.",
+        "Les coordonnées sont celles des caméras du visualiseur ; les sphères tierces ne fournissent pas un cap géographique calibré. La correspondance visuelle n’est pas une identité cadastrale.",
+        "Les parties masquées par les arbres et les garde-corps restent inconnues. Aucun total physique de fenêtres ou état actuel en 2026 n’est déduit.",
+        "N020 est une vue historique de février 2019 ; N015/C022 datent de juin 2022. Les portions visibles de chaque date sont distinguées ; aucune rénovation ni continuité d’état actuelle n’est affirmée.",
+        "Les niveaux retenus correspondent aux étages déjà dessinés et au niveau bas visible côté jardin ; la longueur des composants est une interprétation du rythme photographié sur le plan source.",
+        "Dans N015, le bloc haut à trois pignons à droite est 2997D ; les grands plans est de 1A20B/2355E sont le front bas à toit plat, plus à gauche derrière les arbres. Ces deux groupes ne sont pas confondus."
       ]
     }
   ],
@@ -594,10 +616,84 @@
       "observationIds": [
         "OBS-B002-SOUTHEND-EAST-UNRESOLVED"
       ],
-      "reason": "N015 (sphère Dany Gaule, juin 2022) recoupe le front du groupe B002 côté étang, mais les grands sapins cachent la partie sud correspondant au voisinage de 2355E. C022/C041/C042 ne dégagent pas une limite fiable entre ce petit volume et le front blanc central. Les ouvertures de 2355E:wall:003 restent donc non attribuables dans les captures examinées.",
+      "reason": "Les balcons et le noyau visibles sont désormais dessinés par le lot côté jeux. Les ouvertures derrière les garde-corps et les parties couvertes par les arbres restent à documenter individuellement.",
       "confidence": "low",
       "approximate": true,
       "details": []
+    },
+    {
+      "changeId": "2355E-GARDEN-EAST-BALCONIES",
+      "buildingId": "2355E",
+      "faceId": "2355E:wall:003",
+      "status": "ready",
+      "title": "B002 sud · balcons côté jeux",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "YCOOR-N020",
+        "YCOOR-N015",
+        "C022"
+      ],
+      "observationIds": [
+        "OBS-2355E-GARDEN-EAST-BALCONIES"
+      ],
+      "reason": "Les vues YCOOR-N020 et N015 recoupent le front est blanc à balcons et le noyau en pierre : les trois bandes hautes et le niveau bas côté jardin sont distingués malgré les branches. La continuité avec le retour sud, les limites des volumes et les différences de toiture séparent 1A20B de 2355E. Quatre garde-corps et leurs dalles sont interprétés ; les fenêtres cachées derrière ces lignes ne sont pas répétées.",
+      "confidence": "medium",
+      "approximate": true,
+      "focus": {
+        "u": -5.666890902097247,
+        "height": 1507
+      },
+      "details": [
+        {
+          "id": "2355e-garden-balcony-1",
+          "u": -5.67,
+          "v": 1502.45,
+          "label": "Bande de balcon du côté jeux · emprise et densité du dessin estimées",
+          "evidenceIds": [
+            "YCOOR-N020",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "garden-southend-balcony"
+        },
+        {
+          "id": "2355e-garden-balcony-2",
+          "u": -5.67,
+          "v": 1505.25,
+          "label": "Bande de balcon du côté jeux · emprise et densité du dessin estimées",
+          "evidenceIds": [
+            "YCOOR-N020",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "garden-southend-balcony"
+        },
+        {
+          "id": "2355e-garden-balcony-3",
+          "u": -5.67,
+          "v": 1508.05,
+          "label": "Bande de balcon du côté jeux · emprise et densité du dessin estimées",
+          "evidenceIds": [
+            "YCOOR-N020",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "garden-southend-balcony"
+        },
+        {
+          "id": "2355e-garden-balcony-4",
+          "u": -5.67,
+          "v": 1510.85,
+          "label": "Bande de balcon du côté jeux · emprise et densité du dessin estimées",
+          "evidenceIds": [
+            "YCOOR-N020",
+            "YCOOR-N015",
+            "C022"
+          ],
+          "template": "garden-southend-balcony"
+        }
+      ],
+      "receiveShadow": false
     }
   ]
 }

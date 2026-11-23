@@ -65,6 +65,7 @@ button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:2px 
  <select id="design-facade" disabled><option>Aucune façade disponible</option></select>
  <button id="design-focus" type="button" disabled>Voir la façade choisie</button>
  <button id="design-building" type="button" disabled>Voir tout le carré</button>
+ <button id="garden-facades" type="button" disabled>Voir côté jeux</button>
  <button id="photo-building" type="button" disabled>Voir B007 reconstitué</button>
  <small id="photo-status" style="display:block"></small>
  <small style="display:block">Détails visibles documentés · côtés cachés encore à vérifier.</small>
@@ -251,6 +252,12 @@ function focusYcoorSquare(){
  const x=(bounds[0]+bounds[3])/2-ORIGIN.e,z=ORIGIN.n-(bounds[1]+bounds[4])/2;
  target.set(x,height(x,z)+6,z);state.angle=-Math.PI*2/3;state.zoom=1.45;state.view='overview';needsResize=true;
 }
+function focusPlaygroundFacades(){
+ const buildings=pilot?.local.buildings.filter(building=>['1A20B','2355E','2997D','2F7D6'].includes(building.id))??[];
+ if(!buildings.length)return;
+ focusDesignTarget({building:{vertices:buildings.flatMap(building=>building.vertices)}});
+ state.angle=Math.PI/3;state.zoom=1.8;state.view='facade';needsResize=true;
+}
 function syncDesignControls(){
  const enabled=Boolean(pilot?.designEnabled);
  $('design-toggle').disabled=!pilot?.status.designReady||buildingMode!=='local';
@@ -259,6 +266,7 @@ function syncDesignControls(){
  $('design-toggle').textContent='Détails documentés : '+(enabled?'ON':'OFF');
  $('design-coverage').disabled=!pilot?.panelReady;
  $('design-building').disabled=!pilot?.status.designReady;
+ $('garden-facades').disabled=!pilot?.status.designReady;
  $('photo-building').disabled=!pilot?.reconstruction;
  $('photo-status').textContent=pilot?.reconstruction?(enabled?'B007 reconstitué d’après photos · hauteur et détails estimés.':'B007 : volume officiel de 2020 affiché.') : '';
  $('design-coverage').setAttribute('aria-expanded',String(Boolean(pilot?.panelOpen&&pilot.panelView==='coverage')));
@@ -271,7 +279,7 @@ async function startDesignPilot(){
  pilotLoading=true;
  try{
   await loadHeight();
-  const {createPilot}=await import('../preview-ycoor-design/design/pilot.js?v=8');
+  const {createPilot}=await import('../preview-ycoor-design/design/pilot.js?v=9');
   pilot=await createPilot({THREE,scene,
    dataBaseUrl:new URL('../preview-ycoor-design/assets/',import.meta.url).href,
    designBaseUrl:new URL('../preview-ycoor-design/design/',import.meta.url).href,
@@ -301,6 +309,7 @@ async function startDesignPilot(){
 }
 $('design-coverage').onclick=()=>{pilot?.openCoverage();syncDesignControls();};
 $('design-building').onclick=focusYcoorSquare;
+$('garden-facades').onclick=focusPlaygroundFacades;
 $('photo-building').onclick=()=>{
  const building=pilot?.reconstruction?.model.buildings[0];
  if(!building)return;

@@ -118,7 +118,7 @@
       ],
       "observedAt": null,
       "confidence": "low",
-      "statement": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures.",
+      "statement": "État du premier contrôle, avant le recoupement YCOOR-N019 : Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures.",
       "limitations": [
         "N008 est un contrôle de visibilité de juin 2024, sans façade B003 lisible.",
         "N009/N010 sont des vues candidates de février 2019 ; leur cap de contributeur et leur attribution à B003 restent non vérifiés.",
@@ -139,7 +139,7 @@
       ],
       "observedAt": null,
       "confidence": "low",
-      "statement": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures.",
+      "statement": "État du premier contrôle, avant le recoupement YCOOR-N019 : Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures.",
       "limitations": [
         "N008 est un contrôle de visibilité de juin 2024, sans façade B003 lisible.",
         "N009/N010 sont des vues candidates de février 2019 ; leur cap de contributeur et leur attribution à B003 restent non vérifiés.",
@@ -220,6 +220,50 @@
       "statement": "Bande haute arrière en retrait ; arbres, distance et bord de toit empêchent de lire le plan. Ne pas reproduire les fenêtres des autres côtés.",
       "limitations": [
         "Vérification de visibilité uniquement ; aucune ouverture ou absence d’ouverture n’est affirmée."
+      ]
+    },
+    {
+      "observationId": "OBS-B003-GARDEN-EAST-008",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:008",
+      "sourceId": "streetview",
+      "captureIds": [
+        "B003-N010",
+        "B003-N009",
+        "YCOOR-N019"
+      ],
+      "observedAt": "2019-02",
+      "confidence": "medium",
+      "statement": "Le recoupement du plan source avec YCOOR-N019 relie le bâtiment à trois balcons de N009/N010 au groupe B003, au sud du passage, et au front du Rawyl visible à droite. Le volume, le soubassement clair en pente, les trois lignes de garde-corps et la position dans le jardin concordent. Les vues historiques montrent trois garde-corps, des zones de pierre, des panneaux clairs et quelques baies basses. Seuls ces éléments lisibles sont interprétés sur les deux pans est.",
+      "limitations": [
+        "Positions, dimensions, altitudes, couleurs, projections des balcons et motifs de garde-corps sont des estimations artistiques sur les plans sources, pas des mesures photographiques.",
+        "Les coordonnées sont celles des caméras du visualiseur ; les sphères tierces ne fournissent pas un cap géographique calibré. La correspondance visuelle n’est pas une identité cadastrale.",
+        "Les parties masquées par les arbres et les garde-corps restent inconnues. Aucun total physique de fenêtres ou état actuel en 2026 n’est déduit.",
+        "La correspondance a été recoupée au niveau architectural ; les caps de contributeurs et les GPS physiques restent non vérifiés. Le découpage exact des pixels entre les deux plans est n’est pas calibré.",
+        "Le détail appliqué décrit l’apparence de février 2019. Les vues de 2022/2024 conservent le contexte mais ne vérifient pas chaque ouverture arrière actuelle.",
+        "Les panneaux clairs ne prouvent pas le nombre de vitrages cachés. Les fenêtres basses sont des composants individuels, sans décompte exhaustif ; leur hauteur suit approximativement la pente du modèle de terrain."
+      ]
+    },
+    {
+      "observationId": "OBS-B003-GARDEN-EAST-010",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:010",
+      "sourceId": "streetview",
+      "captureIds": [
+        "B003-N010",
+        "B003-N009",
+        "YCOOR-N019"
+      ],
+      "observedAt": "2019-02",
+      "confidence": "medium",
+      "statement": "Le recoupement du plan source avec YCOOR-N019 relie le bâtiment à trois balcons de N009/N010 au groupe B003, au sud du passage, et au front du Rawyl visible à droite. Le volume, le soubassement clair en pente, les trois lignes de garde-corps et la position dans le jardin concordent. Les vues historiques montrent trois garde-corps, des zones de pierre, des panneaux clairs et quelques baies basses. Seuls ces éléments lisibles sont interprétés sur les deux pans est.",
+      "limitations": [
+        "Positions, dimensions, altitudes, couleurs, projections des balcons et motifs de garde-corps sont des estimations artistiques sur les plans sources, pas des mesures photographiques.",
+        "Les coordonnées sont celles des caméras du visualiseur ; les sphères tierces ne fournissent pas un cap géographique calibré. La correspondance visuelle n’est pas une identité cadastrale.",
+        "Les parties masquées par les arbres et les garde-corps restent inconnues. Aucun total physique de fenêtres ou état actuel en 2026 n’est déduit.",
+        "La correspondance a été recoupée au niveau architectural ; les caps de contributeurs et les GPS physiques restent non vérifiés. Le découpage exact des pixels entre les deux plans est n’est pas calibré.",
+        "Le détail appliqué décrit l’apparence de février 2019. Les vues de 2022/2024 conservent le contexte mais ne vérifient pas chaque ouverture arrière actuelle.",
+        "Les panneaux clairs ne prouvent pas le nombre de vitrages cachés. Les fenêtres basses sont des composants individuels, sans décompte exhaustif ; leur hauteur suit approximativement la pente du modèle de terrain."
       ]
     }
   ],
@@ -1428,7 +1472,7 @@
       "observationIds": [
         "OBS-B003-REAR-008"
       ],
-      "reason": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures. Le contrôle côté jardin YCOOR-N015 ne dégage pas ces murs.",
+      "reason": "Le contexte YCOOR-N019 étaye désormais l’attribution architecturale et les zones lisibles de 2019 sont dessinées. Les parties masquées, les menuiseries derrière les garde-corps et leur état actuel restent à vérifier.",
       "confidence": "low",
       "approximate": true,
       "details": []
@@ -1449,7 +1493,7 @@
       "observationIds": [
         "OBS-B003-REAR-010"
       ],
-      "reason": "Arrière non confirmé : arbres et distance dans la vue de juin 2024 ; attribution de la sphère de février 2019 encore incertaine. Obtenir une vue attribuable de ce côté avant de placer des ouvertures. Le contrôle côté jardin YCOOR-N015 ne dégage pas ces murs.",
+      "reason": "Le contexte YCOOR-N019 étaye désormais l’attribution architecturale et les zones lisibles de 2019 sont dessinées. Les parties masquées, les menuiseries derrière les garde-corps et leur état actuel restent à vérifier.",
       "confidence": "low",
       "approximate": true,
       "details": []
@@ -1543,6 +1587,304 @@
       "confidence": "low",
       "approximate": true,
       "details": []
+    },
+    {
+      "changeId": "B003-GARDEN-EAST-008",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:008",
+      "status": "ready",
+      "title": "B003 · côté jeux nord",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "B003-N010",
+        "B003-N009",
+        "YCOOR-N019"
+      ],
+      "observationIds": [
+        "OBS-B003-GARDEN-EAST-008"
+      ],
+      "reason": "Le recoupement du plan source avec YCOOR-N019 relie le bâtiment à trois balcons de N009/N010 au groupe B003, au sud du passage, et au front du Rawyl visible à droite. Le volume, le soubassement clair en pente, les trois lignes de garde-corps et la position dans le jardin concordent. Les vues historiques montrent trois garde-corps, des zones de pierre, des panneaux clairs et quelques baies basses. Seuls ces éléments lisibles sont interprétés sur les deux pans est.",
+      "confidence": "medium",
+      "approximate": true,
+      "focus": {
+        "u": -6.690448790200044,
+        "height": 1507
+      },
+      "details": [
+        {
+          "id": "b003-east-008-balcony-1",
+          "u": -6.69,
+          "v": 1502.95,
+          "label": "Garde-corps rouge brun côté jeux · trois bandes distinctes dans la vue historique",
+          "evidenceIds": [
+            "B003-N010",
+            "B003-N009",
+            "YCOOR-N019"
+          ],
+          "template": "garden-b003-north-balcony"
+        },
+        {
+          "id": "b003-east-008-balcony-2",
+          "u": -6.69,
+          "v": 1505.75,
+          "label": "Garde-corps rouge brun côté jeux · trois bandes distinctes dans la vue historique",
+          "evidenceIds": [
+            "B003-N010",
+            "B003-N009",
+            "YCOOR-N019"
+          ],
+          "template": "garden-b003-north-balcony"
+        },
+        {
+          "id": "b003-east-008-balcony-3",
+          "u": -6.69,
+          "v": 1508.55,
+          "label": "Garde-corps rouge brun côté jeux · trois bandes distinctes dans la vue historique",
+          "evidenceIds": [
+            "B003-N010",
+            "B003-N009",
+            "YCOOR-N019"
+          ],
+          "template": "garden-b003-north-balcony"
+        },
+        {
+          "id": "b003-east-008-stone-pier",
+          "u": -1.0,
+          "v": 1505.95,
+          "label": "Zone verticale de parement pierre visible entre les balcons · étendue approximative",
+          "evidenceIds": [
+            "B003-N010",
+            "B003-N009",
+            "YCOOR-N019"
+          ],
+          "kind": "panel",
+          "width": 0.85,
+          "height": 9.2,
+          "color": "#87857a",
+          "depth": 0.015,
+          "offset": 0.025
+        },
+        {
+          "id": "b003-east-008-basement-1",
+          "u": -10.3,
+          "v": 1499.1,
+          "label": "Petite baie sombre du soubassement visible dans N010 · placement approximatif, pas total de fenêtres",
+          "evidenceIds": [
+            "B003-N010"
+          ],
+          "template": "small-timber-ground-window",
+          "width": 0.95,
+          "height": 0.85,
+          "frame": {
+            "width": 0.08,
+            "color": "#86887c"
+          }
+        },
+        {
+          "id": "b003-east-008-basement-2",
+          "u": -3,
+          "v": 1498.35,
+          "label": "Petite baie sombre du soubassement visible dans N010 · placement approximatif, pas total de fenêtres",
+          "evidenceIds": [
+            "B003-N010"
+          ],
+          "template": "small-timber-ground-window",
+          "width": 0.95,
+          "height": 0.85,
+          "frame": {
+            "width": 0.08,
+            "color": "#86887c"
+          }
+        },
+        {
+          "id": "b003-east-008-pale-infill-1",
+          "u": -3.1,
+          "v": 1506.5,
+          "label": "Panneau clair directement visible derrière le garde-corps · vitrage et mécanisme cachés non restitués",
+          "evidenceIds": [
+            "B003-N010"
+          ],
+          "kind": "panel",
+          "width": 1.6,
+          "height": 1.4,
+          "color": "#c7c8bd",
+          "depth": 0.02,
+          "offset": 0.035
+        }
+      ],
+      "receiveShadow": false
+    },
+    {
+      "changeId": "B003-GARDEN-EAST-010",
+      "buildingId": "2F7D6",
+      "faceId": "2F7D6:wall:010",
+      "status": "ready",
+      "title": "B003 · côté jeux sud",
+      "discrepancy": "missing_detail",
+      "evidenceIds": [
+        "B003-N010",
+        "B003-N009",
+        "YCOOR-N019"
+      ],
+      "observationIds": [
+        "OBS-B003-GARDEN-EAST-010"
+      ],
+      "reason": "Le recoupement du plan source avec YCOOR-N019 relie le bâtiment à trois balcons de N009/N010 au groupe B003, au sud du passage, et au front du Rawyl visible à droite. Le volume, le soubassement clair en pente, les trois lignes de garde-corps et la position dans le jardin concordent. Les vues historiques montrent trois garde-corps, des zones de pierre, des panneaux clairs et quelques baies basses. Seuls ces éléments lisibles sont interprétés sur les deux pans est.",
+      "confidence": "medium",
+      "approximate": true,
+      "focus": {
+        "u": -8.438566139186632,
+        "height": 1507
+      },
+      "details": [
+        {
+          "id": "b003-east-010-balcony-1",
+          "u": -8.44,
+          "v": 1502.95,
+          "label": "Garde-corps rouge brun côté jeux · trois bandes distinctes dans la vue historique",
+          "evidenceIds": [
+            "B003-N010",
+            "B003-N009",
+            "YCOOR-N019"
+          ],
+          "template": "garden-b003-south-balcony"
+        },
+        {
+          "id": "b003-east-010-balcony-2",
+          "u": -8.44,
+          "v": 1505.75,
+          "label": "Garde-corps rouge brun côté jeux · trois bandes distinctes dans la vue historique",
+          "evidenceIds": [
+            "B003-N010",
+            "B003-N009",
+            "YCOOR-N019"
+          ],
+          "template": "garden-b003-south-balcony"
+        },
+        {
+          "id": "b003-east-010-balcony-3",
+          "u": -8.44,
+          "v": 1508.55,
+          "label": "Garde-corps rouge brun côté jeux · trois bandes distinctes dans la vue historique",
+          "evidenceIds": [
+            "B003-N010",
+            "B003-N009",
+            "YCOOR-N019"
+          ],
+          "template": "garden-b003-south-balcony"
+        },
+        {
+          "id": "b003-east-010-stone-pier",
+          "u": -15.0,
+          "v": 1505.95,
+          "label": "Zone verticale de parement pierre visible entre les balcons · étendue approximative",
+          "evidenceIds": [
+            "B003-N010",
+            "B003-N009",
+            "YCOOR-N019"
+          ],
+          "kind": "panel",
+          "width": 1.05,
+          "height": 9.2,
+          "color": "#87857a",
+          "depth": 0.015,
+          "offset": 0.025
+        },
+        {
+          "id": "b003-east-010-basement-1",
+          "u": -12,
+          "v": 1501.1,
+          "label": "Petite baie sombre du soubassement visible dans N010 · placement approximatif, pas total de fenêtres",
+          "evidenceIds": [
+            "B003-N010"
+          ],
+          "template": "small-timber-ground-window",
+          "width": 0.95,
+          "height": 0.85,
+          "frame": {
+            "width": 0.08,
+            "color": "#86887c"
+          }
+        },
+        {
+          "id": "b003-east-010-basement-2",
+          "u": -7,
+          "v": 1500,
+          "label": "Petite baie sombre du soubassement visible dans N010 · placement approximatif, pas total de fenêtres",
+          "evidenceIds": [
+            "B003-N010"
+          ],
+          "template": "small-timber-ground-window",
+          "width": 0.95,
+          "height": 0.85,
+          "frame": {
+            "width": 0.08,
+            "color": "#86887c"
+          }
+        },
+        {
+          "id": "b003-east-010-basement-3",
+          "u": -2,
+          "v": 1499.25,
+          "label": "Petite baie sombre du soubassement visible dans N010 · placement approximatif, pas total de fenêtres",
+          "evidenceIds": [
+            "B003-N010"
+          ],
+          "template": "small-timber-ground-window",
+          "width": 0.95,
+          "height": 0.85,
+          "frame": {
+            "width": 0.08,
+            "color": "#86887c"
+          }
+        },
+        {
+          "id": "b003-east-010-pale-infill-1",
+          "u": -11.7,
+          "v": 1503.7,
+          "label": "Panneau clair directement visible derrière le garde-corps · vitrage et mécanisme cachés non restitués",
+          "evidenceIds": [
+            "B003-N010"
+          ],
+          "kind": "panel",
+          "width": 1.6,
+          "height": 1.4,
+          "color": "#c7c8bd",
+          "depth": 0.02,
+          "offset": 0.035
+        },
+        {
+          "id": "b003-east-010-pale-infill-2",
+          "u": -11.7,
+          "v": 1506.5,
+          "label": "Panneau clair directement visible derrière le garde-corps · vitrage et mécanisme cachés non restitués",
+          "evidenceIds": [
+            "B003-N010"
+          ],
+          "kind": "panel",
+          "width": 1.6,
+          "height": 1.4,
+          "color": "#c7c8bd",
+          "depth": 0.02,
+          "offset": 0.035
+        },
+        {
+          "id": "b003-east-010-pale-infill-3",
+          "u": -6.1,
+          "v": 1503.7,
+          "label": "Panneau clair directement visible derrière le garde-corps · vitrage et mécanisme cachés non restitués",
+          "evidenceIds": [
+            "B003-N010"
+          ],
+          "kind": "panel",
+          "width": 1.6,
+          "height": 1.4,
+          "color": "#c7c8bd",
+          "depth": 0.02,
+          "offset": 0.035
+        }
+      ],
+      "receiveShadow": false
     }
   ]
 }

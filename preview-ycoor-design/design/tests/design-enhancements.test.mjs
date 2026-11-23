@@ -28,6 +28,16 @@ const setup = (overrides = {}) => {
 const near = (actual, expected) => assert.ok(Math.abs(actual-expected)<1e-5, `${actual} != ${expected}`);
 const box = object => {object.updateWorldMatrix(true,true);return new THREE.Box3().setFromObject(object);};
 
+test('broad thin balcony details can avoid shadow-map aliasing while retaining their cast silhouettes', () => {
+  const original = setup(), clean = setup({changes:[change(undefined,{receiveShadow:false})]});
+  assert.ok(original.meshes.every(mesh=>mesh.receiveShadow && mesh.castShadow));
+  assert.ok(clean.meshes.every(mesh=>!mesh.receiveShadow && mesh.castShadow));
+  const scene = new THREE.Scene();
+  assert.throws(()=>create({THREE,scene,changes:[change(undefined,{receiveShadow:'false'})],faces:[face()],originHeight:990}),/receiveShadow/);
+  assert.equal(scene.children.length,0);
+  original.dispose();clean.dispose();
+});
+
 test('places a feature on a translated rotated face with one altitude subtraction', () => {
   const layer = setup();
   assert.equal(layer.group.name,'ycoor-design-enhancements');

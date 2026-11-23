@@ -1,5 +1,5 @@
 import { createLocalBuildings } from './local-buildings.js';
-import { createDesignEnhancements } from './design-enhancements.js';
+import { createDesignEnhancements } from './design-enhancements.js?v=2';
 
 /** An explicitly approximate interpretation; never replaces the source dataset. */
 export function createPhotoReconstruction({ THREE, scene, data, source, originHeight }) {

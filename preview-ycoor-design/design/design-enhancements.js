@@ -180,6 +180,7 @@ export function createDesignEnhancements({THREE,scene,changes=[],faces=[],origin
     const face=faceById.get(change.faceId);
     if (!face || face.buildingId!==change.buildingId || face.facadeAllowed===false || face.orientationAmbiguous===true) continue;
     const context=change.changeId??'(missing changeId)';
+    if (change.receiveShadow!==undefined && typeof change.receiveShadow!=='boolean') fail(context,'receiveShadow must be boolean');
     if (!Array.isArray(change.evidenceIds)||!change.evidenceIds.length||change.evidenceIds.some(id=>typeof id!=='string'||!id.trim())) fail(context,'ready changes require evidenceIds');
     if (typeof change.changeId!=='string'||!change.changeId.trim()) fail(context,'changeId is required');
     if (!Array.isArray(change.details)) fail(context,'details must be an explicit array');
@@ -217,7 +218,7 @@ export function createDesignEnhancements({THREE,scene,changes=[],faces=[],origin
       const geometry=new THREE.BoxGeometry(part.width,part.height,part.depth); geometries.add(geometry);
       const mesh=new THREE.Mesh(geometry,materials.get(key));
       mesh.position.set(part.u,part.v,part.offset+part.depth/2);
-      mesh.userData={...identity}; mesh.castShadow=true; mesh.receiveShadow=true;
+      mesh.userData={...identity}; mesh.castShadow=true; mesh.receiveShadow=change.receiveShadow??true;
       feature.add(mesh); meshes.push(mesh);
     }
     group.add(feature);

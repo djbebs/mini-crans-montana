@@ -1,12 +1,14 @@
 # Compléter le petit secteur Ycoor
 
-La P0.6.7 dispose d’un inventaire des **six volumes et 43 plans de murs sources**. B002 regroupe plusieurs volumes CAD : ce n’est ni un décompte de bâtiments cadastraux, ni une promesse de 43 façades physiques indépendantes. Au 23 novembre 2026, **220 composants sont dessinés sur neuf plans partiels**, dont trois côtés de B003 ([état détaillé](b003-facades.md)). Le total de fenêtres et le nombre restant ne sont pas établis.
+La P0.6.7 dispose d’un inventaire des **six volumes et 43 plans de murs sources**. B002 regroupe plusieurs volumes CAD : ce n’est ni un décompte de bâtiments cadastraux, ni une promesse de 43 façades physiques indépendantes. Au 23 novembre 2026, **269 composants sont dessinés sur quatorze plans partiels**, dont les quatre côtés de B003 ([état détaillé](b003-facades.md)). Le total de fenêtres et le nombre restant ne sont pas établis.
 
 Le lot du 23 novembre ajoute 101 composants : front Rawyl, deux faces du volume d’angle 2329F, face ouest centrale 1A20B et extrémité 2355E à l’ouest et au sud. Cinq nouvelles captures intégrales conservent URL, coordonnées/cap du visualiseur et date affichée (quatre vues de juin 2024, une sphère de juin 2022). Les 30 plans sans détails ont un motif d’attente ; les quatre plans de 26152 restent bloqués par la vérification du volume. Les côtés cachés, petits retraits hauts et contacts entre volumes ne reçoivent pas de fenêtres extrapolées.
 
 Les [15 captures complémentaires indexées](../../crans-montana-p06/assets/streetview-survey/2026-11-15/supplement-index.csv) et leur [schéma de positions de caméra](../../crans-montana-p06/assets/streetview-survey/2026-11-15/supplement-map.svg) complètent le relevé original sans le réécrire. Ce schéma ne représente ni les surfaces effectivement recensées ni une garantie de couverture exhaustive. Le GPS physique et le cap par rapport au nord vrai restent non calibrés.
 
-Un second lot du même jour porte ces compléments à **18 captures**. Il ajoute une [reconstitution photographique de B007](b007-reconstruction.md), avec 71 composants et des hauteurs explicitement estimées. Elle se charge séparément ; le volume source et ses quatre plans bloqués restent disponibles sans modification. Elle n’est pas comprise dans les neuf plans partiels ni dans les 220 composants du registre officiel.
+Un second lot du même jour porte ces compléments à **18 captures**. Il ajoute une [reconstitution photographique de B007](b007-reconstruction.md), avec 71 composants et des hauteurs explicitement estimées. Elle se charge séparément ; le volume source et ses quatre plans bloqués restent disponibles sans modification. Elle n’est pas comprise dans les quatorze plans partiels ni dans les 269 composants du registre officiel.
+
+Le lot [côté jeux](playground-facades.md) ajoute ensuite 49 composants sur cinq plans auparavant vides : les deux fronts est de B002, les deux pans est de B003 et le front sud-est du Rawyl. Les compléments photographiques passent à 21 captures. Les ouvertures encore cachées restent inconnues.
 
 ## Un cycle par lot
 

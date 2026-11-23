@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="836" viewBox="0 0 1000 836">
-<rect width="1000" height="836" fill="#faf8ef"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="852" viewBox="0 0 1000 852">
+<rect width="1000" height="852" fill="#faf8ef"/>
 <g font-family="sans-serif" fill="#24362f"><text x="35" y="38" font-size="22">Ycoor · points de vue complémentaires</text>
-<text x="35" y="66">18 captures · 11 positions de caméra rapportées par Google</text>
+<text x="35" y="66">21 captures · 12 positions de caméra rapportées par Google</text>
 <text x="35" y="91">Schéma WGS84 approximatif · GPS physique et nord vrai non calibrés · pas de fond cadastral</text>
 <path d="M925 175v-45l-7 12m7-12 7 12" stroke="#24362f" fill="none"/><text x="919" y="120">N</text>
 <a href="evidence/2026-11-21/B003-N001.jpg"><title>B003-N001, B003-N002, B003-N003 · 46.3106806, 7.4773777</title><circle cx="130.61" cy="448.99" r="14" fill="#295a85"/><text x="130.61" y="453.99" text-anchor="middle" fill="white">1</text></a>
@@ -14,8 +14,8 @@
 <text x="35" y="689" font-size="12">4 · B003-N007 · 46.3102964, 7.4774249</text>
 <a href="evidence/2026-11-21/B003-N008.jpg"><title>B003-N008, B007-N018 · 46.3109398, 7.479384</title><circle cx="657.28" cy="350.49" r="14" fill="#295a85"/><text x="657.28" y="355.49" text-anchor="middle" fill="white">5</text></a>
 <text x="35" y="705" font-size="12">5 · B003-N008, B007-N018 · 46.3109398, 7.479384</text>
-<a href="evidence/2026-11-22/B003-N009.jpg"><title>B003-N009, B003-N010 · 46.3106401, 7.4785164</title><circle cx="429.52" cy="464.38" r="14" fill="#295a85"/><text x="429.52" y="469.38" text-anchor="middle" fill="white">6</text></a>
-<text x="35" y="721" font-size="12">6 · B003-N009, B003-N010 · 46.3106401, 7.4785164</text>
+<a href="evidence/2026-11-22/B003-N009.jpg"><title>B003-N009, B003-N010, YCOOR-N019 · 46.3106401, 7.4785164</title><circle cx="429.52" cy="464.38" r="14" fill="#295a85"/><text x="429.52" y="469.38" text-anchor="middle" fill="white">6</text></a>
+<text x="35" y="721" font-size="12">6 · B003-N009, B003-N010, YCOOR-N019 · 46.3106401, 7.4785164</text>
 <a href="evidence/2026-11-23/YCOOR-N011.jpg"><title>YCOOR-N011 · 46.3109544, 7.4773586</title><circle cx="125.59" cy="344.94" r="14" fill="#295a85"/><text x="125.59" y="349.94" text-anchor="middle" fill="white">7</text></a>
 <text x="35" y="737" font-size="12">7 · YCOOR-N011 · 46.3109544, 7.4773586</text>
 <a href="evidence/2026-11-23/YCOOR-N013.jpg"><title>YCOOR-N013 · 46.3114352, 7.4776328</title><circle cx="197.57" cy="162.22" r="14" fill="#295a85"/><text x="197.57" y="167.22" text-anchor="middle" fill="white">8</text></a>
@@ -26,5 +26,7 @@
 <text x="35" y="785" font-size="12">10 · YCOOR-N015, B007-N017 · 46.3112586, 7.4784379</text>
 <a href="evidence/2026-11-23/B007-N016.jpg"><title>B007-N016 · 46.3114805, 7.4777436</title><circle cx="226.66" cy="145.00" r="14" fill="#295a85"/><text x="226.66" y="150.00" text-anchor="middle" fill="white">11</text></a>
 <text x="35" y="801" font-size="12">11 · B007-N016 · 46.3114805, 7.4777436</text>
+<a href="evidence/2026-11-23/YCOOR-N020.jpg"><title>YCOOR-N020, YCOOR-N021 · 46.3107605, 7.4788768</title><circle cx="524.13" cy="418.63" r="14" fill="#295a85"/><text x="524.13" y="423.63" text-anchor="middle" fill="white">12</text></a>
+<text x="35" y="817" font-size="12">12 · YCOOR-N020, YCOOR-N021 · 46.3107605, 7.4788768</text>
 <text x="35" y="615" font-size="13">Positions de caméra seulement ; aucune surface cachée ni exhaustivité du relevé n’est déduite.</text>
 </g></svg>

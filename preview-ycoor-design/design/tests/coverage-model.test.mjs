@@ -57,9 +57,9 @@ test('ready records cannot silently target missing, wrong-building or ambiguous 
   assert.throws(() => buildFacadeInventory(input), /ambiguous|face|plane/i);
 });
 
-test('unverified rear views explain the next action without becoming drawn face evidence', () => {
+test('unverified upper rear views explain the next action without becoming drawn face evidence', () => {
   const input = args();
-  const pending = input.evidence.changes.find(change => change.changeId === 'B003-REAR-UNVERIFIED-008');
+  const pending = input.evidence.changes.find(change => change.changeId === 'B003-UNVERIFIED-009');
   const result = buildFacadeInventory(input), rear = result.faces.find(face => face.faceId === pending.faceId);
   assert.equal(rear.status, 'not_reviewed');
   assert.equal(rear.detailCount, 0);
