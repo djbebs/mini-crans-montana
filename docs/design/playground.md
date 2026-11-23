@@ -14,10 +14,10 @@ Les captures originales du relevé de façades restent intactes. Les images tour
 
 | Équipement | Repères visuels | Animation |
 |---|---|---|
-| Ensemble bois/rouge avec pont de cordes | P002, P007 ; photos 13 et 15 | Escalier, pont, toboggan métallique **ouvert**, retour au sol |
+| Ensemble bois/rouge avec pont de cordes | P002, P007 ; photos 13 et 15 | Escalier, pont, glissades assises, sur le dos ou sur le ventre ; parfois un saut de joie après la réception |
 | Double cône de cordes avec anneau | P005 ; photo 11 | Montée et descente sur les niveaux effectivement dessinés |
 | Parcours en rondins | Photo 15 | Marche en équilibre sur les poutres |
-| Portique sud | P003, P006 ; photo 22 | Balançoire simple ; forme actuelle du siège peu lisible, simplifiée |
+| Portique sud | P003, P006 ; photo 22 | Balançoire simple ; adulte qui approche, donne trois poussées synchronisées puis reste sur le côté pour surveiller. Forme actuelle du siège peu lisible, simplifiée |
 | Portique nord à nacelle bleue | Photo 17 ; P003 | Enfant assis, nacelle et suspentes synchronisées |
 | Jeu jaune à deux sièges | Photo 22 | Deux enfants assis, oscillation commune du jeu |
 | Petit jeu sombre sur ressort | Photo 22 | Bascule assise synchronisée |
@@ -28,6 +28,10 @@ Les silhouettes partielles d’autres petits équipements visibles en arrière-p
 
 `playground-models.js` sépare les sept placements du site et les constructeurs de jeux. Les modèles n’apparaissent que dans le polygone Ycoor attendu ; une frontière incompatible supprime le placement plutôt que de redistribuer les jeux au hasard. Les pièces statiques sont regroupées par couleur pour réduire les appels de dessin. Les sièges mobiles gardent leur propre groupe.
 
-Le moteur de personnages reste commun aux secteurs : chaque jeu fournit ses contacts, son parcours fermé et ses volumes interdits. Un rappel `onPose` applique au siège le même instant d’animation que celui de l’enfant. Les contacts restent fixes par rapport à la base du modèle sur le terrain incliné. La limite reste de douze personnages pour le secteur. Masquer les jeux masque aussi leurs utilisateurs.
+Le moteur de personnages reste commun aux secteurs : chaque jeu fournit ses contacts, ses parcours et ses volumes interdits. Un rappel `onPose` applique au siège le même instant d’animation que celui de l’enfant. Les suspentes de la balançoire simple rejoignent les bords du siège. Le bassin des vrais GLB sert de point de contact, en tenant compte de leur taille ; leurs jambes s’étendent devant le siège. La nacelle accueille l’enfant vers son bord avant.
+
+Les six variantes du toboggan sont mélangées avec une graine par personnage et par série : trois postures, avec ou sans saut de joie. Le choix reste stable pendant chaque passage. Les transitions d’installation et de redressement conservent le contact avec la glissière ; le saut survient après le retour au sol. Le déplacement de l’adulte est une séquence non répétée, qui termine par une surveillance sans limite de durée. Il regarde le siège mobile et garde ses distances avec sa trajectoire.
+
+Les contacts restent fixes par rapport à la base du modèle sur le terrain incliné. La limite reste de douze personnages pour le secteur, avec un accompagnateur à la place d’un adulte statique. Masquer les jeux masque aussi leurs utilisateurs. Toutes ces actions sont des animations illustratives demandées par l’utilisateur, pas des observations de personnes réelles.
 
 Les tests couvrent les sept emprises dans le polygone OSM **et** la surface de jeux officielle, tous les circuits d’enfants, les contacts sièges/enfants sur un cycle, et le raccord du sol au terrain. La version P0.6.6 conserve ses cinq anciens modèles ; les ajouts au moteur de personnages n’agissent que sur les nouveaux types d’interaction.

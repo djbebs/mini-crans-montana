@@ -81,7 +81,8 @@ export function evaluateSequence(track,frames,t){
    return {...p,phase,moving,fromIndex:from,toIndex:to,
     visible:phase!=='insideTube',
     heading:moving?Math.atan2(b.x-a.x,b.z-a.z):0,
-    progress:u,cycleLength:cycle};
+    progress:u,cycleLength:cycle,
+    slope:moving?Math.atan2(a.y-b.y,Math.hypot(b.x-a.x,b.z-a.z)):0};
   }
   now-=duration;
  }
@@ -96,6 +97,10 @@ export function sequenceDuration(sequence){
 }
 export function selectMotionVariant(spec,elapsed){
  const variants=Array.isArray(spec.variants)&&spec.variants.length?spec.variants:null;
+ if(spec.loop===false){
+  const v=variants?.[0]||spec;
+  return {track:v.track,sequence:v.sequence,elapsed:Math.min(elapsed,Math.max(0,sequenceDuration(v.sequence)-1e-7)),variantName:v.name||'once',cycleIndex:0};
+ }
  if(!variants){
   const sequence=spec.sequence||SCENES[spec.role]||[];
   return {track:spec.track,sequence,elapsed,variantName:'default',cycleIndex:0};
@@ -103,6 +108,16 @@ export function selectMotionVariant(spec,elapsed){
  const durations=variants.map(v=>sequenceDuration(v.sequence));
  const all=durations.reduce((a,b)=>a+b,0);
  if(all<=0)return null;
+ if(spec.variantOrder==='shuffle'){
+  const block=Math.floor(elapsed/all),order=variants.map((_,i)=>i);
+  let seed=hash((spec.id||1)+block*104729+307),at=((elapsed%all)+all)%all;
+  for(let i=order.length-1;i>0;i--){seed=hash(seed+i);const j=seed%(i+1);[order[i],order[j]]=[order[j],order[i]];}
+  for(let n=0;n<order.length;n++){
+   const i=order[n];
+   if(at<durations[i]||n===order.length-1)return {track:variants[i].track,sequence:variants[i].sequence,elapsed:at,variantName:variants[i].name,cycleIndex:block*variants.length+n};
+   at-=durations[i];
+  }
+ }
  const seed=((spec.id||1)%variants.length+variants.length)%variants.length;
  let at=((elapsed%all)+all)%all;
  for(let n=0;n<variants.length;n++){
@@ -124,6 +139,13 @@ function pulse(time,seed,period=11,length=1.2){
  return Math.sin(Math.PI*f)**2;
 }
 const STILL_ROLES=new Set(['stand','watch','supervise','chat','wave','sit','play-platform']);
+function placeRiderHip(pose,spec,contact){
+ const hip=(spec.hipHeight??.46)*(spec.bodyScale??1),along=Math.sin(pose.bodyX||0)*hip;
+ pose.riderContact={...contact};pose.rotationOrder='YXZ';
+ pose.x=contact.x-Math.sin(pose.heading)*along;
+ pose.y=contact.y-Math.cos(pose.bodyX||0)*hip;
+ pose.z=contact.z-Math.cos(pose.heading)*along;
+}
 export function motionAt(spec,t,height,cache={}){
  const secs=Math.max(0,t);
  const seed=spec.id||1;
@@ -213,11 +235,54 @@ export function motionAt(spec,t,height,cache={}){
    pose.armL=-1.0;pose.armR=-.97;pose.legL=.12;pose.legR=.12;
    pose.armLZ=.08;pose.armRZ=-.08;
    pose.bodyX=-.11;
-  }else if(sampled.phase==='swing'||sampled.phase==='rocker'){
+  }else if(sampled.phase==='swing'){
+   pose.heading=spec.facing??pose.heading;
+   // Original child GLBs face +Z. Negative hip rotation extends the legs
+   // forward; a positive value folded them behind the seat and hid them.
+   pose.legL=-.98-.08*Math.sin(secs*1.37);pose.legR=pose.legL;
+   pose.armL=-.18;pose.armR=-.18;pose.armLZ=.23;pose.armRZ=-.23;
+   pose.bodyX=0;
+   placeRiderHip(pose,spec,{x:pose.x,y:pose.y+.42,z:pose.z});
+  }else if(sampled.phase==='rocker'){
    pose.heading=spec.facing??pose.heading;
    pose.legL=1.12;pose.legR=1.12;
    pose.armL=-.72;pose.armR=-.72;
    pose.bodyX=.04;
+  }else if(/^(?:board|slide|recover)-(?:sit|back|front)$/.test(sampled.phase)){
+   const [action,style]=sampled.phase.split('-');
+   const slope=action==='board'?(spec.riderMotion?.entrySlope??0):action==='recover'?(spec.riderMotion?.exitSlope??0):sampled.slope;
+   const targetTilt=style==='sit'?-.25:style==='back'?-Math.PI/2+slope:Math.PI/2+slope;
+   const amount=action==='board'?u:action==='recover'?1-u:1;
+   const hip=(spec.hipHeight??.46)*(spec.bodyScale??1);
+   pose.bodyX=targetTilt*amount;
+   pose.legL=style==='sit'?-1.10*amount:0;pose.legR=pose.legL;
+   pose.armL=(style==='front'?-2.5:-.20)*amount;pose.armR=pose.armL;
+   // Lift/extend the legs before lowering the pelvis onto the chute; reverse
+   // that order on recovery so the feet cannot pass through the steel floor.
+   const contactY=pose.y+lerp(hip,.18,amount*amount);
+   placeRiderHip(pose,spec,{x:pose.x,y:contactY,z:pose.z});
+  }else if(sampled.phase==='joyJump'){
+   const leap=Math.sin(Math.PI*u);
+   pose.y=height(pose.x,pose.z)+.31+.28*leap;
+   pose.armL=-2.85*leap;pose.armR=-2.85*leap;
+   pose.legL=-.20*leap;pose.legR=-.20*leap;
+  }else if(sampled.phase==='pushSwing'||sampled.phase==='watchSwing'){
+   const watched=spec.watchMotion?evaluateSequence(spec.watchMotion.track,spec.watchMotion.sequence,secs):null;
+   pose.rotationOrder='YXZ';
+   if(watched){
+    const toward=Math.atan2(watched.x-pose.x,watched.z-pose.z);
+    if(sampled.phase==='watchSwing')pose.heading=toward;
+    else pose.heading=spec.facing??toward;
+    pose.headX=clamp(Math.atan2(pose.y+1.5-(height(spec.modelCenter.x,spec.modelCenter.z)+.27+watched.y+.85),Math.hypot(watched.x-pose.x,watched.z-pose.z)),0,.42);
+   }
+   if(sampled.phase==='pushSwing'){
+    const period=spec.watchMotion?.period||sequenceDuration(spec.watchMotion?.sequence)||4.6;
+    const phase=((secs%period)+period)%period/period;
+    const difference=Math.abs(phase-.25);
+    const push=Math.max(0,1-Math.min(difference,1-difference)/.10);
+    pose.pushStrength=push;pose.armL=-.25-.75*push;pose.armR=pose.armL;
+    pose.bodyX=.065*push;
+   }
   }else if(sampled.phase==='balance'){
    const pace=secs*5.2;
    pose.armLZ=.85;pose.armRZ=-.85;

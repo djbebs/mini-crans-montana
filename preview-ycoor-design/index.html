@@ -406,7 +406,7 @@ function updatePeoplePanel(){
  const n=peopleSystem?.actors?.length||0;
  el.textContent=n?
   (peopleSystem.adults+' adultes · '+peopleSystem.children+' enfants · '+season()+
-  '. Escalade, glisse, équilibre, balançoires et jeux à ressort. Tenues saisonnières.'):
+  '. Glissades variées et sauts de joie. Un adulte vient pousser puis surveille l’enfant. Tenues saisonnières.'):
   'Aucun personnage placé : pas de zone ni de chemin exploitable.';
 }
 $('people-switch').onclick=()=>{
@@ -423,7 +423,7 @@ async function startPeople(){
  peopleStatus='loading';updatePeoplePanel();
  let created=null;
  try{
-  if(!peopleModule)peopleModule=import('../crans-montana-p06/characters.js?v=7');
+  if(!peopleModule)peopleModule=import('../crans-montana-p06/characters.js?v=8');
   const mod=await peopleModule;
   created=await mod.createPopulation({
    THREE,season:season(),height:legacyPhotoHeight(height),
@@ -544,7 +544,7 @@ async function startFurniture(){
   const [source,visual,photoModels]=await Promise.all([
    import('../crans-montana-p06/furniture-source.js?v=3'),
    import('../crans-montana-p06/furniture-mesh.js?v=3'),
-   import('./design/playground-models.js?v=2')
+   import('./design/playground-models.js?v=3')
   ]);
   furniturePainter=visual.drawFurniture;
   photoPainter=photoModels.drawObservedPlayground;

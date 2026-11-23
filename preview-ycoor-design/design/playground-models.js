@@ -120,14 +120,22 @@ function buildCombo(T,g){
   const track=[point(-1.7,.04,-3.15),...stairs,point(-1.7,1.68,-.7),point(-1.7,1.68,0),point(-.7,1.68,0),point(-.15,1.46,0),point(.4,1.68,0),point(1.3,1.68,0),...chute,
     point(1.3,.04,5.05),point(2.9,.04,5.05),point(2.9,.04,-3.15),point(-1.7,.04,-3.15)];
   for(const i of [0,18,19,20,21])track[i].ground=true;
-  const sequence=[];
-  sequence.push(['waitBottom',0,0,1]);
-  for(let i=0;i<6;i++)sequence.push(['stairs',i,i+1,.62]);
-  for(let i=6;i<12;i++)sequence.push(['platformWalk',i,i+1,.7]);
-  sequence.push(['waitTop',12,12,1.5]);
-  for(let i=12;i<17;i++)sequence.push(['slide',i,i+1,.45]);
-  sequence.push(['feetLand',17,18,.65],['rest',18,18,1],['return',18,19,1.4],['return',19,20,6.9],['return',20,21,4]);
-  return {solids,interactions:[{role:'play-slide',track,sequence,groundedPhases:['waitBottom','rest','return']}]};
+  const prefix=[['waitBottom',0,0,1]];
+  for(let i=0;i<6;i++)prefix.push(['stairs',i,i+1,.62]);
+  for(let i=6;i<12;i++)prefix.push(['platformWalk',i,i+1,.7]);
+  prefix.push(['waitTop',12,12,1.5]);
+  const variants=['sit','back','front'].flatMap(style=>[false,true].map(celebrate=>{
+    const sequence=[...prefix,['board-'+style,12,12,1.1]];
+    for(let i=12;i<17;i++)sequence.push(['slide-'+style,i,i+1,.45]);
+    sequence.push(['recover-'+style,17,18,1.1],['rest',18,18,.6]);
+    if(celebrate)sequence.push(['joyJump',18,18,.9],['rest',18,18,.5]);
+    sequence.push(['return',18,19,1.4],['return',19,20,6.9],['return',20,21,4]);
+    return {name:style+(celebrate?'-joy':'-calm'),track,sequence};
+  }));
+  const slope=(a,b)=>Math.atan2(a.y-b.y,Math.hypot(b.x-a.x,b.z-a.z));
+  return {solids,interactions:[{role:'play-slide',track,sequence:variants[0].sequence,variants,variantOrder:'shuffle',
+    riderMotion:{entrySlope:slope(chute[0],chute[1]),exitSlope:slope(chute.at(-2),chute.at(-1))},
+    groundedPhases:['waitBottom','rest','return']}]};
 }
 
 function buildSpaceNet(T,g){
@@ -181,7 +189,12 @@ function buildSwing(T,g,key,basket){
   for(const x of [-1.8,1.8])cyl(.13,.1,'steel',x,height,0);
   const pivot=new T.Group();pivot.name=key+'-pendulum';pivot.position.y=height;g.add(pivot);
   const b=tools(T,pivot);
-  for(const x of [-.65,.65])b.link([x,0,0],[x,-length,0],.023,'dark');
+  const hangerWidth=basket ? .65 : .28;
+  for(const [side,x] of [['left',-hangerWidth],['right',hangerWidth]]){
+    b.link([x,0,0],[x,-length,0],.023,'dark');
+    const attachment=new T.Group();attachment.name=key+'-suspension-'+side;
+    attachment.position.set(x,-length,0);pivot.add(attachment);
+  }
   if(basket){
     const rim=b.mesh(new T.TorusGeometry(.8,.075,5,16),'blue',0,-length,0);rim.rotation.x=Math.PI/2;
     b.cyl(.72,.055,'rope',0,-length-.05,0);
@@ -191,12 +204,24 @@ function buildSwing(T,g,key,basket){
       b.link([-z,-length,x],[z,-length,x],.02,'net');
     }
   }else b.cube(.65,.11,.36,'dark',0,-length-.05,0);
-  const contact=new T.Group();contact.name=key+'-seat';contact.position.y=-length;pivot.add(contact);
+  const contact=new T.Group();contact.name=key+'-seat';contact.position.set(0,-length,basket ? .42 : 0);pivot.add(contact);
   const angle=t=>amplitude*Math.sin(t/period*Math.PI*2);
   const interaction=cyclicInteraction({role:'play-swing',period,contactName:contact.name,
-    position:t=>point(0,height-length*Math.cos(angle(t))-.42,-length*Math.sin(angle(t))),
+    position:t=>point(0,height-length*Math.cos(angle(t))-(basket ? .42 : 0)*Math.sin(angle(t))-.42,
+      -length*Math.sin(angle(t))+(basket ? .42 : 0)*Math.cos(angle(t))),
     onPose:pose=>{pivot.rotation.x=angle(pose.motionTime||0);}});
-  return {solids:[...[-1.8,1.8].flatMap(x=>[-1.15,1.15].map(z=>box(x,.55,z,.09,.55,.09)))],interactions:[interaction]};
+  const interactions=[interaction];
+  if(!basket){
+    const track=[point(2.6,.04,-2.1),point(0,.04,-2.1),point(0,.04,-1.1),
+      point(0,.04,-2.1),point(1.15,.04,-2.1),point(1.15,.04,-.35)];
+    for(const p of track)p.ground=true;
+    interactions.push({role:'swing-helper',kind:'adulte',loop:false,facing:0,track,
+      sequence:[['waitBottom',0,0,2],['return',0,1,3],['return',1,2,1.3],['pushSwing',2,2,13.8],
+        ['return',2,3,1.2],['return',3,4,1.2],['return',4,5,1.8],['watchSwing',5,5,1]],
+      watchMotion:{track:interaction.track,sequence:interaction.sequence,period},
+      groundedPhases:['waitBottom','return','pushSwing','watchSwing']});
+  }
+  return {solids:[...[-1.8,1.8].flatMap(x=>[-1.15,1.15].map(z=>box(x,.55,z,.09,.55,.09)))],interactions};
 }
 
 function spring(T,g){
@@ -254,11 +279,15 @@ export function drawObservedPlayground(T,features,height,parent,pickable,visible
     const part=new T.Group();part.name=p.key;part.position.set(p.x,height(p.x,p.z)+.27,p.z);part.rotation.y=p.rotation;group.add(part);
     part.userData.groundAtLocal=(x,z)=>{const q=rotate({x,z},p.rotation);return height(p.x+q.x,p.z+q.z)-height(p.x,p.z);};
     const built=builders[p.key](T,part,p.key);mergeStatic(part);
-    const interactions=built.interactions.map(item=>({...item,track:item.track.map(q=>{
+    const mapTrack=track=>track.map(q=>{
       const r=rotate(q,p.rotation);
       if(q.ground)r.y+=height(p.x+r.x,p.z+r.z)-height(p.x,p.z);
       return r;
-    }),facing:(item.facing||0)+p.rotation}));
+    });
+    const interactions=built.interactions.map(item=>({...item,track:mapTrack(item.track),
+      variants:item.variants?.map(v=>({...v,track:mapTrack(v.track)})),
+      watchMotion:item.watchMotion?{...item.watchMotion,track:mapTrack(item.watchMotion.track)}:null,
+      facing:(item.facing||0)+p.rotation}));
     const solidVolumes=built.solids.map(s=>{
       const corners=[s.minX,s.maxX].flatMap(x=>[s.minZ,s.maxZ].map(z=>rotate({x,z},p.rotation)));
       return {...s,minX:Math.min(...corners.map(c=>c.x)),maxX:Math.max(...corners.map(c=>c.x)),minZ:Math.min(...corners.map(c=>c.z)),maxZ:Math.max(...corners.map(c=>c.z))};

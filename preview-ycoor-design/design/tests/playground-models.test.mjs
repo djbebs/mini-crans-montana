@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { registerHooks } from 'node:module';
 import * as THREE from 'three';
-import { motionAt } from '../../../crans-montana-p06/people-motion.js';
+import { motionAt, selectMotionVariant } from '../../../crans-montana-p06/people-motion.js';
 import { validatePrefabVariant } from '../../../crans-montana-p06/playground-collision.js';
 import { pointInPolygon } from '../../../crans-montana-p06/photo-playground.js';
 import { createTerrainModel } from '../terrain-model.js';
@@ -16,7 +16,7 @@ registerHooks({resolve(name,context,next){
   if(name.startsWith('three/addons/'))return {url:new URL('../examples/jsm/'+name.slice(13),threeUrl).href,shortCircuit:true};
   return next(name,context);
 }});
-const { planPopulation }=await import('../../../crans-montana-p06/characters.js');
+const { planPopulation, createPopulation }=await import('../../../crans-montana-p06/characters.js');
 
 const mod = await import('../playground-models.js').catch(error => {
   if (error.code === 'ERR_MODULE_NOT_FOUND') return {};
@@ -76,11 +76,127 @@ test('swing and spring seats stay synchronized with the seated children througho
       const pose=motionAt(rider,t,()=>-.258,{});
       rider.onPose(pose); app.group.updateMatrixWorld(true);
       const contact=app.group.getObjectByName(rider.contactName).getWorldPosition(new THREE.Vector3());
-      assert.ok(contact.distanceTo(new THREE.Vector3(pose.x,pose.y+.42,pose.z))<.018,
+      const hips=pose.riderContact||{x:pose.x,y:pose.y+.42,z:pose.z};
+      assert.ok(contact.distanceTo(new THREE.Vector3(hips.x,hips.y,hips.z))<.018,
         rider.modelKey+' child must follow the physical seat');
-      assert.ok(pose.legL>.7&&pose.legR>.7,'seated rider does not walk in mid-air');
+      assert.ok(Math.abs(pose.legL)>.7&&Math.abs(pose.legR)>.7,'seated rider does not walk in mid-air');
     }
   }
+});
+
+test('simple swing suspensions meet the seat rather than hanging outside its edges', () => {
+  const app=setup(),root=app.group.getObjectByName('swing-south');
+  root.updateWorldMatrix(true,true);
+  const seat=root.getObjectByName('swing-south-seat');
+  const anchors=['left','right'].map(side=>root.getObjectByName('swing-south-suspension-'+side));
+  assert.ok(anchors.every(Boolean),'the two actual suspension endpoints are inspectable');
+  const origin=seat.getWorldPosition(new THREE.Vector3());
+  for(const anchor of anchors){
+    const end=anchor.getWorldPosition(new THREE.Vector3());
+    assert.ok(Math.abs(end.y-origin.y)<.005);
+    assert.ok(end.distanceTo(origin)<=.325,'suspension attaches within the 65 cm seat');
+  }
+});
+
+test('the original child GLB has visible legs extending in front of the swing seat', async () => {
+  const app=setup(),population=await createPopulation({THREE,season:'summer',height:()=>-.258,
+    furnitureData:site,photoDrawn:app.drawn,maxActors:12});
+  for(const actor of population.actors.filter(a=>a.spec.role==='play-swing')){
+    actor.elapsed=1.15; population.update(0);population.group.updateMatrixWorld(true);
+    app.group.updateMatrixWorld(true);
+    const hip=actor.parts.leftLeg.getWorldPosition(new THREE.Vector3())
+      .add(actor.parts.rightLeg.getWorldPosition(new THREE.Vector3())).multiplyScalar(.5);
+    const seat=app.group.getObjectByName(actor.spec.contactName).getWorldPosition(new THREE.Vector3());
+    assert.ok(hip.distanceTo(seat)<.018,'actual GLB hip joints follow the seat despite actor scale variation');
+    const forward=new THREE.Vector3(0,0,1).applyQuaternion(actor.anchor.quaternion);
+    for(const leg of [actor.parts.leftLeg,actor.parts.rightLeg]){
+      assert.ok(leg?.visible,'both original leg meshes remain visible');
+      const localBox=new THREE.Box3(),inverse=new THREE.Matrix4().copy(leg.matrixWorld).invert();
+      leg.traverse(mesh=>{
+        if(!mesh.isMesh)return;
+        mesh.geometry.computeBoundingBox();
+        localBox.union(mesh.geometry.boundingBox.clone().applyMatrix4(new THREE.Matrix4().multiplyMatrices(inverse,mesh.matrixWorld)));
+      });
+      const toe=leg.localToWorld(new THREE.Vector3(0,localBox.min.y,0));
+      const hip=leg.getWorldPosition(new THREE.Vector3());
+      assert.ok(toe.clone().sub(hip).dot(forward)>.28,'feet extend forward, away from the hidden underside of the seat');
+    }
+  }
+  population.dispose();
+});
+
+test('all three slide postures keep the original GLB legs above the visible chute', async () => {
+  const app=setup(),population=await createPopulation({THREE,season:'summer',height:()=>-.258,
+    furnitureData:site,photoDrawn:app.drawn,maxActors:12});
+  const actor=population.actors.find(a=>a.spec.modelKey==='combo');
+  const variants=actor.spec.variants.filter(v=>v.name.endsWith('-calm'));
+  assert.equal(variants.length,3);
+  for(const v of variants){
+    let t=0;
+    for(const f of v.sequence){if(f[0].startsWith('slide-')&&f[1]===14){t+=f[3]/2;break;}t+=f[3];}
+    actor.spec.variants=null;actor.spec.track=v.track;actor.spec.sequence=v.sequence;
+    actor.elapsed=t;actor.cache.lastSafePose=null;population.update(0);
+    population.group.updateMatrixWorld(true);app.group.updateMatrixWorld(true);
+    const pose=motionAt(actor.spec,t,()=>-.258,{});
+    const hip=actor.parts.leftLeg.getWorldPosition(new THREE.Vector3())
+      .add(actor.parts.rightLeg.getWorldPosition(new THREE.Vector3())).multiplyScalar(.5);
+    assert.ok(hip.distanceTo(new THREE.Vector3(pose.riderContact.x,pose.riderContact.y,pose.riderContact.z))<.01,
+      v.name+' uses the real hip joint as its slide contact');
+    for(const leg of [actor.parts.leftLeg,actor.parts.rightLeg]){
+      const toe=leg.localToWorld(new THREE.Vector3(0,-.46,0));
+      const ray=new THREE.Raycaster(toe.clone().add(new THREE.Vector3(0,5,0)),new THREE.Vector3(0,-1,0));
+      const hit=ray.intersectObject(app.group.getObjectByName('combo'),true)[0];
+      assert.ok(hit,v.name+' feet remain over the actual rendered chute');
+      assert.ok(toe.y>=hit.point.y-.02,v.name+' legs are not buried inside the slide');
+    }
+  }
+  population.dispose();
+});
+
+test('an adult approaches the swing, pushes in time, then remains beside it watching', () => {
+  const app=setup(),plan=planPopulation({furnitureFeatures:site.features,photoDrawn:app.drawn,maxActors:12});
+  const helper=plan.people.find(p=>p.role==='swing-helper');
+  assert.ok(helper,'an adult interaction is assigned to the simple swing');
+  assert.equal(helper.kind,'adulte');
+  const approach=motionAt(helper,4,()=>-.258,{});
+  assert.equal(approach.phase,'return');
+  const push=motionAt(helper,10.35,()=>-.258,{});
+  assert.equal(push.phase,'pushSwing');assert.ok(push.pushStrength>.8);
+  const late=motionAt(helper,60,()=>-.258,{}),later=motionAt(helper,120,()=>-.258,{});
+  assert.equal(late.phase,'watchSwing');assert.equal(later.phase,'watchSwing');
+  assert.ok(Math.hypot(late.x-later.x,late.z-later.z)<1e-6,'adult stays beside the swing');
+  const child=plan.people.find(p=>p.modelKey===helper.modelKey&&p.kind==='enfant');
+  for(let t=0;t<70;t+=.13){
+    const adult=motionAt(helper,t,()=>-.258,{}),rider=motionAt(child,t,()=>-.258,{});
+    assert.ok(Math.hypot(adult.x-rider.x,adult.z-rider.z)>.48,'adult avoids the child’s swept path');
+    if(adult.phase==='watchSwing'){
+      const expected=Math.atan2(rider.x-adult.x,rider.z-adult.z);
+      assert.ok(Math.abs(Math.sin(adult.heading-expected))<1e-6,'adult looks toward the moving child');
+    }
+  }
+});
+
+test('slide cycles vary between sitting, lying on the back and prone, with occasional celebration', () => {
+  const app=setup(),plan=planPopulation({furnitureFeatures:site.features,photoDrawn:app.drawn,maxActors:12});
+  const child=plan.people.find(p=>p.modelKey==='combo'&&p.kind==='enfant');
+  assert.ok(child.variants?.length>=3,'several complete authored slide circuits exist');
+  const phases=new Set(child.variants.flatMap(v=>v.sequence.map(f=>f[0])));
+  for(const phase of ['slide-sit','slide-back','slide-front','joyJump'])assert.ok(phases.has(phase),phase);
+  assert.ok(child.variants.some(v=>!v.sequence.some(f=>f[0]==='joyJump')),'celebration is occasional');
+  const cycle=child.variants.reduce((n,v)=>n+v.sequence.reduce((s,f)=>s+f[3],0),0);
+  const names=new Set();
+  for(let t=0;t<cycle*3;t+=1.7){
+    const active=selectMotionVariant(child,t);names.add(active.variantName);
+    assert.deepEqual(selectMotionVariant(child,t),active,'pose choice remains stable during a frame');
+  }
+  assert.equal(names.size,child.variants.length);
+  const jumping=child.variants.find(v=>v.sequence.some(f=>f[0]==='joyJump'));
+  let at=0;
+  for(const frame of jumping.sequence){if(frame[0]==='joyJump')break;at+=frame[3];}
+  const spec={...child,variants:null,track:jumping.track,sequence:jumping.sequence};
+  const grounded=motionAt(spec,at,()=>-.258,{}),jump=motionAt(spec,at+.45,()=>-.258,{});
+  assert.ok(jump.y-grounded.y>.20,'joy jump has a visible takeoff');
+  assert.ok(jump.armL<-2&&jump.armR<-2,'both arms are raised');
 });
 
 test('the photo turf follows the official footprint and can be hidden with the equipment', () => {

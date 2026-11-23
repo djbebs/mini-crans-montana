@@ -79,7 +79,7 @@ export function validatePrefabVariant({variant,model,polygon,extent=49.5,radius=
   if(!valid)return {ok:false,reason:'collision-or-outside-polygon',phase,from,to};
  }
  const first=track[sequence[0][1]],last=track[sequence.at(-1)[2]];
- if(Math.hypot(first.x-last.x,first.y-last.y,first.z-last.z)>.03)
+ if(variant.loop!==false&&Math.hypot(first.x-last.x,first.y-last.y,first.z-last.z)>.03)
   return {ok:false,reason:'non-looping-variant'};
  return {ok:true,reason:null};
 }
