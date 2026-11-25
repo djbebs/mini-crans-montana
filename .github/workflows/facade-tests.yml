@@ -1,0 +1,18 @@
+name: Facade prototype tests
+on:
+  push:
+    branches: [feature/p068-facade-windows]
+  pull_request:
+    paths:
+      - 'crans-montana-p06/facade/**'
+      - 'crans-montana-p06/index.html'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test facade modules
+        run: cd crans-montana-p06/facade && npm test

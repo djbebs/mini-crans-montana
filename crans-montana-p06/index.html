@@ -117,11 +117,45 @@ button,input{font:inherit;color:inherit}button{cursor:pointer;border:2px solid v
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import {createFacadeLifecycle} from './facade/facade-lifecycle.js?v=068b';
 // Optional 3D Tiles library is loaded dynamically: the OSM view stays available if the CDN fails.
 window.__p0Booted=true;
 const $=(id)=>document.getElementById(id);
 
 let tiles=null,tilesMeshes=0,useOfficial=true,buildingLayer=null,tilesState='loading';
+// Windows are an independent OFF-by-default visual experiment.
+const officialTileScenes=new Set();
+const facadeSystem=createFacadeLifecycle(THREE,{onStatus:status=>{
+ const el=$('facade-status');if(!el)return;
+ if(status.mode==='off'){
+  el.textContent='Fenêtres désactivées · rendu P0.6.6';
+  return;
+ }
+ const result=status.tiles+' tuiles analysées · '+status.triangles+' triangles · '+status.facades+' façades · '+
+  status.generated+' fenêtres calculées · '+status.rendered+' envoyées au rendu · '+
+  status.rejected+' rejetées · '+status.invalid+' coordonnées invalides · '+
+  status.errors+' erreurs.';
+ el.textContent=result+(status.lastError?' Dernière erreur : '+status.lastError:'')+
+  (status.rendered===0?' Aucune fenêtre exploitable : vérifier façades et chargement.':'');
+}});
+const facadeControl=document.createElement('div');
+facadeControl.style.cssText='margin-top:8px;padding-top:6px;border-top:2px dashed #bcb5a0;font-size:12px;line-height:1.4';
+facadeControl.innerHTML='<label for="facade-mode">🪟 Fenêtres P0.6.8</label> <select id="facade-mode" style="max-width:100%;font-size:11px"><option value="off">OFF · P0.6.6</option><option value="procedural">Procédural (estimé)</option><option value="hybrid">Hybride (estimé + vérifié)</option></select><label style="display:block;margin-top:5px"><input type="checkbox" id="facade-contrast"> Contraste diagnostic (rose/jaune)</label><div id="facade-status" role="status" style="font-size:10px;line-height:1.4;overflow-wrap:anywhere">Fenêtres désactivées</div><small style="display:block;font-size:10px">Fenêtres estimées, pas des relevés réels. Le compteur confirme les instances 3D, pas leur visibilité à l’écran.</small>';
+$('place').appendChild(facadeControl);
+function reloadFacades(){
+ if(facadeSystem.mode!=='off')for(const model of officialTileScenes)facadeSystem.load(model);
+}
+$('facade-mode').addEventListener('change',e=>{
+ facadeSystem.setMode(e.target.value);reloadFacades();
+});
+$('facade-contrast').addEventListener('change',e=>{
+ facadeSystem.setContrast(e.target.checked);reloadFacades();
+});
+// This URL is an isolated experimental preview. Production main remains OFF by default.
+if(location.pathname.includes('/preview-p068/')){
+ $('facade-mode').value='procedural';
+ facadeSystem.setMode('procedural');
+}
 function note(t,show=true){const e=$('real-status');e.textContent=t;e.classList.toggle('show',show);e.dataset.failed=String(tilesState==='error');if(tilesState==='error')e.title='Cliquer pour ouvrir le rendu officiel P0.4'}
 $('real-status').onclick=()=>{if(tilesState==='error')location.href='../crans-montana-p0/?v=4'};
 function syncRoofs(){
@@ -785,6 +819,7 @@ function materialForTiles(){
 }
 async function startRoofs(older=false){
  note('Chargement des bâtiments officiels · '+(older?'révision 2025':'révision 2026')+'…');
+ facadeSystem.reset();officialTileScenes.clear();
  if(tiles){scene.remove(tiles.group);try{tiles.dispose()}catch(e){}try{tiles.userData?.dracoLoader?.dispose()}catch(e){}tiles=null}
  tilesMeshes=0;tilesState='loading';
  const timeout=setTimeout(()=>{
@@ -812,11 +847,12 @@ async function startRoofs(older=false){
   tiles.group.matrixAutoUpdate=false;tiles.group.matrix.copy(toENU());scene.add(tiles.group);tiles.group.updateMatrixWorld(true);
   tiles.addEventListener('load-tileset',()=>note('Source swisstopo connectée, chargement des toits…'));
   tiles.addEventListener('load-model',({scene:tileScene})=>{
+   officialTileScenes.add(tileScene);
    let count=0;
    tileScene.traverse(o=>{if(o.isMesh){o.material=materialForTiles();o.castShadow=false;o.receiveShadow=true;count++}});
-   if(count){tilesMeshes+=count;tilesState='ready';clearTimeout(timeout);syncRoofs();note('Maillages officiels reçus dans Three.js · vérifie le rendu');setTimeout(()=>note('',false),3200)}
+   if(count){tilesMeshes+=count;tilesState='ready';clearTimeout(timeout);syncRoofs();note('Maillages officiels reçus dans Three.js · vérifie le rendu');setTimeout(()=>note('',false),3200);if(facadeSystem.mode!=='off')facadeSystem.load(tileScene)}
   });
-  tiles.addEventListener('dispose-model',({scene:tileScene})=>tileScene.traverse(o=>{if(o.isMesh)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m?.dispose?.())}));
+  tiles.addEventListener('dispose-model',({scene:tileScene})=>{facadeSystem.disposeScene(tileScene);officialTileScenes.delete(tileScene);tileScene.traverse(o=>{if(o.isMesh)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m?.dispose?.())})});
   tiles.addEventListener('load-error',e=>{console.warn('swisstopo tiles',e);if(!tilesMeshes){window.__roofError=String(e.error?.message||e.error||'requête bloquée')+' · '+String(e.url||'').split('/').slice(-2).join('/');note('Erreur tuile : '+window.__roofError.slice(0,124));if(!e.tile){clearTimeout(timeout);if(!older)startRoofs(true);else{tilesState='error';useOfficial=false;syncRoofs();note('3D Three.js indisponible : '+window.__roofError.slice(0,96)+' · appuyer ici pour P0.4')}}}});
  }catch(err){clearTimeout(timeout);window.__roofError=String(err?.message||err);if(!older){startRoofs(true)}else{tilesState='error';useOfficial=false;syncRoofs();note('Bibliothèque ou tuiles indisponibles : '+window.__roofError.slice(0,105))}}
 }
